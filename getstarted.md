@@ -9,7 +9,7 @@ description: ""
 
 * You can install ND4J either from source or from Maven central. Either way you do it, you need to run this git command and cd into an ND4J working directory. 
 
-         git clone https://github.com/agibsonccc/nd4j
+         git clone https://github.com/SkymindIO/nd4j.git
          cd nd4j
 
 ### IntelliJ
