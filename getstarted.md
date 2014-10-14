@@ -42,7 +42,7 @@ description: ""
 
 * If you don't have Maven, you can follow the installation instructions on Maven's ["getting started" page](https://maven.apache.org/guides/getting-started/maven-in-five-minutes.html). Finally, run this command:
 
-         mvn clean install -DskipTests
+         mvn clean install -DskipTests -Dmaven.javadoc.skip=true
 
 * After you run "mvn clean", you will find ND4J jar files the local folder, which is where the compiling happens.
 	
