@@ -53,7 +53,7 @@ description: ""
         <artifactId>nd4j</artifactId>
         <groupId>org.nd4j</groupId>
         <artifactId>nd4j-api</artifactId>
-        <version>0.0.1-SNAPSHOT</version>
+        <version>0.0.3.5.1</version>
        </dependency>
 
 From here, you need to pick an implementation suitable for your needs. This can be either jblas for native or cuda for GPUs.
@@ -65,7 +65,7 @@ Jblas:
                 <artifactId>nd4j</artifactId>
                 <groupId>org.nd4j</groupId>
                 <artifactId>nd4j-jblas</artifactId>
-                <version>0.0.1-SNAPSHOT</version>
+                <version>0.0.3.5.1</version>
                </dependency>
 
 Jcuda:
@@ -74,7 +74,7 @@ Jcuda:
                        <artifactId>nd4j</artifactId>
                        <groupId>org.nd4j</groupId>
                        <artifactId>nd4j-jcublas</artifactId>
-                       <version>0.0.1-SNAPSHOT</version>
+                       <version>0.0.3.5.1</version>
                       </dependency>
 
 For Jcuda, we are still in the process of streamlining the release for this one. For now, please do the following:
