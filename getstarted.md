@@ -48,47 +48,45 @@ description: ""
 	
 * Include the following in your pom.xml:
 
+            <dependency>
+             <artifactId>nd4j</artifactId>
+             <groupId>org.nd4j</groupId>
+             <artifactId>nd4j-api</artifactId>
+             <version>0.0.1-SNAPSHOT</version>
+            </dependency>
 
-       <dependency>
-        <artifactId>nd4j</artifactId>
-        <groupId>org.nd4j</groupId>
-        <artifactId>nd4j-api</artifactId>
-        <version>0.0.3.5.1</version>
-       </dependency>
-
-From here, you need to pick an implementation suitable for your needs. This can be either jblas for native or cuda for GPUs.
-
+From there, you need to pick a suitable implementation. This can be either Jblas for native or Cuda for GPUs.
 
 Jblas:
 
-             <dependency>
-                <artifactId>nd4j</artifactId>
-                <groupId>org.nd4j</groupId>
-                <artifactId>nd4j-jblas</artifactId>
-                <version>0.0.3.5.1</version>
-               </dependency>
+            <dependency>
+               <artifactId>nd4j</artifactId>
+               <groupId>org.nd4j</groupId>
+               <artifactId>nd4j-jblas</artifactId>
+               <version>0.0.1-SNAPSHOT</version>
+            </dependency>
 
 Jcuda:
 
-                    <dependency>
-                       <artifactId>nd4j</artifactId>
-                       <groupId>org.nd4j</groupId>
-                       <artifactId>nd4j-jcublas</artifactId>
-                       <version>0.0.3.5.1</version>
-                      </dependency>
+            <dependency>
+             <artifactId>nd4j</artifactId>
+             <groupId>org.nd4j</groupId>
+             <artifactId>nd4j-jcublas</artifactId>
+             <version>0.0.1-SNAPSHOT</version>
+            </dependency>
 
 For Jcuda, we are still in the process of streamlining the release for this one. For now, please do the following:
 
-
-                  git clone https://github.com/SkymindIO/mavenized-jcuda
-                  cd mavenized-jcuda
-                  mvn clean install
-
+             git clone https://github.com/SkymindIO/mavenized-jcuda
+             cd mavenized-jcuda
+             mvn clean install
 
 This will install the Jcuda jar files.
 
 You need to specify a version of Jcuda to use as well. The version will depend on your GPU. Amazon supports 0.5.5.
 
+This will install the Jcuda jar files.
+
 **NEXT STEP**: Now you're ready to run the examples cited in our [documentation](../elementwise.html).
 
-**The curious** will want to examine our [Github repo](https://github.com/SkymindIO/nd4j) or access the core through [Maven](http://maven.apache.org/download.cgi).
+Here's our [Github repo](https://github.com/SkymindIO/nd4j), or you can access the core through [Maven](http://maven.apache.org/download.cgi).
