@@ -55,7 +55,7 @@ description: ""
              <version>0.0.3.5.2</version>
             </dependency>
 
-From there, you need to pick a suitable implementation. This can be either Jblas for native or Cuda for GPUs.
+From there, you need to pick a suitable implementation. That can be either Jblas for native or Cuda for GPUs.
 
 Jblas:
 
@@ -75,17 +75,13 @@ Jcuda:
              <version>0.0.3.5.2</version>
             </dependency>
 
-For Jcuda, we are still in the process of streamlining the release for this one. For now, please do the following:
+We're still streamlining the release for Jcuda. For now, please do the following:
 
              git clone https://github.com/SkymindIO/mavenized-jcuda
              cd mavenized-jcuda
              mvn clean install
 
-This will install the Jcuda jar files.
-
-You need to specify a version of Jcuda to use as well. The version will depend on your GPU. Amazon supports 0.5.5.
-
-This will install the Jcuda jar files.
+This will install the Jcuda jar files. You need to specify a version of Jcuda to use as well. The version will depend on your GPU. Amazon supports 0.5.5.
 
 **NEXT STEP**: Now you're ready to run the examples cited in our [documentation](../elementwise.html).
 
