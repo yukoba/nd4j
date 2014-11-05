@@ -11,6 +11,7 @@ The basic operations of linear algebra are matrix creation, addition and multipl
 * [Matrix Operations](../matrixwise.html)
 * [Reshape/Transpose Matrices](../reshapetranspose.html)
 * [Functions](../functions.html)
+* [Swapping CPUs for GPUs](../gpu_native_backends.html)
 
 (The example code for elementwise operations [lives here](https://github.com/SkymindIO/nd4j/blob/master/nd4j-examples/src/main/java/org/nd4j/examples/ElementWiseOperationExample.java).)
 
