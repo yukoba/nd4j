@@ -5,7 +5,7 @@ layout: default
 
 # Swapping GPU and Native Backends
 
-Selecting between GPUs and native CPUs for your backend processing happens in ND4J's POM file. 
+To select between GPUs and native CPUs for your backend processing, you'll need to change the dependencies in ND4J's POM file. Your selection will affect both ND4J and, if you're using it, [Deeplearning4j](http://deeplearning4j.org/).
 
 Every project in Maven needs a Project Object Model, or POM, in the root directory. It's an XML file with information and configuration details that Maven uses to build the project.
 
