@@ -58,6 +58,12 @@ You can then manually import the jar files in to [eclipse](http://stackoverflow.
 
 
 
+###Working with the source
+
+If you want to develop for nd4j, git clone the software and use maven as follows:
+
+mvn clean install -DskipTests -Dmaven.javadoc.skip=true
+
 
 **NEXT STEP**: Now you're ready to run the examples cited in our [documentation](../elementwise.html).
 
