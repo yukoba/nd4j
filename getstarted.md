@@ -7,10 +7,53 @@ description: ""
 
 * ND4J requires [Java 7](http://www.oracle.com/technetwork/java/javase/downloads/jdk7-downloads-1880260.html).
 
-* You can install ND4J either from source or from Maven central. Either way you do it, you need to run this git command and cd into an ND4J working directory. 
 
-         git clone https://github.com/SkymindIO/nd4j.git
-         cd nd4j
+If you are using maven, you need to specify 2 dependencies. One is the api:
+                
+                 <dependency>
+                   <groupId>org.nd4j</groupId>
+                   <artifactId>nd4j-api</artifactId>
+                   <version>${nd4j.version}</version>
+               </dependency>
+             
+  This is the core implementation that handles most of the interop of the different implementations.
+  
+  You then need one of the backends.  Nd4j supports several backends which range from cuda to different native implementations. The reason for this is that while there are several different blas implementations on the jvm, none of them support a matlab/numpy like interface. Either that or they are in pure java (which for more computational applications can cause problems) See the [downloads](http://nd4j.org/downloads.html) page for more of an explanation on available backends.
+  
+ The available backends right now are:
+    
+    Jblas: 
+    
+               <dependency>
+                   <groupId>org.nd4j</groupId>
+                   <artifactId>nd4j-jblas</artifactId>
+                   <version>${nd4j.version}</version>
+               </dependency>
+  
+     Net lib blas:
+      
+      
+              <dependency>
+                   <groupId>org.nd4j</groupId>
+                   <artifactId>nd4j-api</artifactId>
+                   <version>${nd4j.version}</version>
+               </dependency>
+      
+     Jcublas (cuda/GPUs):
+     
+     
+             <dependency>
+                   <groupId>org.nd4j</groupId>
+                   <artifactId>nd4j-jcublas</artifactId>
+                   <version>${nd4j.version}</version>
+               </dependency>
+  
+  
+
+##Not Maven
+
+See our [http://nd4j.org/downloads.html](downloads) page.
+
 
 ### IntelliJ
 
