@@ -5,7 +5,7 @@ description: ""
 ---
 {% include JB/setup %}
 
-* ND4J requires [Java 7](http://www.oracle.com/technetwork/java/javase/downloads/jdk7-downloads-1880260.html).
+ND4J requires [Java 7](http://www.oracle.com/technetwork/java/javase/downloads/jdk7-downloads-1880260.html).
 
 If you are using Maven, you need to specify two dependencies. One is the API:
                 
