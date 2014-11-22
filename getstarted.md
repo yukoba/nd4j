@@ -15,13 +15,13 @@ If you are using Maven, you need to specify two dependencies. One is the API:
                    <version>${nd4j.version}</version>
                  </dependency>
              
-This is the core implementation that handles most of the interop of the different implementations.
+This is the core implementation that handles most of the interoperability of different implementations.
 
-You then need one of the backends. ND4J supports several backends which range from Cuda to different native implementations. That's because, while there are several different Blas implementations on the JVM, none of them support a Matlab/Numpy-like interface. Either that or they are in pure Java (which for more computational applications can cause problems). See the [downloads](http://nd4j.org/downloads.html) page for a more thorough explanation on the backends available.
-  
-For the moment, they are:
+You'll also need to choose a backend. 
+
+ND4J supports several backends, ranging from Cuda to different native implementations. While there are several Blas implementations on the JVM, none of them support a Matlab/Numpy-like interface. See our [downloads](http://nd4j.org/downloads.html) page for a more thorough explanation on the backends available.
     
-Jblas: 
+## Jblas
 
                  <dependency>
                    <groupId>org.nd4j</groupId>
@@ -29,7 +29,7 @@ Jblas:
                    <version>${nd4j.version}</version>
                  </dependency>
   
-Net lib Blas:
+## Net lib Blas:
  
                  <dependency>
                    <groupId>org.nd4j</groupId>
@@ -37,7 +37,7 @@ Net lib Blas:
                    <version>${nd4j.version}</version>
                  </dependency>
       
-Jcublas (cuda/GPUs):
+## Jcublas (Cuda/GPUs):
      
                  <dependency>
                    <groupId>org.nd4j</groupId>
