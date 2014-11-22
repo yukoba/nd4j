@@ -7,11 +7,9 @@ description: ""
 
 # Downloads
 
-ND4j allows you to alternate between the computational backends (GPUs and different native blas bindings). In Maven, it's fairly easy to switch between different backends. 
+ND4j lets you switch between three computational backends: one for GPUs and two different native blas bindings. 
 
-This may not be as easy without. Here we provide a number of archives that contain all of the jar files required for usage of different of ND4J backends.
-
-Currently ND4j has three different versions: Two for native and one for GPUs.
+In Maven, it's fairly easy to switch between different backends. Without Maven, it may be harder. Here we provide a number of archives that contain all of the jar files required to use ND4J's backends.
 
 #Native
 
