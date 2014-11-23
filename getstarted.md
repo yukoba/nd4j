@@ -19,7 +19,9 @@ This is the core implementation that handles most of the interop.
 
 You'll also need to specify a backend dependency. 
 
-ND4J supports several backends, ranging from Cuda to different native implementations. While there are several Blas implementations on the JVM, none of them support a Matlab/Numpy-like interface. See our [downloads](http://nd4j.org/downloads.html) page for a more thorough explanation on the backends available.
+ND4J supports several backends, ranging from Cuda to different native implementations. While there are several Blas implementations on the JVM, none of them support a Matlab/Numpy-like interface, so we had to make one. 
+
+See our [downloads](http://nd4j.org/downloads.html) page for a more thorough explanation on the backends available.
     
 ## Jblas
 
@@ -49,14 +51,16 @@ ND4J supports several backends, ranging from Cuda to different native implementa
 
 See our [downloads](http://nd4j.org/downloads.html) page.
 
-You can then manually import the jar files in to [Eclipse](http://stackoverflow.com/questions/3280353/how-to-import-a-jar-in-eclipse) or [Intellij](http://stackoverflow.com/questions/1051640/correct-way-to-add-lib-jar-to-an-intellij-idea-project) or [Netbeans](http://gpraveenkumar.wordpress.com/2009/06/17/abc-to-import-a-jar-file-in-netbeans-6-5/).
+You can then manually import the jar files in to [Eclipse](http://stackoverflow.com/questions/3280353/how-to-import-a-jar-in-eclipse), [Intellij](http://stackoverflow.com/questions/1051640/correct-way-to-add-lib-jar-to-an-intellij-idea-project) or [Netbeans](http://gpraveenkumar.wordpress.com/2009/06/17/abc-to-import-a-jar-file-in-netbeans-6-5/).
 
 ###Working with source
 
-If you want to develop for ND4J, just git clone the software and use Maven as follows:
+If you want to develop for ND4J, just *git clone* the software and run this Maven command:
 
                  mvn clean install -DskipTests -Dmaven.javadoc.skip=true
 
-**NEXT STEP**: Now you're ready to run the examples cited in our [documentation](../elementwise.html).
+### Next Steps
 
-Here's our [Github repo](https://github.com/SkymindIO/nd4j), or you can access the core through [Maven](http://maven.apache.org/download.cgi).
+Now you're ready to run the examples cited in our [documentation](../elementwise.html).
+
+Here's our [Github repo](https://github.com/SkymindIO/nd4j). You can access the core through [Maven](http://maven.apache.org/download.cgi).
