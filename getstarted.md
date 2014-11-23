@@ -47,7 +47,7 @@ ND4J supports several backends, ranging from Cuda to different native implementa
 
 ##Bypassing Maven
 
-See our [http://nd4j.org/downloads.html](downloads) page.
+See our [downloads](http://nd4j.org/downloads.html) page.
 
 You can then manually import the jar files in to [Eclipse](http://stackoverflow.com/questions/3280353/how-to-import-a-jar-in-eclipse) or [Intellij](http://stackoverflow.com/questions/1051640/correct-way-to-add-lib-jar-to-an-intellij-idea-project), [Netbeans](http://gpraveenkumar.wordpress.com/2009/06/17/abc-to-import-a-jar-file-in-netbeans-6-5/).
 
