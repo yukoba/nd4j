@@ -7,7 +7,7 @@ description: ""
 
 ND4J requires [Java 7](http://www.oracle.com/technetwork/java/javase/downloads/jdk7-downloads-1880260.html).
 
-If you're using Maven, you need to specify two dependencies. The API, like so:
+If you're using [Maven](http://search.maven.org/#search%7Cga%7C1%7Cnd4j), a build automation tool used for Java projects, you need to specify two dependencies. The API, like so:
                 
                  <dependency>
                    <groupId>org.nd4j</groupId>
@@ -15,9 +15,11 @@ If you're using Maven, you need to specify two dependencies. The API, like so:
                    <version>${nd4j.version}</version>
                  </dependency>
              
-This is the core implementation that handles most of the interoperability of different implementations.
+This is the core implementation that handles most of the interop.
 
-You'll also need to specify a backend dependency. ND4J supports several backends, ranging from Cuda to different native implementations. While there are several Blas implementations on the JVM, none of them support a Matlab/Numpy-like interface. See our [downloads](http://nd4j.org/downloads.html) page for a more thorough explanation on the backends available.
+You'll also need to specify a backend dependency. 
+
+ND4J supports several backends, ranging from Cuda to different native implementations. While there are several Blas implementations on the JVM, none of them support a Matlab/Numpy-like interface. See our [downloads](http://nd4j.org/downloads.html) page for a more thorough explanation on the backends available.
     
 ## Jblas
 
