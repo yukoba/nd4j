@@ -7,7 +7,17 @@ description: ""
 
 ND4J requires [Java 7](http://www.oracle.com/technetwork/java/javase/downloads/jdk7-downloads-1880260.html).
 
-If you're using [Maven](http://search.maven.org/#search%7Cga%7C1%7Cnd4j), a build automation tool used for Java projects, you need to specify two dependencies. The API, like so:
+### Maven
+
+You can install both ND4J and Deeplearning4j separately via [Maven](https://maven.apache.org/download.cgi), a build automation tool used for Java projects. Maven installations require you to: 
+
+* Create your root directory; e.g. nd4j or deeplearning4j.
+* Create a pom.xml file within that directory.
+* Add dependencies and other information into that POM file (see below).
+* Choose your IDE -- [Eclipse](http://books.sonatype.com/m2eclipse-book/reference/creating-sect-importing-projects.html), [IntelliJ](https://www.jetbrains.com/idea/help/importing-project-from-maven-model.html) or [Netbeans](http://wiki.netbeans.org/MavenBestPractices) -- and import the project via Maven. (Alternatively, you can run mvn install within the root.)
+* Note that by using Maven you never run git clone, and you never have to deal with source code, only byte code and jar files. 
+
+For your POM, you need to specify two dependencies, which are detailed in the [Readme](https://github.com/SkymindIO/nd4j/blob/master/README.md). The API, like so:
                 
                  <dependency>
                    <groupId>org.nd4j</groupId>
