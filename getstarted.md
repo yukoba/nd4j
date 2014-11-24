@@ -13,7 +13,7 @@ You can install both ND4J and Deeplearning4j separately via [Maven](https://mave
 
 * Create your root directory; e.g. nd4j or deeplearning4j.
 * Create a pom.xml file within that directory.
-* Add dependencies and other information into that POM file (see below).
+* Add dependencies and other information to that POM file (see below).
 * Choose your IDE -- [Eclipse](http://books.sonatype.com/m2eclipse-book/reference/creating-sect-importing-projects.html), [IntelliJ](https://www.jetbrains.com/idea/help/importing-project-from-maven-model.html) or [Netbeans](http://wiki.netbeans.org/MavenBestPractices) -- and import the project via Maven. (Alternatively, you can run mvn install within the root.)
 * Note that by using Maven you never run git clone (everything is called from the POM), and you never have to deal with source code, only byte code and jar files.  
 
