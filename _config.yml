@@ -8,10 +8,10 @@ highlighter: pygments
 # Themes are encouraged to use these universal variables 
 # so be sure to set them if your theme uses them.
 #
-title : ND4J - N-Dimensional Scientific Computing for Java
-tagline: Scientific Computing for Java
+title : N-Dimensional Scientific Computing for Java
+tagline: ND-Arrays for the JVM
 author :
-  name : BLIX LLC
+  name : Skymind LLC
   email : 1@blix.io
   github : SkymindIO/nd4j
   twitter : dl4j1
