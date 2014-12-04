@@ -11,8 +11,8 @@ highlighter: pygments
 title : N-Dimensional Scientific Computing for Java
 tagline: ND-Arrays for the JVM
 author :
-  name : Skymind LLC
-  email : 1@blix.io
+  name : Skymind Inc.
+  email : chris@skymind.io
   github : SkymindIO/nd4j
   twitter : dl4j1
   feedburner : feedname
