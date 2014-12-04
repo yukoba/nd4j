@@ -80,7 +80,7 @@ If you perform all these operations on your initial 2 x 2 matrix, you should end
 
 ## Elementwise vector operations
 
-When performed with simple units like scalars, the operations of arithmatic are unambiguous. But working with matrices, addition and multiplication can mean several things. With vector-on-matrix operations, you have to know what kind of addition or multiplication you're performing in each case. 
+When performed with simple units like scalars, the operations of arithmetic are unambiguous. But working with matrices, addition and multiplication can mean several things. With vector-on-matrix operations, you have to know what kind of addition or multiplication you're performing in each case. 
 
 First, we'll create a 2 x 2 matrix, a column vector and a row vector. 
 
