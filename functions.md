@@ -74,4 +74,4 @@ Should give you this
       [2.7182817 ,20.085537 ,148.41316 ,1096.6332 ,8103.084 ,59874.14]
       [7.389056 ,54.59815 ,403.4288 ,2980.958 ,22026.465 ,162754.8]
 
-These are just a few of the functions available in ND4J. 
+These are just a few of the functions available in ND4J. You can learn more about our API from [ND4J's Github repo](https://github.com/SkymindIO/nd4j/tree/master/nd4j-api/src/main/java/org/nd4j/linalg).
