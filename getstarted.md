@@ -5,6 +5,12 @@ description: ""
 ---
 {% include JB/setup %}
 
+Contents
+
+
+
+### Java
+
 ND4J requires [Java 7](http://www.oracle.com/technetwork/java/javase/downloads/jdk7-downloads-1880260.html).
 
 ### Maven
@@ -59,15 +65,15 @@ See our [downloads](http://nd4j.org/downloads.html) page for a more thorough exp
 	   <version>${nd4j.version}</version>
 	 </dependency>
 
-##Bypassing Maven
+##Bypassing Maven With Downloads
 
 See our [downloads](http://nd4j.org/downloads.html) page.
 
 You can then manually import the jar files in to [Eclipse](http://stackoverflow.com/questions/3280353/how-to-import-a-jar-in-eclipse), [Intellij](http://stackoverflow.com/questions/1051640/correct-way-to-add-lib-jar-to-an-intellij-idea-project) or [Netbeans](http://gpraveenkumar.wordpress.com/2009/06/17/abc-to-import-a-jar-file-in-netbeans-6-5/).
 
-###Working with source
+###Working with Source (Github)
 
-If you want to develop for ND4J, just *git clone* the software and run this Maven command:
+If you want to develop for ND4J, just *git clone* the software and run this Maven command within the ND4J directory:
 
     mvn clean install -DskipTests -Dmaven.javadoc.skip=true
 
