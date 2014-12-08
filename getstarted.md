@@ -19,11 +19,11 @@ You can install both ND4J and Deeplearning4j separately via [Maven](https://mave
 
 For your POM, you need to specify two dependencies, which are detailed in the [Readme](https://github.com/SkymindIO/nd4j/blob/master/README.md). The API, like so:
 
- <dependency>
-   <groupId>org.nd4j</groupId>
-   <artifactId>nd4j-api</artifactId>
-   <version>${nd4j.version}</version>
- </dependency>
+	 <dependency>
+	   <groupId>org.nd4j</groupId>
+	   <artifactId>nd4j-api</artifactId>
+	   <version>${nd4j.version}</version>
+	 </dependency>
 
 This is the core implementation that handles most of the interop.
 
