@@ -14,7 +14,7 @@
 		   <version>${nd4j.version}</version> 
 		 </dependency>
 
-		# Netlib Blas:
+		# Netlib Blas
 		# <dependency>
 		#   <groupId>org.nd4j</groupId>
 		#   <artifactId>nd4j-api</artifactId>
