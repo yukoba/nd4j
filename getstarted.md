@@ -41,7 +41,7 @@ The API, for one:
 	   <version>${nd4j.version}</version>
 	 </dependency>
 
-You can copy all the dependencies from [one text file](../pomtext.txt) into your POM, if that's more convenient, and simply comment in or comment out as you prefer.
+You can copy all the dependencies from [one text file](../pomtext.txt), paste them into your POM, and simply comment them in or out.
 
 ND4J-API is the core implementation that handles most of the interop. You'll also need to specify a backend dependency. 
 
