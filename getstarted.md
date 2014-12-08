@@ -57,7 +57,7 @@ See our [downloads](http://nd4j.org/downloads.html) page for a more thorough exp
 	   <version>${nd4j.version}</version>
 	 </dependency>
   
-### Netlib Blas:
+### Netlib Blas
  
 	 <dependency>
 	   <groupId>org.nd4j</groupId>
@@ -65,7 +65,7 @@ See our [downloads](http://nd4j.org/downloads.html) page for a more thorough exp
 	   <version>${nd4j.version}</version>
 	 </dependency>
 
-### Jcublas (Cuda/GPUs):
+### Jcublas (Cuda/GPUs)
 
 	 <dependency>
 	   <groupId>org.nd4j</groupId>
