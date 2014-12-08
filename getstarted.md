@@ -18,13 +18,13 @@ You can install both ND4J and Deeplearning4j separately via [Maven](https://mave
 * Note that by using Maven you never run git clone (everything is called from the POM), and you never have to deal with source code, only byte code and jar files.  
 
 For your POM, you need to specify two dependencies, which are detailed in the [Readme](https://github.com/SkymindIO/nd4j/blob/master/README.md). The API, like so:
-                
-                 <dependency>
-                   <groupId>org.nd4j</groupId>
-                   <artifactId>nd4j-api</artifactId>
-                   <version>${nd4j.version}</version>
-                 </dependency>
-             
+
+ <dependency>
+   <groupId>org.nd4j</groupId>
+   <artifactId>nd4j-api</artifactId>
+   <version>${nd4j.version}</version>
+ </dependency>
+
 This is the core implementation that handles most of the interop.
 
 You'll also need to specify a backend dependency. 
@@ -35,27 +35,27 @@ See our [downloads](http://nd4j.org/downloads.html) page for a more thorough exp
     
 ## Jblas
 
-                 <dependency>
-                   <groupId>org.nd4j</groupId>
-                   <artifactId>nd4j-jblas</artifactId>
-                   <version>${nd4j.version}</version>
-                 </dependency>
+ <dependency>
+   <groupId>org.nd4j</groupId>
+   <artifactId>nd4j-jblas</artifactId>
+   <version>${nd4j.version}</version>
+ </dependency>
   
 ## Net lib Blas:
  
-                 <dependency>
-                   <groupId>org.nd4j</groupId>
-                   <artifactId>nd4j-api</artifactId>
-                   <version>${nd4j.version}</version>
-                 </dependency>
-      
+ <dependency>
+   <groupId>org.nd4j</groupId>
+   <artifactId>nd4j-api</artifactId>
+   <version>${nd4j.version}</version>
+ </dependency>
+
 ## Jcublas (Cuda/GPUs):
-     
-                 <dependency>
-                   <groupId>org.nd4j</groupId>
-                   <artifactId>nd4j-jcublas</artifactId>
-                   <version>${nd4j.version}</version>
-                 </dependency>
+
+ <dependency>
+   <groupId>org.nd4j</groupId>
+   <artifactId>nd4j-jcublas</artifactId>
+   <version>${nd4j.version}</version>
+ </dependency>
 
 ##Bypassing Maven
 
@@ -67,7 +67,7 @@ You can then manually import the jar files in to [Eclipse](http://stackoverflow.
 
 If you want to develop for ND4J, just *git clone* the software and run this Maven command:
 
-                 mvn clean install -DskipTests -Dmaven.javadoc.skip=true
+    mvn clean install -DskipTests -Dmaven.javadoc.skip=true
 
 ### Next Steps
 
