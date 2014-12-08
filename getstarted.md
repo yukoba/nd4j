@@ -5,7 +5,15 @@ description: ""
 ---
 {% include JB/setup %}
 
-ND4J requires [Java 7](http://www.oracle.com/technetwork/java/javase/downloads/jdk7-downloads-1880260.html).
+ND4J requires Java 7.
+
+* First, test which version of Java you have (and whether you have it at all), by typing the following into the command line:
+
+		java -version
+
+* If you don't have Java 7 installed on your machine, download the [Java Development Kit (JDK) here](http://www.oracle.com/technetwork/java/javase/downloads/jdk7-downloads-1880260.html). The download will vary by operating system. For newer Macs, you'll want the file on the first line to mention Mac OS X (the number after *jdk-7u* increments with each update). It will look something like this:
+
+		Mac OS X x64 185.94 MB -  jdk-7u67-macosx-x71.dmg
 
 ## Maven
 
