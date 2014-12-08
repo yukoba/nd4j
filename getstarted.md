@@ -9,11 +9,11 @@ Contents
 
 
 
-### Java
+## Java
 
 ND4J requires [Java 7](http://www.oracle.com/technetwork/java/javase/downloads/jdk7-downloads-1880260.html).
 
-### Maven
+## Maven
 
 You can install both ND4J and Deeplearning4j separately via Maven, a build automation tool used for Java projects. You can read about how to install [Maven here](https://maven.apache.org/download.cgi). Once you download the compressed file containing the stable version, follow the instructions that pertain to your operating system; e.g. *"Unix-based Operating Systems (Linux, Solaris and Mac OS X)."* Confirm you have Maven by entering *mvn --version* into your command line before you continue. 
 
@@ -24,6 +24,8 @@ Maven installations of third-party software like ours require you to:
 * Add dependencies and other information to that POM file (see below).
 * Choose your IDE -- [Eclipse](http://books.sonatype.com/m2eclipse-book/reference/creating-sect-importing-projects.html), [IntelliJ](https://www.jetbrains.com/idea/help/importing-project-from-maven-model.html) or [Netbeans](http://wiki.netbeans.org/MavenBestPractices) -- and import the project via Maven. (Alternatively, you can run *mvn install* within the root.)
 * Note that by using Maven you never run git clone (everything is called from the POM), and you never have to deal with source code, only byte code and jar files.  
+
+###Dependencies
 
 For your POM, you need to specify two dependencies, which are detailed in the [Readme](https://github.com/SkymindIO/nd4j/blob/master/README.md). The API, like so:
 
@@ -41,7 +43,7 @@ ND4J supports several backends, ranging from Cuda to different native implementa
 
 See our [downloads](http://nd4j.org/downloads.html) page for a more thorough explanation on the backends available.
     
-## Jblas
+### Jblas
 
 	 <dependency>
 	   <groupId>org.nd4j</groupId>
@@ -49,7 +51,7 @@ See our [downloads](http://nd4j.org/downloads.html) page for a more thorough exp
 	   <version>${nd4j.version}</version>
 	 </dependency>
   
-## Net lib Blas:
+### Net lib Blas:
  
 	 <dependency>
 	   <groupId>org.nd4j</groupId>
@@ -57,7 +59,7 @@ See our [downloads](http://nd4j.org/downloads.html) page for a more thorough exp
 	   <version>${nd4j.version}</version>
 	 </dependency>
 
-## Jcublas (Cuda/GPUs):
+### Jcublas (Cuda/GPUs):
 
 	 <dependency>
 	   <groupId>org.nd4j</groupId>
@@ -65,19 +67,19 @@ See our [downloads](http://nd4j.org/downloads.html) page for a more thorough exp
 	   <version>${nd4j.version}</version>
 	 </dependency>
 
-##Bypassing Maven With Downloads
+## Bypassing Maven With Downloads
 
 See our [downloads](http://nd4j.org/downloads.html) page.
 
 You can then manually import the jar files in to [Eclipse](http://stackoverflow.com/questions/3280353/how-to-import-a-jar-in-eclipse), [Intellij](http://stackoverflow.com/questions/1051640/correct-way-to-add-lib-jar-to-an-intellij-idea-project) or [Netbeans](http://gpraveenkumar.wordpress.com/2009/06/17/abc-to-import-a-jar-file-in-netbeans-6-5/).
 
-###Working with Source (Github)
+## Working with Source (Github)
 
 If you want to develop for ND4J, just *git clone* the software and run this Maven command within the ND4J directory:
 
     mvn clean install -DskipTests -Dmaven.javadoc.skip=true
 
-### Next Steps
+## Next Steps
 
 Now you're ready to run the examples cited in our [documentation](../elementwise.html).
 
