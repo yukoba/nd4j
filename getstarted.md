@@ -35,27 +35,27 @@ See our [downloads](http://nd4j.org/downloads.html) page for a more thorough exp
     
 ## Jblas
 
- <dependency>
-   <groupId>org.nd4j</groupId>
-   <artifactId>nd4j-jblas</artifactId>
-   <version>${nd4j.version}</version>
- </dependency>
+	 <dependency>
+	   <groupId>org.nd4j</groupId>
+	   <artifactId>nd4j-jblas</artifactId>
+	   <version>${nd4j.version}</version>
+	 </dependency>
   
 ## Net lib Blas:
  
- <dependency>
-   <groupId>org.nd4j</groupId>
-   <artifactId>nd4j-api</artifactId>
-   <version>${nd4j.version}</version>
- </dependency>
+	 <dependency>
+	   <groupId>org.nd4j</groupId>
+	   <artifactId>nd4j-api</artifactId>
+	   <version>${nd4j.version}</version>
+	 </dependency>
 
 ## Jcublas (Cuda/GPUs):
 
- <dependency>
-   <groupId>org.nd4j</groupId>
-   <artifactId>nd4j-jcublas</artifactId>
-   <version>${nd4j.version}</version>
- </dependency>
+	 <dependency>
+	   <groupId>org.nd4j</groupId>
+	   <artifactId>nd4j-jcublas</artifactId>
+	   <version>${nd4j.version}</version>
+	 </dependency>
 
 ##Bypassing Maven
 
