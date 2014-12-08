@@ -55,7 +55,7 @@ See our [downloads](http://nd4j.org/downloads.html) page for a more thorough exp
 	   <version>${nd4j.version}</version>
 	 </dependency>
   
-### Net lib Blas:
+### Netlib Blas:
  
 	 <dependency>
 	   <groupId>org.nd4j</groupId>
