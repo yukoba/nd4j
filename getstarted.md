@@ -19,7 +19,11 @@ ND4J requires Java 7.
 
 You can install both ND4J and Deeplearning4j separately via Maven, a build automation tool used for Java projects. You can read about how to install [Maven here](https://maven.apache.org/download.cgi). 
 
-Once you download the compressed file containing Maven's latest stable version, follow the instructions that pertain to your operating system; e.g. *"Unix-based Operating Systems (Linux, Solaris and Mac OS X)."* Then confirm that you have Maven by entering *mvn --version* into your command line before you continue. 
+To see if Maven is on your machine, enter the following into the command line:
+
+		mvn --version
+
+If you don't, then download the compressed file containing Maven's latest stable version, following the instructions that pertain to your operating system; e.g. *"Unix-based Operating Systems (Linux, Solaris and Mac OS X)."* 
 
 Maven installations of third-party software like ours require you to: 
 
