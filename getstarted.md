@@ -5,6 +5,8 @@ description: ""
 ---
 {% include JB/setup %}
 
+<iframe width="840" height="610" src="//www.youtube.com/embed/D0TrW9ht2Qo" frameborder="0" allowfullscreen></iframe>
+
 ND4J requires Java 7.
 
 * First, test which version of Java you have (and whether you have it at all), by typing the following into the command line:
