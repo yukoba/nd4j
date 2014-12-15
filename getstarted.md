@@ -5,7 +5,7 @@ description: ""
 ---
 {% include JB/setup %}
 
-<iframe width="800" height="590" src="//www.youtube.com/embed/D0TrW9ht2Qo" frameborder="0" allowfullscreen></iframe>
+<iframe width="750" height="560" src="//www.youtube.com/embed/D0TrW9ht2Qo" frameborder="0" allowfullscreen></iframe>
 
 ND4J requires Java 7.
 
