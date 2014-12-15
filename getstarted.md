@@ -17,6 +17,12 @@ ND4J requires Java 7.
 
 		Mac OS X x64 185.94 MB -  jdk-7u67-macosx-x71.dmg
 
+### Github
+
+* Download Github for [Mac](https://mac.github.com/), [Windows](https://windows.github.com/), etc. Then enter this command into your terminal (Mac) or Git Shell (Windows):
+
+      git clone https://github.com/SkymindIO/nd4j
+
 ## Maven
 
 You can install both ND4J and Deeplearning4j separately via Maven, a build automation tool used for Java projects. You can read about how to install [Maven here](https://maven.apache.org/download.cgi). 
@@ -32,8 +38,7 @@ Maven installations of third-party software like ours require you to:
 * Create your root directory; e.g. nd4j or deeplearning4j.
 * Create a pom.xml file within that directory.
 * Add dependencies and other information to that POM file (see below).
-* Choose your IDE -- [Eclipse](http://books.sonatype.com/m2eclipse-book/reference/creating-sect-importing-projects.html), [IntelliJ](https://www.jetbrains.com/idea/help/importing-project-from-maven-model.html) or [Netbeans](http://wiki.netbeans.org/MavenBestPractices) -- and import the project via Maven. (Alternatively, you can run *mvn install* within the root.)
-* Note that by using Maven you never run git clone (everything is called from the POM), and you never have to deal with source code, only byte code and jar files.  
+* Choose your IDE -- [Eclipse](http://books.sonatype.com/m2eclipse-book/reference/creating-sect-importing-projects.html), [IntelliJ](https://www.jetbrains.com/idea/help/importing-project-from-maven-model.html) or [Netbeans](http://wiki.netbeans.org/MavenBestPractices) -- and import the ND4J project via Maven. (Alternatively, you can run *mvn install* within the root directory.)
 
 ###Dependencies
 
