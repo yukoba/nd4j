@@ -25,20 +25,22 @@ ND4J requires Java 7.
 
 ## Maven
 
-You can install both ND4J and Deeplearning4j separately via Maven, a build automation tool used for Java projects. You can read about how to install [Maven here](https://maven.apache.org/download.cgi). 
+You can install both ND4J and Deeplearning4j separately via Maven, a build automation tool used for Java projects. Instructions to install [Maven are here](https://maven.apache.org/download.cgi). 
 
 To see if Maven is on your machine, enter the following into the command line:
 
 		mvn --version
 
-If you don't, then download the compressed file containing Maven's latest stable version, following the instructions that pertain to your operating system; e.g. *"Unix-based Operating Systems (Linux, Solaris and Mac OS X)."* 
+If you don't have it, then download the compressed file containing Maven's latest stable version, following the instructions that pertain to your operating system; e.g. *"Unix-based Operating Systems (Linux, Solaris and Mac OS X)."* 
 
 Maven installations of third-party software like ours require you to: 
 
-* Create your root directory; e.g. nd4j or deeplearning4j.
-* Create a pom.xml file within that directory.
+You can install both ND4J and Deeplearning4j separately via [Maven](https://maven.apache.org/download.cgi), a build automation tool used for Java projects. Using Maven to install other software requires you to: 
+
+* Go to your root directory; e.g. nd4j or deeplearning4j.
+* Make sure the pom.xml files within that directory and each major subdirectory are properly configured. 
 * Add dependencies and other information to that POM file (see below).
-* Choose your IDE -- [Eclipse](http://books.sonatype.com/m2eclipse-book/reference/creating-sect-importing-projects.html), [IntelliJ](https://www.jetbrains.com/idea/help/importing-project-from-maven-model.html) or [Netbeans](http://wiki.netbeans.org/MavenBestPractices) -- and import the ND4J project via Maven. (Alternatively, you can run *mvn install* within the root directory.)
+* Choose your IDE -- [Eclipse](http://books.sonatype.com/m2eclipse-book/reference/creating-sect-importing-projects.html), [IntelliJ](https://www.jetbrains.com/idea/help/importing-project-from-maven-model.html) or [Netbeans](http://wiki.netbeans.org/MavenBestPractices) -- and import the ND4J project via Maven.
 
 ###Dependencies
 
