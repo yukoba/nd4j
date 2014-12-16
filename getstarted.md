@@ -40,7 +40,7 @@ If you don't have Java 7 installed on your machine, download the [Java Developme
 ## 2. GitHub
 
 ##### What it is
-[Github](http://en.wikipedia.org/wiki/GitHub) is a web-based [Revision Control System](http://en.wikipedia.org/wiki/Revision_control), _the [de facto host](http://opensource.com/life/12/11/code-hosting-comparison) for [open source](http://en.wikipedia.org/wiki/Comparison_of_open-source_software_hosting_facilities) projects_ (click [here](http://en.wikipedia.org/wiki/Comparison_of_open-source_software_hosting_facilities) for a comparison).
+[Github](http://en.wikipedia.org/wiki/GitHub) is a web-based [Revision Control System](http://en.wikipedia.org/wiki/Revision_control), _the [de facto host](http://opensource.com/life/12/11/code-hosting-comparison) for open source projects_ (click [here](http://en.wikipedia.org/wiki/Comparison_of_open-source_software_hosting_facilities) for a comparison between existing open-source software hosting facilities).
 
 ##### Why you need it
 If you just want to use the ND4J libraries, you do not need GitHub, Maven will take care of the .jar files. However, if you are planning to contribute to the ND4J project, you are very welcome to report bugs. By the way, thanks for all the people already doing so.
