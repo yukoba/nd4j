@@ -14,7 +14,7 @@ In order to use ND4J, you will need to have several tools installed in your mach
 3. [Maven](https://github.com/globalcaos/nd4j/blob/gh-pages/getstarted.md#3-maven)
 4. [IDE for Java](https://github.com/globalcaos/nd4j/blob/gh-pages/getstarted.md#4-ide-for-java)
 
-Installing these tools might take a few hours, so sit tight. This tutorial will guide you to run a few simple examples that illustrate how ND4J works.
+Installing these tools might take a few hours, so sit tight. This tutorial will guide you until you can run a few simple examples that illustrate how ND4J works.
 
 <iframe width="750" height="560" src="//www.youtube.com/embed/D0TrW9ht2Qo" frameborder="0" allowfullscreen></iframe>
 
@@ -64,9 +64,6 @@ It will allow you to install both ND4J and Deeplearning4j projects with a single
 
 See our [downloads](http://nd4j.org/downloads.html) page.
 
-You can then manually import the jar files in to [Eclipse](http://stackoverflow.com/questions/3280353/how-to-import-a-jar-in-eclipse), [Intellij](http://stackoverflow.com/questions/1051640/correct-way-to-add-lib-jar-to-an-intellij-idea-project) or [Netbeans](http://gpraveenkumar.wordpress.com/2009/06/17/abc-to-import-a-jar-file-in-netbeans-6-5/).
-
-
 ##### Is it already installed?
 To see if Maven is installed in your machine, enter the following into the command line:
 
@@ -107,6 +104,10 @@ We recommend for you to install [IntelliJ](https://www.jetbrains.com/idea/downlo
 For picky ones, these are some equivalent IDEs ([Eclipse](http://books.sonatype.com/m2eclipse-book/reference/creating-sect-importing-projects.html) or [Netbeans](http://wiki.netbeans.org/MavenBestPractices)).
 
 Now you can easily import the ND4J project via Maven.
+
+How to import files into your [IDE](http://encyclopedia.thefreedictionary.com/integrated+development+environment) of choice:
+[Intellij](http://stackoverflow.com/questions/1051640/correct-way-to-add-lib-jar-to-an-intellij-idea-project),
+[Eclipse](http://stackoverflow.com/questions/3280353/how-to-import-a-jar-in-eclipse) or [Netbeans](http://gpraveenkumar.wordpress.com/2009/06/17/abc-to-import-a-jar-file-in-netbeans-6-5/).
 
 ## Next Steps
 
