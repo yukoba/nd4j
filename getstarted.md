@@ -57,7 +57,7 @@ To clone the ND4J files, enter this command into your terminal (Mac) or Git Shel
 ## 3. Maven
 
 ##### What it is
-[Maven](http://maven.apache.org/what-is-maven.html) is an automated build tool for Java projects, that basically knows where the latest version of the libraries (ND4J .jar files) are, and will download them automatically into your computer, ready to reference.
+[Maven](http://maven.apache.org/what-is-maven.html) is an automated build tool for Java projects, that basically knows where the latest version of the libraries (ND4J .jar files) are, and downloads them automatically into your computer, ready to reference.
 
 ##### Why you need it
 It will allow you to install both ND4J and Deeplearning4j projects with a single command. You can alternatively bypass Maven with downloads:
@@ -80,7 +80,7 @@ Download the compressed file containing Maven's latest stable version, following
 Using Maven to install other software requires you to: 
 
 * Go to your root directory; e.g. nd4j or deeplearning4j.
-* Make sure the pom.xml files within that directory and each major subdirectory are properly configured. 
+* Make sure the [pom.xml files](https://maven.apache.org/pom.html) within that directory and each major subdirectory are properly configured. 
 * Add dependencies and other information to that POM file (see below).
 
 ###### Working with Source (Github)
