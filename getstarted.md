@@ -101,6 +101,8 @@ Now you're ready to run the examples cited in our [documentation](../elementwise
 
 Once you are comfortable with the examples, you might want to change the dependencies defined in the POM files. Learn how to change the [dependencies here](http://nd4j.org/dependencies.html).
 
+For further questions or feedback please contact us through our [Google Groups Forum](https://groups.google.com/forum/#!forum/nd4j).
+
 Useful links:
 
 * ND4J [project](http://nd4j.org/) and [Github repository](https://github.com/SkymindIO/nd4j).
