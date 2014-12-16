@@ -99,7 +99,7 @@ For picky ones, these are some equivalent IDEs ([Eclipse](http://books.sonatype.
 
 Now you can easily import the ND4J project via Maven.
 
-How to import files into your [IDE](http://encyclopedia.thefreedictionary.com/integrated+development+environment) of choice:
+How to import files into the IDE of choice:
 [Intellij](http://stackoverflow.com/questions/1051640/correct-way-to-add-lib-jar-to-an-intellij-idea-project),
 [Eclipse](http://stackoverflow.com/questions/3280353/how-to-import-a-jar-in-eclipse) or [Netbeans](http://gpraveenkumar.wordpress.com/2009/06/17/abc-to-import-a-jar-file-in-netbeans-6-5/).
 
