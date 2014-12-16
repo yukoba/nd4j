@@ -11,10 +11,6 @@ ND4j lets you switch between three computational backends: one for GPUs and two 
 
 In Maven, it's fairly easy to switch between different backends. Without Maven, it may be harder. Here we provide a number of archives that contain all of the jar files required to use ND4J's backends.
 
-How to import file into your [IDE](http://encyclopedia.thefreedictionary.com/integrated+development+environment) of choice:
-[Intellij](http://stackoverflow.com/questions/1051640/correct-way-to-add-lib-jar-to-an-intellij-idea-project),
-[Eclipse](http://stackoverflow.com/questions/3280353/how-to-import-a-jar-in-eclipse) or [Netbeans](http://gpraveenkumar.wordpress.com/2009/06/17/abc-to-import-a-jar-file-in-netbeans-6-5/).
-
 #Native
 
 ## Jblas
