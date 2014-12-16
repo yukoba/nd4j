@@ -102,57 +102,11 @@ You want to set up a hassle-free development environment so that you only worry 
 Just check your installed programs.
 
 ##### Installation
-We recommend for you to install [IntelliJ](https://www.jetbrains.com/idea/download/), unless you are a strong advocate of another equivalent IDE ([Eclipse](http://books.sonatype.com/m2eclipse-book/reference/creating-sect-importing-projects.html) or [Netbeans](http://wiki.netbeans.org/MavenBestPractices)).
+We recommend for you to install [IntelliJ](https://www.jetbrains.com/idea/download/). You will be perfectly fine with the free community edition.
+
+For picky ones, these are some equivalent IDEs ([Eclipse](http://books.sonatype.com/m2eclipse-book/reference/creating-sect-importing-projects.html) or [Netbeans](http://wiki.netbeans.org/MavenBestPractices)).
+
 Now you can easily import the ND4J project via Maven.
-
-
-
-
-
-
-### Dependencies
-
-For your POM, you need to specify two dependencies, which are detailed in the [Readme](https://github.com/SkymindIO/nd4j/blob/master/README.md). 
-
-The API, for one:
-
-	 <dependency>
-	   <groupId>org.nd4j</groupId>
-	   <artifactId>nd4j-api</artifactId>
-	   <version>${nd4j.version}</version>
-	 </dependency>
-
-You can copy all the dependencies from [one text file](../pomtext.txt), paste them into your POM, and simply comment them in or out.
-
-ND4J-API is the core implementation that handles most of the interop. You'll also need to specify a backend dependency. 
-
-ND4J supports several backends, ranging from Cuda to different native implementations. While there are several Blas implementations on the JVM, none of them support a Matlab/Numpy-like interface, so we had to make one. 
-
-See our [downloads](http://nd4j.org/downloads.html) page for a more thorough explanation on the backends available.
-    
-### Jblas
-
-	 <dependency>
-	   <groupId>org.nd4j</groupId>
-	   <artifactId>nd4j-jblas</artifactId>
-	   <version>${nd4j.version}</version>
-	 </dependency>
-  
-### Netlib Blas
- 
-	 <dependency>
-	   <groupId>org.nd4j</groupId>
-	   <artifactId>nd4j-api</artifactId>
-	   <version>${nd4j.version}</version>
-	 </dependency>
-
-### Jcublas (Cuda/GPUs)
-
-	 <dependency>
-	   <groupId>org.nd4j</groupId>
-	   <artifactId>nd4j-jcublas</artifactId>
-	   <version>${nd4j.version}</version>
-	 </dependency>
 
 ## Next Steps
 
