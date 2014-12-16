@@ -74,12 +74,6 @@ Instructions to install [Maven are here](https://maven.apache.org/download.cgi).
 
 Download the compressed file containing Maven's latest stable version, following the instructions that pertain to your operating system; e.g. *"Unix-based Operating Systems (Linux, Solaris and Mac OS X)."* 
 
-Using Maven to install other software requires you to: 
-
-* Go to your root directory; e.g. nd4j or deeplearning4j.
-* Make sure the [pom.xml files](https://maven.apache.org/pom.html) within that directory and each major subdirectory are properly configured. 
-* Add dependencies and other information to that POM file (see below).
-
 ###### Working with Source (Github)
 
 If you want to develop for ND4J, just *git clone* the software and run this Maven command within the ND4J directory:
