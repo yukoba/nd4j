@@ -7,7 +7,13 @@ description: ""
 
 ### Dependencies
 
-For your POM, you need to specify two dependencies, which are detailed in the [Readme](https://github.com/SkymindIO/nd4j/blob/master/README.md). 
+Using Maven to install other software requires you to: 
+
+* Go to your root directory; e.g. nd4j or deeplearning4j.
+* Make sure the [pom.xml files](https://maven.apache.org/pom.html) within that directory and each major subdirectory are properly configured. 
+* Add dependencies and other information to that POM file (see below).
+
+For your POM, you need to specify two dependencies, which are detailed in the [Readme](https://github.com/SkymindIO/nd4j/blob/master/README.md).
 
 The API, for one:
 
