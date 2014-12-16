@@ -103,7 +103,7 @@ Once you are comfortable with the examples, you might want to change the depende
 
 Useful links:
 
-* [Github ND4J repository](https://github.com/SkymindIO/nd4j).
-* [Github DeepLearning4J repository](https://github.com/SkymindIO/deeplearning4j).
+* ND4J [project](http://nd4j.org/) and [Github repository](https://github.com/SkymindIO/nd4j).
+* DeepLearning4J [project](http://deeplearning4j.org/) and [Github repository](https://github.com/SkymindIO/deeplearning4j).
 
 
