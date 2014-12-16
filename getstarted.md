@@ -114,3 +114,5 @@ How to import files into your [IDE](http://encyclopedia.thefreedictionary.com/in
 Now you're ready to run the examples cited in our [documentation](../elementwise.html).
 
 Here's our [Github repo](https://github.com/SkymindIO/nd4j). You can access the core through [Maven](http://maven.apache.org/download.cgi).
+
+If you want to start doing fancy stuff, you might want to change the POM files. Learn how to change the [dependencies](http://nd4j.org/dependencies.html).
