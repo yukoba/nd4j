@@ -21,7 +21,7 @@ Installing these tools might take a few hours, so sit tight. This tutorial will 
 # 1. Java
 
 ### What it is
-[Java](http://en.wikipedia.org/wiki/Java_%28programming_language%29) is yor [programming language](http://en.wikipedia.org/wiki/Comparison_of_programming_languages) of choice.
+[Java](http://en.wikipedia.org/wiki/Java_%28programming_language%29) is our [programming language](http://en.wikipedia.org/wiki/Comparison_of_programming_languages) of choice.
 
 ### Why you need it
 Java will translate your code into machine code, allowing you to run it.
@@ -30,6 +30,7 @@ Java will translate your code into machine code, allowing you to run it.
 To test which version of Java you have (and whether you have it at all), type the following into the command line:
 
 		java -version
+
 ND4J requires Java 7, so if you have an older verion, you will need to install a newer one.
 
 ### Installation
