@@ -25,7 +25,7 @@ The full installation may take an hour or so, depending on the speed of your Int
 [Java](http://en.wikipedia.org/wiki/Java_%28programming_language%29) is our [programming language](http://en.wikipedia.org/wiki/Comparison_of_programming_languages) of choice.
 
 ### Why you need it
-Java will translate your code into machine code, allowing you to run it.
+Java will translate your code into machine code, and allow you to work cross-platform on servers, desktops and mobile.
 
 ### Is it already installed?
 To test which version of Java you have (and whether you have it at all), type the following into the command line:
@@ -42,7 +42,7 @@ If you don't have Java 7 installed on your machine, download the [Java Developme
 # 2. <a name="github">Github</a>
 
 ### What it is
-[Github](http://en.wikipedia.org/wiki/GitHub) is a web-based [Revision Control System](http://en.wikipedia.org/wiki/Revision_control), _the [de facto host](http://opensource.com/life/12/11/code-hosting-comparison) for open source projects_ (click [here](http://en.wikipedia.org/wiki/Comparison_of_open-source_software_hosting_facilities) for a comparison between existing open-source software hosting facilities).
+[Github](http://en.wikipedia.org/wiki/GitHub) is a web-based [Revision Control System](http://en.wikipedia.org/wiki/Revision_control), _the [de facto host](http://opensource.com/life/12/11/code-hosting-comparison) for open-source projects_ (click [here](http://en.wikipedia.org/wiki/Comparison_of_open-source_software_hosting_facilities) for a comparison between existing open-source software hosting facilities).
 
 ### Why you need it
 If you just want to use the ND4J libraries, you do not need GitHub, Maven will take care of the .jar files. However, if you are planning to contribute to the [ND4J](https://github.com/SkymindIO/nd4j) or the [DeepLearning4J](https://github.com/SkymindIO/deeplearning4j) project, you are welcome to report bugs. (Our gratitude goes out to those already doing so.)
@@ -59,10 +59,10 @@ To clone the ND4J files, enter this command into your terminal (Mac) or Git Shel
 # 3. <a name="maven">Maven</a>
 
 ### What it is
-Maven is an automated build tool for Java projects (among other [things](http://maven.apache.org/what-is-maven.html)), that basically knows where the latest version of the libraries (ND4J .jar files) are, and downloads them automatically into your computer, ready to reference.
+Maven is an automated build tool for Java projects (among other [things](http://maven.apache.org/what-is-maven.html)), which  knows where the latest version of the libraries (ND4J .jar files) are and downloads them automatically to your computer, ready to reference.
 
 ### Why you need it
-Maven will allow you to install both ND4J and Deeplearning4j projects with a single command. Moreover, it integrates with an Integrated Development Environment ([IDE](https://github.com/globalcaos/nd4j/blob/gh-pages/getstarted.md#4-ide-for-java)), which you will install later (see below). If you really know what you are doing, and still do not align with Maven's paradigm, you can alternatively bypass it visiting our [downloads](http://nd4j.org/downloads.html) page.
+Maven will allow you to install both ND4J and Deeplearning4j projects with a single command. Moreover, it integrates with an Integrated Development Environment ([IDE](https://github.com/globalcaos/nd4j/blob/gh-pages/getstarted.md#4-ide-for-java)), which you will be asked to install below. If you know what you're doing, and don't align with Maven's paradigm, you can bypass it by visiting our [downloads](http://nd4j.org/downloads.html) page.
 
 ### Is it already installed?
 To see if Maven is installed in your machine, enter the following into the command line:
