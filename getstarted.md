@@ -9,7 +9,11 @@ description: ""
 
 In order to use ND4J, you will need to have several tools installed in your machine:
 
-1. [Java](https://github.com/globalcaos/nd4j/blob/gh-pages/getstarted.md#1-java)
+
+<a href="#java">Java</a>
+<a name="java">Java</a>
+
+1. <a href="#java">Java</a>
 2. [Github](https://github.com/globalcaos/nd4j/blob/gh-pages/getstarted.md#2-github)
 3. [Maven](https://github.com/globalcaos/nd4j/blob/gh-pages/getstarted.md#3-maven)
 4. [IDE for Java](https://github.com/globalcaos/nd4j/blob/gh-pages/getstarted.md#4-ide-for-java)
@@ -18,7 +22,7 @@ Installing these tools might take a few hours, so sit tight. This tutorial will 
 
 <iframe width="750" height="560" src="//www.youtube.com/embed/D0TrW9ht2Qo" frameborder="0" allowfullscreen></iframe>
 
-# 1. Java
+# 1. <a name="java">Java</a>
 
 ### What it is
 [Java](http://en.wikipedia.org/wiki/Java_%28programming_language%29) is our [programming language](http://en.wikipedia.org/wiki/Comparison_of_programming_languages) of choice.
