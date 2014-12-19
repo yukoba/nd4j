@@ -44,7 +44,7 @@ If you don't have Java 7 installed on your machine, download the [Java Developme
 [Github](http://en.wikipedia.org/wiki/GitHub) is a web-based [Revision Control System](http://en.wikipedia.org/wiki/Revision_control), _the [de facto host](http://opensource.com/life/12/11/code-hosting-comparison) for open source projects_ (click [here](http://en.wikipedia.org/wiki/Comparison_of_open-source_software_hosting_facilities) for a comparison between existing open-source software hosting facilities).
 
 ### Why you need it
-If you just want to use the ND4J libraries, you do not need GitHub, Maven will take care of the .jar files. However, if you are planning to contribute to the [ND4J](https://github.com/SkymindIO/nd4j) or the [DeepLearning4J](https://github.com/SkymindIO/deeplearning4j) project, you are very welcome to report bugs. By the way, thanks for all the people already doing so.
+If you just want to use the ND4J libraries, you do not need GitHub, Maven will take care of the .jar files. However, if you are planning to contribute to the [ND4J](https://github.com/SkymindIO/nd4j) or the [DeepLearning4J](https://github.com/SkymindIO/deeplearning4j) project, you are welcome to report bugs. (Our gratitude goes out to those already doing so.)
 
 ### Is it already installed?
 Just check your installed programs.
@@ -77,11 +77,10 @@ If you want to develop for ND4J, just *git clone* the software (explained above)
 
     mvn clean install -DskipTests -Dmaven.javadoc.skip=true
 
-
 # 4. IDE for Java
 
 ### What it is
-An Integrated Development Environment ([IDE](http://encyclopedia.thefreedictionary.com/integrated+development+environment)) will allow you to edit the source code, debug it and build it with a few clicks. The ones suggested here will use your installed version of Java, will talk with GitHub and Maven, which will take care of the dependencies for you. Visit our [dependencies](http://nd4j.org/dependencies.html) page to know how to 'easily' change the dependencies later on.
+An Integrated Development Environment ([IDE](http://encyclopedia.thefreedictionary.com/integrated+development+environment)) will allow you to edit the source code, debug it and build it with a few clicks. The ones suggested here will use your installed version of Java as well as communicate with GitHub and Maven, which will take care of the dependencies for you. Visit our [dependencies](http://nd4j.org/dependencies.html) page to know how to "easily" change the dependencies later on.
 
 ### Why you need it
 You want to set up a hassle-free development environment so that you only worry about your code.
@@ -90,23 +89,21 @@ You want to set up a hassle-free development environment so that you only worry 
 Just check your installed programs.
 
 ### Installation
-We recommend installing [IntelliJ](https://www.jetbrains.com/idea/download/). You will be perfectly fine with the free community edition.
+We recommend [IntelliJ](https://www.jetbrains.com/idea/download/), and its free, community edition does the job.
 
-For picky ones, these are some equivalent IDEs: [Eclipse](http://books.sonatype.com/m2eclipse-book/reference/creating-sect-importing-projects.html) or [Netbeans](http://wiki.netbeans.org/MavenBestPractices).
+If you prefer, ND4J can also be used with [Eclipse](http://books.sonatype.com/m2eclipse-book/reference/creating-sect-importing-projects.html) or [Netbeans](http://wiki.netbeans.org/MavenBestPractices).
 
 Now you can easily import the ND4J project via [Intellij](http://stackoverflow.com/questions/1051640/correct-way-to-add-lib-jar-to-an-intellij-idea-project) (or again, for picky ones via [Eclipse](http://stackoverflow.com/questions/3280353/how-to-import-a-jar-in-eclipse) or [Netbeans](http://gpraveenkumar.wordpress.com/2009/06/17/abc-to-import-a-jar-file-in-netbeans-6-5/)).
 
 # Next Steps
 
-Now you're ready to run the examples cited in our [documentation](../elementwise.html). We recommend that you launch your IDE, load the ND4J project and open the examples subdirectory. Locate one of them and click run. If everything was installed correctly you should see numbers appear as the program output. You can start inspecting/messing with the code.
+Now you're ready to run the examples cited in our [documentation](../elementwise.html). We recommend that you launch your IDE, load the ND4J project, and open the examples subdirectory. Right-click on one of them and select "Run" from the drop-down menu. If everything was installed correctly, you should see numbers appear as the program output. In the right window, you can also start inspecting/playing with the code.
 
 Once you are comfortable with the examples, you might want to change the dependencies defined in the POM files. Learn how to change the [dependencies here](http://nd4j.org/dependencies.html).
 
-For further questions or feedback please contact us through our [Google Groups Forum](https://groups.google.com/forum/#!forum/nd4j).
+If you have questions or feedback, please contact us through our [Google Groups Forum](https://groups.google.com/forum/#!forum/nd4j).
 
 Useful links:
 
 * ND4J [project](http://nd4j.org/) and [Github repository](https://github.com/SkymindIO/nd4j).
 * DeepLearning4J [project](http://deeplearning4j.org/) and [Github repository](https://github.com/SkymindIO/deeplearning4j).
-
-
