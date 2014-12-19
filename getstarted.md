@@ -7,7 +7,7 @@ description: ""
 
 # Overview
 
-In order to use ND4J, you will need to have several tools installed in your machine:
+In order to use ND4J, you will need to have a few tools installed on your machine:
 
 1. <a href="#java">Java</a>
 2. <a href="#github">Github</a>
@@ -15,7 +15,7 @@ In order to use ND4J, you will need to have several tools installed in your mach
 4. <a href="#ide">IDE for Java</a>
 5. <a href="#next">Next Steps</a>
 
-Installing these tools might take a few hours, so sit tight. This tutorial will guide you until you can run a few simple examples that illustrate how ND4J works.
+The full installation may take an hour or so, depending on the speed of your Internet connection. This tutorial will show you how to run a few simple examples that illustrate how ND4J works.
 
 <iframe width="750" height="560" src="//www.youtube.com/embed/D0TrW9ht2Qo" frameborder="0" allowfullscreen></iframe>
 
