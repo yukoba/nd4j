@@ -9,10 +9,6 @@ description: ""
 
 In order to use ND4J, you will need to have several tools installed in your machine:
 
-
-<a href="#ide">IDE for Java</a>
-<a name="ide">IDE for Java</a>
-
 1. <a href="#java">Java</a>
 2. <a href="#github">Github</a>
 3. <a href="#maven">Maven</a>
