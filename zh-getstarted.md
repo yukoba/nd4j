@@ -63,5 +63,61 @@ Github是基于互联网的的一个分布式的版本控制系统。GitHub可�
 
 ## <a name="maven">Maven</a>
 
+### 什么是Maven
 
+Maven是一个能自动构建Java项目（除其他事项外）的工具 ，它能知道并帮您下载最新版本的图书馆（ ND4J .jar文件）到您的计算机或电脑，让您随时准备引用。
 
+### 为什么您需要Maven
+
+只要一个命令，Maven可以让您同时安装ND4J和Deeplearning4j这两个项目。此外，它具有一个集成开发环境：Integrated Development Environment（ IDE ），我们将会在接下来的指示中要求您安装Maven。如果您很清楚的知道一切如何运作，您直接可以不需要通过Maven的模式进行调整，您直接通过我们的下载页面绕过它。
+
+### 您是否安装了Maven
+
+如果想要查看Maven是否的安装在您的计算机或电脑上，只要输入以下的文本到命令行：
+
+        mvn --version
+
+### 安装
+
+点击这里查看如何安装[Maven](https://maven.apache.org/download.cgi)。
+
+根据适用于您的操作系统的说明，例如基于UNIX操作系统（ Linux，Solaris和Mac OS X），然后下载包含Maven的最新稳定版本的压缩文件。
+
+如果您想要开发ND4J，只要git 复制（git clone）此软件（如上所述） ，并运行ND4J目录中的Maven命令：
+
+        mvn clean install -DskipTests -Dmaven.javadoc.skip=true
+
+## <a name="ide">Java IDE</a>
+
+### 什么是 Java IDE
+
+一个集成开发环境（ IDE）将允许你编辑源代码，调试它，点击几下建立它。那些在这里建议将您的安装的Java版本，以及与GitHub上和Maven沟通，这将依赖于你的照顾。[请访问我们的网页依赖知道如何“轻松”后来更改的依赖关系](http://nd4j.org/dependencies.html)。
+
+### 为什么您需要Java IDE
+
+你想建立一个无障碍的发展环境，让你只担心你的代码。
+
+### 您是否安装了Java IDE
+
+您只需检查您的安装的程序。
+
+### 安装
+
+我们推荐[IntelliJ](https://www.jetbrains.com/idea/download/) ，同时它也是免费的，我们只需要社区版（Community Edition）的就可以了。
+
+如果您喜欢， ND4J也可以在[Eclipse](http://books.sonatype.com/m2eclipse-book/reference/creating-sect-importing-projects.html)或[Netbeans](http://wiki.netbeans.org/MavenBestPractices)使用。
+
+现在您可以简单的通过IntelliJ来导入ND4J项目（或者通过Eclipse或 Netbeans）。
+
+## <a name="next">下一步</a>
+
+现在您可以运行我们引用文档中的例子。我们建议您启动您的IDE ，加载ND4J项目，并打开示例子目录。在其中一个右键单击并从下拉菜单中选择“运行” 。如果一切都被正确安装，你应该看到的数字显示为程序输出。在右侧窗口中，你也可以开始检查/的代码打。
+
+一旦您熟悉了这些例子，您可以更改POM文件中的依赖值。请点击这里学习如何改变依赖值。
+
+如果您有任何疑问或意见，请通过我们谷歌讨论组的论坛联系我们。
+
+相关链接:
+
+ND4J项目和Github上库。
+DeepLearning4J项目和Github上库。
