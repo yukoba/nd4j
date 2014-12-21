@@ -87,15 +87,7 @@ ND4J需要Java 7 才能执行，因此，如果您有较旧的Java版本，您�
 
         mvn clean install -DskipTests -Dmaven.javadoc.skip=true
 
-## <a name="ide">Java IDE</a>
-
-### 什么是 Java IDE
-
-一个集成开发环境（ [IDE](https://zh.wikipedia.org/wiki/%E9%9B%86%E6%88%90%E5%BC%80%E5%8F%91%E7%8E%AF%E5%A2%83)）将允许你编辑源代码，调试它，点击几下建立它。那些在这里建议将您的安装的Java版本，以及与GitHub上和Maven沟通，这将依赖于你的照顾。[请访问我们的网页依赖知道如何“轻松”后来更改的依赖关系](http://nd4j.org/dependencies.html)。
-
-### 为什么您需要Java IDE
-
-你想建立一个无障碍的发展环境，让你只担心你的代码。
+## <a name="ide">[Java IDE](https://zh.wikipedia.org/wiki/%E9%9B%86%E6%88%90%E5%BC%80%E5%8F%91%E7%8E%AF%E5%A2%83)</a>
 
 ### 您是否安装了Java IDE
 
@@ -110,8 +102,6 @@ ND4J需要Java 7 才能执行，因此，如果您有较旧的Java版本，您�
 现在您可以简单的通过[IntelliJ](https://zh.wikipedia.org/wiki/IntelliJ_IDEA)来导入ND4J项目（或者通过Eclipse或 Netbeans）。
 
 ## <a name="next">下一步</a>
-
-[现在您可以运行我们引用文档中的例子](http://nd4j.org/elementwise.html)。我们建议您启动您的IDE ，加载ND4J项目，并打开示例子目录。在其中一个右键单击并从下拉菜单中选择“运行” 。如果一切都被正确安装，你应该看到的数字显示为程序输出。在右侧窗口中，你也可以开始检查/的代码打。
 
 一旦您熟悉了这些例子，您可以更改POM文件中的依赖值。[请点击这里学习如何改变依赖值](http://nd4j.org/dependencies.html)。
 
