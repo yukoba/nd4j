@@ -37,7 +37,7 @@ ND4J需要Java 7 才能执行，因此，如果您有较旧的Java版本，您�
 
 ### 安装
 
-如果您的计算机（电脑）上没有安装Java 7，请到这里下载 Java开发工具包（ JDK ）。 Java的下载方法将因不同的操作系统而异。对于较新的苹果操作系统，您会看到在在第一行的文件提及Mac OS X（每一次的更新的，jdk-7U后的数字将增加）。您讲会看到类似以下的文本：
+如果您的计算机（电脑）上没有安装Java 7，请到这里下载 Java开发工具包（ [JDK](http://www.oracle.com/technetwork/java/javase/downloads/jdk7-downloads-1880260.html) ）。 Java的下载方法将因不同的操作系统而异。对于较新的苹果操作系统，您会看到在在第一行的文件提及Mac OS X（每一次的更新的，jdk-7U后的数字将增加）。您讲会看到类似以下的文本：
 
         Mac OS X x64 185.94 MB -  jdk-7u67-macosx-x71.dmg
     
@@ -107,7 +107,7 @@ ND4J需要Java 7 才能执行，因此，如果您有较旧的Java版本，您�
 
 如果您喜欢， ND4J也可以在[Eclipse](http://books.sonatype.com/m2eclipse-book/reference/creating-sect-importing-projects.html)或[Netbeans](http://wiki.netbeans.org/MavenBestPractices)使用。
 
-现在您可以简单的通过IntelliJ来导入ND4J项目（或者通过Eclipse或 Netbeans）。
+现在您可以简单的通过[IntelliJ](https://zh.wikipedia.org/wiki/IntelliJ_IDEA)来导入ND4J项目（或者通过Eclipse或 Netbeans）。
 
 ## <a name="next">下一步</a>
 
