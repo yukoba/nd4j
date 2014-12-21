@@ -21,7 +21,7 @@ tagline:
 
 ### 什么是Java
 
-Java是我们的首选编程语言。
+[Java](https://zh.wikipedia.org/wiki/Java)是我们的首选编程语言。
 
 ## 为什么您需要Java
 
@@ -45,7 +45,7 @@ ND4J需要Java 7 才能执行，因此，如果您有较旧的Java版本，您�
 
 ### 什么是Github
 
-Github是基于互联网的的一个分布式的版本控制系统。GitHub可以托管各种git库，并提供一个web界面，但与其它像 SourceForge或Google Code这样的服务不同，GitHub的独特卖点在于从另外一个项目进行分支的简易性。（点击此处查看现有的开放源代码软件的托管设施之间的比较） 。
+[Github](https://zh.wikipedia.org/wiki/GitHub)是基于互联网的的一个分布式的版本控制系统。GitHub可以托管各种git库，并提供一个web界面，但与其它像 SourceForge或Google Code这样的服务不同，GitHub的独特卖点在于从另外一个项目进行分支的简易性。（点击此处查看现有的开放源代码软件的托管设施之间的比较） 。
 
 ### 为什么您需要Github
 
@@ -65,7 +65,7 @@ Github是基于互联网的的一个分布式的版本控制系统。GitHub可�
 
 ### 什么是Maven
 
-Maven是一个能自动构建Java项目（除其他事项外）的工具 ，它能知道并帮您下载最新版本的图书馆（ ND4J .jar文件）到您的计算机或电脑，让您随时准备引用。
+[Maven](https://zh.wikipedia.org/wiki/Apache_Maven)是一个能自动构建Java项目（除其他事项外）的工具 ，它能知道并帮您下载最新版本的图书馆（ ND4J .jar文件）到您的计算机或电脑，让您随时准备引用。
 
 ### 为什么您需要Maven
 
