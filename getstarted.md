@@ -17,7 +17,6 @@ In order to use ND4J, you will need to have a few tools installed on your machin
 
 The full installation may take an hour or so, depending on the speed of your Internet connection. This tutorial will show you how to run a few simple examples that illustrate how ND4J works.
 
-<iframe width="750" height="560" src="//www.youtube.com/embed/D0TrW9ht2Qo" frameborder="0" allowfullscreen></iframe>
 
 # 1. <a name="java">Java</a>
 
