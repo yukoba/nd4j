@@ -8,7 +8,7 @@ description: ""
 |Method| Meaning| Type |
 |:----------|:-------------:| ----:|
 |abs(IComplexNDArray ndarray)| abs(x)|
-|applyDerivative(INDArray input)|Applies the derivative of a transform function to the param input|
+|applyDerivative(INDArray input)|Applies the derivative of a transform function to the param input|Activation|
 |cosineSim(INDArray d1, INDArray d2)|Measures the cosine of the angle between two vectors of an inner product space||
 |downSample(INDArray d1, int[] stride)|Decreases the sampling rate by integer factor (stride)|Signal processing|
 |eigenvalues(INDArray A)|Computes the eigenvalues of a general matrix.|
@@ -18,6 +18,7 @@ description: ""
 |identity|||
 |linear()|Linear activation function, just returns the input as is|Activation|
 |maxout()|Max out activation: max of input(i,j)|Activation|
+|normalizeZeroMeanAndUnitVariance(INDArray toNormalize)|Normalize data to zero mean and unit variance: substract by the mean and divide by the standard deviation||
 |rectifiedLinear()|Rectified linear, the output: rounded|Activation|
 |roundedlinear()|Rounded linear, the output: rounded|Activation|
 |tanh()|Hyperbolic tangent: a sigmoidal function|Activation|
@@ -26,5 +27,5 @@ description: ""
 |softMaxRows()|Softmax with row wise features|Activation|
 |symmetricGeneralizedEigenvalues(INDArray A)|Computes generalized eigenvalues of the problem A x = L B x.|
 |symmetricGeneralizedEigenvalues(INDArray A, INDArray B)|Compute generalized eigenvalues of the problem A x = L B x.|
-|unitVec||
+|unitVec|Scale by 1 / norm2 of the matrix||
 |upSample(INDArray d, INDArray scale)|Upsampling a signal (specifically the first 2 dimensions)|Signal processing|
