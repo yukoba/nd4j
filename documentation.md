@@ -27,3 +27,4 @@ description: ""
 |symmetricGeneralizedEigenvalues(INDArray A)|Computes generalized eigenvalues of the problem A x = L B x.|
 |symmetricGeneralizedEigenvalues(INDArray A, INDArray B)|Compute generalized eigenvalues of the problem A x = L B x.|
 |unitVec||
+|upSample(INDArray d, INDArray scale)|Upsampling a signal (specifically the first 2 dimensions)|Signal processing|
