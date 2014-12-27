@@ -21,6 +21,7 @@ description: ""
 |identity(INDArray ndArray)||Transform|
 |linear()|Linear activation function, just returns the input as is|Activation|
 |maxout()|Max out activation: max of input(i,j)|Activation|
+|maxPool(INDArray input,int[] ds,boolean ignoreBorder)|Max pooling|Transform|
 |neq(INDArray ndArray)|Binary matrix of whether the number at a given index is equal||
 |normalizeZeroMeanAndUnitVariance(INDArray toNormalize)|Normalize data to zero mean and unit variance: substract by the mean and divide by the standard deviation||
 |rectifiedLinear()|Rectified linear, the output: rounded|Activation|
