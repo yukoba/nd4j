@@ -9,8 +9,8 @@ description: ""
 |:----------|:-------------:| ----:|
 |abs(IComplexNDArray ndarray)| abs(x)|
 |applyDerivative(INDArray input)|Applies the derivative of a transform function to the param input|
-|cosineSim||
-|downSample(INDArray d1, int[] stride)|Decreases the sampling rate by integer factor (stride)|
+|cosineSim(INDArray d1, INDArray d2)|Measures the cosine of the angle between two vectors of an inner product space||
+|downSample(INDArray d1, int[] stride)|Decreases the sampling rate by integer factor (stride)|Signal processing|
 |eigenvalues(INDArray A)|Computes the eigenvalues of a general matrix.|
 |eigenvectors(INDArray A)|Computes the eigenvalues and eigenvectors of a general matrix. For matlab users note the following from their documentation: The columns of V present eigenvectors of A. The diagonal matrix D contains eigenvalues. This is in reverse order of Matlab's eig(A) call.|
 |exp()|The e^x function|Activation|
