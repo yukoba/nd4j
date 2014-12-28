@@ -8,9 +8,14 @@ description: ""
 |Method| Meaning| Type |
 |:----------|:-------------:| ----:|
 |abs(IComplexNDArray ndarray)| abs(x)|
+|add(IComplexNumber c)|Add two complex numbers||
 |addi(IComplexNumber c, IComplexNumber result)|Add two complex numbers in place||
+|addi(IComplexNumber c)|Add two complex numbers in-place storing the result in this.||
+|addi(Number a, IComplexNumber result)|Add a real component number to a complex number in place||
 |applyDerivative(INDArray input)|Applies the derivative of a transform function to the param input|Activation|
 |asDouble()|Convert complex number to a double||
+|asFloat()|Convert this number to a float||
+|complexArgument()|Returns the argument of a complex number||
 |cosineSim(INDArray d1, INDArray d2)|Measures the cosine of the angle between two vectors of an inner product space||
 |downSample(INDArray d1, int[] stride)|Decreases the sampling rate by integer factor (stride)|Signal processing|
 |eigenvalues(INDArray A)|Computes the eigenvalues of a general matrix.|
@@ -37,6 +42,7 @@ description: ""
 |softmax()|Softmax function used for multinomial classification|Activation|
 |softMaxRows()|Softmax with row wise features|Activation|
 |sqrt(IComplexNDArray ndArray)|Takes the square root||
+|subi(IComplexNumber c, IComplexNumber result)|Subtract two complex numbers in place||
 |symmetricGeneralizedEigenvalues (INDArray A)|Computes generalized eigenvalues of the problem A x = L B x.|
 |symmetricGeneralizedEigenvalues (INDArray A, INDArray B)|Compute generalized eigenvalues of the problem A x = L B x.|
 |unitVec|Scale by 1 / norm2 of the matrix||
