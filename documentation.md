@@ -9,8 +9,9 @@ To see the complete nd4j-api reference, consult the [Javadocs](../apidocs).
 
 |Method| Meaning| Type |
 |:----------|:-------------:| ----:|
-|abs(IComplexNDArray ndarray)| abs(x)|
+|abs(IComplexNDArray ndarray)| Absolute value, abs(x)|Transform|
 |add(IComplexNumber c)|Add two complex numbers||
+|AdaGrad(int[] shape)|Vectorized Learning Rate used per Connection Weight; Create adagrad with the specified shape|Hyperparameter|
 |addi(IComplexNumber c, IComplexNumber result)|Add two complex numbers in place||
 |addi(IComplexNumber c)|Add two complex numbers in-place storing the result in this.||
 |addi(Number a, IComplexNumber result)|Add a real component number to a complex number in place||
