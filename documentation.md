@@ -51,7 +51,10 @@ For the complete nd4j-api index, consult the [Javadoc](../apidocs).
 |normalizeZeroMeanAndUnitVariance (INDArray toNormalize)|Normalize data to zero mean and unit variance: substract by the mean and divide by the standard deviation||
 |pool(INDArray toPool,int[] stride)|Pooled expectations|Transform|
 |pow(INDArray ndArray,Number power)|Power function||
-|rand(int[] shape, float min, float max, org.apache.commons.math3.random.RandomGenerator rng)|Generates a random matrix between min and max||
+|rand(int[] shape, float min, float max, org.apache.commons.math3.random.
+RandomGenerator rng)|Generates a random matrix between min and max||
+|randomNumberBetween(double begin, double end, org.apache.commons.math3.random.
+RandomGenerator rng)|Generates a random integer between the specified numbers||
 |rectifiedLinear()|Rectified linear|Activation|
 |roundedlinear()|Rounded linear, the output: rounded|Activation|
 |tanh()|Hyperbolic tangent: a sigmoidal function|Activation|
