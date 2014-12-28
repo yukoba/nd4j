@@ -21,10 +21,14 @@ description: ""
 |hardTanh|Hard Tanh is tanh constraining input to -1 to 1|Activation|
 |identity(INDArray ndArray)||Transform|
 |linear()|Linear activation function, just returns the input as is|Activation|
+|log(INDArray ndArray)|Log function||
+|max(INDArray ndArray,double max)|Max function||
 |maxout()|Max out activation: max of input(i,j)|Activation|
 |maxPool(INDArray input,int[] ds,boolean ignoreBorder)|Max pooling|Transform|
 |neq(INDArray ndArray)|Binary matrix of whether the number at a given index is equal||
 |normalizeZeroMeanAndUnitVariance (INDArray toNormalize)|Normalize data to zero mean and unit variance: substract by the mean and divide by the standard deviation||
+|pool(INDArray toPool,int[] stride)|Pooled expectations|Transform|
+|pow(INDArray ndArray,Number power)|Power function||
 |rectifiedLinear()|Rectified linear, the output: rounded|Activation|
 |roundedlinear()|Rounded linear, the output: rounded|Activation|
 |tanh()|Hyperbolic tangent: a sigmoidal function|Activation|
@@ -32,6 +36,7 @@ description: ""
 |sign(IComplexNDArray toSign)|Signum function of this ndarray||
 |softmax()|Softmax function used for multinomial classification|Activation|
 |softMaxRows()|Softmax with row wise features|Activation|
+|sqrt(IComplexNDArray ndArray)|Takes the square root||
 |symmetricGeneralizedEigenvalues (INDArray A)|Computes generalized eigenvalues of the problem A x = L B x.|
 |symmetricGeneralizedEigenvalues (INDArray A, INDArray B)|Compute generalized eigenvalues of the problem A x = L B x.|
 |unitVec|Scale by 1 / norm2 of the matrix||
