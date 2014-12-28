@@ -51,14 +51,10 @@ For the complete nd4j-api index, consult the [Javadoc](../apidocs).
 |normalizeZeroMeanAndUnitVariance (INDArray toNormalize)|Normalize data to zero mean and unit variance: substract by the mean and divide by the standard deviation||
 |pool(INDArray toPool,int[] stride)|Pooled expectations|Transform|
 |pow(INDArray ndArray,Number power)|Power function||
-|rand(int[] shape, float min, float max, org.apache.commons.math3.random.
-RandomGenerator rng)|Generates a random matrix between min and max||
-|randomNumberBetween(double begin, double end, org.apache.commons.math3.random.
-RandomGenerator rng)|Generates a random integer between the specified numbers||
+|rand(int[] shape, float min, float max, org.apache.commons.math3.random. RandomGenerator rng)|Generates a random matrix between min and max||
+|randomNumberBetween(double begin, double end, org.apache.commons.math3.random. RandomGenerator rng)|Generates a random integer between the specified numbers||
 |rectifiedLinear()|Rectified linear|Activation|
 |roundedlinear()|Rounded linear, the output: rounded|Activation|
-|tanh()|Hyperbolic tangent: a sigmoidal function|Activation|
-|toDecimal(String binary)|Converts the given binary string to a decimal based integer.||
 |sigmoid()|An s-shaped function for logistic regression|Activation|
 |sign(IComplexNDArray toSign)|Signum function of this ndarray||
 |sm(double a, double b)|Tests if a is smaller than b||
@@ -68,6 +64,8 @@ RandomGenerator rng)|Generates a random integer between the specified numbers||
 |subi(IComplexNumber c, IComplexNumber result)|Subtract two complex numbers in place||
 |symmetricGeneralizedEigenvalues (INDArray A)|Computes generalized eigenvalues of the problem A x = L B x.|
 |symmetricGeneralizedEigenvalues (INDArray A, INDArray B)|Compute generalized eigenvalues of the problem A x = L B x.|
+|tanh()|Hyperbolic tangent: a sigmoidal function|Activation|
+|toDecimal(String binary)|Converts the given binary string to a decimal based integer.||
 |unitVec|Scale by 1 / norm2 of the matrix||
 |upSample(INDArray d, INDArray scale)|Upsampling a signal (specifically the first 2 dimensions)|Signal processing|
 
