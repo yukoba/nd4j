@@ -15,8 +15,12 @@ description: ""
 |applyDerivative(INDArray input)|Applies the derivative of a transform function to the param input|Activation|
 |asDouble()|Convert complex number to a double||
 |asFloat()|Convert this number to a float||
+|BaseComplexNDArray(float[] data, int[] shape, char ordering)|Create NDArray with given data, shape and 0 offset||
+|BaseComplexNDArray(INDArray m,char ordering)|Construct a complex matrix from a realComponent matrix.||
+|BaseComplexNDArray(List<IComplexNDArray> slices,int[] shape,int[] stride,char ordering)|Create NDArray from the specified slices and the given shape||
 |complexArgument()|Returns the argument of a complex number||
 |cosineSim(INDArray d1, INDArray d2)|Measures the cosine of the angle between two vectors of an inner product space||
+|divi(IComplexNumber c, IComplexNumber result)|Divide two complex numbers in place||
 |downSample(INDArray d1, int[] stride)|Decreases the sampling rate by integer factor (stride)|Signal processing|
 |eigenvalues(INDArray A)|Computes the eigenvalues of a general matrix.|
 |eigenvectors(INDArray A)|Computes the eigenvalues and eigenvectors of a general matrix. For matlab users note the following from their documentation: The columns of V present eigenvectors of A. The diagonal matrix D contains eigenvalues. This is in reverse order of Matlab's eig(A) call.|
@@ -30,6 +34,7 @@ description: ""
 |max(INDArray ndArray,double max)|Max function||
 |maxout()|Max out activation: max of input(i,j)|Activation|
 |maxPool(INDArray input,int[] ds,boolean ignoreBorder)|Max pooling|Transform|
+|muli(IComplexNumber c, IComplexNumber result)|Multiply two complex numbers in place||
 |neq(INDArray ndArray)|Binary matrix of whether the number at a given index is equal||
 |normalizeZeroMeanAndUnitVariance (INDArray toNormalize)|Normalize data to zero mean and unit variance: substract by the mean and divide by the standard deviation||
 |pool(INDArray toPool,int[] stride)|Pooled expectations|Transform|
