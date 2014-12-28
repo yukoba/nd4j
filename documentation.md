@@ -41,7 +41,7 @@ For the complete nd4j-api index, consult the [Javadoc](../apidocs).
 |identity(INDArray ndArray)||Transform|
 |linear()|Linear activation function, just returns the input as is|Activation|
 |log(INDArray ndArray)|Log function||
-|manhattanDistance(double[] p, double[] q)|This will calculate the Manhattan distance between two sets of points. The Manhattan distance is equivalent to: 1_sum_n |p_i - q_i| ||
+|manhattanDistance(double[] p, double[] q)|This will calculate the Manhattan distance between two sets of points. The Manhattan distance is equivalent to: 1_sum_n &#124;p_i - q_i&#124;||
 |max(INDArray ndArray,double max)|Max function||
 |maxout()|Max out activation: max of input(i,j)|Activation|
 |maxPool(INDArray input,int[] ds,boolean ignoreBorder)|Max pooling|Transform|
