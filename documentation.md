@@ -5,7 +5,7 @@ description: ""
 ---
 {% include JB/setup %}
 
-To see the complete nd4j-api reference, consult the [Javadocs](../apidocs).
+For the complete nd4j-api index, consult the [Javadoc](../apidocs).
 
 |Method| Meaning| Type |
 |:----------|:-------------:| ----:|
