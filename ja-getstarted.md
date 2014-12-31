@@ -8,9 +8,9 @@ description: ""
 ND4Jを始めるためには、以下のプログラムをインストールする必要があります。
 
 1. [Java](#1-java)を活用することで、新たなプロジェクトを編集することができます。[ダウンロード](https://java.com/ja/download/)
-2. [Github](#2-github)を活用することで、ND4Jに関するデータを一元管理することができます。[Macはこちら](https://mac.github.com/), [Windowsはこちら](https://windows.github.com/)
-3. [Maven](#3-maven)を活用することで、最新版のND4Jの[JAR](http://ja.wikipedia.org/wiki/JAR_%28%E3%83%95%E3%82%A1%E3%82%A4%E3%83%AB%E3%83%95%E3%82%A9%E3%83%BC%E3%83%9E%E3%83%83%E3%83%88%29)を自動的にアップロードし続けることができます。[ダウンロード](https://maven.apache.org/download.cgi)
-4. [IDE for Java](#4-ide-for-java)は、上記のプログラムを実行するためのシステム環境になります。[ダウンロード](https://www.jetbrains.com/idea/download/)
+2. [Github](#2-github)を活用することで、ND4Jに関するデータを一元管理することができます。[Macはこちら](https://mac.github.com/), [Windowsはこちら](https://windows.github.com/)。
+3. [Maven](#3-maven)を活用することで、最新版のND4Jの[JAR](http://ja.wikipedia.org/wiki/JAR_%28%E3%83%95%E3%82%A1%E3%82%A4%E3%83%AB%E3%83%95%E3%82%A9%E3%83%BC%E3%83%9E%E3%83%83%E3%83%88%29)を自動的にアップロードし続けることができます。[ダウンロード](https://maven.apache.org/download.cgi)。
+4. [IDE for Java](#4-ide-for-java)は、上記のプログラムを実行するためのシステム環境になります。[ダウンロード](https://www.jetbrains.com/idea/download/)。
 
 
 <iframe width="750" height="560" src="//www.youtube.com/embed/D0TrW9ht2Qo" frameborder="0" allowfullscreen></iframe>
@@ -49,7 +49,7 @@ ND4Jを始めるためには、以下のプログラムをインストールす�
 ### インストール方法
  以下のURLを通じて無料でダウンロードいただけます。
  
-[Macはこちら](https://mac.github.com/), [Windowsはこちら](https://windows.github.com/)
+[Macはこちら](https://mac.github.com/), [Windowsはこちら](https://windows.github.com/)。
 
 ND4Jのファイルを複製するためには以下の文章をterminal (Mac) もしくは Git Shell (Windows)へ入力してください。
 
@@ -81,12 +81,12 @@ ND4Jのファイルを複製するためには以下の文章をterminal (Mac) �
 
     mvn clean install -DskipTests -Dmaven.javadoc.skip=true
 
-
 # <a id="4-ide-for-java">4. IDE for Java</a>
 
 ### IDEとは
 
 [IDE](http://encyclopedia.thefreedictionary.com/integrated+development+environment)とは、ソフトウェアの開発において用いられるエディタ、コンパイラ、リンカ、デバッガ、その他の支援ツールなどを統合・統一化した開発環境のことを指します。IDEには、ソフトウェア開発に必要な最低限のツールがすべて含まれているため、これを導入することで、インストールしたMaveとGitHubの操作を統一して行うことができます。 
+
 ### なぜIDEが必要か
 
 IDSを活用することで、コードを入力するだけで簡単にシステムをセットアップができるようになります。IDEは一般的にMavenとセットで使われるため、Mavenのダウンロードをおすすめしております。
@@ -104,9 +104,9 @@ IDSを活用することで、コードを入力するだけで簡単にシス�
 [Eclipse](http://books.sonatype.com/m2eclipse-book/reference/creating-sect-importing-projects.html) or [Netbeans](http://wiki.netbeans.org/MavenBestPractices).
 
 インストール後、以下のサイトからND4Jプロジェクトをダウンロードいただけます。
-
-[Intellijの場合](http://stackoverflow.com/questions/1051640/correct-way-to-add-lib-jar-to-an-intellij-idea-project)、
-[Eclipseの場合](http://stackoverflow.com/questions/3280353/how-to-import-a-jar-in-eclipse) 、 [Netbeansの場合](http://gpraveenkumar.wordpress.com/2009/06/17/abc-to-import-a-jar-file-in-netbeans-6-5/)
+* [Intellijの場合](http://stackoverflow.com/questions/1051640/correct-way-to-add-lib-jar-to-an-intellij-idea-project)、
+* [Eclipseの場合](http://stackoverflow.com/questions/3280353/how-to-import-a-jar-in-eclipse) 、 
+* [Netbeansの場合](http://gpraveenkumar.wordpress.com/2009/06/17/abc-to-import-a-jar-file-in-netbeans-6-5/)
 
 # Next Steps
 
@@ -118,5 +118,5 @@ IDSを活用することで、コードを入力するだけで簡単にシス�
 
 その他リンク:
 
-*  [ND4Jとは](http://nd4j.org/) 。ND4Jに関するGitHubのファイルは [こちら](https://github.com/SkymindIO/nd4j)
-*  [DeepLearning4Jとは](http://deeplearning4j.org/)。DeepLearning4Jに関するGitHubのファイルは [こちら](https://github.com/SkymindIO/deeplearning4j).
+*  [ND4Jとは](http://nd4j.org/) 。ND4Jに関するGitHubのファイルは [こちら](https://github.com/SkymindIO/nd4j)。
+*  [DeepLearning4Jとは](http://deeplearning4j.org/)。DeepLearning4Jに関するGitHubのファイルは [こちら](https://github.com/SkymindIO/deeplearning4j)。
