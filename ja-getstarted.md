@@ -103,7 +103,7 @@ IDEを活用することで、コードを入力するだけで簡単にシス�
 
 [Eclipse](http://books.sonatype.com/m2eclipse-book/reference/creating-sect-importing-projects.html) or [Netbeans](http://wiki.netbeans.org/MavenBestPractices)。
 
-インストール後、以下のサイトからND4Jプロジェクトをダウンロードいただけます。
+インストール後、以下のサイトからND4Jプロジェクトをダウンロードいただけます:
 * [Intellijの場合](http://stackoverflow.com/questions/1051640/correct-way-to-add-lib-jar-to-an-intellij-idea-project)
 * [Eclipseの場合](http://stackoverflow.com/questions/3280353/how-to-import-a-jar-in-eclipse) 
 * [Netbeansの場合](http://gpraveenkumar.wordpress.com/2009/06/17/abc-to-import-a-jar-file-in-netbeans-6-5/)
@@ -112,7 +112,7 @@ IDEを活用することで、コードを入力するだけで簡単にシス�
 
  これで[当社ホームページ](../elementwise.html)にあるプロジェクトを実行する準備が整いました。ダウンロードいただいたIDE上で、いずれか一つのプロジェクトをクリックし、(Run)ボタンを押すことで実行できます。すべてが正しくダウンロードされていた場合、画面に数字が表示され、アウトプットを確認することができます。
 
-操作環境にご満足頂いた場合は、POMファイルのdependenciyを変更することも可能です。dependencyの変更方法は [こちら](http://nd4j.org/dependencies.html).
+操作環境にご満足頂いた場合は、POMファイルのdependencyを変更することも可能です。dependencyの変更方法は [こちら](http://nd4j.org/dependencies.html).
 
 質問やフィードバックに関しては、 [Google Groups Forum](https://groups.google.com/forum/#!forum/nd4j)までお願いいたします。
 
