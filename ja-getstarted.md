@@ -61,7 +61,7 @@ ND4Jのファイルを複製するためには以下の文章をterminal (Mac) �
  MavenとはJava用プロジェクト管理ツールです。([Mavenホームページ](http://maven.apache.org/what-is-maven.html)) Mavenをインストールすることで、最新版のND4Jの[JAR](http://ja.wikipedia.org/wiki/JAR_%28%E3%83%95%E3%82%A1%E3%82%A4%E3%83%AB%E3%83%95%E3%82%A9%E3%83%BC%E3%83%9E%E3%83%83%E3%83%88%29)を自動的にアップロードし続けることができます。
 
 ### なぜ必要か
- Mavenを活用することで、より簡単にND4JとDeeplearning4j projectsをインストールすることができます。なお、最終的にダウンロードする[IDE](http://ja.wikipedia.org/wiki/%E7%B5%B1%E5%90%88%E9%96%8B%E7%99%BA%E7%92%B0%E5%A2%83)を操作するうえでも、Mavenは役立ちます。([IDE](https://github.com/globalcaos/nd4j/blob/gh-pages/getstarted.md#4-ide-for-java))また、もしMavenの内容をご理解いただいている方は、[当社ホームページ](http://nd4j.org/downloads.html) ページにアクセスいただくことで、この過程をスキップすることができます。
+ Mavenを活用することで、より簡単にND4JとDeeplearning4j projectsをインストールすることができます。 なお、 最終的にダウンロードする [IDE](http://ja.wikipedia.org/wiki/%E7%B5%B1%E5%90%88%E9%96%8B%E7%99%BA%E7%92%B0%E5%A2%83)を操作するうえでも、Mavenは役立ちます。([IDE](https://github.com/globalcaos/nd4j/blob/gh-pages/getstarted.md#4-ide-for-java))また、もしMavenの内容をご理解いただいている方は、[当社ホームページ](http://nd4j.org/downloads.html) ページにアクセスいただくことで、この過程をスキップすることができます。
 
 ### イントール状況の確認
 コマンドラインに、以下のコードをご入力ください。
@@ -69,7 +69,7 @@ ND4Jのファイルを複製するためには以下の文章をterminal (Mac) �
 		mvn --version
 
 ### インストール方法
-[Mavenホームページ](https://maven.apache.org/download.cgi)を通じて、無料でダウンロードいただけます
+[Mavenホームページ](https://maven.apache.org/download.cgi)を通じて、無料でダウンロードいただけます。
 
 
 お持ちのパソコンのオペレーティングシステムに適応する、最新版のMavenを含む圧縮ファイルをダウンロードしてください。
@@ -89,7 +89,7 @@ ND4Jのファイルを複製するためには以下の文章をterminal (Mac) �
 
 ### なぜIDEが必要か
 
-IDSを活用することで、コードを入力するだけで簡単にシステムをセットアップができるようになります。IDEは一般的にMavenとセットで使われるため、Mavenのダウンロードをおすすめしております。
+IDEを活用することで、コードを入力するだけで簡単にシステムをセットアップができるようになります。IDEは一般的にMavenとセットで使われるため、Mavenのダウンロードをおすすめしております。
 
 ### イントール状況の確認
 
@@ -97,15 +97,15 @@ IDSを活用することで、コードを入力するだけで簡単にシス�
 
 ### インストール方法
 
-[intellij](https://www.jetbrains.com/idea/download/)のfree community editionをお勧めいたします。
+[Intellij](https://www.jetbrains.com/idea/download/)のfree community editionをお勧めいたします。
 
 以下のIDEも同様にご活用いただけます。
 
-[Eclipse](http://books.sonatype.com/m2eclipse-book/reference/creating-sect-importing-projects.html) or [Netbeans](http://wiki.netbeans.org/MavenBestPractices).
+[Eclipse](http://books.sonatype.com/m2eclipse-book/reference/creating-sect-importing-projects.html) or [Netbeans](http://wiki.netbeans.org/MavenBestPractices)。
 
 インストール後、以下のサイトからND4Jプロジェクトをダウンロードいただけます。
-* [Intellijの場合](http://stackoverflow.com/questions/1051640/correct-way-to-add-lib-jar-to-an-intellij-idea-project)、
-* [Eclipseの場合](http://stackoverflow.com/questions/3280353/how-to-import-a-jar-in-eclipse) 、 
+* [Intellijの場合](http://stackoverflow.com/questions/1051640/correct-way-to-add-lib-jar-to-an-intellij-idea-project)
+* [Eclipseの場合](http://stackoverflow.com/questions/3280353/how-to-import-a-jar-in-eclipse) 
 * [Netbeansの場合](http://gpraveenkumar.wordpress.com/2009/06/17/abc-to-import-a-jar-file-in-netbeans-6-5/)
 
 # Next Steps
