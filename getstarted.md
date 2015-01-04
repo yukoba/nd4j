@@ -53,14 +53,17 @@ We recommend installing [IntelliJ](https://www.jetbrains.com/idea/download/). Th
 # <a id="maven">Maven</a>
 
 ### What it is
+
 Maven is an automated build tool for Java projects (among other [things](http://maven.apache.org/what-is-maven.html)), which locates the latest version of the project libraries (Deeplearning4j .jar files) and downloads them automatically to your computer.
 
 ### Why you need it
+
 Maven will allow you to install both ND4J and Deeplearning4j projects easily. It works well with Integrated Development Environments ([IDE](#ide-for-java)) such as IntelliJ.
 
 (Experienced Java developers who prefer not to work with Maven can find the .jar files in our [downloads](downloads.html) page. For an expert user it might be faster, but also more complicated due to dependencies.)
 
 ### Is it already installed?
+
 To see if Maven is installed in your machine, enter the following into the command line:
 
 		mvn --version
