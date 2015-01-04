@@ -87,11 +87,7 @@ The images below will walk you through the windows of the IntelliJ New Project W
 
 ![Alt text](../img/maven2.png) 
 
-Simply click "Next" on the following screen, and on the screen after that (below), just name your project. ("ND4J" perhaps?)
-
-![Alt text](../img/maven4.png) 
-
-Now you should go into your pom.xml file within the new ND4J project in IntelliJ. It will look something like this:
+Simply click "Next" on the following screen, and on the screen after that (below), just name your project. ("ND4J" perhaps?) Now you should go into your pom.xml file within the new ND4J project in IntelliJ. It will look something like this:
 
 ![Alt text](../img/nd4j_pom_before.png) 
 
