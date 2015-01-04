@@ -57,10 +57,10 @@ Alternatively, for those that dod not install GitHub, you can click on the '[dow
 # <a id="3-maven">3. Maven</a>
 
 ### What it is
-Maven is an automated build tool for Java projects (among other [things](http://maven.apache.org/what-is-maven.html)), that basically knows where the latest version of the libraries (ND4J .jar files) are, and downloads them automatically into your computer, ready to reference.
+Maven is an automated build tool for Java projects (among other [things](http://maven.apache.org/what-is-maven.html)), that basically knows where the latest version of the libraries (ND4J .jar files) are, and downloads them automatically to your computer, ready to reference.
 
 ### Why you need it
-Maven will allow you to install both ND4J and Deeplearning4j projects with a single command. Moreover, it integrates with the Integrated Development Environments ([IDE](#4-ide-for-java)), which you will install later (see below).
+Maven will allow you to install both ND4J and Deeplearning4j projects easily. Moreover, it works well with Integrated Development Environments ([IDE](#4-ide-for-java)) such as IntelliJ.
 
 Again, if you really know what you are doing, and do not want to install Maven's, you can find the .jar files in our [downloads](downloads.html) page. For an expert user it might be faster, but more complicated due to dependencies.
 
@@ -74,7 +74,7 @@ Instructions to install Maven are [here](https://maven.apache.org/download.cgi).
 
 Download the compressed file containing Maven's latest stable version, following the instructions that pertain to your operating system; e.g. *"Unix-based Operating Systems (Linux, Solaris and Mac OS X)."* 
 
-If you want to develop for ND4J, just *git clone* the software (explained above) and run this Maven command within the ND4J directory:
+If you want to develop for ND4J, just *git clone* ND4J source code (explained above) and run this Maven command within the ND4J directory:
 
     mvn clean install -DskipTests -Dmaven.javadoc.skip=true
 
