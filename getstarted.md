@@ -7,10 +7,10 @@ description: ""
 
 In order to use ND4J, you will need to have several tools installed in your machine:
 
-1. [Java](#java) ([download](http://www.oracle.com/technetwork/java/javase/downloads/jdk7-downloads-1880260.html))
-2. [An Integrated Development Environment](#ide-for-java) ([download](https://www.jetbrains.com/idea/download/))
-3. [Maven](#maven) ([download](https://maven.apache.org/download.cgi))
-4. [Github](#github) (download for [Mac](https://mac.github.com/) or [Windows](https://windows.github.com/))
+1. [Java](#java) 
+2. [An Integrated Development Environment](#ide-for-java) 
+3. [Maven](#maven)
+4. [Github](#github)
 
 Installing these tools might take a while, so sit tight. This tutorial will guide you until you can run a few simple examples that illustrate how ND4J works.
 
@@ -113,12 +113,11 @@ If you just want to use the ND4J libraries, **you are not required to install Gi
 Just check your installed programs.
 
 ### Installation
-Download GitHub for [Mac](https://mac.github.com/), [Windows](https://windows.github.com/), etc.
-To clone the ND4J files, enter this command into your terminal (Mac) or Git Shell (Windows):
+Download GitHub for [Mac](https://mac.github.com/), [Windows](https://windows.github.com/), etc. To clone the ND4J files, enter this command into your terminal (Mac) or Git Shell (Windows):
 
       git clone https://github.com/SkymindIO/nd4j
       
-Another way to get the source code is by clicking on the '[download ZIP](https://github.com/SkymindIO/nd4j/archive/master.zip)' button from the [ND4J GitHub page](https://github.com/SkymindIO/nd4j). Then unzip the file (you can use [7-zip](http://www.7-zip.org/download.html) to do that).
+Another way to get the source code is by clicking on the "[download ZIP](https://github.com/SkymindIO/nd4j/archive/master.zip)" button from the [ND4J GitHub page](https://github.com/SkymindIO/nd4j). Then unzip the file (you can use [7-zip](http://www.7-zip.org/download.html) to do that).
 
 # Next Steps
 
@@ -131,5 +130,5 @@ For questions or feedback, join us on our [Google Groups Forum](https://groups.g
 Useful links:
 
 * ND4J's [Github repository](https://github.com/SkymindIO/nd4j).
-* [DeepLearning4J project](http://deeplearning4j.org/) and [Github repository](https://github.com/SkymindIO/deeplearning4j) (using ND4J).
+* [DeepLearning4J](http://deeplearning4j.org/) and its [Github repository](https://github.com/SkymindIO/deeplearning4j), which use ND4J.
 
