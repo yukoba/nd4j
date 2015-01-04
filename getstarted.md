@@ -17,10 +17,10 @@ Installing these tools might take a while, so sit tight. This tutorial will guid
 # <a id="java">Java</a>
 
 ### What it is
-[Java](http://en.wikipedia.org/wiki/Java_%28programming_language%29) is yor [programming language](http://en.wikipedia.org/wiki/Comparison_of_programming_languages) of choice.
+[Java](http://en.wikipedia.org/wiki/Java_%28programming_language%29) is the programming language we use. There are 9 million Java developers worldwide. Java runs on 3 billion mobile phones and 97 percent of all enterprise desktops. 
 
 ### Why you need it
-Java will translate your code into machine code, allowing you to run it.
+Java will allow your neural nets to work cross-platform on servers, desktops and mobile devices.
 
 ### Is it already installed?
 To test which version of Java you have (and whether you have it at all), type the following into the command line:
@@ -37,30 +37,28 @@ If you don't have Java 7 installed on your machine, download the [Java Developme
 # <a id="ide-for-java">Integrated Development Environment (IDE)</a>
 
 ### What it is
-An Integrated Development Environment ([IDE](http://encyclopedia.thefreedictionary.com/integrated+development+environment)) will allow you to edit the source code, debug it and build it with a few clicks. The ones suggested here will use your installed version of Java, will talk with GitHub and Maven, which will take care of the dependencies for you. Visit our [dependencies](dependencies.html) page to know how to 'easily' change the dependencies later on.
+An Integrated Development Environment ([IDE](http://encyclopedia.thefreedictionary.com/integrated+development+environment)) will allow you to work with our API and build your nets with a few clicks. The IDEs suggested here will use your installed version of Java and can communicate with Maven, which will take care of the dependencies for you. Visit our [dependencies](dependencies.html) page to see how you can easily swap them out as needed.
 
 ### Why you need it
-You want to set up a hassle-free development environment so that you only worry about your code. IDEs typically come with Maven support, but we prefer you to install [Maven](#maven) so you can run commands directly as instructed previously.
+You want a hassle-free development environment so that you only need to think about your code. IDEs typically come with Maven support, but we prefer you to install [Maven](#maven) so you can run commands directly as instructed previously.
 
 ### Is it already installed?
 Just check your installed programs.
 
 ### Installation
-We recommend installing [IntelliJ](https://www.jetbrains.com/idea/download/). You will be perfectly fine with the free community edition.
+We recommend installing [IntelliJ](https://www.jetbrains.com/idea/download/). The free community edition does the job just fine.
 
-For picky ones, these are some equivalent IDEs: [Eclipse](http://books.sonatype.com/m2eclipse-book/reference/creating-sect-importing-projects.html) or [Netbeans](http://wiki.netbeans.org/MavenBestPractices).
-
-Now you can easily import the ND4J project via [Intellij](http://stackoverflow.com/questions/1051640/correct-way-to-add-lib-jar-to-an-intellij-idea-project) (or again, for picky ones via [Eclipse](http://stackoverflow.com/questions/3280353/how-to-import-a-jar-in-eclipse) or [Netbeans](http://gpraveenkumar.wordpress.com/2009/06/17/abc-to-import-a-jar-file-in-netbeans-6-5/)).
+[Eclipse](http://books.sonatype.com/m2eclipse-book/reference/creating-sect-importing-projects.html) and [Netbeans](http://wiki.netbeans.org/MavenBestPractices) are two other popular IDEs.
 
 # <a id="maven">Maven</a>
 
 ### What it is
-Maven is an automated build tool for Java projects (among other [things](http://maven.apache.org/what-is-maven.html)), that basically locates the latest version of the libraries (Deeplearning4j .jar files), and downloads them automatically to your computer.
+Maven is an automated build tool for Java projects (among other [things](http://maven.apache.org/what-is-maven.html)), which locates the latest version of the project libraries (Deeplearning4j .jar files) and downloads them automatically to your computer.
 
 ### Why you need it
 Maven will allow you to install both ND4J and Deeplearning4j projects easily. It works well with Integrated Development Environments ([IDE](#ide-for-java)) such as IntelliJ.
 
-(If you really know what you are doing, and do not want to install Maven, you can find the .jar files in our [downloads](downloads.html) page. For an expert user it might be faster, but also more complicated due to dependencies.)
+(Experienced Java developers who prefer not to work with Maven can find the .jar files in our [downloads](downloads.html) page. For an expert user it might be faster, but also more complicated due to dependencies.)
 
 ### Is it already installed?
 To see if Maven is installed in your machine, enter the following into the command line:
