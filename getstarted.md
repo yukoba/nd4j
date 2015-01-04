@@ -8,7 +8,7 @@ description: ""
 In order to use ND4J, you will need to have several tools installed in your machine:
 
 1. [Java](#java) 
-2. [An Integrated Development Environment](#ide-for-java) 
+2. [Integrated Development Environment](#ide-for-java) 
 3. [Maven](#maven)
 4. [Github](#github)
 
@@ -17,7 +17,7 @@ Installing these tools might take a while, so sit tight. This tutorial will guid
 # <a id="java">Java</a>
 
 ### What it is
-[Java](http://en.wikipedia.org/wiki/Java_%28programming_language%29) is the programming language we use. There are 9 million Java developers worldwide. Java runs on 3 billion mobile phones and 97 percent of all enterprise desktops. 
+Java is the programming language we use. There are 9 million Java developers worldwide. Java runs on 3 billion mobile phones and 97 percent of all enterprise desktops. 
 
 ### Why you need it
 Java will allow your neural nets to work cross-platform on servers, desktops and mobile devices.
