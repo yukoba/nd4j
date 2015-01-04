@@ -14,7 +14,7 @@ In order to use ND4J, you will need to have several tools installed in your mach
 
 Installing these tools might take a while, so sit tight. This tutorial will guide you until you can run a few simple examples that illustrate how ND4J works.
 
-# <a id="java">1. Java</a>
+# <a id="java">Java</a>
 
 ### What it is
 [Java](http://en.wikipedia.org/wiki/Java_%28programming_language%29) is yor [programming language](http://en.wikipedia.org/wiki/Comparison_of_programming_languages) of choice.
