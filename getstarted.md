@@ -34,7 +34,7 @@ If you don't have Java 7 installed on your machine, download the [Java Developme
 
 		Mac OS X x64 185.94 MB -  jdk-7u67-macosx-x71.dmg
 
-# <a id="ide-for-java">Integrated Development Environment (IDE)</a>
+# <a id="ide-for-java">Integrated Development Environment</a>
 
 ### What it is
 An Integrated Development Environment ([IDE](http://encyclopedia.thefreedictionary.com/integrated+development+environment)) will allow you to work with our API and build your nets with a few clicks. The IDEs suggested here will use your installed version of Java and can communicate with Maven, which will take care of the dependencies for you. Visit our [dependencies](dependencies.html) page to see how you can easily swap them out as needed.
