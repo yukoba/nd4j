@@ -27,7 +27,7 @@ To test which version of Java you have (and whether you have it at all), type th
 
 		java -version
 
-ND4J requires Java 7, so if you have an older verion, you will need to install a newer one.
+ND4J requires Java 7, so if you have an older version, you will need to install a newer one.
 
 ### Installation
 If you don't have Java 7 installed on your machine, download the [Java Development Kit (JDK) here](http://www.oracle.com/technetwork/java/javase/downloads/jdk7-downloads-1880260.html). The download will vary by operating system. For newer Macs, you'll want the file on the first line to mention Mac OS X (the number after *jdk-7u* increments with each update). It will look something like this:
@@ -40,7 +40,7 @@ If you don't have Java 7 installed on your machine, download the [Java Developme
 An Integrated Development Environment ([IDE](http://encyclopedia.thefreedictionary.com/integrated+development+environment)) will allow you to edit the source code, debug it and build it with a few clicks. The ones suggested here will use your installed version of Java, will talk with GitHub and Maven, which will take care of the dependencies for you. Visit our [dependencies](dependencies.html) page to know how to 'easily' change the dependencies later on.
 
 ### Why you need it
-You want to set up a hassle-free development environment so that you only worry about your code. IDEs typically come with Maven support, but we prefer you to install [Maven](#3-maven) so you can run commands directly as instructed previously.
+You want to set up a hassle-free development environment so that you only worry about your code. IDEs typically come with Maven support, but we prefer you to install [Maven](#maven) so you can run commands directly as instructed previously.
 
 ### Is it already installed?
 Just check your installed programs.
@@ -89,9 +89,9 @@ Simply click "Next" on the following screen, and on the screen after that (below
 
 ![Alt text](../img/nd4j_pom_before.png) 
 
-You will need to add dependencies within the <dependencies> section: "nd4j-api" and a linear-algebra backend like "nd4j-jblas" or "nd4j-jcublas", depending on whether you are working with CPUs or GPUs, respectively. You will find all three by searching for them on [Maven's central repository](http://search.maven.org). Click on the "latest version" on this screen. From there, you want to copy the dependency information:
+You will need to add dependencies within the <dependencies> section: "nd4j-api" and a linear-algebra backend like "nd4j-jblas" or "nd4j-jcublas", depending on whether you are working with CPUs or GPUs, respectively. You will find all three by searching for them on [the Maven central repository](http://search.maven.org). Click on the "latest version" on this screen. From there, you want to copy the dependency information:
 
-![Alt text](../img/nd4j_maven.png) 
+![Alt text](../img/nd4j_maven.png)
 
 And paste it into the "dependencies" section of your pom.xml, which should end up looking like this:
 
