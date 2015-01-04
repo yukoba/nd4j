@@ -89,7 +89,7 @@ Simply click "Next" on the following screen, and on the screen after that (below
 
 ![Alt text](../img/nd4j_pom_before.png) 
 
-You will need to add dependencies within the <dependencies> section: "nd4j-api" and a linear-algebra backend like "nd4j-jblas" or "nd4j-jcublas", depending on whether you are working with CPUs or GPUs, respectively. You will find all three by searching for them on [search.maven.org](http://search.maven.org/#search%7Cga%7C1%7Cnd4j-jblas). Click on the "latest version" on this screen. From there, you want to copy the dependency information:
+You will need to add dependencies within the <dependencies> section: "nd4j-api" and a linear-algebra backend like "nd4j-jblas" or "nd4j-jcublas", depending on whether you are working with CPUs or GPUs, respectively. You will find all three by searching for them on [Maven's central repository](http://search.maven.org/#search%7Cga%7C1%7Cnd4j-jblas). Click on the "latest version" on this screen. From there, you want to copy the dependency information:
 
 ![Alt text](../img/nd4j_maven.png) 
 
