@@ -93,7 +93,7 @@ You will need to add dependencies within the <dependencies> section: "nd4j-api" 
 
 ![Alt text](../img/nd4j_maven.png)
 
-And paste it into the "dependencies" section of your pom.xml, which should end up looking like this:
+And paste it into the "dependencies" section of your pom.xml, which should end up looking like this in IntelliJ:
 
 ![Alt text](../img/nd4j_pom_after.png) 
 
