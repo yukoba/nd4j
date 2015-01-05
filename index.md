@@ -7,21 +7,19 @@ tagline:
 
 # ND4J: N-Dimensional Arrays for Java
 
-### N-Dimensional Linear Algebra, made *intuitive* and *fast*.
-
-ND4J is a **scientific computing library** for **linear algebra and matrix manipulation** (see [examples](elementwise.html)) on the JVM. It is meant to be used in **production environments** rather than as a research tool, which means that the routines have been carefully crafted to run **fast** and with **minimum RAM** requirements.
+ND4J is a **scientific computing library** for **linear algebra and matrix manipulation** (see our [examples](elementwise.html)) on the JVM. It is meant to be used in **production environments** rather than as a research tool, which means that the routines have been carefully crafted to run **fast**, with **minimum RAM** requirements.
 
 ND4J includes:
 
-* **Versatile** ND-array object.
-* **Multiplatform** functionality including GPUs.
-* **Linear algebra** and **signal processing** functions.
+* **Versatile** ND-array object
+* **Multiplatform** functionality including GPUs
+* **Linear algebra** and **signal processing** functions
 
-A usability gap has separated Java, Scala and Clojure programmers from the most powerful tools in data analysis, like [NumPy](http://www.numpy.org/) or [Matlab](http://www.mathworks.com/). With ND4J, the scientific computing tools once limited to the Python community are now **open source**, **distributed** and **integrated** with **GPUs** on the JVM.
+A usability gap has separated Java, Scala and Clojure programmers from the most powerful tools in data analysis, like [NumPy](http://www.numpy.org/) or [Matlab](http://www.mathworks.com/). With ND4J, intuitive scientific computing tools once limited to the Python community are now **open source**, **distributed** and **integrated** with **GPUs** on the JVM.
 
 Think [SLF4J](http://www.slf4j.org/). Now imagine Numpy with [Theano](http://deeplearning.net/software/theano/) built into it. That's what you get with ND4J. It gives engineers in **production environments** an easy way to port their algorithms and interface with other libraries native to the Java ecosystem. 
 
-##[Get started!](getstarted.html)
+#[Getting started is easy](getstarted.html)
 
 ### ND4J Specifics
 
@@ -65,4 +63,4 @@ Which results in:
            [9.0 ,13.0]
            ]
 
-##[Get started!](getstarted.html)
+#[Get started](getstarted.html)
