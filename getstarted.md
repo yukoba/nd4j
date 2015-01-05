@@ -7,7 +7,7 @@ description: ""
 
 # Video: Set Up ND4J in Minutes
 
-<iframe width="750" height="560" src="http://youtu.be/aWQsQQoTm9Y" frameborder="0" allowfullscreen></iframe>
+<iframe width="750" height="560" src="//www.youtube.com/embed/aWQsQQoTm9Y" frameborder="0" allowfullscreen></iframe>
 
 In order to use ND4J, you'll need to have several tools installed in your machine:
 
