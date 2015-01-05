@@ -14,7 +14,7 @@ In order to use ND4J, you'll need to have several tools installed in your machin
 3. [Maven](#maven)
 4. [Github](#github)
 
-Installing these tools might take a while, so sit tight. This tutorial will guide you until you can run a few simple examples that illustrate how ND4J works.
+Installing these tools from scratch takes a while, so be patient. This tutorial will guide you until you can run a few simple examples that illustrate how ND4J works, and perform your own calculations.
 
 # <a id="java">Java</a>
 
