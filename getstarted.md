@@ -1,11 +1,9 @@
 ---
 layout: page
-title: "Getting Started"
+title: "Video: Set Up ND4J in Minutes"
 description: ""
 ---
 {% include JB/setup %}
-
-# Video: Set Up ND4J in Minutes
 
 <iframe width="750" height="560" src="//www.youtube.com/embed/aWQsQQoTm9Y" frameborder="0" allowfullscreen></iframe>
 
