@@ -17,6 +17,8 @@ tagline:
 
 整个安装过程可能需要一个小时左右，这将取决于您的网络速度。在这个教程里，通过利用一些简单的例子，您将会学习到ND4J如何运行。
 
+<iframe width="750" height="560" src="//www.youtube.com/embed/D0TrW9ht2Qo" frameborder="0" allowfullscreen=""></iframe>
+
 ## <a name="java">Java</a>
 
 ### 什么是Java
