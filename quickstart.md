@@ -1,6 +1,6 @@
 ---
 layout: page
-title: "Quickstart: Run ND4J Examples in Minutes"
+title: "Quickstart: Run ND4J Examples"
 description: ""
 ---
 {% include JB/setup %}
@@ -31,7 +31,7 @@ description: ""
 
 		git clone https://github.com/SkymindIO/nd4j-examples
 
-You can then manually import the Maven project into an IDE such as  [Eclipse](http://books.sonatype.com/m2eclipse-book/reference/creating-sect-importing-projects.html),  [Intellij](https://www.jetbrains.com/idea/help/importing-project-from-maven-model.html) or [Netbeans](http://wiki.netbeans.org/MavenBestPractices).
+You can then manually import the [Maven](http://nd4j.org/getstarted.html#maven) project into an IDE such as  [Eclipse](http://books.sonatype.com/m2eclipse-book/reference/creating-sect-importing-projects.html),  [Intellij](https://www.jetbrains.com/idea/help/importing-project-from-maven-model.html) or [Netbeans](http://wiki.netbeans.org/MavenBestPractices).
 
 * Open up the nd4j-examples project in your IDE, find the ElementWiseOperationExample.java file and press run. 
 
