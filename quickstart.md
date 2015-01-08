@@ -33,7 +33,7 @@ description: ""
 
 You can then manually import the [Maven](http://nd4j.org/getstarted.html#maven) project into an IDE such as  [Eclipse](http://books.sonatype.com/m2eclipse-book/reference/creating-sect-importing-projects.html),  [Intellij](https://www.jetbrains.com/idea/help/importing-project-from-maven-model.html) or [Netbeans](http://wiki.netbeans.org/MavenBestPractices).
 
-* Open up the nd4j-examples project in your IDE, find the ElementWiseOperationExample.java file and press run. 
+Now open up the nd4j-examples project in your IDE, find the ElementWiseOperationExample.java file and press run. 
 
 By this point, you should have scientific computing for the JVM up and running. Congratulations. (If you haven't, please [let us know](https://groups.google.com/forum/#!forum/nd4j)!)
 
