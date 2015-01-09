@@ -31,16 +31,16 @@ The current version of __Jcuda__ requires you to specify your <font color="#0099
 
         <dependency>
          <groupId>org.nd4j</groupId>
-         <artifactId>nd4j-jcublas-windows64-6.0</artifactId>
+         <artifactId>nd4j-jcublas-windows64-<font color="#00CC00">6.0</font></artifactId>
          <version>0.0.3.5.5.1</version>
         </dependency>
 
 You can replace the _artifactId_ depending to your preference:
 
-|                                 | CUDA v5.5                  | CUDA v6.0                  | CUDA v6.5                  |
+|                                 | <font color="#00CC00">CUDA v5.5</font>                  | <font color="#00CC00">CUDA v6.0</font>                  | <font color="#00CC00">CUDA v6.5</font>                  |
 | ------------------------------- |:--------------------------:| --------------------------:|---------------------------:|
-| Linux 32 and 64, and Windows 32 | nd4j-jcublas-5.5           | nd4j-jcublas-6.0           | nd4j-jcublas-6.5           |
-| Windows 64                      | nd4j-jcublas-windows64-5.5 | nd4j-jcublas-windows64-6.0 | nd4j-jcublas-windows64-6.5 |
-| OSX                             | _not supported_            | nd4j-jcublas-osx-6.0       | nd4j-jcublas-osx-6.5       |
+| <font color="#0099CC">Linux 32 and 64, and Windows 32</font> | nd4j-jcublas-<font color="#00CC00">5.5</font>           | nd4j-jcublas-<font color="#00CC00">6.0</font>           | nd4j-jcublas-<font color="#00CC00">6.5</font>           |
+| <font color="#0099CC">Windows 64</font>                      | nd4j-jcublas-windows64-<font color="#00CC00">5.5</font> | nd4j-jcublas-windows64-<font color="#00CC00">6.0</font> | nd4j-jcublas-windows64-<font color="#00CC00">6.5</font> |
+| <font color="#0099CC">OSX</font>                             | _not supported_            | nd4j-jcublas-osx-<font color="#00CC00">6.0</font>       | nd4j-jcublas-osx-<font color="#00CC00">6.5</font>       |
 
 And that's it. Switching to GPUs means typing two additional letters in your POM.
