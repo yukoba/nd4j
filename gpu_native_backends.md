@@ -28,6 +28,7 @@ Jblas:
            <artifactId>nd4j-jblas</artifactId>
            <version>0.0.3.5.2</version>
         </dependency>
+
 Jcuda:
 
         <dependency>
