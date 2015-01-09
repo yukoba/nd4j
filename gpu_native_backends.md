@@ -27,8 +27,11 @@ __Jblas__:
            <version>0.0.3.5.5.1</version>
         </dependency>
 
-The current version of __Jcuda__ requires you to specify your ```html 
-<font color="red">OS</font> ``` and CUDA version (supporting versions 5.5, 6.0 and 6.5). For example, if you are runnin in Windows 64 and have CUDA v6.0 installed, you need to define the _artifactId_ as:
+The current version of __Jcuda__ requires you to specify your
+```html 
+<font color="red"> OS </font>
+```
+and CUDA version (supporting versions 5.5, 6.0 and 6.5). For example, if you are runnin in Windows 64 and have CUDA v6.0 installed, you need to define the _artifactId_ as:
 
         <dependency>
          <groupId>org.nd4j</groupId>
