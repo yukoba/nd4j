@@ -12,30 +12,35 @@ Every project in Maven needs a Project Object Model, or POM, in the root directo
 After you include this API dependency in your pom.xml
 
         <dependency>
-         <artifactId>nd4j</artifactId>
          <groupId>org.nd4j</groupId>
          <artifactId>nd4j-api</artifactId>
-         <version>0.0.3.5.2</version>
+         <version>0.0.3.5.5.1</version>
         </dependency>
 
-You'll need to choose between Jblas for native or Cuda for GPUs.
+You'll need to choose between Jblas for native or Jcuda (using CUDA for GPUs).
 
-Jblas:
+__Jblas__:
 
         <dependency>
-           <artifactId>nd4j</artifactId>
            <groupId>org.nd4j</groupId>
            <artifactId>nd4j-jblas</artifactId>
-           <version>0.0.3.5.2</version>
+           <version>0.0.3.5.5.1</version>
         </dependency>
 
-Jcuda:
+The current version of __Jcuda__ requires you to specify your OS and CUDA version (supporting versions 5.5, 6.0 and 6.5). For example, if you are runnin in Windows 64 and have CUDA v6.0 installed, you need to define the _artifactId_ as:
 
         <dependency>
-         <artifactId>nd4j</artifactId>
          <groupId>org.nd4j</groupId>
-         <artifactId>nd4j-jcublas</artifactId>
-         <version>0.0.3.5.2</version>
+         <artifactId>nd4j-jcublas-windows64-6.0</artifactId>
+         <version>0.0.3.5.5.1</version>
         </dependency>
+
+You can replace the _artifactId_ depending to your preference:
+
+|                                 | CUDA v5.5                  | CUDA v6.0                  | CUDA v6.5                  |
+| ------------------------------- |:--------------------------:| --------------------------:|---------------------------:|
+| Linux 32 and 64, and Windows 32 | nd4j-jcublas-5.5           | nd4j-jcublas-6.0           | nd4j-jcublas-6.5           |
+| Windows 64                      | nd4j-jcublas-windows64-5.5 | nd4j-jcublas-windows64-6.0 | nd4j-jcublas-windows64-6.5 |
+| OSX                             | _not supported_            | nd4j-jcublas-osx-6.0       | nd4j-jcublas-osx-6.5       |
 
 And that's it. Switching to GPUs means typing two additional letters in your POM.
