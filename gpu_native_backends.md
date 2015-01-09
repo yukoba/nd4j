@@ -40,7 +40,7 @@ You can replace the _artifactId_ depending to your preference:
 |                                 | <font color="#00CC00">CUDA v5.5</font>                  | <font color="#00CC00">CUDA v6.0</font>                  | <font color="#00CC00">CUDA v6.5</font>                  |
 | ------------------------------- |:--------------------------:| --------------------------:|---------------------------:|
 | <font color="#FF6600">Linux 32 and 64, and Windows 32</font> | nd4j-jcublas-<font color="#00CC00">5.5</font>           | nd4j-jcublas-<font color="#00CC00">6.0</font>           | nd4j-jcublas-<font color="#00CC00">6.5</font>           |
-| <font color="#FF6600">Windows 64</font>                      | nd4j-jcublas-windows64-<font color="#00CC00">5.5</font> | nd4j-jcublas-windows64-<font color="#00CC00">6.0</font> | nd4j-jcublas-windows64-<font color="#00CC00">6.5</font> |
-| <font color="#FF6600">OSX</font>                             | _not supported_            | nd4j-jcublas-osx-<font color="#FF6600">6.0</font>       | nd4j-jcublas-osx-<font color="#00CC00">6.5</font>       |
+| <font color="#FF6600">Windows 64</font>                      | nd4j-jcublas-<font color="#FF6600">windows64</font>-<font color="#00CC00">5.5</font> | nd4j-jcublas-<font color="#FF6600">windows64</font>-<font color="#00CC00">6.0</font> | nd4j-jcublas-<font color="#FF6600">windows64</font>-<font color="#00CC00">6.5</font> |
+| <font color="#FF6600">OSX</font>                             | _not supported_            | nd4j-jcublas-<font color="#FF6600">osx</font>-<font color="#FF6600">6.0</font>       | nd4j-jcublas-<font color="#FF6600">osx</font>-<font color="#00CC00">6.5</font>       |
 
 And that's it. Switching to GPUs means typing two additional letters in your POM.
