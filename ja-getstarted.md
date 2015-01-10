@@ -1,6 +1,6 @@
 ---
-layout: page
-title: "Getting Started"
+layout: ja-default
+title: "ND4J入門"
 description: ""
 ---
 {% include JB/setup %}
