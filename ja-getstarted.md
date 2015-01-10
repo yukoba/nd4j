@@ -5,6 +5,8 @@ description: ""
 ---
 {% include JB/setup %}
 
+# ND4J入門
+
 ND4Jを始めるためには、以下のプログラムをインストールする必要があります。
 
 1. [Java](#java)を活用することで、新たなプロジェクトを編集することができます。[ダウンロード](https://java.com/ja/download/)
