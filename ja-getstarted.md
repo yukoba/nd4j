@@ -5,7 +5,7 @@ description: ""
 ---
 {% include JB/setup %}
 
-# ND4J入門
+# ND4Jはじめましょう
 
 ND4Jを始めるためには、以下のプログラムをインストールする必要があります。
 
