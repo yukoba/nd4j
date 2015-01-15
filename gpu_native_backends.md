@@ -14,7 +14,7 @@ After you include this API dependency in your pom.xml
         <dependency>
          <groupId>org.nd4j</groupId>
          <artifactId>nd4j-api</artifactId>
-         <version>0.0.3.5.5.1</version>
+         <version>${nd4j.version}</version>
         </dependency>
 
 You'll need to choose between Jblas for native or Jcuda (using CUDA for GPUs).
@@ -24,7 +24,7 @@ __Jblas__:
         <dependency>
            <groupId>org.nd4j</groupId>
            <artifactId>nd4j-jblas</artifactId>
-           <version>0.0.3.5.5.1</version>
+           <version>${nd4j.version}</version>
         </dependency>
 
 The current version of __Jcuda__ requires you to specify your <font color="#FF6600">OS</font> and <font color="#00CC00">CUDA version</font> (supporting versions 5.5, 6.0 and 6.5). For example, if you're running on <font color="#FF6600">Windows-64</font> and have <font color="#00CC00">CUDA v6.0</font> installed, then you need to define the _artifactId_ as:
@@ -32,7 +32,7 @@ The current version of __Jcuda__ requires you to specify your <font color="#FF66
         <dependency>
          <groupId>org.nd4j</groupId>
          <artifactId>nd4j-jcublas-windows64-6.0</artifactId>
-         <version>0.0.3.5.5.1</version>
+         <version>${nd4j.version}</version>
         </dependency>
 
 You can replace the _artifactId_, depending on your preference:
