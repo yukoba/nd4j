@@ -23,8 +23,6 @@ The API, for one:
 	   <version>${nd4j.version}</version>
 	 </dependency>
 
-You can copy all the dependencies from [one text file](../pomtext.txt), paste them into your POM, and simply comment them in or out.
-
 ND4J-API is the core implementation that handles most of the interop. You'll also need to specify a backend dependency. 
 
 ND4J supports several backends, ranging from Cuda to different native implementations. While there are several Blas implementations on the JVM, none of them support a Matlab/Numpy-like interface, so we had to make one. 
