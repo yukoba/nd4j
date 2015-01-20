@@ -13,7 +13,7 @@ In order to use ND4J, you'll need to have several tools installed in your machin
 2. [Integrated Development Environment](#ide-for-java) 
 3. [Maven](#maven)
 4. [Github](#github)
-5. [Quickstart](http://nd4j.org/quickstart.html)
+5. [Next Steps](#next-steps)
 
 Installing these tools from scratch takes a while, so be patient. This tutorial will guide you until you can run a few simple examples that illustrate how ND4J works, and perform your own calculations.
 
@@ -132,7 +132,7 @@ Download GitHub for [Mac](https://mac.github.com/), [Windows](https://windows.gi
       
 Another way to get the source code is by clicking on the "[download ZIP](https://github.com/SkymindIO/nd4j/archive/master.zip)" button from the [ND4J GitHub page](https://github.com/SkymindIO/nd4j). Then unzip the file (you can use [7-zip](http://www.7-zip.org/download.html) to do that).
 
-# Next Steps
+# <a id="next-steps">Next Steps</a>
 
 Now you're ready to run the [examples](elementwise.html). We recommend that you launch your IDE, load the ND4J project and open the examples subdirectory. Locate one of them and click run. If everything was installed correctly you should see numbers appear as the program output. You can start inspecting/messing with the code.
 
