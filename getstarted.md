@@ -89,19 +89,29 @@ The images below will walk you through the windows of the IntelliJ New Project W
 
 ![Alt text](../img/maven2.png) 
 
-Simply click "Next" on the following screen, and on the screen after that (below), just name your project. ("ND4J", perhaps?) Now you should go into your pom.xml file within the new ND4J project in IntelliJ. The POM will take a few seconds to build, but when it's done, it will look something like this:
+Simply click "Next" on the following screen, and on the screen after that (below), just name your project. ("ND4J", perhaps?) Now you should go into your pom.xml file within the root of the new ND4J project in IntelliJ. 
 
-![Alt text](../img/nd4j_pom_before.png) 
+Make sure the following dependencies appear within the `<dependencies> ... </dependincies>` section, so Maven installs the ND4J-API and the JBLAS:
 
-You will need to add dependencies within the `<dependencies> ... </dependincies>` section: "nd4j-api" and a linear-algebra backend like "nd4j-jblas" or "nd4j-jcublas", depending on whether you are working with CPUs or GPUs, respectively. You will find all three by searching for them on: <a href="http://search.maven.org/#search%7Cga%7C1%7Cnd4j-jblas">search.maven.org</a>. Click on the "latest version" on this screen. From there, you want to copy the dependency information:
+The ND4J-API:
 
-![Alt text](../img/nd4j_maven.png)
+	 <dependency>
+	   <groupId>org.nd4j</groupId>
+	   <artifactId>nd4j-api</artifactId>
+	   <version>${nd4j.version}</version>
+	 </dependency>
 
-And paste it into the "dependencies" section of your pom.xml, which should end up looking like this in IntelliJ:
+And the JBLAS backend:
 
-![Alt text](../img/nd4j_pom_after.png) 
+	 <dependency>
+	   <groupId>org.nd4j</groupId>
+	   <artifactId>nd4j-jblas</artifactId>
+	   <version>${nd4j.version}</version>
+	 </dependency>
 
-That's it. Once you've pasted the right dependencies into the pom, you're done. You can create a new Java file within IntelliJ and start using ND4J's API to start doing distributed linear algebra. (See our [intro](http://nd4j.org/introduction.html) if you need inspiration.) 
+Copy-paste if necessary. You can now create a new Java file within IntelliJ and start using ND4J's API to start doing distributed linear algebra. (See our [intro](http://nd4j.org/introduction.html) if you need inspiration.) 
+
+The JBLAS backend can be switched to Netlib Blas, or JCUBLAS for GPU support. Check our [dependencies](dependencies.html) page for advanced configuration.
 
 # <a id="github">GitHub</a>
 
