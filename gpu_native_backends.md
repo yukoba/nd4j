@@ -3,7 +3,7 @@ title:
 layout: default
 ---
 
-# Swapping of JCublas (GPU) ackend
+# Swapping of JCublas (GPU) backend
 
 To select between GPUs and native CPUs for your backend processing, you'll need to change the dependencies in ND4J's POM file. Your selection will affect both ND4J and, if you're using it, [Deeplearning4j](http://deeplearning4j.org/).
 
