@@ -15,17 +15,20 @@ In order to use ND4J, you'll need to have several tools installed in your machin
 4. [Github](#github)
 5. [Next Steps](#next-steps)
 
-Installing these tools from scratch takes a while, so be patient. This tutorial will guide you until you can run a few simple examples that illustrate how ND4J works, and perform your own calculations.
+Installing these tools will take more or less time depending on what you already have installed in your machine. Feel free to skip the explanation for the packages you already have. This tutorial will guide you until you can run a few simple examples that illustrate how ND4J works, and perform your own calculations.
 
 # <a id="java">Java</a>
 
 ### What it is
+
 Java is the programming language we use. There are 9 million Java developers worldwide. Java runs on 3 billion mobile phones and 97 percent of all enterprise desktops. 
 
 ### Why you need it
+
 Java will allow your neural nets to work cross-platform on servers, desktops and mobile devices.
 
 ### Is it already installed?
+
 To test which version of Java you have (and whether you have it at all), type the following into the command line:
 
 		java -version
@@ -33,6 +36,7 @@ To test which version of Java you have (and whether you have it at all), type th
 ND4J requires Java 7, so if you have an older version, you will need to install a newer one.
 
 ### Installation
+
 If you don't have Java 7 installed on your machine, download the [Java Development Kit (JDK) here](http://www.oracle.com/technetwork/java/javase/downloads/jdk7-downloads-1880260.html). The download will vary by operating system. For newer Macs, you'll want the file on the first line to mention Mac OS X (the number after *jdk-7u* increments with each update). It will look something like this:
 
 		Mac OS X x64 185.94 MB -  jdk-7u67-macosx-x71.dmg
@@ -40,15 +44,19 @@ If you don't have Java 7 installed on your machine, download the [Java Developme
 # <a id="ide-for-java">Integrated Development Environment</a>
 
 ### What it is
+
 An Integrated Development Environment ([IDE](http://encyclopedia.thefreedictionary.com/integrated+development+environment)) will allow you to work with our API and build your nets with a few clicks. The IDEs suggested here will use your installed version of Java and can communicate with Maven, which will take care of the dependencies for you. Visit the [dependencies](dependencies.html) page to see how to set up your POM file, or visit the [GPU](gpu_native_backends.html) page to see how you can easily swap backends as needed.
 
 ### Why you need it
+
 You want a hassle-free development environment so that you only need to think about your code. IDEs typically come with Maven support, but we prefer you to install [Maven](#maven) so you can run commands directly as instructed previously.
 
 ### Is it already installed?
+
 Just check your installed programs.
 
 ### Installation
+
 We recommend installing [IntelliJ](https://www.jetbrains.com/idea/download/). The free community edition does the job just fine.
 
 [Eclipse](http://books.sonatype.com/m2eclipse-book/reference/creating-sect-importing-projects.html) and [Netbeans](http://wiki.netbeans.org/MavenBestPractices) are two other popular IDEs.
@@ -116,6 +124,7 @@ The JBLAS backend can be switched to Netlib Blas, or JCUBLAS for GPU support. Ch
 # <a id="github">GitHub</a>
 
 ### What it is
+
 [Github](http://en.wikipedia.org/wiki/GitHub) is a web-based [Revision Control System](http://en.wikipedia.org/wiki/Revision_control), _the [de facto host](http://opensource.com/life/12/11/code-hosting-comparison) for open source projects_.
 
 ### Why you need it
@@ -123,12 +132,14 @@ The JBLAS backend can be switched to Netlib Blas, or JCUBLAS for GPU support. Ch
 If you just want to use the ND4J libraries, **you are not required to install GitHub**. If you're planning to contribute to the ND4J or the [DeepLearning4J](https://github.com/SkymindIO/deeplearning4j) project by fixing bugs and committing code, you will. (Thanks in advance :)
 
 ### Is it already installed?
+
 Just check your installed programs.
 
 ### Installation
+
 Download GitHub for [Mac](https://mac.github.com/), [Windows](https://windows.github.com/), etc. To clone the ND4J files, enter this command into your terminal (Mac) or Git Shell (Windows):
 
-      git clone https://github.com/SkymindIO/nd4j
+      git clone https://github.com/SkymindIO/nd4j-examples
       
 Another way to get the source code is by clicking on the "[download ZIP](https://github.com/SkymindIO/nd4j/archive/master.zip)" button from the [ND4J GitHub page](https://github.com/SkymindIO/nd4j). Then unzip the file (you can use [7-zip](http://www.7-zip.org/download.html) to do that).
 
