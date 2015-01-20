@@ -17,7 +17,7 @@ The current version of __Jcuda__ requires you to specify your <font color="#FF66
          <version>${nd4j.version}</version>
         </dependency>
 
-You can replace the _artifactId_, depending on your preference:
+You can replace the `<artifactId> ... </artifactId>`, depending on your preference:
 
 |                                 | <font color="#00CC00">CUDA v5.5</font>                  | <font color="#00CC00">CUDA v6.0</font>                  | <font color="#00CC00">CUDA v6.5</font>                  |
 | ------------------------------- |:--------------------------:| --------------------------:|---------------------------:|
