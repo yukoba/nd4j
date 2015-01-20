@@ -40,7 +40,7 @@ If you don't have Java 7 installed on your machine, download the [Java Developme
 # <a id="ide-for-java">Integrated Development Environment</a>
 
 ### What it is
-An Integrated Development Environment ([IDE](http://encyclopedia.thefreedictionary.com/integrated+development+environment)) will allow you to work with our API and build your nets with a few clicks. The IDEs suggested here will use your installed version of Java and can communicate with Maven, which will take care of the dependencies for you. Visit our [dependencies](dependencies.html) page to see how you can easily swap them out as needed.
+An Integrated Development Environment ([IDE](http://encyclopedia.thefreedictionary.com/integrated+development+environment)) will allow you to work with our API and build your nets with a few clicks. The IDEs suggested here will use your installed version of Java and can communicate with Maven, which will take care of the dependencies for you. Visit the [dependencies](dependencies.html) page to see how to set up your POM file, or visit the [GPU](gpu_native_backends.html) page to see how you can easily swap backends as needed.
 
 ### Why you need it
 You want a hassle-free development environment so that you only need to think about your code. IDEs typically come with Maven support, but we prefer you to install [Maven](#maven) so you can run commands directly as instructed previously.
@@ -93,7 +93,7 @@ Simply click "Next" on the following screen, and on the screen after that (below
 
 ![Alt text](../img/nd4j_pom_before.png) 
 
-You will need to add dependencies within the <dependencies> section: "nd4j-api" and a linear-algebra backend like "nd4j-jblas" or "nd4j-jcublas", depending on whether you are working with CPUs or GPUs, respectively. You will find all three by searching for them on: <a href="http://search.maven.org/#search%7Cga%7C1%7Cnd4j-jblas">search.maven.org</a>. Click on the "latest version" on this screen. From there, you want to copy the dependency information:
+You will need to add dependencies within the `<dependencies> ... </dependincies>` section: "nd4j-api" and a linear-algebra backend like "nd4j-jblas" or "nd4j-jcublas", depending on whether you are working with CPUs or GPUs, respectively. You will find all three by searching for them on: <a href="http://search.maven.org/#search%7Cga%7C1%7Cnd4j-jblas">search.maven.org</a>. Click on the "latest version" on this screen. From there, you want to copy the dependency information:
 
 ![Alt text](../img/nd4j_maven.png)
 
@@ -126,7 +126,7 @@ Another way to get the source code is by clicking on the "[download ZIP](https:/
 
 Now you're ready to run the [examples](elementwise.html). We recommend that you launch your IDE, load the ND4J project and open the examples subdirectory. Locate one of them and click run. If everything was installed correctly you should see numbers appear as the program output. You can start inspecting/messing with the code.
 
-Once you are comfortable with the examples, you might want to change the dependencies defined in the POM files. Learn how to change the [dependencies here](dependencies.html).
+Once you are comfortable with the examples, you might want to change the dependencies defined in the POM files. Learn how to change the [dependencies here](gpu_native_backends.html).
 
 For questions or feedback, join us on our [Google Groups Forum](https://groups.google.com/forum/#!forum/nd4j).
 
