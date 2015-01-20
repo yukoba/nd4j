@@ -33,7 +33,7 @@ Go to your root directory; e.g. nd4j or deeplearning4j and take a look at the [p
 
 ### Or Jcublas (Cuda/GPUs)
 
-Go to our [GPU page](gpu_native_backends.htms) for that.
+Go to our [GPU page](gpu_native_backends.html) for that.
 
 
 
