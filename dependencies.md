@@ -29,7 +29,7 @@ For the backend, you have 3 choices for.
 	   <version>${nd4j.version}</version>
 	 </dependency>
   
-### Or Netlib Blas
+### Or [Netlib Blas](http://netlib.org/)
  
 	 <dependency>
 	   <groupId>org.nd4j</groupId>
