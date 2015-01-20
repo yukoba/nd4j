@@ -7,21 +7,15 @@ description: ""
 
 ## How to configure the POM file
 
-Maven is able to automatically install the required dependencies, which in our case will be the ND4J-API, and the JBLAS backend (that you can switch to Netlib Blas or [JCUBLAS](gpu_native_backends.html) for GPUs). Go to your root directory; e.g. nd4j or deeplearning4j and take a look at the [pom.xml file](https://maven.apache.org/pom.html). It should look like this:
+Maven is able to automatically install the required dependencies once we define the desired backend:
 
-![Alt text](../img/nd4j_pom_before.png) 
+* JBLAS (default)
+* [Netlib Blas](http://netlib.org/)
+* [JCUBLAS](gpu_native_backends.html) (for GPUs compatibility)
+ 
+Go to your root directory; e.g. nd4j or deeplearning4j and take a look at the [pom.xml file](https://maven.apache.org/pom.html). You should see one backend defined in the `<dependencies> ... </dependincies>` section. You can switch among:
 
-Make sure you have the appropriate dependencies within the `<dependencies> ... </dependincies>` section. Include them otherwise. The API is a must:
-
-	 <dependency>
-	   <groupId>org.nd4j</groupId>
-	   <artifactId>nd4j-api</artifactId>
-	   <version>${nd4j.version}</version>
-	 </dependency>
-
-For the backend, you have 3 choices for.
-
-### You can include Jblas
+### Jblas
 
 	 <dependency>
 	   <groupId>org.nd4j</groupId>
@@ -40,6 +34,9 @@ For the backend, you have 3 choices for.
 ### Or Jcublas (Cuda/GPUs)
 
 Go to our [GPU page](gpu_native_backends.htms) for that.
+
+
+
 
 ## How to find out and specify the latest version of the libraries (advanced)
 
