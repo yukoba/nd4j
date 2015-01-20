@@ -7,7 +7,7 @@ tagline:
 
 # ND4J: N-Dimensional Arrays for Java
 
-ND4J is a **scientific computing library** for **linear algebra and matrix manipulation** (see our [examples](elementwise.html)) on the JVM. It is meant to be used in **production environments** rather than as a research tool, which means that the routines have been carefully crafted to run **fast**, with **minimum RAM** requirements.
+ND4J is a **scientific computing library** for **linear algebra and matrix manipulation** (see our [examples](introduction.html)) on the JVM. It is meant to be used in **production environments** rather than as a research tool, which means that the routines have been carefully crafted to run **fast**, with **minimum RAM** requirements.
 
 ND4J includes:
 
