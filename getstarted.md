@@ -127,7 +127,7 @@ Just check your installed programs.
 
 ### Installation
 
-Download GitHub for [Mac](https://mac.github.com/), [Windows](https://windows.github.com/), etc. To clone the ND4J or DL4J files, enter this command into your terminal (Mac) or Git Shell (Windows):
+Download GitHub for [Mac](https://mac.github.com/), [Windows](https://windows.github.com/), etc. Once installed, to clone the ND4J or DL4J files, enter this command into your terminal (Mac) or Git Shell (Windows):
 
       git clone https://github.com/SkymindIO/nd4j
       git clone https://github.com/SkymindIO/deeplearning4j
