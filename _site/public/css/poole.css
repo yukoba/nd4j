@@ -441,7 +441,6 @@ a.pagination-item:hover {
   min-width:140px;
 }*/
 
-<style type="text/css">
 			* {
 				margin:0px;
 				padding:0px;
@@ -490,4 +489,4 @@ a.pagination-item:hover {
 			.nav li ul li ul {
 				right:-140px;
 				top:0px;
-			}</style>			
+			}			
