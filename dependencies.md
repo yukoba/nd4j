@@ -1,7 +1,7 @@
 ---
 layout: page
-title: "Getting Started"
-description: ""
+title: "Dependencies"
+description: "Dependencies - How to change backends"
 ---
 {% include JB/setup %}
 
