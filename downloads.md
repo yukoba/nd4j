@@ -1,6 +1,6 @@
 ---
 layout: page
-title: "ND4J Downloads"
+title: "Downloads"
 description: ""
 ---
 {% include JB/setup %}
