@@ -1,6 +1,7 @@
 ---
-title: 
-layout: default
+layout: page
+title: "GPU's"
+description: "GPU - Compatibility for nVidea CUDA BLAS, CUBLAS through JCUBLAS"
 ---
 
 # Swapping of JCublas (GPU) backend
