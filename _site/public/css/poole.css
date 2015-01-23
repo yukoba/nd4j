@@ -437,4 +437,6 @@ a.pagination-item:hover {
 
 .nav li ul {
   display:none;
+  position:absolute;
+  min-width:140px;
 }
