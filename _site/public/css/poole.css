@@ -428,3 +428,13 @@ a.pagination-item:hover {
     border-bottom-right-radius: 4px;
   }
 }
+
+/*
+ * Submenus
+ *
+ * Test for submenu navigation
+ */
+
+.nav li ul {
+  display:none;
+}
