@@ -3,9 +3,9 @@ layout: page
 title: "Downloads"
 description: ""
 ---
-<!---
+
 {% include JB/setup %}
--->
+
 # Downloads
 
 ND4j lets you switch between three computational backends: one for GPUs and two different native blas bindings. 
