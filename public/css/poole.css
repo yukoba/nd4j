@@ -499,7 +499,7 @@ a.pagination-item:hover {
  */
 
 <style type="text/css">
-/**{margin:0px;padding:0px;}*/
+*{margin:0px;padding:0px;}
 .nav {margin:0px;padding:0px;width:500px;}
 ul, ol {list-style:none;}
 .nav > li {float:left;}
