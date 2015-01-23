@@ -159,5 +159,4 @@ Useful links:
 * [DeepLearning4J - Wikipedia](https://en.wikipedia.org/wiki/Deeplearning4j)
 * [DeepLearning4J - API Documentation](http://deeplearning4j.org/doc/)
 * [DeepLearning4J - Maven Repository](http://mvnrepository.com/artifact/org.deeplearning4j)
-* [DeepLearning4J - Wiki Tutorial](https://github.com/SkymindIO/deeplearning4j/wiki)
 
