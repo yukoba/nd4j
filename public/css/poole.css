@@ -491,3 +491,17 @@ a.pagination-item:hover {
   line-height: 2.5em;  
   font-weight: normal;
 }
+
+/*
+ * Submenus
+ *
+ * Test for submenu navigation
+ */
+
+.nav li ul {
+  display:none;
+  position:absolute;
+  min-width:140px;
+}
+
+
