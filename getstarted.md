@@ -1,7 +1,7 @@
 ---
 layout: page
 title: "Get started with ND4J in Minutes"
-description: "Follow our video and install a Java development environment ready for matrix algebra with ND4J"
+description: "Follow our video and install a Java development environment ready for N-Dimensional Array Algebra with ND4J"
 ---
 {% include JB/setup %}
 
