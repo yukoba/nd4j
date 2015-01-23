@@ -497,8 +497,8 @@ a.pagination-item:hover {
  *
  * Test for submenu navigation
  */
-.nav li a:hover {background-color:#434343;}
 <style type="text/css">
+.nav li a:hover {background-color:#434343;}
 
 /**{margin:0px;padding:0px;}
 .nav {margin:0px;padding:0px;width:500px;}
