@@ -498,8 +498,7 @@ a.pagination-item:hover {
  * Test for submenu navigation
  */
 
-<style type="text/css">
-			
+
 
 			.nav li a:hover {
 				background-color:#434343;
@@ -524,5 +523,4 @@ a.pagination-item:hover {
 				top:0px;
 			}
 			
-		</style>
 
