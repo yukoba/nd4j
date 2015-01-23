@@ -435,8 +435,8 @@ a.pagination-item:hover {
  * Test for submenu navigation
  */
 
-.nav li ul {
+/*.nav li ul {
   display:none;
   position:absolute;
   min-width:140px;
-}
+}*/
