@@ -1,7 +1,7 @@
 ---
 layout: page
-title: "Video: Set Up ND4J in Minutes"
-description: ""
+title: "Get started with ND4J in Minutes"
+description: "Follow our video and install a Java development environment ready for matrix algebra with ND4J"
 ---
 {% include JB/setup %}
 
