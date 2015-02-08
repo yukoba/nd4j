@@ -5,7 +5,7 @@ tagline: "ND4J is a library for N-Dimensional Array Algebra designed for product
 ---
 {% include JB/setup %}
 
-ND4J is a scientific computing library for (see our [examples](introduction.html)) the JVM. It is meant to be used in production environments rather than as a research tool, which means routines are designed to run fast with minimum RAM requirements.
+ND4J is a scientific computing library for the JVM. It is meant to be used in production environments rather than as a research tool, which means routines are designed to run fast with minimum RAM requirements.
 
 **Main features**
 
