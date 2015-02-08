@@ -27,38 +27,40 @@ Think [SLF4J](http://www.slf4j.org/). Now imagine Numpy with [Theano](http://dee
 
 ### Code Example
 
-Creating a 2 x 2 NDarray:
+Create a 2 x 2 NDarray:
 
     INDArray arr1 = Nd4j.create(new float[]{1,2,3,4},new int[]{2,2});
     System.out.println(arr1);
 
-Which will result in:
+Outputs:
 
     [[1.0 ,3.0]
     [2.0 ,4.0]
     ]
 
-Adding scalar with in-place operations:
+Adding a scalar with in-place operations:
 
     arr1.addi(1);
     System.out.println(arr1);
 
-So each element is incremented by one:
+Each element is incremented by one:
 
     [[2.0 ,4.0]
     [3.0 ,5.0]
     ]
 
-Creating a second array (_arr2_) and adding it to the first one (_arr1_):
+Create a second array (_arr2_) and adding it to the first (_arr1_):
 
     INDArray arr2 = ND4j.create(new float[]{5,6,7,8},new int[]{2,2});
     arr1.addi(arr2);
     System.out.println(arr1);
 
-Which results in:
+Outputs:
 
     [[7.0 ,11.0]
     [9.0 ,13.0]
     ]
+
+You get the idea.
 
 ###[Get started](getstarted.html).
