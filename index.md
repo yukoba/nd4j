@@ -17,7 +17,7 @@ A usability gap has separated Java, Scala and Clojure programmers from the most 
 
 Think [SLF4J](http://www.slf4j.org/). Now imagine Numpy with [Theano](http://deeplearning.net/software/theano/) built in. That's ND4J. It gives engineers in production environments an easy way to port their algorithms and interface with other libraries in the Java and Scala ecosystems. 
 
-#[Getting started is easy](getstarted.html)
+##[Getting started is easy](getstarted.html)
 
 ### ND4J Specifics
 
