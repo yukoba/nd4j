@@ -4,11 +4,11 @@ title: "GPU's"
 description: "GPU - Compatibility for nVidea CUDA BLAS, CUBLAS through JCUBLAS"
 ---
 
-# Swapping of JCublas (GPU) backend
+# Swapping in the JCublas backend (for GPUs) 
 
-To select between GPUs and native CPUs for your backend processing, you'll need to change the dependencies in ND4J's POM file. Your selection will affect both ND4J and, if you're using it, [Deeplearning4j](http://deeplearning4j.org/).
+You can choose GPUs or native CPUs for your backend processing by changing the dependencies in ND4J's POM.xml file. Your selection will affect both ND4J and, if you're using it, [Deeplearning4j](http://deeplearning4j.org/).
 
-Check our [dependencies page](dependencies.html) for instructions about how to find and configure the POM file.
+Check our [dependencies page](dependencies.html) for instructions on configuring your POM.xml file.
 
 The current version of __Jcuda__ requires you to specify your <font color="#FF6600">OS</font> and <font color="#00CC00">CUDA version</font> (supporting versions 5.5, 6.0 and 6.5). For example, if you're running on <font color="#FF6600">Windows-64</font> and have <font color="#00CC00">CUDA v6.0</font> installed, then you need to define the _artifactId_ as:
 
