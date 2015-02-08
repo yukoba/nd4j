@@ -17,7 +17,7 @@ A usability gap has separated Java, Scala and Clojure programmers from the most 
 
 Think [SLF4J](http://www.slf4j.org/). Now imagine Numpy with [Theano](http://deeplearning.net/software/theano/) built in. That's ND4J. It gives engineers in production environments an easy way to port their algorithms and interface with other libraries in the Java and Scala ecosystems. 
 
-##[Getting started is easy](getstarted.html)
+##[Click here to get started](getstarted.html), or read on. 
 
 ### ND4J Specifics
 
@@ -32,7 +32,7 @@ Create a 2 x 2 NDarray:
     INDArray arr1 = Nd4j.create(new float[]{1,2,3,4},new int[]{2,2});
     System.out.println(arr1);
 
-Outputs:
+Output:
 
     [[1.0 ,3.0]
     [2.0 ,4.0]
@@ -55,12 +55,10 @@ Create a second array (_arr2_) and adding it to the first (_arr1_):
     arr1.addi(arr2);
     System.out.println(arr1);
 
-Outputs:
+Output:
 
     [[7.0 ,11.0]
     [9.0 ,13.0]
     ]
 
-You get the idea.
-
-###[Get started](getstarted.html).
+You get the idea. [Now get started](getstarted.html).
