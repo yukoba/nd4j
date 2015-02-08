@@ -5,15 +5,15 @@ description: "Dependencies - How to change backends"
 ---
 {% include JB/setup %}
 
-## How to configure the POM file
+## Configuring the POM.xml file
 
-Maven is able to automatically install the required dependencies once we define the desired backend:
+Maven can automatically install the required dependencies once we select one of these three backends:
 
 * JBLAS (default)
 * [Netlib Blas](http://netlib.org/)
-* [JCUBLAS](gpu_native_backends.html) (for GPUs compatibility)
+* [JCUBLAS](gpu_native_backends.html) (for GPUs)
  
-Go to your root directory; e.g. nd4j or deeplearning4j and take a look at the [pom.xml file](https://maven.apache.org/pom.html). You should see one backend defined in the `<dependencies> ... </dependincies>` section. You can switch among:
+Go to your root directory -- e.g. nd4j or deeplearning4j -- and inspect the [pom.xml file](https://maven.apache.org/pom.html). You should see one backend defined in the `<dependencies> ... </dependencies>` section. You can switch among:
 
 ### Jblas
 
@@ -33,18 +33,14 @@ Go to your root directory; e.g. nd4j or deeplearning4j and take a look at the [p
 
 ### Or Jcublas (Cuda/GPUs)
 
-Go to our [GPU page](gpu_native_backends.html) for that.
+See our [GPU page](gpu_native_backends.html) for the versions you can choose.
 
+## Finding and specifying the latest version of the libraries (Advanced)
 
-
-
-## How to find out and specify the latest version of the libraries (advanced)
-
-You will find it by searching for them on: [search.maven.org](http://search.maven.org/#search%7Cga%7C1%7Cnd4j-jblas). Click on the "latest version" on this screen. From there, you want to copy the dependency information:
+They can be found on: [search.maven.org](http://search.maven.org/#search%7Cga%7C1%7Cnd4j-jblas). Click on the "latest version" on this screen. From there, you want to copy the dependency information:
 
 ![Alt text](../img/nd4j_maven.png)
 
 And paste it into the "dependencies" section of your pom.xml, which should end up looking like this in IntelliJ:
 
 ![Alt text](../img/nd4j_pom_after.png) 
-
