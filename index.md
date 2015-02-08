@@ -29,8 +29,8 @@ Think [SLF4J](http://www.slf4j.org/). Now imagine Numpy with [Theano](http://dee
 
 Creating a 2 x 2 NDarray:
 
-   INDArray arr1 = Nd4j.create(new float[]{1,2,3,4},new int[]{2,2});
-   System.out.println(arr1);
+    INDArray arr1 = Nd4j.create(new float[]{1,2,3,4},new int[]{2,2});
+    System.out.println(arr1);
 
 Which will result in:
 
