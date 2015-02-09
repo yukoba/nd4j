@@ -1,10 +1,10 @@
 ---
 layout: page
-title: "GPU's"
+title: 
 description: "GPU - Compatibility for nVidea CUDA BLAS, CUBLAS through JCUBLAS"
 ---
 
-# Swapping in the JCublas backend (for GPUs) 
+# The JCublas backend (for GPUs) 
 
 You can choose GPUs or native CPUs for your backend processing by changing the dependencies in ND4J's POM.xml file. Your selection will affect both ND4J and, if you're using it, [Deeplearning4j](http://deeplearning4j.org/).
 
