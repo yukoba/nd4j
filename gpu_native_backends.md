@@ -26,4 +26,4 @@ You can replace the `<artifactId> ... </artifactId>`, depending on your preferen
 | <font color="#FF6600">Windows 64</font>                      | nd4j-jcublas-<font color="#FF6600">windows64</font>-<font color="#00CC00">5.5</font> | nd4j-jcublas-<font color="#FF6600">windows64</font>-<font color="#00CC00">6.0</font> | nd4j-jcublas-<font color="#FF6600">windows64</font>-<font color="#00CC00">6.5</font> |
 | <font color="#FF6600">OSX</font>                             | _not supported_            | nd4j-jcublas-<font color="#FF6600">osx</font>-<font color="#00CC00">6.0</font>       | nd4j-jcublas-<font color="#FF6600">osx</font>-<font color="#00CC00">6.5</font>       |
 
-And that's it. Switching to GPUs means typing two additional letters in your POM.
+That's it. Switching to GPUs means changing one line in your POM.xml file.
