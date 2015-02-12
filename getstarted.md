@@ -45,7 +45,7 @@ If you don't have Java 7 installed on your machine, download the [Java Developme
 
 ### What an IDE is
 
-An Integrated Development Environment ([IDE](http://encyclopedia.thefreedictionary.com/integrated+development+environment)) will allow you to work with our API and build your nets with a few clicks. The IDEs suggested here work with your installed version of Java and can communicate with Maven (see below), which takes care of the dependencies for you. Visit ND4J's [dependencies](dependencies.html) page to see how to set up the POM.xml file, and consult the page on [GPUs abnd CPUs](gpu_native_backends.html) page to learn how to swap backends (it's one line of code...).
+An Integrated Development Environment ([IDE](http://encyclopedia.thefreedictionary.com/integrated+development+environment)) will allow you to work with our API and build your nets with a few clicks. The IDEs suggested here work with your installed version of Java and can communicate with Maven (see below), which takes care of the dependencies for you. Visit ND4J's [dependencies](dependencies.html) page to see how to set up the POM.xml file, and consult the page on [GPUs and CPUs](gpu_native_backends.html) page to learn how to swap backends (it's one line of code...).
 
 ### Why you need an IDE
 
@@ -141,7 +141,7 @@ Another way to get the source code is by clicking on the "[download ZIP](https:/
 
 # <a id="next-steps">Next Steps</a>
 
-Now you're ready to run the [examples](introduction.html). We recommend that you launch your IDE, load the ND4J project and open the examples subdirectory. Locate one in the file tree on the lefthand side of the IntelliJ winow, right click on it, and select the green arrow for "Run" on the drop-down menu. If everything was installed correctly, you should see numbers appear as the program output. Please alter the code to see what you can do with it. 
+Now you're ready to run the [examples](introduction.html). We recommend that you launch your IDE, load the ND4J project and open the examples subdirectory. Locate one in the file tree on the lefthand side of the IntelliJ window, right click on it, and select the green arrow for "Run" on the drop-down menu. If everything was installed correctly, you should see numbers appear as the program output. Please alter the code to see what you can do with it. 
 
 Once you're comfortable with the examples, you might want to change the dependencies defined in the POM files. Learn how to change the [dependencies here](gpu_native_backends.html).
 
