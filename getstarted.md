@@ -5,8 +5,6 @@ description: "Follow our video and install a Java development environment ready 
 ---
 {% include JB/setup %}
 
-<iframe width="750" height="560" src="//www.youtube.com/embed/aWQsQQoTm9Y" frameborder="0" allowfullscreen></iframe>
-
 To use ND4J, you need to install a few things on your computer:
 
 1. [Java](#java) 
