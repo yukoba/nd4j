@@ -114,7 +114,21 @@ You can now create a new Java file within IntelliJ, and start using ND4J's API f
 
 # <a id="canova">Canova</a>
 
-Now follow the same process to install [Canova](http://search.maven.org/#search%7Cga%7C1%7Ccanova-parent) using Maven. [Canova](https://github.com/deeplearning4j/Canova) is a general vectorization lib for machine-learning tools.
+### What it is
+
+[Canova](https://github.com/deeplearning4j/Canova) is a general vectorization lib for machine-learning tools.
+
+### Why you need Canova
+
+Canova makes your life easier by vectorizing raw data into usable vector formats like svmLight, libsvm and ARFF.
+
+### Is Canova already installed?
+
+Probably not. It's brand new. 
+
+### Installing Canova
+
+Take the same steps to install [Canova](http://search.maven.org/#search%7Cga%7C1%7Ccanova-parent) using Maven that you followed for ND4J. 
 
 # <a id="github">GitHub</a>
 
