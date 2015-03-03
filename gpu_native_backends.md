@@ -1,7 +1,7 @@
 ---
 layout: page
 title: 
-description: "GPU - Compatibility for nVidea CUDA BLAS, CUBLAS through JCUBLAS"
+description: "GPU - Compatibility for NVIDIA CUDA BLAS, CUBLAS through JCUBLAS"
 ---
 
 # The JCublas backend (for GPUs) 
