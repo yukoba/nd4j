@@ -13,10 +13,10 @@ Before using Scala Nd4j:
 * Ensure you have the Scala plugin (IntelliJ: Preferences -> Plugins)
 * Add Maven Scala plugin and plugin repository to pom.xml
 
-    package org.deeplearning4j.learn
-    import java.util.Arrays
-    import org.nd4j.api.linalg.DSL._
-    import org.nd4j.linalg.factory.Nd4j
+        package org.deeplearning4j.learn
+        import java.util.Arrays
+        import org.nd4j.api.linalg.DSL._
+        import org.nd4j.linalg.factory.Nd4j
      
      object ScalaMain {
      def main (args: Array[String]) {
