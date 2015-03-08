@@ -1,13 +1,11 @@
 ---
 layout: page
-title: "Scala and Scientific Computing on ND4J"
+title: "Scala & Scientific Computing on ND4J"
 description: 
 ---
 {% include JB/setup %}
 
-
-
-
+Below you'll find illustrations of how ND4J's Scala API works. Notice how similar the syntax is to Python. 
 
     package org.deeplearning4j.learn
     import java.util.Arrays
@@ -19,11 +17,11 @@ description:
      * Before using Scala Nd4j, make sure you have included the nd4j-scala-api Maven dependency.
      * Ensure you have the Scala plugin (IntelliJ: Preferences -> Plugins).
      * Add Maven Scala plugin and plugin repository to pom.xml
-     *
-     * @author sonali
      */
+     
      object ScalaMain {
      def main (args: Array[String]) {
+     
      /** Creating arrays in multiple ways, all using numpy syntax */
      
      var arr = Nd4j.create(4)
