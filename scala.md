@@ -14,7 +14,7 @@ description:
     import org.nd4j.api.linalg.DSL._
     import org.nd4j.linalg.factory.Nd4j
      /**
-     * Examples of Scala Nd4j usage
+     * Examples of Scala Nd4j usage: ScalaMain.scala
      *
      * Before using Scala Nd4j, make sure you have included the nd4j-scala-api Maven dependency.
      * Ensure you have the Scala plugin (IntelliJ: Preferences -> Plugins).
