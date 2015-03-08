@@ -9,7 +9,7 @@ Below you'll find illustrations of how ND4J's Scala API works. Notice how simila
 
 Before using Scala Nd4j: 
 * Make sure you have included the nd4j-scala-api Maven dependency. 
-* Ensure you have the Scala plugin (IntelliJ: Preferences -> Plugins).
+* Ensure you have the Scala plugin (IntelliJ: Preferences -> Plugins)
 * Add Maven Scala plugin and plugin repository to pom.xml
 
     package org.deeplearning4j.learn
