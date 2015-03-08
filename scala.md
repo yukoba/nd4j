@@ -8,6 +8,7 @@ description:
 Below you'll find illustrations of how ND4J's Scala API works. Notice how similar the syntax is to Python. 
 
 Before using Scala Nd4j: 
+
 * Make sure you have included the nd4j-scala-api Maven dependency. 
 * Ensure you have the Scala plugin (IntelliJ: Preferences -> Plugins)
 * Add Maven Scala plugin and plugin repository to pom.xml
