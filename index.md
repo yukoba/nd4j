@@ -13,7 +13,7 @@ ND4J is a scientific computing library for the JVM. It is meant to be used in pr
 * Multiplatform functionality including GPUs
 * Linear algebra and signal processing functions
 
-A usability gap has separated Java, Scala and Clojure programmers from the most powerful tools in data analysis, like [NumPy](http://www.numpy.org/) or [Matlab](http://www.mathworks.com/). With ND4J, intuitive scientific computing tools once limited to the Python community are now open source, distributed and integrated with GPUs on the JVM.
+A usability gap has separated Java, [Scala](http://nd4j.org/scala.html) and Clojure programmers from the most powerful tools in data analysis, like [NumPy](http://www.numpy.org/) or [Matlab](http://www.mathworks.com/). With ND4J, intuitive scientific computing tools once limited to the Python community are now open source, distributed and integrated with GPUs on the JVM.
 
 Think [SLF4J](http://www.slf4j.org/). Now imagine Numpy with [Theano](http://deeplearning.net/software/theano/) built in. That's ND4J. It gives engineers in production environments an easy way to port their algorithms and interface with other libraries in the Java and Scala ecosystems. 
 
