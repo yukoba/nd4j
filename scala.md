@@ -1,6 +1,6 @@
 ---
 layout: page
-title: "Scala & Scientific Computing on ND4J"
+title: "ND4J, Scala & Scientific Computing"
 description: 
 ---
 {% include JB/setup %}
