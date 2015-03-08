@@ -26,7 +26,7 @@ Before using Scala Nd4j:
      val arr4 = Nd4j.linspace(1, 6, 6).reshape(2, 3)
      
     /** Array addition in place */
-    
+
     arr += arr2
     arr += 2
     
