@@ -5,7 +5,7 @@ description:
 ---
 {% include JB/setup %}
 
-Below you'll find illustrations of how ND4J's Scala API works. Notice how similar the syntax is to Python. (You can run the Scala examples using [this file](https://github.com/deeplearning4j/nd4j/blob/master/ScalaMain.scala).)
+Below you'll find illustrations of how ND4J's Scala API works. Notice how similar the syntax is to Python. (You can run the Scala examples using [this file](https://gist.github.com/agibsonccc/241034a329bd1e12fa70).)
 
 Before using Scala ND4J, please make sure you have: 
 
