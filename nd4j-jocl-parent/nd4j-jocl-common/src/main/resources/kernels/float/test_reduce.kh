@@ -1,27 +1,27 @@
 #include "reduce.h"
 
 
-__global  float update(float old,float opOutput,float *extraParams) {
+__global  float update(float old,float opOutput,global float *extraParams) {
 	return opOutput + old;
 }
 
 
-__global  float merge(float old,float opOutput,float *extraParams) {
+__global  float merge(float old,float opOutput,global float *extraParams) {
 	return opOutput + old;
 }
 
-__global  float op(float d1,float *extraParams) {
+__global  float op(float d1,global float *extraParams) {
 	return d1;
 }
 
 
-__global  float postProcess(float reduction,int n,int xOffset,float *dx,int incx,float *params,float *result) {
+__global  float postProcess(float reduction,int n,int xOffset,global float *dx,int incx,global float *params,global float *result) {
 	return reduction;
 }
 
 
-extern "C"
-__kernel void sum_strided_float(int n, int xOffset,float *dx,int incx,float *params,float *result) {
+
+__kernel void sum_strided_float(int n, int xOffset,global float *dx,int incx,global float *params,global float *result) {
 	transform(n,xOffset,dx,incx,params,result);
 }
 
@@ -35,25 +35,25 @@ int main(void) {
 	printf("[Vector addition of %d elements]\n", numElements);
 
 	// Allocate the host input vector A
-	float *h_A = (float *) malloc(size);
+	global float *h_A = (global float *) malloc(size);
 	for(i = 0; i < numElements; i++) {
 		h_A[i] = i + 1;
 		printf("Host %d \n",i);
 	}
 
-    float *h_Result = (float*) malloc(size);
+    global float *h_Result = (float*) malloc(size);
     for(int i = 0; i < numElements; i++) {
     	h_Result[i] = 0;
     }
 
 
-	float *d_A = NULL;
+	global float *d_A = NULL;
 	//allocate memory on device
 	CUDA_CHECK_RETURN(cudaMalloc((void **)&d_A, size));
 	//copy memory from host to device
 	CUDA_CHECK_RETURN(cudaMemcpy(d_A, h_A, size, cudaMemcpyHostToDevice));
 
-	float *d_Result = NULL;
+	global float *d_Result = NULL;
 	CUDA_CHECK_RETURN(cudaMalloc((void **)&d_Result, size));
 	CUDA_CHECK_RETURN(cudaMemcpy(d_Result, h_A, size, cudaMemcpyHostToDevice));
 
@@ -63,9 +63,9 @@ int main(void) {
 	int blocksPerGrid = 128;
 	int threadsPerBlock = 256;
 
-	float *extraParams = (float *) malloc(1 * sizeof(float));
+	global float *extraParams = (global float *) malloc(1 * sizeof(float));
 	extraParams[0] = 0;
-	float *d_extraParams = NULL;
+	global float *d_extraParams = NULL;
 	CUDA_CHECK_RETURN(cudaMalloc((void **)&d_extraParams, size));
     CUDA_CHECK_RETURN(cudaMemcpy(d_extraParams, extraParams, 1 * sizeof(float), cudaMemcpyHostToDevice));
 

@@ -1,15 +1,15 @@
 #include "pairwise_transform.h"
 
 
-__global  float op(float d1,float d2,float *params) {
+__global  float op(float d1,float d2,global float *params) {
       return d2 / d1;
 }
-__global  float op(float d1,float *params) {
+__global  float op(float d1,global float *params) {
          return d1;
 }
 
-extern "C"
-__kernel void rdiv_strided_float(int n, int xOffset,int yOffset,float *dx, float *dy,int incx,int incy,float *params,float *result) {
+
+__kernel void rdiv_strided_float(int n, int xOffset,int yOffset,global float *dx, global float *dy,int incx,int incy,global float *params,global float *result) {
         transform(n,xOffset,yOffset,dx,dy,incx,incy,params,result);
 
  }

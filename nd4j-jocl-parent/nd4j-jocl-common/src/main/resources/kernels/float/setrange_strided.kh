@@ -1,7 +1,7 @@
 #include "transform.h"
 
 
-__global  float op(float d1,float *params) {
+__global  float op(float d1,global float *params) {
        float min = params[0];
        float max = params[1];
     if(d1 >= min && d1 <= max)
@@ -16,8 +16,8 @@ __global  float op(float d1,float *params) {
      
 }
 
-extern "C"
-__kernel void setrange_strided_float(int n,int idx,float *dy,int incy,float *params,float *result) {
+
+__kernel void setrange_strided_float(int n,int idx,global float *dy,int incy,global float *params,global float *result) {
        transform(n,idx,dy,incy,params,result);
 
  }

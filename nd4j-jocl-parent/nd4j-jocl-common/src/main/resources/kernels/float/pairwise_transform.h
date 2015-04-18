@@ -1,10 +1,10 @@
 #include <math.h>
 
 //x[i] and y[i]
-__global  float op(float d1,float d2,float *params);
-__global  float op(float d1,float *params);
+__global  float op(float d1,float d2,global float *params);
+__global  float op(float d1,global float *params);
 
-__global  void transform(int n,int xOffset,int yOffset, float *dx, float *dy,int incx,int incy,float *params,float *result) {
+__global  void transform(int n,int xOffset,int yOffset, global float *dx, global float *dy,int incx,int incy,global float *params,global float *result) {
 
     int totalThreads = get_num_groups(0) * get_local_size(0);
     int tid = get_local_id(0);

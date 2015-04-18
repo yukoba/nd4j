@@ -11,7 +11,7 @@ __global  double doBinomial(int n, double p,double *randomNumbers, curandGenerat
   return x;
 }
 
-extern "C"
+
 __kernel void binomial_scalar_double(int len,int n,double ps,double *randomNumbers,double *result, curandGenerator_t s) {
           int tid = get_local_id(0) + get_group_id(0) * get_local_size(0);
           for(int i = tid; i < len; i += get_local_size(0)*get_num_groups(0)) {

@@ -102,7 +102,7 @@ public class ContextHolder {
      * context.
      */
     private void initialize(CUcontext context,int deviceNumber) {
-        int result = cuInit(0);
+        int result = cuInit(deviceNumber);
         if (result != CUresult.CUDA_SUCCESS)
         {
             throw new CudaException(

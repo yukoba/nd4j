@@ -1,4 +1,4 @@
-extern "C"
+
 #include <math.h>
 
 #define SHARED_MEMORY_LENGTH  128

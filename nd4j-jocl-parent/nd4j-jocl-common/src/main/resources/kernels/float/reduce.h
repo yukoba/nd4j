@@ -1,4 +1,4 @@
-extern "C"
+
 #include <math.h>
 #include <stdio.h>
 #include <stdlib.h>
@@ -7,15 +7,15 @@ extern "C"
 //referenced: https://github.com/ArchaeaSoftware/cudahandbook/blob/master/reduction/reduction6AnyBlockSize.cuh
 
 //an op for the kernel
-__global  float op(float d1,float *extraParams);
+__global  float op(float d1,global float *extraParams);
 
 //calculate an update of the reduce operation
-__global  float update(float old,float opOutput,float *extraParams);
+__global  float update(float old,float opOutput,global float *extraParams);
 //invoked when combining two kernels
-__global  float merge(float f1, float f2,float *extraParams);
+__global  float merge(float f1, float f2,global float *extraParams);
 
 //post process result (for things like means etc)
-__global  float postProcess(float reduction,int n,int xOffset,float *dx,int incx,float *extraParams,float *result);
+__global  float postProcess(float reduction,int n,int xOffset,global float *dx,int incx,global float *extraParams,global float *result);
 
 /**
 
@@ -27,7 +27,7 @@ Perform a reduction
 @param extraParams extra parameters used for calculations
 @param result where to store the result of the reduction
  */
-__global  void transform(int n, int xOffset,float *dx,int incx,float *extraParams,float *result) {
+__global  void transform(int n, int xOffset,global float *dx,int incx,global float *extraParams,global float *result) {
 	extern _local float sPartials[];
 	int tid = get_local_id(0);
 	int totalThreads = get_num_groups(0) * get_local_size(0);

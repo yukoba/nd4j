@@ -1,27 +1,27 @@
 #include "reduce.h"
 
 
-__global  float merge(float old,float opOutput,float *extraParams) {
+__global  float merge(float old,float opOutput,global float *extraParams) {
        return opOutput * old;
  }
 
 
-__global  float update(float old,float opOutput,float *extraParams) {
+__global  float update(float old,float opOutput,global float *extraParams) {
        return opOutput * old;
  }
 
 
 
-__global  float op(float d1,float *extraParams) {
+__global  float op(float d1,global float *extraParams) {
       return d1;
 }
 
 
-__global  float postProcess(float reduction,int n,int xOffset,float *dx,int incx,float *extraParams,float *result) {
+__global  float postProcess(float reduction,int n,int xOffset,global float *dx,int incx,global float *extraParams,global float *result) {
            return reduction;
 }
-extern "C"
-__kernel void prod_strided_float(int n, int xOffset,float *dx,int incx,float *extraParams,float *result) {
+
+__kernel void prod_strided_float(int n, int xOffset,global float *dx,int incx,global float *extraParams,global float *result) {
              transform(n,xOffset,dx,incx,extraParams,result);
 }
 

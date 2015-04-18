@@ -1,18 +1,18 @@
-extern "C"
+
 #include <math.h>
 
 #define SHARED_MEMORY_LENGTH  128
 
 
 //an op for the kernel
-__global  float op(float d1,float d2,float *extraParams);
+__global  float op(float d1,float d2,global float *extraParams);
 
 //calculate an update of the reduce operation
-__global  float update(float old,float opOutput,float *extraParams);
+__global  float update(float old,float opOutput,global float *extraParams);
 
 
 //post process result (for things like means etc)
-__global  float postProcess(float reduction,int n,int xOffset,float *dx,int incx,float *extraParams,float *result);
+__global  float postProcess(float reduction,int n,int xOffset,global float *dx,int incx,global float *extraParams,global float *result);
 
 
 
@@ -32,7 +32,7 @@ Perform a reduction
 @param extraParams extra parameters used for calculations
 @param result where to store the result of the reduction
 */
-__global  void transform_pair(int n, int xOffset,int yOffset,float *dx,float *dy,int incx,int incy,float *extraParams,float *result) {
+__global  void transform_pair(int n, int xOffset,int yOffset,global float *dx,global float *dy,int incx,int incy,global float *extraParams,global float *result) {
         extern _local float sPartials[];
         const int tid = get_local_id(0);
         int totalThreads = get_num_groups(0) * get_local_size(0);
@@ -87,7 +87,7 @@ Perform a reduction
 @param extraParams extra parameters used for calculations
 @param result where to store the result of the reduction
 */
-__global  void transform(int n, int xOffset,float *dx,int incx,float *extraParams,float *result) {
+__global  void transform(int n, int xOffset,global float *dx,int incx,global float *extraParams,global float *result) {
         extern _local float sPartials[];
         const int tid = get_local_id(0);
         int totalThreads = get_num_groups(0) * get_local_size(0);

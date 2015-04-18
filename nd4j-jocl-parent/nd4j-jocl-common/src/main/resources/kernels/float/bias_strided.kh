@@ -1,10 +1,10 @@
 #include "reduce.h"
 
-__global  float merge(float old,float opOutput,float *extraParams) {
+__global  float merge(float old,float opOutput,global float *extraParams) {
        return opOutput + old;
  }
 
-__global  float update(float old,float opOutput,float *extraParams) {
+__global  float update(float old,float opOutput,global float *extraParams) {
        return opOutput + old;
  }
 
@@ -14,11 +14,11 @@ __global  float update(float old,float opOutput,float *extraParams) {
  @param d1 the first operator
  @param d2 the second operator
 */
-__global  float op(float d1,float d2,float *extraParams) {
+__global  float op(float d1,float d2,global float *extraParams) {
       return op(d1,extraParams);
 }
 //an op for the kernel
-__global  float op(float d1,float *extraParams) {
+__global  float op(float d1,global float *extraParams) {
        float mean = extraParams[1];
        float curr = (d1 - mean);
        return  curr;
@@ -26,12 +26,12 @@ __global  float op(float d1,float *extraParams) {
 }
 
 //post process result (for things like means etc)
-__global  float postProcess(float reduction,int n,int xOffset,float *dx,int incx,float *extraParams,float *result) {
+__global  float postProcess(float reduction,int n,int xOffset,global float *dx,int incx,global float *extraParams,global float *result) {
           return reduction;
 }
 
-extern "C"
-__kernel void bias_strided_float(int n, int xOffset,float *dx,int incx,float *extraParams,float *result) {
+
+__kernel void bias_strided_float(int n, int xOffset,global float *dx,int incx,global float *extraParams,global float *result) {
               transform(n,xOffset,dx,incx,extraParams,result);
 
  }

@@ -16,7 +16,7 @@ __global  double op(double d1,double *params) {
      
 }
 
-extern "C"
+
 __kernel void setrange_strided_double(int n,int idx,double *dy,int incy,double *params,double *result) {
        transform(n,idx,dy,incy,params,result);
 
