@@ -93,20 +93,12 @@ public class KernelFunctions {
 
     /**
      * Invoke a function with the given number of parameters
-     *
-     * @param blocks           the number of blocks to launch the kernel
-     * @param threadsPerBlock  the number of threads per block
-     * @param kernelParameters the parameters
+    * @param kernelParameters the parameters
      * @param dataType         the data type ot use
      */
-    public static   void invoke(int blocks, int threadsPerBlock, String functionName,String dataType,Object...kernelParameters) {
+    public static   void invoke(String functionName,String dataType,Object...kernelParameters) {
         // Call the kernel function.
-        //dot<<<blocksPerGrid,threadsPerBlock>>>( dev_a, dev_b,dev_partial_c );
-        int sharedMemSize = threadsPerBlock * (dataType.equals("float") ? Sizeof.cl_float : Sizeof.cl_double);
         KernelFunctionLoader.launcher(functionName,dataType).forFunction(functionName + "_" + dataType)
-                .setBlockSize(threadsPerBlock,1,1)
-                .setGridSize(blocks,1,1)
-                .setSharedMemSize(sharedMemSize)
                 .call(kernelParameters);
 
     }

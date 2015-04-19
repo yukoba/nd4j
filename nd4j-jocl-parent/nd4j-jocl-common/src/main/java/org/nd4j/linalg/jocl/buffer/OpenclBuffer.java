@@ -16,12 +16,13 @@
 
 package org.nd4j.linalg.jocl.buffer;
 
-import org.jocl.Pointer;
 import org.jocl.cl_mem;
 import org.nd4j.linalg.api.buffer.DataBuffer;
 
+import java.nio.ByteBuffer;
+
 /**
- * A Jcuda buffer
+ * An opencl buffer
  *
  * @author Adam Gibson
  */
@@ -39,7 +40,11 @@ public interface OpenclBuffer extends DataBuffer {
      */
     public void alloc();
 
-
+    /**
+     * The underlying data buffer
+     * @return the underlying data buffer
+     */
+    public ByteBuffer buff();
 
 
     /**
@@ -48,7 +53,7 @@ public interface OpenclBuffer extends DataBuffer {
      *
      * @param pointer the pointer to set
      */
-    void set(Pointer pointer);
+    void set(ByteBuffer pointer);
 
 
 }

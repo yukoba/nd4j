@@ -47,7 +47,7 @@ public class JoclExecutioner implements OpExecutioner {
     public JoclExecutioner() {
         SimpleOpencl.init();
         dummyFloatPointer = KernelFunctions.alloc(new float[]{1});
-        dummyDoublePointer =KernelFunctions.alloc(new double[]{1});
+        dummyDoublePointer = KernelFunctions.alloc(new double[]{1});
     }
 
     @Override
@@ -114,6 +114,29 @@ public class JoclExecutioner implements OpExecutioner {
     }
 
 
+
+    private Object[] convert(Object[] extraArgs,String dataType) {
+        if(extraArgs == null)
+            return null;
+        Object[] ret = new Object[extraArgs.length];
+
+        if(dataType.equals("double")) {
+            double[] convert = PointerUtil.toDoubles(extraArgs);
+            for(int i = 0; i < extraArgs.length; i++)
+                ret[i] = convert[i];
+        }
+        else {
+            float[] convert = PointerUtil.toFloats(extraArgs);
+            for(int i = 0; i < extraArgs.length; i++)
+                ret[i] = convert[i];
+
+        }
+
+        return ret;
+    }
+
+
+
     @Override
     public INDArray execAndReturn(TransformOp op, int dimension) {
         for (int i = 0; i < op.x().vectorsAlongDimension(dimension); i++) {
@@ -143,7 +166,7 @@ public class JoclExecutioner implements OpExecutioner {
 
     private void invoke(Accumulation op) {
         OpenclBuffer xBuffer = (OpenclBuffer) op.x().data();
-        Pointer xPointer = xBuffer.pointer().withByteOffset(xBuffer.elementSize() * op.x().offset());
+        Pointer xPointer = Pointer.to(xBuffer.buff()).withByteOffset(xBuffer.elementSize() * op.x().offset());
         OpenclBuffer result;
         int resultLength = 1000;
         if (op.x().data().dataType() == DataBuffer.DOUBLE) {
@@ -162,9 +185,11 @@ public class JoclExecutioner implements OpExecutioner {
 
         if (op.y() != null) {
             OpenclBuffer yBuffer = (OpenclBuffer) op.y().data();
-            Pointer yPointer = yBuffer.pointer().withByteOffset(op.y().offset() * yBuffer.elementSize());
+            Pointer yPointer = Pointer.to(yBuffer.buff()).withByteOffset(op.y().offset() * yBuffer.elementSize());
 
             //int n,int xOffset,int yOffset, double *dx, double *dy,int incx,int incy,double *result
+
+
             Object[] kernelParams = new Object[] {
                     new int[]{op.n()},
                     new int[]{op.x().offset()},
@@ -173,12 +198,13 @@ public class JoclExecutioner implements OpExecutioner {
                     yPointer,
                     new int[]{op.x().majorStride()},
                     new int[]{op.y().majorStride()},
-                    toArgs(op.extraArgs(), getType(op)),
-                    result.pointer()
+
             };
 
+            kernelParams = concate(kernelParams,convert(op.extraArgs(),getType(op)),new Object[]{result.pointer()});
+
             invokeFunction(op, kernelParams);
-            setResultForOp(op, result.pointer());
+            setResultForOp(op);
 
 
         } else {
@@ -188,12 +214,12 @@ public class JoclExecutioner implements OpExecutioner {
                     new int[]{op.x().offset()},
                     xPointer,
                     new int[]{op.x().majorStride()},
-                    toArgs(op.extraArgs(), getType(op)),
-                    result.pointer()
+
             };
 
+            kernelParams = concate(kernelParams,convert(op.extraArgs(),getType(op)),new Object[]{result.pointer()});
             invokeFunction(op, kernelParams);
-            setResultForOp(op, result.pointer());
+            setResultForOp(op);
 
 
         }
@@ -201,29 +227,42 @@ public class JoclExecutioner implements OpExecutioner {
         result.destroy();
     }
 
+    private Object[] concate(Object[]...arrs) {
+        int length = 0;
+        for(int i = 0; i < arrs.length; i++) {
+            length += arrs[i].length;
+        }
+
+        Object[] ret = new Object[length];
+        int count = 0;
+        for(int i = 0; i < arrs.length; i++) {
+            for(int j = 0; j < arrs[i].length; j++) {
+                ret[count++] = arrs[i][j];
+            }
+        }
+
+        return ret;
+    }
+
 
     private void invokeFunction(Op op, Object... kernelParams) {
         String functionName = op instanceof TransformOp || op instanceof Accumulation ? op.name() + "_strided" : op.name();
-        int blocks = PointerUtil.getNumBlocks(op.n(), KernelFunctions.BLOCKS, KernelFunctions.THREADS);
-        int threads = PointerUtil.getNumThreads(op.n(), KernelFunctions.THREADS);
-        KernelFunctions.invoke(blocks,threads,functionName,getType(op),kernelParams);
+        KernelFunctions.invoke(functionName,getType(op),kernelParams);
 
     }
 
 
-    private void setResultForOp(Accumulation acc, Pointer resultPointer) {
+    private void setResultForOp(Accumulation acc) {
         OpenclBuffer buff = (OpenclBuffer) acc.x().data();
 
         if (buff.dataType() == DataBuffer.DOUBLE) {
             double[] data = new double[1];
-            Pointer get = Pointer.to(data);
-            JCuda.cudaMemcpy(get, resultPointer, Sizeof.cl_double, cudaMemcpyKind.cudaMemcpyDeviceToHost);
+            data[0] = buff.buff().getDouble();
             acc.setCurrentResult(data[0]);
         }
         else {
             float[] data = new float[1];
-            Pointer get = Pointer.to(data);
-            JCuda.cudaMemcpy(get, resultPointer, Sizeof.cl_float, cudaMemcpyKind.cudaMemcpyDeviceToHost);
+            data[0] = buff.buff().getFloat();
             acc.setCurrentResult(data[0]);
         }
     }
@@ -231,14 +270,14 @@ public class JoclExecutioner implements OpExecutioner {
 
     private void invoke(ScalarOp op) {
         OpenclBuffer xBuffer = (OpenclBuffer) op.x().data();
-        Pointer xPointer = xBuffer.pointer().withByteOffset(op.x().offset() * xBuffer.elementSize());
+        Pointer xPointer = Pointer.to(xBuffer.buff()).withByteOffset(op.x().offset() * xBuffer.elementSize());
 
         OpenclBuffer zBuffer = (OpenclBuffer) op.z().data();
-        Pointer zPointer = zBuffer.pointer().withByteOffset(zBuffer.elementSize() * op.z().offset());
+        Pointer zPointer = Pointer.to(zBuffer.buff()).withByteOffset(zBuffer.elementSize() * op.z().offset());
 
         if (op.y() != null) {
             OpenclBuffer yBuffer = (OpenclBuffer) op.y().data();
-            Pointer yPointer = yBuffer.pointer().withByteOffset(yBuffer.elementSize() * op.y().offset());
+            Pointer yPointer = Pointer.to(yBuffer.buff()).withByteOffset(yBuffer.elementSize() * op.y().offset());
             Object[] kernelParams = new Object[]{
                     new int[]{op.n()},
                     new int[]{op.x().offset()},
@@ -247,10 +286,10 @@ public class JoclExecutioner implements OpExecutioner {
                     yPointer,
                     new int[]{op.x().majorStride()},
                     new int[]{op.y().majorStride()},
-                    toArgs(op.extraArgs(), getType(op)),
-                    zPointer
+
             };
 
+            kernelParams = concate(kernelParams,convert(op.extraArgs(),getType(op)),new Object[]{zPointer});
             invokeFunction(op, kernelParams);
 
 
@@ -264,10 +303,10 @@ public class JoclExecutioner implements OpExecutioner {
                     PointerUtil.getPointer(op),
                     xPointer,
                     new int[]{op.x().majorStride()},
-                    toArgs(op.extraArgs(), getType(op)),
-                    zPointer
+
             };
 
+            kernelParams = concate(kernelParams,convert(op.extraArgs(),getType(op)),new Object[]{zPointer});
             invokeFunction(op, kernelParams);
 
 
@@ -283,14 +322,14 @@ public class JoclExecutioner implements OpExecutioner {
 
     private void invoke(TransformOp op) {
         OpenclBuffer xBuffer = (OpenclBuffer) op.x().data();
-        Pointer xPointer = xBuffer.pointer().withByteOffset(xBuffer.elementSize() * op.x().offset());
+        Pointer xPointer = Pointer.to(xBuffer.buff()).withByteOffset(xBuffer.elementSize() * op.x().offset());
 
         OpenclBuffer zBuffer = (OpenclBuffer) op.z().data();
-        Pointer zPointer = zBuffer.pointer().withByteOffset(zBuffer.elementSize() * op.z().offset());
+        Pointer zPointer = Pointer.to(zBuffer.buff()).withByteOffset(zBuffer.elementSize() * op.z().offset());
 
         if (op.y() != null) {
             OpenclBuffer yBuffer = (OpenclBuffer) op.y().data();
-            Pointer yPointer = yBuffer.pointer().withByteOffset(op.y().offset() * yBuffer.elementSize());
+            Pointer yPointer = Pointer.to(yBuffer.buff()).withByteOffset(op.y().offset() * yBuffer.elementSize());
             /**
              * Construct pointer arguments in the following order:
              * n
@@ -308,8 +347,8 @@ public class JoclExecutioner implements OpExecutioner {
             params[4] = yPointer;
             params[5] = new int[]{op.x().majorStride()};
             params[6] = new int[]{op.y().majorStride()};
-            params[7] = toArgs(op.extraArgs(), getType(op));
-            params[8] = zPointer;
+            params = concate(params, convert(op.extraArgs(), getType(op)), new Object[]{zPointer});
+
             invokeFunction(op, params);
 
 
@@ -320,9 +359,10 @@ public class JoclExecutioner implements OpExecutioner {
                     new int[]{op.x().offset()},
                     xPointer,
                     new int[]{op.x().majorStride()},
-                    toArgs(op.extraArgs(), getType(op)),
-                    zPointer
+
             };
+
+            kernelParams = concate(kernelParams,convert(op.extraArgs(),getType(op)),new Object[]{zPointer});
 
             invokeFunction(op, kernelParams);
 

@@ -39,7 +39,7 @@ import org.nd4j.linalg.jocl.kernel.KernelFunctionLoader;
 public class SimpleOpencl {
 
     private static boolean init = false;
-   
+
 
     static {
         init();
@@ -61,7 +61,7 @@ public class SimpleOpencl {
 
     public static Pointer getPointer(INDArray array) {
         OpenclBuffer buffer = (OpenclBuffer) array.data();
-        return buffer.pointer().withByteOffset(buffer.elementSize() * array.offset());
+        return Pointer.to(buffer.buff()).withByteOffset(buffer.elementSize() * array.offset());
     }
 
 
@@ -99,12 +99,13 @@ public class SimpleOpencl {
 
         DataTypeValidation.assertDouble(A, B, C);
         assertCudaBuffer(A.data(), B.data(), C.data());
-       
+
 
         Pointer cAPointer = getPointer(A);
         Pointer cBPointer = getPointer(B);
         Pointer cCPointer = getPointer(C);
 
+/*
 
         jocl.cublasDgemv(
                 'N',
@@ -118,8 +119,9 @@ public class SimpleOpencl {
                 beta,
                 cCPointer,
                 1);
+*/
 
-       
+
         return C;
     }
 
@@ -136,7 +138,7 @@ public class SimpleOpencl {
     public static INDArray gemv(INDArray A, INDArray B, INDArray C, float alpha, float beta) {
 
         DataTypeValidation.assertFloat(A, B, C);
-       
+
 
         Pointer cAPointer = getPointer(A);
         Pointer cBPointer = getPointer(B);
@@ -144,7 +146,7 @@ public class SimpleOpencl {
 
 
 
-        jocl.cublasSgemv('N',
+    /*    jocl.cublasSgemv('N',
                 A.rows(),
                 A.columns(),
                 alpha,
@@ -156,7 +158,7 @@ public class SimpleOpencl {
                 cCPointer,
                 1);
 
-       
+       */
 
         return C;
     }
@@ -175,12 +177,13 @@ public class SimpleOpencl {
     public static IComplexNDArray gemv(IComplexNDArray A, IComplexNDArray B, IComplexDouble a, IComplexNDArray C
             , IComplexDouble b) {
         DataTypeValidation.assertSameDataType(A, B, C);
-       
+
 
 
         Pointer cAPointer = getPointer(A);
         Pointer cBPointer = getPointer(B);
         Pointer cCPointer = getPointer(C);
+/*
 
 
         cuDoubleComplex alpha = cuDoubleComplex.cuCmplx(a.realComponent().doubleValue(), b.imaginaryComponent().doubleValue());
@@ -198,8 +201,9 @@ public class SimpleOpencl {
                 beta,  // beta
                 cCPointer, // y
                 C.secondaryStride()); // ldc
+*/
 
-       
+
 
         return C;
 
@@ -219,14 +223,14 @@ public class SimpleOpencl {
             , IComplexFloat b) {
         DataTypeValidation.assertFloat(A, B, C);
         assertCudaBuffer(A, B, C);
-       
+
 
         Pointer cAPointer = getPointer(A);
         Pointer cBPointer = getPointer(B);
         Pointer cCPointer = getPointer(C);
 
 
-        cuComplex alpha = cuComplex.cuCmplx(a.realComponent().floatValue(), b.imaginaryComponent().floatValue());
+      /*  cuComplex alpha = cuComplex.cuCmplx(a.realComponent().floatValue(), b.imaginaryComponent().floatValue());
         cuComplex beta = cuComplex.cuCmplx(b.realComponent().floatValue(), b.imaginaryComponent().floatValue());
 
         jocl.cublasCgemv(
@@ -242,7 +246,7 @@ public class SimpleOpencl {
                 cCPointer, // y
                 C.secondaryStride()); // ldc
 
-       
+    */
 
         return C;
 
@@ -262,14 +266,14 @@ public class SimpleOpencl {
     public static IComplexNDArray gemm(IComplexNDArray A, IComplexNDArray B, IComplexDouble a, IComplexNDArray C
             , IComplexDouble b) {
         DataTypeValidation.assertSameDataType(A, B, C);
-       
+
 
         Pointer cAPointer = getPointer(A);
         Pointer cBPointer = getPointer(B);
         Pointer cCPointer = getPointer(C);
 
 
-
+/*
         cuDoubleComplex alpha = cuDoubleComplex.cuCmplx(a.realComponent().doubleValue(), b.imaginaryComponent().doubleValue());
         cuDoubleComplex beta = cuDoubleComplex.cuCmplx(b.realComponent().doubleValue(), b.imaginaryComponent().doubleValue());
 
@@ -288,7 +292,7 @@ public class SimpleOpencl {
                 cCPointer, // y
                 C.rows()); // ldc
 
-       
+       */
 
         return C;
 
@@ -308,14 +312,14 @@ public class SimpleOpencl {
             , IComplexFloat b) {
         DataTypeValidation.assertFloat(A, B, C);
 
-       
+
 
         Pointer cAPointer = getPointer(A);
         Pointer cBPointer = getPointer(B);
         Pointer cCPointer = getPointer(C);
 
 
-        cuComplex alpha = cuComplex.cuCmplx(a.realComponent().floatValue(), b.imaginaryComponent().floatValue());
+     /*   cuComplex alpha = cuComplex.cuCmplx(a.realComponent().floatValue(), b.imaginaryComponent().floatValue());
         cuComplex beta = cuComplex.cuCmplx(b.realComponent().floatValue(), b.imaginaryComponent().floatValue());
 
         jocl.cublasCgemm(
@@ -333,7 +337,7 @@ public class SimpleOpencl {
                 cCPointer, // y
                 C.rows()); // ldc
 
-       
+       */
 
         return C;
 
@@ -354,7 +358,7 @@ public class SimpleOpencl {
 
         DataTypeValidation.assertDouble(A, B, C);
 
-       
+
 
         OpenClNDArray cA = (OpenClNDArray) A;
         OpenClNDArray cB = (OpenClNDArray) B;
@@ -365,7 +369,7 @@ public class SimpleOpencl {
         Pointer cCPointer = getPointer(cC);
 
 
-        jocl.cublasDgemm(
+      /*  jocl.cublasDgemm(
                 'n', //trans
                 'n',
                 C.rows(),  // m
@@ -380,7 +384,7 @@ public class SimpleOpencl {
                 cCPointer, // y
                 C.rows()); // incy
 
-       
+       */
 
         return C;
 
@@ -399,12 +403,13 @@ public class SimpleOpencl {
     public static INDArray gemm(INDArray A, INDArray B, INDArray C,
                                 float alpha, float beta) {
         DataTypeValidation.assertFloat(A, B, C);
-       
+
 
 
         Pointer cAPointer = getPointer(A);
         Pointer cBPointer = getPointer(B);
         Pointer cCPointer = getPointer(C);
+/*
 
         jocl.cublasSgemm(
                 'n', //trans
@@ -421,6 +426,7 @@ public class SimpleOpencl {
                 cCPointer, // y
                 C.rows()); // incy
        
+*/
 
         return C;
 
@@ -438,10 +444,10 @@ public class SimpleOpencl {
      */
     public static double nrm2(IComplexNDArray A) {
 
-       
+
 
         Pointer cAPointer = getPointer(A);
-        if (A.data().dataType() == DataBuffer.FLOAT) {
+       /* if (A.data().dataType() == DataBuffer.FLOAT) {
             float s = jocl.cublasSnrm2(A.length(), cAPointer, 2);
             return s;
         } else {
@@ -449,6 +455,10 @@ public class SimpleOpencl {
             return s;
         }
 
+
+*/
+
+        return 0.0;
     }
 
     /**
@@ -460,14 +470,14 @@ public class SimpleOpencl {
     public static void copy(IComplexNDArray x, IComplexNDArray y) {
         DataTypeValidation.assertSameDataType(x, y);
 
-       
+
 
         Pointer xCPointer = getPointer(x);
         Pointer yCPointer = getPointer(y);
 
 
         OpenclBuffer buff = (OpenclBuffer) x.data();
-        if (x.majorStride() == 2 && y.majorStride() == 2)
+/*        if (x.majorStride() == 2 && y.majorStride() == 2)
             JCuda.cudaMemcpy(
                     yCPointer
                     , xCPointer
@@ -475,7 +485,7 @@ public class SimpleOpencl {
                     , cudaMemcpyKind.cudaMemcpyDeviceToDevice);
         else
             Nd4j.getExecutioner().exec(new CopyOp(x, y, y, x.length()));
-       
+       */
 
 
     }
@@ -488,17 +498,18 @@ public class SimpleOpencl {
      * @return the max index of the given ndarray
      */
     public static int iamax(IComplexNDArray x) {
-       
+
 
         Pointer xCPointer = getPointer(x);
-        if (x.data().dataType() == DataBuffer.FLOAT) {
+   /*     if (x.data().dataType() == DataBuffer.FLOAT) {
             int max = jocl.cublasIsamax(x.length(), xCPointer, 1);
             return max;
         } else {
             int max = jocl.cublasIzamax(x.length(), xCPointer, 1);
             return max;
         }
-
+*/
+        return 0;
     }
 
     /**
@@ -507,8 +518,9 @@ public class SimpleOpencl {
      */
     public static float asum(IComplexNDArray x) {
         Pointer xCPointer = getPointer(x);
-        float sum = jocl.cublasScasum(x.length(), xCPointer, 1);
-        return sum;
+      /*  float sum = jocl.cublasScasum(x.length(), xCPointer, 1);
+        return sum;*/
+        return 0.0f;
     }
 
 
@@ -526,7 +538,7 @@ public class SimpleOpencl {
         Pointer xCPointer = getPointer(x);
         Pointer yCPointer = getPointer(y);
        
-
+/*
         if (x.data().dataType() == DataBuffer.FLOAT) {
             jocl.cublasSswap(
                     x.length(),
@@ -544,7 +556,7 @@ public class SimpleOpencl {
                     1);
 
         }
-       
+       */
 
 
     }
@@ -555,7 +567,7 @@ public class SimpleOpencl {
      */
     public static double asum(INDArray x) {
 
-
+/*
         Pointer xCPointer = getPointer(x);
         if (x.data().dataType() == DataBuffer.FLOAT) {
             float sum = jocl.cublasSasum(x.length(), xCPointer, 1);
@@ -563,8 +575,9 @@ public class SimpleOpencl {
         } else {
             double sum = jocl.cublasDasum(x.length(), xCPointer, 1);
             return sum;
-        }
+        }*/
 
+        return 0.0;
     }
 
     /**
@@ -575,6 +588,7 @@ public class SimpleOpencl {
      */
     public static double nrm2(INDArray x) {
 
+/*
 
         if (x.data().dataType() == DataBuffer.FLOAT) {
             Pointer xCPointer = getPointer(x);
@@ -588,8 +602,10 @@ public class SimpleOpencl {
             return normal2;
         }
         throw new IllegalStateException("Illegal data type on array ");
+*/
 
 
+        return 0.0;
     }
 
     /**
@@ -602,7 +618,7 @@ public class SimpleOpencl {
     public static int iamax(INDArray x) {
 
 
-
+/*
         Pointer xCPointer = getPointer(x);
 
         if (x.data().dataType() == DataBuffer.FLOAT) {
@@ -621,7 +637,8 @@ public class SimpleOpencl {
             return max - 1;
         }
 
-        throw new IllegalStateException("Illegal data type on array ");
+        throw new IllegalStateException("Illegal data type on array ");*/
+        return 0;
     }
 
 
@@ -639,7 +656,7 @@ public class SimpleOpencl {
 
         Pointer xAPointer = getPointer(A);
         Pointer xBPointer = getPointer(B);
-       
+      /*
         jocl.cublasSaxpy(
                 A.length(),
                 da,
@@ -647,7 +664,7 @@ public class SimpleOpencl {
                 A.majorStride(),
                 xBPointer,
                 B.majorStride());
-       
+       */
 
 
     }
@@ -665,6 +682,7 @@ public class SimpleOpencl {
         Pointer aCPointer = getPointer(A);
         Pointer bCPointer = getPointer(B);
        
+/*
 
         jocl.cublasCaxpy(
                 A.length(),
@@ -675,6 +693,7 @@ public class SimpleOpencl {
                 1
         );
        
+*/
 
 
     }
@@ -693,7 +712,7 @@ public class SimpleOpencl {
         Pointer bCPointer = getPointer(B);
        
 
-        jocl.cublasZaxpy(
+   /*     jocl.cublasZaxpy(
                 A.length(),
                 jcuda.cuDoubleComplex.cuCmplx(da.realComponent().floatValue(), da.imaginaryComponent().floatValue()),
                 aCPointer,
@@ -702,7 +721,7 @@ public class SimpleOpencl {
                 B.majorStride()
         );
        
-
+*/
 
     }
 
@@ -718,15 +737,15 @@ public class SimpleOpencl {
     public static INDArray scal(double alpha, INDArray x) {
         DataTypeValidation.assertDouble(x);
 
-       
+
 
         Pointer xCPointer = getPointer(x);
-        jocl.cublasDscal(
+   /*     jocl.cublasDscal(
                 x.length(),
                 alpha,
                 xCPointer,
                 x.majorStride());
-       
+    */
 
         return x;
 
@@ -744,16 +763,16 @@ public class SimpleOpencl {
 
 
         DataTypeValidation.assertFloat(x);
-       
+
 
         Pointer xCPointer = getPointer(x);
-        jocl.cublasSscal(
+      /*  jocl.cublasSscal(
                 x.length(),
                 alpha,
                 xCPointer,
                 x.majorStride());
        
-
+*/
         return x;
 
     }
@@ -765,16 +784,16 @@ public class SimpleOpencl {
      * @param y the destination
      */
     public static void copy(INDArray x, INDArray y) {
-       
+
         DataTypeValidation.assertSameDataType(x, y);
         Pointer xCPointer = getPointer(x);
         Pointer yCPointer = getPointer(y);
-        if(x.data().dataType() == DataBuffer.DOUBLE)
+   /*     if(x.data().dataType() == DataBuffer.DOUBLE)
             jocl.cublasDcopy(x.length(),xCPointer,x.majorStride(),yCPointer,y.majorStride());
         if(x.data().dataType() == DataBuffer.FLOAT)
             jocl.cublasScopy(x.length(),xCPointer,x.majorStride(),yCPointer,y.majorStride());
        
-
+*/
     }
 
     /**
@@ -787,12 +806,12 @@ public class SimpleOpencl {
     public static double dot(INDArray x, INDArray y) {
         DataTypeValidation.assertSameDataType(x, y);
 
-       
+
 
         Pointer xCPointer = getPointer(x);
         Pointer yCPointer = getPointer(y);
 
-        if (x.data().dataType() == (DataBuffer.FLOAT)) {
+     /*   if (x.data().dataType() == (DataBuffer.FLOAT)) {
             float ret = jocl.cublasSdot(
                     x.length(),
                     xCPointer,
@@ -812,38 +831,39 @@ public class SimpleOpencl {
            
 
             return ret;
-        }
+        }*/
 
+        return 0.0;
     }
 
 
     public static IComplexDouble dot(IComplexNDArray x, IComplexNDArray y) {
         DataTypeValidation.assertSameDataType(x, y);
 
-       
+
 
         Pointer aCPointer = getPointer(x);
         Pointer bCPointer = getPointer(y);
 
+//
+//        jcuda.cuDoubleComplex dott = jocl.cublasZdotc(
+//                x.length(),
+//                aCPointer,
+//                x.majorStride(),
+//                bCPointer,
+//                y.majorStride());
+//
+//        IComplexDouble ret = Nd4j.createDouble(dott.x, dott.y);
+//
 
-        jcuda.cuDoubleComplex dott = jocl.cublasZdotc(
-                x.length(),
-                aCPointer,
-                x.majorStride(),
-                bCPointer,
-                y.majorStride());
 
-        IComplexDouble ret = Nd4j.createDouble(dott.x, dott.y);
-       
-
-
-        return ret;
+        return null;
     }
 
 
     public static INDArray ger(INDArray A, INDArray B, INDArray C, double alpha) {
         DataTypeValidation.assertDouble(A, B, C);
-       
+
 
         // = alpha * A * transpose(B) + C
         Pointer aCPointer = getPointer(A);
@@ -851,7 +871,7 @@ public class SimpleOpencl {
         Pointer cCPointer = getPointer(C);
 
 
-        jocl.cublasDger(
+     /*   jocl.cublasDger(
                 A.rows(),   // m
                 A.columns(),// n
                 alpha,      // alpha
@@ -862,8 +882,8 @@ public class SimpleOpencl {
                 cCPointer,        // dC or A
                 C.rows()    // lda
         );
+*/
 
-       
 
         return C;
     }
@@ -872,12 +892,13 @@ public class SimpleOpencl {
     public static INDArray ger(INDArray A, INDArray B, INDArray C, float alpha) {
         DataTypeValidation.assertFloat(A, B, C);
 
-       
+
         // = alpha * A * transpose(B) + C
 
         Pointer aCPointer = getPointer(A);
         Pointer bCPointer = getPointer(B);
         Pointer cCPointer = getPointer(C);
+/*
 
 
         jocl.cublasSger(
@@ -892,6 +913,7 @@ public class SimpleOpencl {
                 C.rows()    // lda
         );
        
+*/
 
 
         return C;
@@ -908,9 +930,10 @@ public class SimpleOpencl {
     public static IComplexNDArray scal(IComplexFloat alpha, IComplexNDArray x) {
         DataTypeValidation.assertFloat(x);
 
-       
+
 
         Pointer xCPointer = getPointer(x);
+/*
 
         jocl.cublasCscal(
                 x.length(),
@@ -919,6 +942,7 @@ public class SimpleOpencl {
                 x.majorStride()
         );
        
+*/
 
 
         return x;
@@ -933,10 +957,11 @@ public class SimpleOpencl {
      */
     public static IComplexNDArray scal(IComplexDouble alpha, IComplexNDArray x) {
         DataTypeValidation.assertDouble(x);
-       
+
 
 
         Pointer xCPointer = getPointer(x);
+/*
 
         jocl.cublasZscal(
                 x.length(),
@@ -946,6 +971,7 @@ public class SimpleOpencl {
         );
        
 
+*/
 
         return x;
     }
@@ -960,7 +986,7 @@ public class SimpleOpencl {
     public static IComplexDouble dotu(IComplexNDArray x, IComplexNDArray y) {
 
         DataTypeValidation.assertSameDataType(x, y);
-       
+      /*
 
         Pointer xCPointer = getPointer(x);
         Pointer yCPointer = getPointer(y);
@@ -972,9 +998,9 @@ public class SimpleOpencl {
             jcuda.cuComplex dott = jocl.cublasCdotu(x.length(), xCPointer, x.majorStride(), yCPointer, y.majorStride());
             ret = Nd4j.createDouble(dott.x, dott.y);
         }
-       
+       */
 
-        return ret;
+        return null;
     }
 
 
@@ -989,7 +1015,7 @@ public class SimpleOpencl {
                                        IComplexNDArray B,
                                        IComplexNDArray C, IComplexDouble Alpha) {
         // = alpha * A * tranpose(B) + C
-       
+
         DataTypeValidation.assertDouble(A, B, C);
 
 
@@ -997,7 +1023,7 @@ public class SimpleOpencl {
         Pointer aCPointer = getPointer(A);
         Pointer bCPointer = getPointer(B);
         Pointer cCPointer = getPointer(C);
-
+/*
         cuDoubleComplex alpha = cuDoubleComplex.cuCmplx(Alpha.realComponent(), Alpha.imaginaryComponent());
 
         jocl.cublasZgeru(
@@ -1011,7 +1037,7 @@ public class SimpleOpencl {
                 cCPointer,        // d_C or A
                 C.rows()    // lda
         );
-       
+       */
 
 
         return C;
@@ -1029,12 +1055,12 @@ public class SimpleOpencl {
         DataTypeValidation.assertFloat(A, B, C);
         // = alpha * A * tranpose(B) + C
 
-       
+
         Pointer aCPointer = getPointer(A);
         Pointer bCPointer = getPointer(B);
         Pointer cCPointer = getPointer(C);
 
-
+/*
         cuComplex alpha = cuComplex.cuCmplx(Alpha.realComponent(), Alpha.imaginaryComponent());
 
 
@@ -1048,8 +1074,8 @@ public class SimpleOpencl {
                 B.rows(),   // incy
                 cCPointer,        // dC or A
                 C.rows()    // lda
-        );
-       
+        );*/
+
 
         return C;
     }
@@ -1067,13 +1093,13 @@ public class SimpleOpencl {
 
         DataTypeValidation.assertFloat(A, B, C);
         // = alpha * A * tranpose(B) + C
-       
+
 
         Pointer aCPointer = getPointer(A);
         Pointer bCPointer = getPointer(B);
         Pointer cCPointer = getPointer(C);
 
-        cuDoubleComplex alpha = cuDoubleComplex.cuCmplx(Alpha.realComponent(), Alpha.imaginaryComponent());
+    /*    cuDoubleComplex alpha = cuDoubleComplex.cuCmplx(Alpha.realComponent(), Alpha.imaginaryComponent());
 
         jocl.cublasZgeru(
                 A.rows(),   // m
@@ -1086,8 +1112,8 @@ public class SimpleOpencl {
                 cCPointer,        // d_C or A
                 C.rows()    // lda
         );
+*/
 
-       
 
         return C;
     }
@@ -1105,11 +1131,12 @@ public class SimpleOpencl {
         DataTypeValidation.assertDouble(A, B, C);
         // = alpha * A * tranpose(B) + C
 
-       
+
 
         Pointer aCPointer = getPointer(A);
         Pointer bCPointer = getPointer(B);
         Pointer cCPointer = getPointer(C);
+/*
 
 
         cuDoubleComplex alpha = cuDoubleComplex.cuCmplx(Alpha.realComponent(), Alpha.imaginaryComponent());
@@ -1126,8 +1153,9 @@ public class SimpleOpencl {
                 cCPointer,        // dC or A
                 C.rows()    // lda
         );
+*/
 
-       
+
 
         return C;
     }
@@ -1143,14 +1171,14 @@ public class SimpleOpencl {
     public static void axpy(double alpha, INDArray x, INDArray y) {
         DataTypeValidation.assertDouble(x, y);
 
-       
+
 
         Pointer xCPointer = getPointer(x);
         Pointer yCPointer = getPointer(y);
-
+/*
         jocl.cublasDaxpy(x.length(), alpha, xCPointer, x.majorStride(), yCPointer, y.majorStride());
 
-       
+       */
 
     }
 
@@ -1164,13 +1192,13 @@ public class SimpleOpencl {
      */
     public static void saxpy(float alpha, INDArray x, INDArray y) {
         DataTypeValidation.assertFloat(x, y);
-       
+
 
         Pointer xCPointer = getPointer(x);
         Pointer yCPointer = getPointer(y);
 
-        jocl.cublasSaxpy(x.length(), alpha, xCPointer, x.majorStride(), yCPointer, y.majorStride());
-       
+      /*  jocl.cublasSaxpy(x.length(), alpha, xCPointer, x.majorStride(), yCPointer, y.majorStride());
+      */
 
 
     }

@@ -21,6 +21,9 @@ import org.jocl.Pointer;
 import org.jocl.Sizeof;
 import org.nd4j.linalg.api.buffer.DataBuffer;
 
+import java.nio.ByteBuffer;
+import java.nio.IntBuffer;
+
 /**
  * Cuda int buffer
  *
@@ -93,11 +96,6 @@ public class OpenClIntDataBuffer extends BaseOpenClDataBuffer {
 
     @Override
     public void assign(Number value, int offset) {
-        int arrLength = length - offset;
-        int[] data = new int[arrLength];
-        for (int i = 0; i < data.length; i++)
-            data[i] = value.intValue();
-        set(offset, arrLength, Pointer.to(data));
     }
 
     @Override

@@ -24,8 +24,12 @@ public class ContextHolder {
     private Table<cl_device_id,String,cl_context> deviceToThreadAndContext = HashBasedTable.create();
     private Map<cl_platform_id,List<cl_device_id>> platformToDevice = new HashMap<>();
     private Map<cl_platform_id,Integer> numDevices = new HashMap<>();
+    private Table<String,cl_context,cl_command_queue> queues = HashBasedTable.create();
     private static ContextHolder INSTANCE;
     private int numPlatforms = 0;
+    private cl_platform_id platform;
+    private cl_device_id device;
+
     private ContextHolder(){
         getNumPlatforms();
         Runtime.getRuntime().addShutdownHook(new Thread(new Runnable() {
@@ -38,6 +42,69 @@ public class ContextHolder {
             }
         }));
     }
+
+
+    /**
+     * The context to use. This is going to be relative
+     * to the device used and the current thread
+     * @return the context to use
+     */
+    public cl_context ctx() {
+        cl_context ctx = deviceToThreadAndContext.get(device(),Thread.currentThread().getName());
+        return ctx;
+    }
+
+    /**
+     * Returns the queue to use for
+     * invoking kernels.
+     * This is going to be relative
+     * to the current thread and the context
+     * based on the device used
+     * @return the queue to use
+     */
+    public cl_command_queue queue() {
+        return queues.get(Thread.currentThread().getName(),ctx());
+    }
+
+    /**
+     * Return the platform
+     * @return the platform to use
+     */
+    public cl_platform_id getPlatform() {
+        if(platform == null) {
+               platform = platformToDevice.keySet().iterator().next();
+        }
+        return platform;
+    }
+
+
+    /**
+     * Returns the device to use
+     * @return the device to use
+     */
+    public cl_device_id device() {
+        if(device == null) {
+           device = platformToDevice.values().iterator().next().get(0);
+        }
+        return device;
+    }
+
+    /**
+     * Set the device to use
+     * @param device the device to use
+     */
+    public void setDevice(cl_device_id device) {
+        this.device = device;
+    }
+
+    /**
+     * Set the platform to use
+     * @param platform the platform to use
+     */
+    public void setPlatform(cl_platform_id platform) {
+        this.platform = platform;
+    }
+
 
     public static ContextHolder getInstance() {
         if(INSTANCE == null)

@@ -30,8 +30,7 @@ import org.nd4j.linalg.jocl.kernel.KernelFunctions;
 
 import java.io.IOException;
 import java.lang.ref.WeakReference;
-import java.nio.ByteBuffer;
-import java.nio.ByteOrder;
+import java.nio.*;
 import java.util.Collection;
 import java.util.Collections;
 import java.util.HashSet;
@@ -45,6 +44,7 @@ import java.util.concurrent.atomic.AtomicBoolean;
 public abstract class BaseOpenClDataBuffer implements OpenclBuffer {
 
     protected transient cl_mem pinnedPointer;
+    protected transient ByteBuffer buff;
     protected int length;
     protected int elementSize;
     protected transient cl_context context;
@@ -98,34 +98,20 @@ public abstract class BaseOpenClDataBuffer implements OpenclBuffer {
     @Override
     public void put(int i, IComplexNumber result) {
         ensureNotFreed();
-
-
         if (dataType() == DataBuffer.FLOAT) {
-
-            jocl.cublasSetVector(
-                    length(),
-                    new cuComplex[]{CudaComplexConversion.toComplex(result.asFloat())}
-                    , i
-                    , 1
-                    , pointer()
-                    , 1);
-        } else {
-            jocl.cublasSetVector(
-                    length(),
-                    new cuDoubleComplex[]{CudaComplexConversion.toComplexDouble(result.asDouble())}
-                    , i
-                    , 1
-                    , pointer()
-                    , 1);
+            buff.putFloat(i,result.realComponent().floatValue());
+            buff.putFloat(i + 1,result.imaginaryComponent().floatValue());
+        }
+        else {
+            buff.putDouble(i, result.realComponent().doubleValue());
+            buff.putDouble(i + 1, result.imaginaryComponent().doubleValue());
         }
     }
 
     @Override
     public float[] asFloat() {
         ensureNotFreed();
-
-        ByteBuffer buf = pinnedPointer.getByteBuffer(0, length() * elementSize());
-        return buf.asFloatBuffer().array();
+        return buff.asFloatBuffer().array();
     }
 
     @Override
@@ -142,8 +128,7 @@ public abstract class BaseOpenClDataBuffer implements OpenclBuffer {
     @Override
     public int[] asInt() {
         ensureNotFreed();
-        ByteBuffer buf = pinnedPointer.getByteBuffer(0, length() * elementSize());
-        return buf.asIntBuffer().array();
+        return buff.asIntBuffer().array();
     }
 
 
@@ -156,10 +141,11 @@ public abstract class BaseOpenClDataBuffer implements OpenclBuffer {
     @Override
     public void alloc() {
 
-
+        buff = ByteBuffer.allocateDirect(length() * elementSize()).
+                order(ByteOrder.nativeOrder());
         pinnedPointer =  CL.clCreateBuffer(context,
                 CL.CL_MEM_ALLOC_HOST_PTR,
-                Sizeof.cl_float * length, Pointer.to(new float[length]), null);
+                elementSize() * length, Pointer.to(new float[length]), null);
 
         ref = new WeakReference<DataBuffer>(this,Nd4j.bufferRefQueue());
         Nd4j.getResourceManager().incrementCurrentAllocatedMemory(elementSize() * length());
@@ -169,26 +155,16 @@ public abstract class BaseOpenClDataBuffer implements OpenclBuffer {
 
 
     @Override
-    public void set(Pointer pointer) {
+    public void set(ByteBuffer pointer) {
         ensureNotFreed();
 
+        for(int i = 0; i < length(); i++) {
+           if(dataType() == DataBuffer.DOUBLE)
+               buff.putDouble(i,pointer.getDouble(i));
 
-        if (dataType() == DOUBLE) {
-            jocl.cublasDcopy(
-                    length(),
-                    pointer,
-                    1,
-                    pointer(),
-                    1
-            );
-        } else {
-            jocl.cublasScopy(
-                    length(),
-                    pointer,
-                    1,
-                    pointer(),
-                    1
-            );
+            else
+               buff.putFloat(i,pointer.getFloat(i));
+
         }
 
 
@@ -206,7 +182,6 @@ public abstract class BaseOpenClDataBuffer implements OpenclBuffer {
 
         if (to.dataType() != dataType())
             throw new IllegalArgumentException("Unable to copy buffer, mis matching data types.");
-        JCuda.cudaMemcpy(to.pointer(), pointer(), length() * elementSize(), cudaMemcpyKind.cudaMemcpyDeviceToDevice);
         if(dataType() == DataBuffer.DOUBLE) {
             java.nio.DoubleBuffer buf = getDoubleBuffer();
             BaseOpenClDataBuffer bufTo = (BaseOpenClDataBuffer) to;
@@ -236,9 +211,10 @@ public abstract class BaseOpenClDataBuffer implements OpenclBuffer {
         assign(value, 0);
     }
 
-
-
-
+    @Override
+    public ByteBuffer buff() {
+        return buff;
+    }
 
     @Override
     public IComplexFloat getComplexFloat(int i) {
@@ -256,26 +232,23 @@ public abstract class BaseOpenClDataBuffer implements OpenclBuffer {
         return dataType() == DataBuffer.FLOAT ? getComplexFloat(i) : getComplexDouble(i);
     }
 
+
     /**
      * Set an individual element
      *
      * @param index the index of the element
      * @param from  the element to get data from
      */
-    protected void set(int index, int length, Pointer from, int inc) {
+    protected void set(int index, int length, IntBuffer from, int inc) {
         ensureNotFreed();
 
 
         int offset = elementSize() * index;
         if (offset >= length() * elementSize())
             throw new IllegalArgumentException("Illegal offset " + offset + " with index of " + index + " and length " + length());
-        jocl.cublasSetVector(
-                length
-                , elementSize()
-                , from
-                , inc
-                , pointer().withByteOffset(offset)
-                , 1);
+        for(int i = index; i < length; i += inc) {
+            buff.putDouble(i, from.get(i));
+        }
 
     }
 
@@ -285,7 +258,67 @@ public abstract class BaseOpenClDataBuffer implements OpenclBuffer {
      * @param index the index of the element
      * @param from  the element to get data from
      */
-    protected void set(int index, int length, cl_mem from) {
+    protected void set(int index, int length, DoubleBuffer from, int inc) {
+        ensureNotFreed();
+
+
+        int offset = elementSize() * index;
+        if (offset >= length() * elementSize())
+            throw new IllegalArgumentException("Illegal offset " + offset + " with index of " + index + " and length " + length());
+        for(int i = index; i < length; i += inc) {
+            buff.putDouble(i, from.get(i));
+        }
+
+    }
+    /**
+     * Set an individual element
+     *
+     * @param index the index of the element
+     * @param from  the element to get data from
+     */
+    protected void set(int index, int length, FloatBuffer from, int inc) {
+        ensureNotFreed();
+
+
+        int offset = elementSize() * index;
+        if (offset >= length() * elementSize())
+            throw new IllegalArgumentException("Illegal offset " + offset + " with index of " + index + " and length " + length());
+        for(int i = index; i < length; i += inc) {
+            buff.putFloat(i,from.get(i));
+        }
+
+    }
+
+    /**
+     * Set an individual element
+     *
+     * @param index the index of the element
+     * @param from  the element to get data from
+     */
+    protected void set(int index, int length, ByteBuffer from, int inc) {
+        ensureNotFreed();
+
+
+        int offset = elementSize() * index;
+        if (offset >= length() * elementSize())
+            throw new IllegalArgumentException("Illegal offset " + offset + " with index of " + index + " and length " + length());
+        for(int i = index; i < length; i += inc) {
+            buff.putFloat(i,from.getFloat(i));
+        }
+
+    }
+
+    public ByteBuffer buffer() {
+        return buff;
+    }
+
+    /**
+     * Set an individual element
+     *
+     * @param index the index of the element
+     * @param from  the element to get data from
+     */
+    protected void set(int index, int length, ByteBuffer from) {
         ensureNotFreed();
         set(index, length, from, 1);
     }
@@ -294,7 +327,7 @@ public abstract class BaseOpenClDataBuffer implements OpenclBuffer {
     public void assign(DataBuffer data) {
         ensureNotFreed();
         OpenclBuffer buf = (OpenclBuffer) data;
-        set(0, buf.pointer());
+        set(0, buf.buff());
     }
     protected ByteBuffer getBuffer() {
         return getBuffer(0);
@@ -305,7 +338,8 @@ public abstract class BaseOpenClDataBuffer implements OpenclBuffer {
             throw new IllegalStateException("Pinned pointer uninitialized");
 
 
-        ByteBuffer buf = pinnedPointer.getByteBuffer(offset * elementSize(),elementSize() * length() - offset * elementSize());
+        int length = (int) (elementSize() * length() - offset * elementSize());
+        ByteBuffer buf = buff.get(new byte[length],(int) offset * elementSize(),length);
         if(buf == null)
             throw new IllegalStateException("Unable to obtain buffer: was null");
         // Set the byte order of the ByteBuffer
@@ -320,10 +354,7 @@ public abstract class BaseOpenClDataBuffer implements OpenclBuffer {
     protected java.nio.DoubleBuffer getDoubleBuffer(long offset) {
         if(pinnedPointer == null)
             throw new IllegalStateException("Pinned pointer uninitialized");
-        ByteBuffer buf = pinnedPointer.getByteBuffer(offset * elementSize(),elementSize() * length() - offset * elementSize());
-
-        if(buf == null)
-            throw new IllegalStateException("Unable to obtain buffer: was null");
+        ByteBuffer buf = buff.get(new byte[elementSize() * length()], (int) offset * elementSize() ,(int) (elementSize() * length() - offset * elementSize()));
         // Set the byte order of the ByteBuffer
         buf.order(ByteOrder.nativeOrder());
         return buf.asDoubleBuffer();
@@ -334,7 +365,8 @@ public abstract class BaseOpenClDataBuffer implements OpenclBuffer {
     }
 
     protected ByteBuffer getBuffer(long offset) {
-        ByteBuffer buf = pinnedPointer.getByteBuffer(offset * elementSize(),elementSize() * length() - offset * elementSize());
+        //ByteBuffer buf = buff.(offset * elementSize(),elementSize() * length() - offset * elementSize());
+        ByteBuffer buf = buff.get(new byte[elementSize() * length()],(int) offset * elementSize(),(int) (elementSize() * length() - offset * elementSize()));
         // Set the byte order of the ByteBuffer
         buf.order(ByteOrder.nativeOrder());
         return buf;
@@ -345,7 +377,7 @@ public abstract class BaseOpenClDataBuffer implements OpenclBuffer {
      * @param index the index of the element
      * @param from  the element to get data from
      */
-    protected void set(int index, cl_mem from) {
+    protected void set(int index, ByteBuffer from) {
         ensureNotFreed();
         set(index, 1, from);
     }
@@ -359,7 +391,7 @@ public abstract class BaseOpenClDataBuffer implements OpenclBuffer {
             if(!freed.get()) {
                 if (Nd4j.shouldInstrument)
                     Nd4j.getInstrumentation().log(this, Instrumentation.DESTROYED);
-               CL.clReleaseMemObject(pointer());
+                CL.clReleaseMemObject(pointer());
                 freed.set(true);
                 Nd4j.getResourceManager().decrementCurrentAllocatedMemory(elementSize() * length());
                 references().clear();
@@ -476,24 +508,11 @@ public abstract class BaseOpenClDataBuffer implements OpenclBuffer {
             DataBuffer buffer = buffers[i];
             if (buffer instanceof OpenclBuffer) {
                 OpenclBuffer buff = (OpenclBuffer) buffer;
-                if (buff.dataType() == DataBuffer.DOUBLE) {
-                    jocl.cublasDcopy(
-                            buff.length()
-                            , buff.pointer().withByteOffset(buff.elementSize() * offsets[i])
-                            , strides[i]
-                            , pointer().withByteOffset(count * buff.elementSize())
-                            , 1);
-                    count += (buff.length() - 1 - offsets[i]) / strides[i] + 1;
-                } else {
-                    jocl.cublasScopy(buff.length()
-                            , buff.pointer().withByteOffset(buff.elementSize() * offsets[i])
-                            , strides[i]
-                            , pointer().withByteOffset(count * buff.elementSize())
-                            , 1);
-                    count += (buff.length() - 1 - offsets[i]) / strides[i] + 1;
-                }
-            } else
-                throw new IllegalArgumentException("Only jcuda data buffers allowed");
+                if (buff.dataType() == DataBuffer.DOUBLE)
+                    for (int j = offsets[i]; j < buff.length(); j += strides[i]) {
+                        buff.put(count++, buff.getDouble(j));
+                    }
+            }
         }
     }
 

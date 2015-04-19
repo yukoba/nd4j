@@ -25,6 +25,7 @@ import org.nd4j.linalg.util.ArrayUtil;
 import java.io.IOException;
 import java.nio.ByteBuffer;
 import java.nio.DoubleBuffer;
+import java.nio.FloatBuffer;
 
 /**
  * Cuda double  buffer
@@ -67,8 +68,7 @@ public class OpenClDoubleDataBuffer extends BaseOpenClDataBuffer {
 
         if (contiguous) {
             int offset = indices[0];
-            Pointer p = Pointer.to(data);
-            set(offset, data.length, p, inc);
+            set(offset, data.length, FloatBuffer.wrap(data), inc);
 
         } else
             throw new UnsupportedOperationException("Non contiguous is not supported");
@@ -84,8 +84,8 @@ public class OpenClDoubleDataBuffer extends BaseOpenClDataBuffer {
 
         if (contiguous) {
             int offset = indices[0];
-            Pointer p = Pointer.to(data);
-            set(offset, data.length, p, inc);
+
+            set(offset, data.length, DoubleBuffer.wrap(data), inc);
         } else
             throw new UnsupportedOperationException("Non contiguous is not supported");
 
@@ -163,8 +163,7 @@ public class OpenClDoubleDataBuffer extends BaseOpenClDataBuffer {
 
     @Override
     public byte[] asBytes() {
-        ByteBuffer buf =  pinnedPointer.getByteBuffer(0, length() * elementSize());
-        return buf.array();
+        return buff.array();
     }
 
     @Override

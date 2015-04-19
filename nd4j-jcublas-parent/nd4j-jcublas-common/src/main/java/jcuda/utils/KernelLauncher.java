@@ -184,8 +184,7 @@ public class KernelLauncher {
      * @param number The number of the device to use
      * @throws CudaException If number < 0 or number >= deviceCount
      */
-    public  void setDeviceNumber(int number)
-    {
+    public  KernelLauncher setDeviceNumber(int number) {
         int count[] = new int[1];
         cuDeviceGetCount(count);
         if (number < 0)
@@ -195,6 +194,7 @@ public class KernelLauncher {
                             "There are only " + count[0] + " devices available");
         }
         deviceNumber = number;
+        return this;
     }
 
     /**

@@ -26,6 +26,7 @@ import jcuda.utils.KernelLauncher;
 import org.nd4j.linalg.jcublas.buffer.CudaDoubleDataBuffer;
 import org.nd4j.linalg.jcublas.buffer.CudaFloatDataBuffer;
 import org.nd4j.linalg.jcublas.buffer.JCudaBuffer;
+import org.nd4j.linalg.jcublas.context.ContextHolder;
 import org.springframework.core.io.ClassPathResource;
 
 import java.io.IOException;
@@ -49,14 +50,12 @@ public class KernelFunctions {
     public final static String NAME_SPACE = "org.nd4j.linalg.jcublas";
     public final static String DOUBLE = NAME_SPACE + ".double.functions";
     public final static String FLOAT = NAME_SPACE + ".float.functions";
-    public final static String REDUCE = NAME_SPACE + ".reducefunctions";
     public final static String SHARED_MEM_KEY = NAME_SPACE + ".sharedmem";
     public final static String THREADS_KEY = NAME_SPACE + ".threads";
     public final static String BLOCKS_KEY = NAME_SPACE + ".blocks";
     public static int SHARED_MEM = 512;
     public static int THREADS = 128;
     public static int BLOCKS = 512;
-    private static Set<String> reduceFunctions = new ConcurrentSkipListSet<>();
 
 
     private KernelFunctions() {}
@@ -85,9 +84,6 @@ public class KernelFunctions {
         props.load(res.getInputStream());
         KernelFunctionLoader.getInstance().load();
 
-        String reduceFunctionsList = props.getProperty(REDUCE);
-        for (String function : reduceFunctionsList.split(","))
-            reduceFunctions.add(function);
 
         SHARED_MEM = Integer.parseInt(props.getProperty(SHARED_MEM_KEY, "512"));
         THREADS = Integer.parseInt(props.getProperty(THREADS_KEY, "128"));
@@ -110,8 +106,8 @@ public class KernelFunctions {
         //dot<<<blocksPerGrid,threadsPerBlock>>>( dev_a, dev_b,dev_partial_c );
         int sharedMemSize = threadsPerBlock * (dataType.equals("float") ? Sizeof.FLOAT : Sizeof.DOUBLE);
         KernelFunctionLoader.launcher(functionName,dataType).forFunction(functionName + "_" + dataType)
-                .setBlockSize(threadsPerBlock,1,1)
-                .setGridSize(blocks,1,1)
+                .setBlockSize(threadsPerBlock,1,1).setDeviceNumber(ContextHolder.getInstance().device())
+                .setGridSize(blocks, 1, 1)
                 .setSharedMemSize(sharedMemSize)
                 .call(kernelParameters);
 

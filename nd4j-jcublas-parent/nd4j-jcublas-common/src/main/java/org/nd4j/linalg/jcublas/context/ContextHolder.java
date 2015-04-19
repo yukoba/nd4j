@@ -9,6 +9,8 @@ import jcuda.driver.JCudaDriver;
 import org.nd4j.linalg.jcublas.SimpleJCublas;
 
 
+import java.util.concurrent.atomic.AtomicInteger;
+
 import static jcuda.driver.JCudaDriver.*;
 
 /**
@@ -26,7 +28,7 @@ public class ContextHolder {
     private Table<Integer,String,CUcontext> deviceToThreadAndContext = HashBasedTable.create();
     private int numDevices = 0;
     private static ContextHolder INSTANCE;
-
+    private AtomicInteger deviceTouse = new AtomicInteger(0);
     private ContextHolder(){
         getNumDevices();
         Runtime.getRuntime().addShutdownHook(new Thread(new Runnable() {
@@ -38,6 +40,25 @@ public class ContextHolder {
             }
         }));
     }
+
+    /**
+     * Returns the device to use for launching
+     * kernels
+     * @return the device to use for launching kernels
+     */
+    public int device() {
+        return deviceTouse.get();
+    }
+
+    /**
+     * Sets the device for launching kernels
+     * @param device the device to use
+     *               to launch kernels
+     */
+    public void setDevice(int device) {
+        deviceTouse.set(device);
+    }
+
 
     public static ContextHolder getInstance() {
         if(INSTANCE == null)
@@ -112,8 +133,7 @@ public class ContextHolder {
 
         // Try to obtain the current context
         result = cuCtxGetCurrent(context);
-        if (result != CUresult.CUDA_SUCCESS)
-        {
+        if (result != CUresult.CUDA_SUCCESS) {
             throw new CudaException(
                     "Failed to obtain the current context: "+
                             CUresult.stringFor(result));

@@ -21,6 +21,7 @@ package org.nd4j.linalg.jocl.kernel;
 import org.apache.commons.io.IOUtils;
 import org.jocl.cl_kernel;
 import org.nd4j.linalg.api.buffer.DataBuffer;
+import org.nd4j.linalg.jocl.context.ContextHolder;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.core.io.ClassPathResource;
@@ -79,9 +80,6 @@ public class KernelFunctionLoader {
         return INSTANCE;
     }
 
-    private static String dataFolder(int type) {
-        return "/kernels/" + (type == DataBuffer.FLOAT ? "float" : "double");
-    }
 
 
     public  static KernelLauncher launcher(String functionName,String dataType) {
@@ -89,12 +87,28 @@ public class KernelFunctionLoader {
     }
 
 
+    /**
+     * Returns a kernel launcher
+     * relative to the settings in the context holder.
+     * These settings include:
+     * The current thread
+     * The current device
+     * The current platform
+     * @param functionName the function name
+     * @param dataType the data type to use
+     * @return the kernel launcher for a given
+     * context holder settings
+     */
     public KernelLauncher get(String functionName,String dataType) {
         String path = paths.get(functionName + "_" + dataType);
         if(path == null) {
             throw new IllegalArgumentException("Unable to find " + functionName + "_" + dataType);
         }
-        return KernelLauncher.load(path, functionName + "_" + dataType);
+        return KernelLauncher.load(
+                path, functionName + "_" + dataType
+                , ContextHolder.getInstance().getPlatform()
+                ,ContextHolder.getInstance().device()
+                ,ContextHolder.getInstance().queue());
     }
 
 
