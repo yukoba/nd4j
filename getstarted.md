@@ -64,7 +64,7 @@ We recommend installing [IntelliJ](https://www.jetbrains.com/idea/download/). Th
 
 ### What it is
 
-Maven is an automated build tool for Java projects (among other [things](http://maven.apache.org/what-is-maven.html)), which locates the latest version of the project libraries (ND4J .jar files) and downloads them automatically to your computer.
+Maven is an automated build tool for Java projects (among other [things](http://maven.apache.org/what-is-maven.html)), which locates the latest version of the project libraries (ND4J .jar files) and downloads them automatically to your computer. We've written a slightly more thorough [introduction to Maven for Python programmers](http://deeplearning4j.org/maven.html) here. 
 
 ### Why you need Maven
 
