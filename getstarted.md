@@ -82,7 +82,7 @@ Include the default backend ([Jblas](http://en.wikipedia.org/wiki/Jblas:_Linear_
 	   <version>${nd4j.version}</version>
 	 </dependency>
 
-If you want to know the precise version of ND4J you're using, press `Ctrl` and click on `nd4j.version`. (This is a neat trick to jump through code in IntelliJ.) Keep in mind that the JBLAS backend can be switched to Netlib Blas, or to Jcublas for GPU use. Check our [dependencies](../dependencies.html) page for advanced configuration changes. That page also explains how to check on the [latest version](http://search.maven.org/#search%7Cga%7C1%7Cnd4j) of the libraries.
+Keep in mind that the JBLAS backend can be switched to Netlib Blas, or to Jcublas for GPU use. Check our [dependencies](../dependencies.html) page for advanced configuration changes. That page also explains how to check on the [latest version](http://search.maven.org/#search%7Cga%7C1%7Cnd4j) of the libraries.
 
 You can now create a new Java file within IntelliJ, and start using ND4J's API for distributed linear algebra. (See our [intro](http://nd4j.org/introduction.html) for a couple beginning operations. ND4J in IntelliJ has **autocomplete**, so starting a new line with any letter will show you a list of all ND4J commends including that letter.) 
 
