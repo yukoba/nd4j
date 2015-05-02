@@ -18,7 +18,7 @@ This tutorial will show you how to perform your own calculations and run a few s
 
 ## <a id="java">Java</a>
 
-Java is the main programming language of ND4J (we also have a Scala API). There are about 9 million Java developers worldwide. It runs on 3 billion mobile phones and 97 percent of all enterprise desktops, both Windows and OSX. Java is used for everything from distributed cloud-based systems with thousands of nodes, to low-memory IoT devices. It's a "write once, run anywhere" language.
+Java is the main programming language of ND4J. (We also have a [Scala API](http://nd4j.org/scala.html).) There are about 9 million Java developers worldwide. It runs on 3 billion mobile phones and 97 percent of all enterprise desktops, both Windows and OSX. Java is used for everything from distributed cloud-based systems with thousands of nodes, to low-memory IoT devices. It's a "write once, run anywhere" language.
 
 ### Installing Java
 
