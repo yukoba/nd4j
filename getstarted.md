@@ -98,7 +98,7 @@ The images below will walk you through the windows of the IntelliJ New Project W
 
 Click through the following screen with "Next", and on the screen after that (below), name your project. ("ND4J", for example...) Now go into your pom.xml file within the root of the new ND4J project in IntelliJ. 
 
-Include the default backend ([Jblas](http://en.wikipedia.org/wiki/Jblas:_Linear_Algebra_for_Java)) in the `<dependencies> ... </dependincies>` section, so Maven can automatically install the required libraries:
+Include the default backend ([Jblas](http://en.wikipedia.org/wiki/Jblas:_Linear_Algebra_for_Java)) in the `<dependencies> ... </dependencies>` section, so Maven can automatically install the required libraries:
 
 	 <dependency>
 	   <groupId>org.nd4j</groupId>
