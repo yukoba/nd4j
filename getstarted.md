@@ -8,7 +8,7 @@ description: "Follow our video and install a Java development environment ready 
 To use ND4J, you need to install a few things on your computer:
 
 1. [Java](#java) 
-2. [Integrated Development Environment](#ide-for-java) 
+2. [Integrated Development Environment](#ide) 
 3. [Maven](#maven)
 4. [Canova](#canova)
 5. [Github](#github)
@@ -18,13 +18,7 @@ This tutorial will show you how to perform your own calculations and run a few s
 
 # <a id="java">Java</a>
 
-### What it is
-
-Java is the programming language ND4J is written in. There are 9 million Java developers worldwide. It runs on 3 billion mobile phones and 97 percent of all enterprise desktops, both Windows and OSX. You can use it for distributed cloud-based systems with thousands of nodes, as well as on low-memory IoT devices. It's a "write once, run anywhere" language. That's why we chose it.
-
-### Why you need Java
-
-Java will allow your neural nets to work cross-platform on servers, desktops and mobile devices.
+Java is the main programming language of ND4J (we also have a Scala API). There are about 9 million Java developers worldwide. It runs on 3 billion mobile phones and 97 percent of all enterprise desktops, both Windows and OSX. Programmers use Java for everything from distributed cloud-based systems with thousands of nodes, to low-memory IoT devices. It's a "write once, run anywhere" language.
 
 ### Is Java already installed?
 
@@ -38,39 +32,25 @@ ND4J requires Java 7, so if you have an older or newer version, you will need to
 
 If you don't have Java 7 installed on your machine, download the [Java Development Kit (JDK) here](http://www.oracle.com/technetwork/java/javase/downloads/jdk7-downloads-1880260.html). The download will vary by operating system. For newer Macs, you'll want the file on the first line to mention Mac OS X (the number after *jdk-7u* increments with each update). It will look something like this:
 
-		Mac OS X x64 185.94 MB -  jdk-7u67-macosx-x75.dmg
+		Mac OS X x64 185.94 MB -  jdk-7u79-macosx-x75.dmg
 
-# <a id="ide-for-java">Integrated Development Environment</a>
+# <a id="ide">Integrated Development Environments</a>
 
-### What an IDE is
-
-An Integrated Development Environment ([IDE](http://encyclopedia.thefreedictionary.com/integrated+development+environment)) will allow you to work with our API and build your nets with a few clicks. The IDEs suggested here work with your installed version of Java and can communicate with Maven (see below), which takes care of the dependencies for you. Visit ND4J's [dependencies](dependencies.html) page to see how to set up the POM.xml file, and consult the page on [GPUs and CPUs](gpu_native_backends.html) page to learn how to swap backends (it's one line of code...).
-
-### Why you need an IDE
-
-You want a hassle-free development environment so that you only need to think about your code. IDEs typically come with Maven support, but we prefer you to install [Maven](#maven) so you can run commands directly as instructed previously.
+An Integrated Development Environment ([IDE](http://encyclopedia.thefreedictionary.com/integrated+development+environment)) will allow you to work with our API and build your nets with a few clicks. The IDEs suggested here work with your installed version of Java and can communicate with [Maven](#maven), which takes care of the dependencies for you. Visit ND4J's [dependencies](dependencies.html) page to see how to set up the POM.xml file, and consult the page on [GPUs and CPUs](gpu_native_backends.html) page to learn how to swap backends (it's one line of code...). An IDE provides a hassle-free development environment that allows you to focus more on your code. IDEs typically come with Maven support, but we prefer you to install [Maven](#maven) so you can run commands directly. While we prefer IntelliJ, [Eclipse](http://books.sonatype.com/m2eclipse-book/reference/creating-sect-importing-projects.html) and [Netbeans](http://wiki.netbeans.org/MavenBestPractices) are two other popular IDEs. 
 
 ### Is an IDE already installed?
 
-Just check the list of applications installed on your computer.
+Check the list of applications on your computer.
 
 ### Installing an IDE
 
-We recommend installing [IntelliJ](https://www.jetbrains.com/idea/download/). The free community edition does the job just fine.
-
-[Eclipse](http://books.sonatype.com/m2eclipse-book/reference/creating-sect-importing-projects.html) and [Netbeans](http://wiki.netbeans.org/MavenBestPractices) are two other popular IDEs.
+The free community edition of [IntelliJ](https://www.jetbrains.com/idea/download/) has installation instructions.
 
 # <a id="maven">Maven</a>
 
-### What it is
+Maven is an automated build tool for Java projects (among other [things](http://maven.apache.org/what-is-maven.html)), which locates the latest version of the project libraries (ND4J .jar files) and downloads them automatically to your computer. We've written a slightly more thorough [introduction to Maven for non-Java programmers](http://deeplearning4j.org/maven.html) here. Maven will allow you to install both ND4J and Deeplearning4j projects easily. It works well with Integrated Development Environments ([IDE](#ide)) such as IntelliJ.
 
-Maven is an automated build tool for Java projects (among other [things](http://maven.apache.org/what-is-maven.html)), which locates the latest version of the project libraries (ND4J .jar files) and downloads them automatically to your computer. We've written a slightly more thorough [introduction to Maven for Python programmers](http://deeplearning4j.org/maven.html) here. 
-
-### Why you need Maven
-
-Maven will allow you to install both ND4J and Deeplearning4j projects easily. It works well with Integrated Development Environments ([IDE](#ide-for-java)) such as IntelliJ.
-
-(Experienced Java developers who prefer not to work with Maven can find the .jar files in our [downloads](downloads.html) page. For an expert user it might be faster, but also more complicated due to dependencies.)
+*(Experienced Java developers who prefer not to work with Maven can find the .jar files on our [downloads](downloads.html) page. For an expert user, the downloads may be faster, but for beginners, they are also more complicated to use, due to dependencies.)*
 
 ### Is Maven already installed?
 
@@ -80,7 +60,7 @@ To see if Maven is installed in your machine, enter the following into the comma
 
 ### Installing Maven
 
-Instructions to install Maven are [here](https://maven.apache.org/download.cgi). Download the compressed file containing Maven's latest stable version.
+Instructions to install Maven are [here](https://maven.apache.org/download.cgi). Download the compressed file containing Maven's latest stable version. 
 
 ![Alt text](../img/maven_downloads.png) 
 
@@ -88,7 +68,9 @@ Lower on the same Web page, follow the instructions that pertain to your operati
 
 ![Alt text](../img/maven_OS_instructions.png) 
 
-Now, using your IDE, create a new project. Select `maven-archetype-quickstart`.
+# ND4J
+
+Now, using your IDE, create a new project. Select `maven-archetype-quickstart`. 
 
 ![Alt text](../img/new_maven_project.png) 
 
@@ -96,9 +78,9 @@ The images below will walk you through the windows of the IntelliJ New Project W
 
 ![Alt text](../img/maven2.png) 
 
-Click through the following screen with "Next", and on the screen after that (below), name your project. ("ND4J", for example...) Now go into your pom.xml file within the root of the new ND4J project in IntelliJ. 
+Click through the following screen with "Next", and on the screen after that (below), name your project. ("ND4J", for example) Now go into your pom.xml file within the root of the new ND4J project in IntelliJ. 
 
-Include the default backend ([Jblas](http://en.wikipedia.org/wiki/Jblas:_Linear_Algebra_for_Java)) in the `<dependencies> ... </dependencies>` section, so Maven can automatically install the required libraries:
+Include the default backend ([Jblas](http://en.wikipedia.org/wiki/Jblas:_Linear_Algebra_for_Java)) in the `<dependencies> ... </dependencies>` section, so that Maven can automatically install the required libraries:
 
 	 <dependency>
 	   <groupId>org.nd4j</groupId>
@@ -106,23 +88,13 @@ Include the default backend ([Jblas](http://en.wikipedia.org/wiki/Jblas:_Linear_
 	   <version>${nd4j.version}</version>
 	 </dependency>
 
-If you want to know exactly which version of ND4J you are using, press `Ctrl` and click on `nd4j.version`. This is a neat trick to jump through code in IntelliJ. Keep in mind that the JBLAS backend can be switched to Netlib Blas, or JCUBLAS for GPU use. Check our [dependencies](dependencies.html) page for advanced configuration changes. That page also explains how to check on the [latest version](http://search.maven.org/#search%7Cga%7C1%7Cnd4j) of the libraries.
+If you want to know the precise version of ND4J you're using, press `Ctrl` and click on `nd4j.version`. (This is a neat trick to jump through code in IntelliJ.) Keep in mind that the JBLAS backend can be switched to Netlib Blas, or to Jcublas for GPU use. Check our [dependencies](../dependencies.html) page for advanced configuration changes. That page also explains how to check on the [latest version](http://search.maven.org/#search%7Cga%7C1%7Cnd4j) of the libraries.
 
-You can now create a new Java file within IntelliJ, and start using ND4J's API for distributed linear algebra. (See our [intro](http://nd4j.org/introduction.html) if you need inspiration. ND4J in IntelliJ has **autocomplete**, so starting a new line with any letter will show you a list of all ND4J commends including that letter.) 
+You can now create a new Java file within IntelliJ, and start using ND4J's API for distributed linear algebra. (See our [intro](http://nd4j.org/introduction.html) for a couple beginning operations. ND4J in IntelliJ has **autocomplete**, so starting a new line with any letter will show you a list of all ND4J commends including that letter.) 
 
 # <a id="canova">Canova</a>
 
-### What it is
-
-[Canova](https://github.com/deeplearning4j/Canova) is a general vectorization lib for machine-learning tools.
-
-### Why you need Canova
-
-Canova makes your life easier by vectorizing raw data into usable vector formats like svmLight, libsvm and ARFF.
-
-### Is Canova already installed?
-
-Probably not. It's brand new. 
+[Canova](https://github.com/deeplearning4j/Canova) is a general vectorization lib we built for machine-learning tools. It vectorizes raw data into usable vector formats like svmLight, libsvm and ARFF, which our neural nets can work with.
 
 ### Installing Canova
 
@@ -130,17 +102,9 @@ Take the same steps to install [Canova](http://search.maven.org/#search%7Cga%7C1
 
 # <a id="github">GitHub</a>
 
-### What it is
-
 [Github](http://en.wikipedia.org/wiki/GitHub) is a web-based [Revision Control System](http://en.wikipedia.org/wiki/Revision_control), _the [de facto host](http://opensource.com/life/12/11/code-hosting-comparison) for open source projects_.
 
-### Why you (maybe) need Github
-
-If you just want to use the ND4J libraries, **you are not required to install GitHub**. If you're planning to contribute to the ND4J or [DeepLearning4J](https://github.com/SkymindIO/deeplearning4j) projects by fixing bugs and committing code, you will need it. (Thanks in advance btw :)
-
-### Is Github already installed?
-
-Just check the list of applications installed on your computer.
+**You are not required to install GitHub** to use ND4J. If you're planning to contribute to the ND4J or [DeepLearning4J](https://github.com/SkymindIO/deeplearning4j) projects by fixing bugs and committing code, you'll need it. (Thanks in advance btw :)
 
 ### Installation
 
@@ -158,7 +122,7 @@ Another way to get the source code is by clicking on the "[download ZIP](https:/
 
 # <a id="next-steps">Next Steps</a>
 
-Now you're ready to run the [examples](introduction.html). We recommend that you launch your IDE, load the ND4J project and open the examples subdirectory. Locate one in the file tree on the lefthand side of the IntelliJ window, right click on it, and select the green arrow for "Run" on the drop-down menu. If everything was installed correctly, you should see numbers appear as the program output. Please alter the code to see what you can do with it. 
+Now you're ready to run the [examples](introduction.html). We recommend that you launch your IDE, load the ND4J project and open the examples subdirectory. Locate an example in the file tree on the lefthand side of the IntelliJ window, right click on it, and select the green arrow for "Run" on the drop-down menu. If everything was installed correctly, you should see numbers appear as the program output at the bottom of the IntelliJ window. Please use these as a sandbox to start experimenting.  
 
 Once you're comfortable with the examples, you might want to change the dependencies defined in the POM files. Learn how to change the [dependencies here](gpu_native_backends.html).
 
@@ -176,4 +140,3 @@ Useful links:
 * [DeepLearning4J - Wikipedia](https://en.wikipedia.org/wiki/Deeplearning4j)
 * [DeepLearning4J - API Documentation](http://deeplearning4j.org/doc/)
 * [DeepLearning4J - Maven Repository](http://mvnrepository.com/artifact/org.deeplearning4j)
-
