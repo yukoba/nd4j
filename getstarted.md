@@ -126,11 +126,8 @@ For questions or feedback, join us on our [Google Groups Forum](https://groups.g
 
 ## Useful links
 
-* [ND4J.org](http://nd4j.org/)
-* [ND4J - Github repository](https://github.com/SkymindIO/nd4j)
-* [ND4J - API Documentation](http://nd4j.org/apidocs/)
-* [ND4J - Maven Repository](http://mvnrepository.com/artifact/org.nd4j)
-* [DeepLearning4J.org](http://deeplearning4j.org/)
-* [DeepLearning4J - Github repository](https://github.com/SkymindIO/deeplearning4j)
-* [DeepLearning4J - API Documentation](http://deeplearning4j.org/doc/)
-* [DeepLearning4J - Maven Repository](http://mvnrepository.com/artifact/org.deeplearning4j)
+* [ND4J Github repository](https://github.com/deeplearning4j/nd4j)
+* [ND4J Maven Repository](http://mvnrepository.com/artifact/org.nd4j)
+* [DeepLearning4j.org](http://deeplearning4j.org/)
+* [DeepLearning4j Github repository](https://github.com/deeplearning4j/deeplearning4j)
+* [DeepLearning4j Maven Repository](http://mvnrepository.com/artifact/org.deeplearning4j)
