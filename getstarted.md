@@ -94,7 +94,7 @@ You can now create a new Java file within IntelliJ, and start using ND4J's API f
 
 Take the same steps to install [Canova](http://search.maven.org/#search%7Cga%7C1%7Ccanova-parent) using Maven that you followed for ND4J. 
 
-# <a id="github">GitHub</a>
+## <a id="github">GitHub</a>
 
 [Github](http://en.wikipedia.org/wiki/GitHub) is a web-based [Revision Control System](http://en.wikipedia.org/wiki/Revision_control), _the [de facto host](http://opensource.com/life/12/11/code-hosting-comparison) for open source projects_.
 
@@ -124,7 +124,7 @@ Once you're comfortable with the examples, you might want to change the dependen
 
 For questions or feedback, join us on our [Google Groups Forum](https://groups.google.com/forum/#!forum/nd4j).
 
-Useful links:
+## Useful links
 
 * [ND4J.org](http://nd4j.org/)
 * [ND4J - Github repository](https://github.com/SkymindIO/nd4j)
