@@ -8,7 +8,7 @@ description: "Follow our video and install a Java development environment ready 
 To use ND4J, you need to install a few things on your computer:
 
 1. [Java](#java) 
-2. [Integrated Development Environment](#ide) 
+2. [IDE](#ide) 
 3. [Maven](#maven)
 4. [Canova](#canova)
 5. [Github](#github)
