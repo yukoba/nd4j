@@ -5,9 +5,7 @@ description: "A general vectorization lib for machine learning"
 ---
 {% include JB/setup %}
 
-## Description
-
-A tool for vectorizing raw data into usable vector formats across machine learning tools.
+Canova is a tool for vectorizing raw data into usable vector formats across machine learning tools.
 
 ## Example
 
