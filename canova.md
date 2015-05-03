@@ -33,6 +33,7 @@ Below is an example of the CSV transform language in action from the command lin
 ### UCI Iris Schema Transform
 
 ```
+
 @RELATION UCIIrisDataset
 @DELIMITER ,
  
@@ -55,6 +56,7 @@ mvn -DskipTests=true -Dmaven.javadoc.skip=true install
 Then we'd want to build the stand-alone Canova jar to run the CLI from the command line:
 
 ```
+
 cd canova-cli/
 mvn -DskipTests=true -Dmaven.javadoc.skip=true package
 ```
@@ -64,6 +66,7 @@ mvn -DskipTests=true -Dmaven.javadoc.skip=true package
 We need a file to tell the vectorization engine what to do. Create a text file containing the following lines in the *canova-cli* directory (you might name the file vec_conf.txt):
 
 ```
+
 input.header.skip=false
 input.statistics.debug.print=false
 input.format=org.canova.api.formats.input.impl.LineInputFormat
