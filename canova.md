@@ -33,14 +33,14 @@ Below is an example of the CSV transform language in action from the command lin
 ### UCI Iris Schema Transform
 
 ```
-@RELATION UCIIrisDataset
-@DELIMITER ,
- 
-   @ATTRIBUTE sepallength  NUMERIC   !NORMALIZE
-   @ATTRIBUTE sepalwidth   NUMERIC   !NORMALIZE
-   @ATTRIBUTE petallength  NUMERIC   !NORMALIZE
-   @ATTRIBUTE petalwidth   NUMERIC   !NORMALIZE
-   @ATTRIBUTE class        STRING   !LABEL
+    @RELATION UCIIrisDataset
+    @DELIMITER ,
+     
+       @ATTRIBUTE sepallength  NUMERIC   !NORMALIZE
+       @ATTRIBUTE sepalwidth   NUMERIC   !NORMALIZE
+       @ATTRIBUTE petallength  NUMERIC   !NORMALIZE
+       @ATTRIBUTE petalwidth   NUMERIC   !NORMALIZE
+       @ATTRIBUTE class        STRING   !LABEL
 ```
 
 ## Setting Up Canova
