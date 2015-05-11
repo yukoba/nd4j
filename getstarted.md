@@ -77,7 +77,7 @@ Lower on the same Web page, follow the instructions that pertain to your operati
 
 ![Alt text](../img/maven_OS_instructions.png) 
 
-## ND4J
+## Starting a New ND4J Project
 
 Now, using your IDE, create a new project. Select `maven-archetype-quickstart`. 
 
@@ -87,7 +87,7 @@ The images below will walk you through the windows of the IntelliJ New Project W
 
 ![Alt text](../img/maven2.png) 
 
-Click through the following screen with "Next", and on the screen after that (below), name your project. ("ND4J", for example) Now go into your pom.xml file within the root of the new ND4J project in IntelliJ. 
+Click through the following screen with "Next", and on the screen after that, name your project ("ND4J-test", for example) and hit finish. Now go into your pom.xml file within the root of the new ND4J project in IntelliJ. 
 
 Include the default backend ([Jblas](http://en.wikipedia.org/wiki/Jblas:_Linear_Algebra_for_Java)) in the `<dependencies> ... </dependencies>` section, so that Maven can automatically install the required libraries:
 
@@ -99,7 +99,7 @@ Include the default backend ([Jblas](http://en.wikipedia.org/wiki/Jblas:_Linear_
 
 Keep in mind that the JBLAS backend can be switched to Netlib Blas, or to Jcublas for GPU use. Check our [dependencies](../dependencies.html) page for advanced configuration changes. That page also explains how to check on the [latest version](http://search.maven.org/#search%7Cga%7C1%7Cnd4j) of the libraries.
 
-You can now create a new Java file within IntelliJ, and start using ND4J's API for distributed linear algebra. (See our [intro](http://nd4j.org/introduction.html) for a couple beginning operations. ND4J in IntelliJ has **autocomplete**, so starting a new line with any letter will show you a list of all ND4J commends including that letter.) 
+You can now create a new Java file within IntelliJ, and start using ND4J's API for distributed linear algebra. (See our [intro](http://nd4j.org/introduction.html) for a couple beginning operations. ND4J in IntelliJ has **autocomplete**, so starting a new line with any letter will show you a list of all ND4J commands including that letter.) 
 
 ## <a id="canova">Canova</a>
 
@@ -125,7 +125,7 @@ The free community edition of [IntelliJ](https://www.jetbrains.com/idea/download
 
 **You are not required to install GitHub**. If you're planning to contribute to the ND4J or [DeepLearning4J](https://github.com/SkymindIO/deeplearning4j) projects by fixing bugs and committing code, you will need git and GitHub. (Thanks in advance btw :)
 
-### Installing Git &/or GitHub
+### Installing Git &/or GitHub (Optional)
 
 Type the following into your command line to verify you have git.
 
@@ -133,7 +133,7 @@ Type the following into your command line to verify you have git.
 
 Just check the list of applications installed on your computer for GitHub.
 
-To use GitHub, first install [git](https://git-scm.herokuapp.com/book/en/v2/Getting-Started-Installing-Git) if you do not have it already. Then setup a [Github account](https://github.com/join). Download GitHub for [Mac](https://mac.github.com/), [Windows](https://windows.github.com/), etc. Once installed, to clone ND4J or DL4J, enter this command into your terminal (Mac) or Git Shell (Windows):
+To use GitHub, first install [git](https://git-scm.herokuapp.com/book/en/v2/Getting-Started-Installing-Git) if you do not have it already. Then setup a [Github account](https://github.com/join). Download GitHub for [Mac](https://mac.github.com/), [Windows](https://windows.github.com/), etc. Once installed, clone ND4J or DL4J, enter this command into your terminal (Mac) or Git Shell (Windows):
 
       git clone https://github.com/SkymindIO/nd4j
       git clone https://github.com/SkymindIO/deeplearning4j
