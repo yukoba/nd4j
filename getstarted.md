@@ -12,7 +12,7 @@ To get started with ND4J and DL4J, review and setup the following:
 4. [Github](#github)
 5. [Next Steps](#next-steps)
 
-# <a id="prereq"> Prerequisites </a>
+## <a id="prereq"> Prerequisites </a>
 
 System configuation requirements:
 
@@ -23,7 +23,7 @@ System configuation requirements:
 
 Distributed systems using Spark requirements: 
 
-* [Spark 1.3.0](https://spark.apache.org/downloads.html) (package type = Pre-built for Hadoop 1.X)
+* [Spark 1.3.0](https://spark.apache.org/downloads.html) _(package type = Pre-built for Hadoop 1.X)_
 
 GPUs requirements:
 
@@ -43,25 +43,17 @@ ND4J requires Java 7, so if you have an older or newer version, you will need to
 
 If you don't have Java 7 installed on your machine, download the [Java Development Kit (JDK) here](http://www.oracle.com/technetwork/java/javase/downloads/jdk7-downloads-1880260.html). The download will vary by operating system. For newer Macs, you'll want the file on the first line to mention Mac OS X (the number after *jdk-7u* increments with each update). It will look something like this:
 
-		Mac OS X x64 185.94 MB -  jdk-7u67-macosx-x75.dmg
+		Mac OS X x64 185.94 MB -  jdk-7u79-macosx-x75.dmg
 
 ## <a id="scala">Scala</a>
 
-### What it is
+Scala is an object-oriented langauge like Java with a strong static type system and it runs on teh JVM. The difference is that it has functional programming features similar to Scheme and Haskell and its structure keeps programs consice. You can use Java libraries with Scala. We provide a [Scala API](http://nd4j.org/scala.html). There are neural net examples you can run written in Scala, and it is requried for Spark implementation.
 
-Scala is an object-oriented langauge like Java with a strong static type system and it runs on teh JVM. The difference is that it has functional programming features similar to Scheme and Haskell and its structure keeps programs consice. You can use Java libraries with Scala. 
-
-### Why you need Scala
-
-We provide a [Scala API](http://nd4j.org/scala.html).) There are neural net examples you can run written in Scala, and it is requried for Spark implementation.
-
-### Is Scala already installed?
+### Installing Scala
 
 To test which version of Java you have (and whether you have it at all), type the following into your command line:
 
 		scala -version
-
-### Installing Scala
 
 In order to install Scala, checkout this [link](http://www.scala-lang.org/download/2.10.4.html).
 
@@ -116,43 +108,30 @@ You can now create a new Java file within IntelliJ, and start using ND4J's API f
 ### Installing Canova
 
 Take the same steps to install [Canova](http://search.maven.org/#search%7Cga%7C1%7Ccanova-parent) using Maven that you followed for ND4J. 
-## <a id="ide-for-java">Integrated Development Environment</a>
 
-### What an IDE is
+## <a id="ide">Integrated Development Environments</a>
 
-An Integrated Development Environment ([IDE](http://encyclopedia.thefreedictionary.com/integrated+development+environment)) will allow you to work with our API and build your nets with a few clicks. The IDEs suggested here work with your installed version of Java and can communicate with Maven (see below), which takes care of the dependencies for you. Visit ND4J's [dependencies](dependencies.html) page to see how to set up the POM.xml file, and consult the page on [GPUs and CPUs](gpu_native_backends.html) page to learn how to swap backends (it's one line of code...).
+An Integrated Development Environment ([IDE](http://encyclopedia.thefreedictionary.com/integrated+development+environment)) will allow you to work with our API and build your nets with a few clicks. The IDEs suggested here work with your installed version of Java and can communicate with [Maven](#maven), which takes care of the dependencies for you. Visit ND4J's [dependencies](dependencies.html) page to see how to set up the POM.xml file, and consult the page on [GPUs and CPUs](gpu_native_backends.html) page to learn how to swap backends (it's one line of code...).
 
-### Why you need an IDE
-
-You want a hassle-free development environment so that you only need to think about your code. IDEs typically come with Maven support, but we prefer you to install [Maven](#maven) so you can run commands directly as instructed previously.
-
-### Is an IDE already installed?
-
-Just check the list of applications installed on your computer.
+An IDE provides a hassle-free development environment that allows you to focus more on your code. IDEs typically come with Maven support, but we prefer you to install [Maven](#maven) so you can run commands directly. While we prefer IntelliJ, [Eclipse](http://books.sonatype.com/m2eclipse-book/reference/creating-sect-importing-projects.html) and [Netbeans](http://wiki.netbeans.org/MavenBestPractices) are two other popular IDEs.
 
 ### Installing an IDE
 
-We recommend installing [IntelliJ](https://www.jetbrains.com/idea/download/). The free community edition does the job just fine.
-
-[Eclipse](http://books.sonatype.com/m2eclipse-book/reference/creating-sect-importing-projects.html) and [Netbeans](http://wiki.netbeans.org/MavenBestPractices) are two other popular IDEs.
+The free community edition of [IntelliJ](https://www.jetbrains.com/idea/download/) has installation instructions.
 
 ## <a id="github">GitHub</a>
 
 [Github](http://en.wikipedia.org/wiki/GitHub) is a web-based [Revision Control System](http://en.wikipedia.org/wiki/Revision_control), _the [de facto host](http://opensource.com/life/12/11/code-hosting-comparison) for open source projects_.
 
-### Why you need Git & Github
+**You are not required to install GitHub**. If you're planning to contribute to the ND4J or [DeepLearning4J](https://github.com/SkymindIO/deeplearning4j) projects by fixing bugs and committing code, you will need git and GitHub. (Thanks in advance btw :)
 
-If you just want to use the ND4J or DL4J libraries, **you are not required to install GitHub**. If you're planning to contribute to the ND4J or [DeepLearning4J](https://github.com/SkymindIO/deeplearning4j) projects by fixing bugs and committing code, you will need git and GitHub. (Thanks in advance btw :)
-
-### Is Git or GitHub already installed?
+### Installing Git &/or GitHub
 
 Type the following into your command line to verify you have git.
 
 		git --version 
 
 Just check the list of applications installed on your computer for GitHub.
-
-### Installation
 
 To use GitHub, first install [git](https://git-scm.herokuapp.com/book/en/v2/Getting-Started-Installing-Git) if you do not have it already. Then setup a [Github account](https://github.com/join). Download GitHub for [Mac](https://mac.github.com/), [Windows](https://windows.github.com/), etc. Once installed, to clone ND4J or DL4J, enter this command into your terminal (Mac) or Git Shell (Windows):
 
