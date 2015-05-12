@@ -83,7 +83,7 @@ Now, using your IDE, create a new project. Select `maven-archetype-quickstart`.
 
 ![Alt text](../img/new_maven_project.png) 
 
-The images below will walk you through the windows of the IntelliJ New Project Wizard using Maven. First, name your group and artifact.
+The images below will walk you through the windows of the IntelliJ New Project Wizard using Maven. First, name your group and artifact. If you're building a deeplearning4j project, you'll want org.deeplearning4j in the GroupID slot; if the project is simply for ND4J, you'll want org.nd4j, and so on. The artifact can be any name you choose.
 
 ![Alt text](../img/maven2.png) 
 
@@ -96,6 +96,12 @@ Include the default backend ([Jblas](http://en.wikipedia.org/wiki/Jblas:_Linear_
 	   <artifactId>nd4j-jblas</artifactId>
 	   <version>${nd4j.version}</version>
 	 </dependency>
+	 
+ND4J's version is a variable here. It will refer to another line higher in the POM, in the <properties> ... </properties> section, specifying the nd4j version and appearing similar to this:
+
+		<nd4j.version>0.0.3.5.5.3</nd4j.version>
+
+The number of the version will vary with new releases. Make sure you check the latest version available on Maven. 
 
 Keep in mind that the JBLAS backend can be switched to Netlib Blas, or to Jcublas for GPU use. Check our [dependencies](../dependencies.html) page for advanced configuration changes. That page also explains how to check on the [latest version](http://search.maven.org/#search%7Cga%7C1%7Cnd4j) of the libraries.
 
@@ -109,9 +115,21 @@ You can now create a new Java file within IntelliJ, and start using ND4J's API f
 
 Take the same steps to install [Canova](http://search.maven.org/#search%7Cga%7C1%7Ccanova-parent) using Maven that you followed for ND4J. 
 
+### Installing Deeplearning4j
+
+Deeplearning4j versions should be specified in the same way you did for ND4J, which the version in properties and the variable in the dependencies. 
+
+The DL4J dependencies you add to the POM will vary with the nature of your project. In addition to the core dependency, given below, you may also want to install deeplearning4j-cli for the command-line interface, deeplearning4j-scaleout for running parallel on Hadoop or Spark, and others as needed... A full list will come up by searching for *deeplearning4j* on Maven Central.
+
+   <dependency>
+     <groupId>org.deeplearning4j</groupId>
+     <artifactId>deeplearning4j-core</artifactId>
+     <version>${deeplearning4j.version}</version>
+   </dependency>
+
 ## <a id="ide">Integrated Development Environments</a>
 
-An Integrated Development Environment ([IDE](http://encyclopedia.thefreedictionary.com/integrated+development+environment)) will allow you to work with our API and build your nets with a few clicks. The IDEs suggested here work with your installed version of Java and can communicate with [Maven](#maven), which takes care of the dependencies for you. Visit ND4J's [dependencies](dependencies.html) page to see how to set up the POM.xml file, and consult the page on [GPUs and CPUs](gpu_native_backends.html) page to learn how to swap backends (it's one line of code...).
+An Integrated Development Environment ([IDE](http://encyclopedia.thefreedictionary.com/integrated+development+environment)) will allow you to work with our API and build your nets with a few clicks. The IDEs suggested here work with your installed version of Java and can communicate with [Maven](#maven), which takes care of the dependencies for you. 
 
 An IDE provides a hassle-free development environment that allows you to focus more on your code. IDEs typically come with Maven support, but we prefer you to install [Maven](#maven) so you can run commands directly. While we prefer IntelliJ, [Eclipse](http://books.sonatype.com/m2eclipse-book/reference/creating-sect-importing-projects.html) and [Netbeans](http://wiki.netbeans.org/MavenBestPractices) are two other popular IDEs.
 
@@ -119,7 +137,7 @@ An IDE provides a hassle-free development environment that allows you to focus m
 
 The free community edition of [IntelliJ](https://www.jetbrains.com/idea/download/) has installation instructions.
 
-## <a id="github">GitHub</a>
+## <a id="github">GitHub (Optional)</a>
 
 [Github](http://en.wikipedia.org/wiki/GitHub) is a web-based [Revision Control System](http://en.wikipedia.org/wiki/Revision_control), _the [de facto host](http://opensource.com/life/12/11/code-hosting-comparison) for open source projects_.
 
