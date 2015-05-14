@@ -127,6 +127,8 @@ The DL4J dependencies you add to the POM will vary with the nature of your proje
      <version>${deeplearning4j.version}</version>
    </dependency>
 
+More information on installing Deeplearning4j is available on its [Getting Started page](http://deeplearning4j.org/gettingstarted.html).
+
 ## <a id="ide">Integrated Development Environments</a>
 
 An Integrated Development Environment ([IDE](http://encyclopedia.thefreedictionary.com/integrated+development+environment)) will allow you to work with our API and build your nets with a few clicks. The IDEs suggested here work with your installed version of Java and can communicate with [Maven](#maven), which takes care of the dependencies for you. 
