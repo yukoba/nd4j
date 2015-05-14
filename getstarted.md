@@ -121,11 +121,11 @@ Deeplearning4j versions should be specified in the same way you did for ND4J, wh
 
 The DL4J dependencies you add to the POM will vary with the nature of your project. In addition to the core dependency, given below, you may also want to install deeplearning4j-cli for the command-line interface, deeplearning4j-scaleout for running parallel on Hadoop or Spark, and others as needed... A full list will come up by searching for *deeplearning4j* on Maven Central.
 
-   <dependency>
-     <groupId>org.deeplearning4j</groupId>
-     <artifactId>deeplearning4j-core</artifactId>
-     <version>${deeplearning4j.version}</version>
-   </dependency>
+		   <dependency>
+		     <groupId>org.deeplearning4j</groupId>
+		     <artifactId>deeplearning4j-core</artifactId>
+		     <version>${deeplearning4j.version}</version>
+		   </dependency>
 
 More information on installing Deeplearning4j is available on its [Getting Started page](http://deeplearning4j.org/gettingstarted.html).
 
