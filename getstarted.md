@@ -165,6 +165,12 @@ You might also want to clone our examples so you can mess around with ND4J or DL
       
 Another way to get the source code is by clicking on the "[download ZIP](https://github.com/SkymindIO/nd4j/archive/master.zip)" button from the [ND4J GitHub page](https://github.com/SkymindIO/nd4j). Then unzip the file (you can use [7-zip](http://www.7-zip.org/download.html) to do that).
 
+Maven can be used in conjunction with Git to ensure that ND4J, Canova and Deeplearning4j build correctly. To make sure you have the most recent, working version of these libraries, you can *cd* into their root directories and enter the following command into your prompt:
+
+		mvn clean install -DskipTests -Dmaven.javadoc.skip=true
+
+Running a clean install on ND4J, Canova and Deeplearning4j, in that order, is a good way to get the most recent bug fixes and features. 
+
 ## <a id="next-steps">Next Steps</a>
 
 Now you're ready to run the [examples](introduction.html). We recommend that you launch your IDE, load the ND4J project and open the examples subdirectory. Locate an example in the file tree on the lefthand side of the IntelliJ window, right click on it, and select the green arrow for "Run" on the drop-down menu. 
