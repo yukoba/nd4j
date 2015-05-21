@@ -27,7 +27,7 @@ Distributed systems using Spark requirements:
 
 GPUs requirements:
 
-* [Cuda](http://docs.nvidia.com/cuda/cuda-getting-started-guide-for-linux/#axzz3Zm828m4B)
+* [Cuda 7](http://docs.nvidia.com/cuda/cuda-getting-started-guide-for-linux/#axzz3Zm828m4B)
 
 ## <a id="java">Java</a>
 
@@ -89,7 +89,7 @@ The images below will walk you through the windows of the IntelliJ New Project W
 
 Click through the following screen with "Next", and on the screen after that, name your project ("ND4J-test", for example) and hit finish. Now go into your pom.xml file within the root of the new ND4J project in IntelliJ. 
 
-Include the default backend ([Jblas](http://en.wikipedia.org/wiki/Jblas:_Linear_Algebra_for_Java)) in the `<dependencies> ... </dependencies>` section, so that Maven can automatically install the required libraries:
+Update the POM file with needed dependences. For example, include the default backend ([Jblas](http://en.wikipedia.org/wiki/Jblas:_Linear_Algebra_for_Java)) in the `<dependencies> ... </dependencies>` section, so that Maven can automatically install the required libraries:
 
 	 <dependency>
 	   <groupId>org.nd4j</groupId>
@@ -104,6 +104,10 @@ ND4J's version is a variable here. It will refer to another line higher in the P
 The number of the version will vary with new releases. Make sure you check the latest version available on Maven. 
 
 Keep in mind that the JBLAS backend can be switched to Netlib Blas, or to Jcublas for GPU use. Check our [dependencies](../dependencies.html) page for advanced configuration changes. That page also explains how to check on the [latest version](http://search.maven.org/#search%7Cga%7C1%7Cnd4j) of the libraries.
+
+Open App.java file that is created with every new Intellij project, and start writing code between the curly brackets you see after **public static void main( String[] args )**. 
+
+Many of the classes will appear in red, since you haven't imported the right packages, but IntelliJ will add those packages automatically to the top of your file. Lookup the appropriate hot keys based on your OS to help automatically load the packages. 
 
 You can now create a new Java file within IntelliJ, and start using ND4J's API for distributed linear algebra. (See our [intro](http://nd4j.org/introduction.html) for a couple beginning operations. ND4J in IntelliJ has **autocomplete**, so starting a new line with any letter will show you a list of all ND4J commands including that letter.) 
 
