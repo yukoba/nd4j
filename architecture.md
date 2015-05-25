@@ -5,7 +5,7 @@ description: "ND4J's API, Buffer and Backends"
 ---
 {% include JB/setup %}
 
-## ND4J's Architecture: API, Buffer and Backends
+## ND4J's APIs, Buffers and Backends
 
 ND4J provides users with Java and [Scala](http://nd4j.org/scala.html) APIs, but other parts of the architecture are less visible. 
 
