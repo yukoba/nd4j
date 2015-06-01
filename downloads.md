@@ -3,14 +3,8 @@ layout: page
 title: "Downloads"
 description: ""
 ---
-ND4J: Scientific Computing on the JVM
-===========================================
 
-ND4J is an Apache2 Licensed open-sourced scientific computing library for the JVM. It is meant to be used in production environments
-rather than as a research tool, which means routines are designed to run fast with minimum RAM requirements.
-
----
-## Installation
+# Downloads
 
 To install ND4J, there are a couple of approaches, and more information can be found on the [ND4J website](http://nd4j.org/getstarted.html).
 
