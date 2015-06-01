@@ -4,7 +4,6 @@ title: "Downloads"
 description: ""
 ---
 
-# Downloads
 
 To install ND4J, there are a couple of approaches, and more information can be found on the [ND4J website](http://nd4j.org/getstarted.html).
 
