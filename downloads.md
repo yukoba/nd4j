@@ -3,51 +3,64 @@ layout: page
 title: "Downloads"
 description: ""
 ---
+ND4J: Scientific Computing on the JVM
+===========================================
 
-{% include JB/setup %}
+ND4J is an Apache2 Licensed open-sourced scientific computing library for the JVM. It is meant to be used in production environments
+rather than as a research tool, which means routines are designed to run fast with minimum RAM requirements.
 
-# Downloads
+---
+## Installation
 
-ND4j lets you switch between three computational backends: one for GPUs and two different native blas bindings. 
+To install ND4J, there are a couple of approaches, and more information can be found on the [ND4J website](http://nd4j.org/getstarted.html).
 
-In Maven, it's fairly easy to switch between different backends. Without Maven, it may be harder. Here we provide a number of archives that contain all of the jar files required to use ND4J's backends.
+#### Install from Maven Central
 
-#Native
+1. Search for nd4j in the [Maven Central Repository](http://mvnrepository.com/search?q=nd4j) to find the available nd4j jars.
+2. Include the appropriate dependency in your pom.xml.
 
-## Jblas
+#### Clone from the GitHub Repo
 
-### Latest
-* [tar archive](https://s3.amazonaws.com/nd4j-distribution/jblas/latest/nd4j-release-0.0.3.5.4-bin.tar.bz2)
-* [bz2 archive](https://s3.amazonaws.com/nd4j-distribution/jblas/latest/nd4j-release-0.0.3.5.4-bin.tar.gz)
-* [zip arcive](https://s3.amazonaws.com/nd4j-distribution/jblas/latest/nd4j-release-0.0.3.5.4-bin.zip)
+ND4J is actively developed. You can clone the repository, compile it, and reference it in your project.
 
-### 0.0.3.5.4
-* [tar archive](https://s3.amazonaws.com/nd4j-distribution/jblas/0.0.3.5.4/nd4j-release-0.0.3.5.4-bin.tar.bz2)
-* [bz2 archive](https://s3.amazonaws.com/nd4j-distribution/jblas/0.0.3.5.4/nd4j-release-0.0.3.5.4-bin.tar.gz)
-* [zip archive](https://s3.amazonaws.com/nd4j-distribution/jblas/0.0.3.5.4/nd4j-release-0.0.3.5.4-bin.zip)
+Clone the repository:
 
-## Netlib Blas
+    $ git clone https://github.com/deeplearning4j/nd4j.git
 
-### Latest
-* [tar archive](https://s3.amazonaws.com/nd4j-distribution/netlib-blas/latest/nd4j-release-0.0.3.5.4-bin.tar.bz2)
-* [bz2 archive](https://s3.amazonaws.com/nd4j-distribution/netlib-blas/latest/nd4j-release-0.0.3.5.4-bin.tar.bz2)
-* [zip archive](https://s3.amazonaws.com/nd4j-distribution/netlib-blas/latest/nd4j-release-0.0.3.5.4-bin.tar.bz2)
+Compile the project:
 
-### 0.0.3.5.4
-* [tar archive](https://s3.amazonaws.com/nd4j-distribution/netlib-blas/0.0.3.5.4/nd4j-release-0.0.3.5.4-bin.tar.bz2)
-* [bz2 archive](https://s3.amazonaws.com/nd4j-distribution/netlib-blas/0.0.3.5.4/nd4j-release-0.0.3.5.4-bin.tar.bz2)
-* [zip archive](https://s3.amazonaws.com/nd4j-distribution/netlib-blas/0.0.3.5.4/nd4j-release-0.0.3.5.4-bin.tar.bz2)
+    $ cd nd4j
+    $ mvn clean install -DskipTests -Dmaven.javadoc.skip=true
 
-# GPUs
+Add the local compiled file dependency (choose the module for your backend) to your pom.xml file:
 
-## Jcublas
+    <dependency>
+        <groupId>org.nd4j</groupId>
+        <artifactId>nd4j-jblas</artifactId>
+        <version>0.0.3.5.5.4-SNAPSHOT</version>
+    </dependency>
 
-###Latest
-* [tar archive](https://s3.amazonaws.com/nd4j-distribution/jcublas/latest/nd4j-release-0.0.3.5.4-bin.tar.bz2)
-* [bz2 archive](https://s3.amazonaws.com/nd4j-distribution/jcublas/latest/nd4j-release-0.0.3.5.4-bin.tar.bz2)
-* [zip archive](https://s3.amazonaws.com/nd4j-distribution/jcublas/latest/nd4j-release-0.0.3.5.4-bin.tar.bz2)
+#### Yum Install / Load RPM (Fedora or CentOS)
+Create a yum repo and run yum install to load the Red Hat Package Management (RPM) files. First create the repo file to setup the configuration locally.
 
-###0.0.3.5.4
-* [tar archive](https://s3.amazonaws.com/nd4j-distribution/jcublas/0.0.3.5.4/nd4j-release-0.0.3.5.4-bin.tar.bz2)
-* [bz2 archive](https://s3.amazonaws.com/nd4j-distribution/jcublas/0.0.3.5.4/nd4j-release-0.0.3.5.4-bin.tar.bz2)
-* [zip archive](https://s3.amazonaws.com/nd4j-distribution/jcublas/0.0.3.5.4/nd4j-release-0.0.3.5.4-bin.tar.bz2)
+    $ sudo vi /etc/yum.repos.d/dl4j.repo 
+
+Add the following to the dl4j.repo file:
+
+'''
+
+    [dl4j.repo]
+
+    name=dl4j-repo
+    baseurl=http://ec2-52-5-255-24.compute-1.amazonaws.com/repo/RPMS
+    enabled=1
+    gpgcheck=0
+'''
+
+Then run the following command on the dl4j repo packages to install them on your machine:
+
+    $ sudo yum install [package name] -y
+    $ sudo yum install nd4j-cli -y # for example
+
+Note, be sure to install the nd4j modules you need first, especially the backend and then install Canova and dl4j.
+
