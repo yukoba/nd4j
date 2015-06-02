@@ -40,9 +40,12 @@ ND4J can measure and display how long various operations take on any given machi
 		    </dependencies>
 		</project>
 
-* Now Click on IntelliJ's *Run* menu and select *Edit Configurations*. This will open a window with a plus sign on the upper lefthand side. Click on that, and select *Application* from the drop-down menu. 
+* Now Click on IntelliJ's *Run* menu and select *Edit Configurations*. This will open a window with a plus sign on the upper lefthand side. 
+![Alt text](../img/benchmarks_1.png)
+* Click on that, and select *Application* from the drop-down menu. 
 * Next, enter *BenchmarkRunnerApp* in the "Main Class" field. In the "Program Arguments" field, enter the terms *-n 5*. 
 * On the bottom right of the same window, first click the "Apply" button, and then "OK".
+![Alt text](../img/benchmarks_2.png)
 * Finally, go back to the POM of your AppTest project, and click the green Run arrow on the upper right. At the bottom of your screen, a sub-window within IntelliJ's project window should open, and after a while, you will see the benchmarks begin to appear. They will look like this:
 
 		========================= Benchmark: org.nd4j.linalg.benchmark.gemm.GemmBenchmarkPerformer ===========================
