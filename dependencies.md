@@ -27,7 +27,7 @@ Go to your root directory -- e.g. nd4j or deeplearning4j -- and inspect the [pom
  
 	 <dependency>
 	   <groupId>org.nd4j</groupId>
-	   <artifactId>nd4j-api</artifactId>
+	   <artifactId>nd4j-netlib-blas</artifactId>
 	   <version>${nd4j.version}</version>
 	 </dependency>
 
