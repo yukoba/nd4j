@@ -9,7 +9,7 @@ ND4J can measure and display how long various operations take on any given machi
 * In IntelliJ, create a new project. (We'll call this example "AppTest".) 
 * Next, you'll add ND4J dependencies to the POM.xml file of the new project. One dependency should be *nd4j-perf*, which contains the benchmarking classes, and the other dependencies will represent the various backends you may want to test; i.e. *nd4j-jblas*, *n4j-netlib-blas*, *nd4j-java* and, finally, *nd4j-jcublas* if you've got GPUs. 
 * Within the *properties* tag of the POM, specify the most recent version of nd4j, which you should have installed with your latest *git pull*.
-* Your time should look something like this:
+* Your entire POM file should look something like this:
 
 		<?xml version="1.0" encoding="UTF-8"?>
 		<project xmlns="http://maven.apache.org/POM/4.0.0"
@@ -36,9 +36,7 @@ ND4J can measure and display how long various operations take on any given machi
 		            <artifactId>nd4j-perf</artifactId>
 		            <version>${nd4j.version}</version>
 		        </dependency>
-		
 		    </dependencies>
-		
 		</project>
 
 * Now Click on IntelliJ's *Run* menu and select *Edit Configurations*. This will open a window with a plus sign on the upper lefthand side. Click on that, and select *Application* from the drop-down menu. 
