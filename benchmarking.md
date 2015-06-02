@@ -73,6 +73,12 @@ ND4J can measure and display how long various operations take on any given machi
 		Backend org.nd4j.linalg.jblas.JblasBackend took (in nanoseconds) 440400 (in milliseconds) 0
 		====================================================
 
-These numbers that appear will be specific to your machine, the backend you choose, and the "Program Arguments" you enter. It's good to start with five iterations to test that benchmarks are working, and then increase them. All operations are dealing with a matrix with 10,000 rows by 10,000 columns, which flattens to a 100-million length vector. That's not an unrealistic number for real problems, so only matrices of this size or larger will give us meaningful tests. The time each operation takes will be reported in both nanoseconds and milliseconds. Some operations will round down to zero milliseconds, will others will take longer. 
+These numbers that appear will be specific to your machine, the backend you choose, and the "Program Arguments" you enter. It's good to start with five iterations to test that benchmarks are working, and then increase them. 
 
-The aim of this feature is not to demonstrate that we have the fastest neural nets, but to enable DL4J and ND4J users to show us what's running slow, so we can improve it. These benchmarks obviously measure the speed of single matrix operations, rather than training on, say, ImageNet. The more we can optimize these lower-level operations at the heart of neura-net training, the faster they will run in parallel on a distributed system, which is the ideal architecture for DL4J. 
+All operations are dealing with a matrix with 10,000 rows by 10,000 columns, which flattens to a 100-million length vector. That's not an unrealistic number for real problems, so only matrices of this size or larger will give us meaningful tests. 
+
+The time each operation takes will be reported in both nanoseconds and milliseconds. Some operations will round down to zero milliseconds, will others will take longer. 
+
+The aim of this feature is not to demonstrate that we have the fastest neural nets, but to enable DL4J and ND4J users to show us what's running slow, so we can improve it. These benchmarks obviously measure the speed of single matrix operations, rather than training on, say, ImageNet. 
+
+The more we can optimize these lower-level operations at the heart of neura-net training, the faster they will run in parallel on a distributed system, which is the ideal architecture for DL4J. 
