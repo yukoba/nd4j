@@ -11,34 +11,35 @@ ND4J can measure and display how long various operations take on any given machi
 * Within the *properties* tag of the POM, specify the most recent version of nd4j, which you should have installed with your latest *git pull*.
 * Your time should look something like this:
 
-				<?xml version="1.0" encoding="UTF-8"?>
-				<project xmlns="http://maven.apache.org/POM/4.0.0"
-				         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-				         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
-				    <modelVersion>4.0.0</modelVersion>
-
-				    <groupId>AppTest</groupId>
-				    <artifactId>AppTest</artifactId>
-				    <version>1.0-SNAPSHOT</version>
-
-				    <properties>
-				        <nd4j.version>0.0.3.5.5.5-SNAPSHOT</nd4j.version>
-				    </properties>
-
-				    <dependencies>
-				        <dependency>
-				            <groupId>org.nd4j</groupId>
-				            <artifactId>nd4j-jblas</artifactId>
-				            <version>${nd4j.version}</version>
-				        </dependency>
-				        <dependency>
-				            <groupId>org.nd4j</groupId>
-				            <artifactId>nd4j-perf</artifactId>
-				            <version>${nd4j.version}</version>
-				        </dependency>
-				    </dependencies>
-
-				</project>
+		<?xml version="1.0" encoding="UTF-8"?>
+		<project xmlns="http://maven.apache.org/POM/4.0.0"
+		         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+		         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+		    <modelVersion>4.0.0</modelVersion>
+		
+		    <groupId>AppTest</groupId>
+		    <artifactId>AppTest</artifactId>
+		    <version>1.0-SNAPSHOT</version>
+		
+		    <properties>
+		        <nd4j.version>0.0.3.5.5.5-SNAPSHOT</nd4j.version>
+		    </properties>
+		
+		    <dependencies>
+		        <dependency>
+		            <groupId>org.nd4j</groupId>
+		            <artifactId>nd4j-jblas</artifactId>
+		            <version>${nd4j.version}</version>
+		        </dependency>
+		        <dependency>
+		            <groupId>org.nd4j</groupId>
+		            <artifactId>nd4j-perf</artifactId>
+		            <version>${nd4j.version}</version>
+		        </dependency>
+		
+		    </dependencies>
+		
+		</project>
 
 * Now Click on IntelliJ's *Run* menu and select *Edit Configurations*. This will open a window with a plus sign on the upper lefthand side. Click on that, and select *Application* from the drop-down menu. 
 * Next, enter *BenchmarkRunnerApp* in the "Main Class" field. In the "Program Arguments" field, enter the terms *-n 5*. 
