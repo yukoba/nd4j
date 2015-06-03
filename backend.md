@@ -49,7 +49,7 @@ Let's step through this line by line with some brief comments:
 
 You can see most of the classes the properties config file lines map to in this snapshot of nd4j-jblas's unfurled directory structure. 
 
-![Alt text](../img/IMAGE_NAME.png)
+![Alt text](../img/nd4j_backend_config.png)
 
 A few more points:
 
