@@ -32,17 +32,19 @@ Let's step through this line by line with some brief comments:
     //this factory creates NDArrays for Jblas
     ndarrayfactory.class = org.nd4j.linalg.jblas.JblasNDArrayFactory  
     
-    //f stands for fortran, with column-major arrays. the alternative is c, which is row-major
+    //f stands for fortran, with column-major arrays. 
+    //the alternative is c, which is row-major
     ndarray.order = f 
     resourcemanager_state = false 
     
-    // the databufferfactory will differ according to your use of cpus or gpus...
+    // the databufferfactory will differ if you use of cpus or gpus...
     databufferfactory = org.nd4j.linalg.api.buffer.factory.DefaultDataBufferFactory 
     
-    //memory allocation can use arrays for storage with "heap", or raw byte buffers/netty with "direct"
+    //memory allocation can use arrays for storage with "heap".
+    //it uses raw byte buffers/netty with "direct".
     alloc = heap 
     
-    //fft specifies which fast fourier transform implementation to use
+    //fft specifies which fast-fourier transform impl to use
     fft = org.nd4j.linalg.fft.DefaultFFTInstance
 
 You can see most of the classes the properties config file lines map to in this snapshot of nd4j-jblas's unfurled directory structure. 
