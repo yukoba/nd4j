@@ -1,7 +1,7 @@
 ---
 layout: page
-title: "ND4J Backends: What They Are, How They Work"
-description: "Linear Algebra Backends"
+title: "ND4J Backends: How They Work"
+description: "Linear Algebra Backends Jblas, Netlib Blas, Jcublas"
 ---
 {% include JB/setup %}
 
