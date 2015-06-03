@@ -27,7 +27,8 @@ Let's step through this line by line with some brief comments:
     //again points to appropriate class
     complex.double.class = org.nd4j.linalg.jblas.complex.ComplexDouble 
     
-    blas.ops = org.nd4j.linalg.jblas.BlasWrapper //ditto
+    // Blas wrappers let you speak to the underlying linalg subprocesses.
+    blas.ops = org.nd4j.linalg.jblas.BlasWrapper 
     
     //this factory creates NDArrays for Jblas
     ndarrayfactory.class = org.nd4j.linalg.jblas.JblasNDArrayFactory  
