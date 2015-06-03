@@ -17,22 +17,31 @@ Let's step through this line by line with some brief comments:
 
     //points to array class for real numbers
     real.class.double = org.nd4j.linalg.jblas.NDArray 
+    
     //points to array class for complex numbers
     complex.class.double = org.nd4j.linalg.jblas.complex.ComplexNDArray 
+    
     //defines the default data type as a float
     dtype = float  
+    
     //again points to appropriate class
     complex.double.class = org.nd4j.linalg.jblas.complex.ComplexDouble 
+    
     blas.ops = org.nd4j.linalg.jblas.BlasWrapper //ditto
+    
     //this factory creates NDArrays for Jblas
     ndarrayfactory.class = org.nd4j.linalg.jblas.JblasNDArrayFactory  
+    
     //f stands for fortran, with column-major arrays. the alternative is c, which is row-major
     ndarray.order = f 
     resourcemanager_state = false 
+    
     // the databufferfactory will differ according to your use of cpus or gpus...
     databufferfactory = org.nd4j.linalg.api.buffer.factory.DefaultDataBufferFactory 
+    
     //memory allocation can use arrays for storage with "heap", or raw byte buffers/netty with "direct"
     alloc = heap 
+    
     //fft specifies which fast fourier transform implementation to use
     fft = org.nd4j.linalg.fft.DefaultFFTInstance
 
