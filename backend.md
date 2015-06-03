@@ -54,5 +54,5 @@ You can see most of the classes the properties config file lines map to in this 
 A few more points:
 
 * Regardless of the backend you choose, you use the same ND4J API for everything, including GPUs and distributed systems. 
-* You can override all properties in the above file from the command line using mvn -D$your_parameter_here.
+* You can override all properties in the above file from the command line using *mvn -D$your_parameter_here*.
 * You can include multiple backends on the classpath. If you do, ND4J will run on as many as GPUs asa you have available, exhaust them, and then start adding CPUs, allowing you to operate on mixed hardware. 
