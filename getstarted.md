@@ -18,7 +18,7 @@ System configuation requirements:
 
 * [Java 7](#java) 
 * [Scala 2.10.4](#scala)
-* [Maven 2.4](#maven)
+* [Maven 3.2.5](#maven)
 * [Canova 0.0.0.2](#canova)
 
 Distributed systems using Spark requirements: 
