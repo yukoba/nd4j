@@ -5,13 +5,19 @@ description: "Dependencies - How to change backends"
 ---
 {% include JB/setup %}
 
+First, you will need to choose the right dependency for your chips:
+
+![Alt text](../img/backend_table.png) 
+
 ## Configuring the POM.xml file
 
-Maven can automatically install the required dependencies once we select one of these three backends:
+Maven can automatically install the required dependencies once we select one of these backends:
 
 * JBLAS (default)
 * [Netlib Blas](http://netlib.org/)
 * [JCUBLAS](gpu_native_backends.html) (for GPUs)
+* ND4J-Java 
+* JOCL 
  
 Go to your root directory -- e.g. nd4j or deeplearning4j -- and inspect the [pom.xml file](https://maven.apache.org/pom.html). You should see one backend defined in the `<dependencies> ... </dependencies>` section. You can switch among:
 
