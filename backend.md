@@ -58,3 +58,48 @@ A few more points:
 * You can override all properties in the above file from the command line using *mvn -D$your_parameter_here*.
 * **Backend prioritization**: You can include multiple backends on the classpath. If you do, ND4J will run on as many as GPUs as you have available, exhaust them, and then start adding CPUs, allowing you to operate on mixed hardware. 
 * C programmers engaged in numerical or scientific computing may ask (with a touch of disdain ;) why we built a Java API over several backends. This architecture allows us to largely abstract away the hardware, while optimizing for it under the hood. Software engineers writing in Java or Scala can build scalable numerical software once, and then deploy on multiple platforms, knowing that we've done the work of lower-level optimization, and that their algorithms will work on servers, desktops and Android phones. Another advantage is that you can build your own backends, test them in isolation, and benefit from a higher-level language. 
+
+## nd4j-benchmark
+
+The [nd4j-benchmark project](https://github.com/deeplearning4j/nd4j-benchmark) on Github is dedicated to running benchmarks on ND4J matrix operations.
+
+Run:
+
+        org.nd4j.linalg.benchmark.app.BenchmarkRunnerApp -n $YOUR NUMBER OF TRIALS -r csv of fully qualified path of trials you want to run *(e.g. org.nd4j.linalg.benchmark.app.BenchmarkRunnerApp)*
+
+##Command-Line Example 
+
+Here's a general matrix multiplication (Gemm) example already included in the *nd4j-perf* module:
+
+            java -cp lib/* org.nd4j.linalg.benchmark.app.BenchmarkRunnerApp -n 10k -r                 org.nd4j.linalg.benchmark.gemm.GemmBenchmarkPerformer,org.nd4j.linalg.benchmark.gemm.GemmBenchmarkPerformer
+
+Notice we specify gemm twice. This is just to demonstrate how you would run multiple classes.
+
+##IntelliJ
+
+You can also run this in IntelliJ with an [app configuration](https://www.jetbrains.com/idea/help/creating-and-editing-run-debug-configurations.html).
+
+Specify *org.nd4j.linalg.benchmark.app.BenchmarkRunnerApp* as the main class, and specify your arguments in program arguments.
+
+#Heap Space
+
+If you need more heap space (in your VM arguments), add:
+
+        -XmxMAX_HEAP_SPACE -XmsMINHEAP_SPACE
+        
+        -Xmx2g -Xms2g
+
+#Flags
+
+**-r** If you leave -r off, it will run every benchmark on the class path
+
+To run one or more particular backends, just include them in your POM.xml file (the default combination right now is jcublas vs jblas).
+
+**-n** number of trials
+
+#Custom OpRunners
+
+1) Create a class extending BaseBenchmarkPerformer (similar to what we did in the copy benchmark). 
+2) Create an associated OpRunner. 
+3) Pass that custom OpRunner in to your new benchmaker performer.
+4) The BenchmarkRunnerApp will automatically pick those classes up and run them for you.
