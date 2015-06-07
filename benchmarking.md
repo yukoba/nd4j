@@ -5,7 +5,7 @@ description: ""
 ---
 {% include JB/setup %}
 
-ND4J can measure and display how long various operations take on any given machine. 
+ND4J can measure and display how long various operations take on any given machine. The [nd4j-benchmark project](https://github.com/deeplearning4j/nd4j-benchmark) on Github is dedicated to running those benchmarks.
 
 ## Tutorial
 
@@ -83,6 +83,41 @@ Here's how you get the numbers:
 		== Benchmark: org.nd4j.linalg.benchmark.dimensionwise.DimensionWiseBenchmarkPerformer ==
 		Backend org.nd4j.linalg.jblas.JblasBackend took (in nanoseconds) 440400 (in milliseconds) 0
 		====================================================
+
+##Command-Line Example 
+
+Run:
+
+        org.nd4j.linalg.benchmark.app.BenchmarkRunnerApp -n $YOUR NUMBER OF TRIALS -r csv of fully qualified path of trials you want to run *(e.g. org.nd4j.linalg.benchmark.app.BenchmarkRunnerApp)*
+
+Here's a general matrix multiplication (Gemm) example already included in the *nd4j-perf* module:
+
+            java -cp lib/* org.nd4j.linalg.benchmark.app.BenchmarkRunnerApp -n 10k -r                 org.nd4j.linalg.benchmark.gemm.GemmBenchmarkPerformer,org.nd4j.linalg.benchmark.gemm.GemmBenchmarkPerformer
+
+Notice we specify gemm twice. This is just to demonstrate how you would run multiple classes.
+
+## Heap Space
+
+If you need more heap space (in your VM arguments), add:
+
+        -XmxMAX_HEAP_SPACE -XmsMINHEAP_SPACE
+        
+        -Xmx2g -Xms2g
+
+## Flags
+
+**-r** If you leave -r off, it will run every benchmark on the class path
+
+To run one or more particular backends, just include them in your POM.xml file (the default combination right now is jcublas vs jblas).
+
+**-n** number of trials
+
+## Custom OpRunners
+
+1) Create a class extending BaseBenchmarkPerformer (similar to what we did in the copy benchmark). 
+2) Create an associated OpRunner. 
+3) Pass that custom OpRunner in to your new benchmaker performer.
+4) The BenchmarkRunnerApp will automatically pick those classes up and run them for you.
 
 ## Netty
 
