@@ -7,7 +7,7 @@ description: ""
 
 ND4J can measure and display how long various operations take on any given machine. The [nd4j-benchmark project](https://github.com/deeplearning4j/nd4j-benchmark) on Github is dedicated to running those benchmarks.
 
-## Tutorial
+## Benchmarks on IntelliJ
 
 Here's how you get the numbers:
 
@@ -84,7 +84,7 @@ Here's how you get the numbers:
 		Backend org.nd4j.linalg.jblas.JblasBackend took (in nanoseconds) 440400 (in milliseconds) 0
 		====================================================
 
-##Command-Line Example 
+##Benchmarks on the Command-Line 
 
 Run:
 
