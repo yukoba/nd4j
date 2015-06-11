@@ -1506,7 +1506,12 @@ public  class NDArrayTestsC extends BaseNd4jTest {
     }
 
 
-
+    @Test
+    public void testGetRow() {
+        INDArray row = Nd4j.linspace(1,4,4).reshape(2,2);
+        INDArray row1Assertion = Nd4j.create(new double[]{3,4});
+        assertEquals(row1Assertion,row.getRow(1));
+    }
 
 
     @Test
