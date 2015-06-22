@@ -89,7 +89,7 @@ The free community edition of [IntelliJ](https://www.jetbrains.com/idea/download
 
 ## Starting a New ND4J Project
 
-Now, using your IDE, create a new project. Select `maven-archetype-quickstart`. 
+Now create a new project within IntelliJ. Select `maven-archetype-quickstart`. 
 
 ![Alt text](../img/new_maven_project.png) 
 
@@ -97,9 +97,11 @@ The images below will walk you through the windows of the IntelliJ New Project W
 
 ![Alt text](../img/maven2.png) 
 
-Click through the following screen with "Next", and on the screen after that, name your project ("ND4J-test", for example) and hit finish. Now go into your pom.xml file within the root of the new ND4J project in IntelliJ. 
+Click through the following screen with "Next", and on the screen after that, name your project ("ND4J-test", for example) and hit finish. Now go into your POM.xml file within the root of the new ND4J project in IntelliJ. 
 
-Update the POM file with needed dependences. For example, include the default backend ([Jblas](http://en.wikipedia.org/wiki/Jblas:_Linear_Algebra_for_Java)) in the `<dependencies> ... </dependencies>` section, so that Maven can automatically install the required libraries:
+Update the POM file with the dependences you'll need. These will vary depending on whether you're running on CPUs or GPUs. 
+
+The default backend for CPUs is ([Jblas](http://en.wikipedia.org/wiki/Jblas:_Linear_Algebra_for_Java)). You can paste that into  the `<dependencies> ... </dependencies>` section of your POM like this:
 
 	 <dependency>
 	   <groupId>org.nd4j</groupId>
@@ -107,13 +109,13 @@ Update the POM file with needed dependences. For example, include the default ba
 	   <version>${nd4j.version}</version>
 	 </dependency>
 	 
+If you do this, Maven will automatically install the required libraries and you should be able to run ND4J.
+
 ND4J's version is a variable here. It will refer to another line higher in the POM, in the <properties> ... </properties> section, specifying the nd4j version and appearing similar to this:
 
 		<nd4j.version>0.0.3.5.5.3</nd4j.version>
 
-The number of the version will vary with new releases. Make sure you check the latest version available on Maven. 
-
-Keep in mind that the JBLAS backend can be switched to Netlib Blas, or to Jcublas for GPU use. Check our [dependencies](../dependencies.html) page for advanced configuration changes. That page also explains how to check on the [latest version](http://search.maven.org/#search%7Cga%7C1%7Cnd4j) of the libraries.
+The number of the version will vary as we progress with new releases. Make sure you check the latest version available on Maven Central. The backend does not have to be Jblas; it can be switched to Netlib Blas, or to Jcublas for GPUs. That's explained on our [dependencies](../dependencies.html) page, alongside more advanced configuration changes. The same page also explains how to check on the [latest version](http://search.maven.org/#search%7Cga%7C1%7Cnd4j) of the libraries.
 
 Open App.java file that is created with every new Intellij project, and start writing code between the curly brackets you see after **public static void main( String[] args )**. 
 
