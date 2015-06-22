@@ -8,7 +8,7 @@ description: "Follow our video and install a Java development environment ready 
 To get started with ND4J and DL4J, review and setup the following:
 
 1. [Prerequisites](#prereq) 
-3. [Integrated Development Environment](#ide-for-java) 
+3. [Integrated Development Environment](#ide) 
 4. [Github](#github)
 5. [Next Steps](#next-steps)
 
