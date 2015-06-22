@@ -83,13 +83,13 @@ An Integrated Development Environment ([IDE](http://encyclopedia.thefreedictiona
 
 An IDE provides a hassle-free development environment that allows you to focus more on your code. IDEs typically come with Maven support, but we prefer you to install [Maven](#maven) so you can run commands directly. While we prefer IntelliJ, [Eclipse](http://books.sonatype.com/m2eclipse-book/reference/creating-sect-importing-projects.html) and [Netbeans](http://wiki.netbeans.org/MavenBestPractices) are two other popular IDEs.
 
-### Installing an IDE
-
 The free community edition of [IntelliJ](https://www.jetbrains.com/idea/download/) has installation instructions.
 
 ## Starting a New ND4J Project
 
-Now create a new project within IntelliJ. Select `maven-archetype-quickstart`. 
+Now create a new project within IntelliJ. With the right dependencies in your project's POM.xml file, Maven will be able to build ND4J for you. Getting the dependencies right amounts to installing ND4J. 
+
+Select `maven-archetype-quickstart`. 
 
 ![Alt text](../img/new_maven_project.png) 
 
