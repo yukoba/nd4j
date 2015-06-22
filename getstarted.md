@@ -25,7 +25,7 @@ Distributed systems using Spark requirements:
 
 * [Spark 1.3.0](https://spark.apache.org/downloads.html) _(package type = Pre-built for Hadoop 1.X)_
 
-GPUs requirements:
+GPU(s) requirements:
 
 * [Cuda 7](http://docs.nvidia.com/cuda/index.html#axzz3dlfIdQjP)
 
@@ -76,6 +76,16 @@ Instructions to install Maven are [here](https://maven.apache.org/download.cgi).
 Lower on the same Web page, follow the instructions that pertain to your operating system; e.g. *"Unix-based Operating Systems (Linux, Solaris and Mac OS X)."* They look like this:
 
 ![Alt text](../img/maven_OS_instructions.png) 
+
+## <a id="ide">Integrated Development Environments</a>
+
+An Integrated Development Environment ([IDE](http://encyclopedia.thefreedictionary.com/integrated+development+environment)) will allow you to work with our API and build your nets with a few clicks. We suggest **IntelliJ**. It will work with your installed version of Java and can communicate with [Maven](#maven), which takes care of the dependencies for you. 
+
+An IDE provides a hassle-free development environment that allows you to focus more on your code. IDEs typically come with Maven support, but we prefer you to install [Maven](#maven) so you can run commands directly. While we prefer IntelliJ, [Eclipse](http://books.sonatype.com/m2eclipse-book/reference/creating-sect-importing-projects.html) and [Netbeans](http://wiki.netbeans.org/MavenBestPractices) are two other popular IDEs.
+
+### Installing an IDE
+
+The free community edition of [IntelliJ](https://www.jetbrains.com/idea/download/) has installation instructions.
 
 ## Starting a New ND4J Project
 
@@ -132,16 +142,6 @@ The DL4J dependencies you add to the POM will vary with the nature of your proje
 		   </dependency>
 
 More information on installing Deeplearning4j is available on its [Getting Started page](http://deeplearning4j.org/gettingstarted.html).
-
-## <a id="ide">Integrated Development Environments</a>
-
-An Integrated Development Environment ([IDE](http://encyclopedia.thefreedictionary.com/integrated+development+environment)) will allow you to work with our API and build your nets with a few clicks. We suggest **IntelliJ**. It will work with your installed version of Java and can communicate with [Maven](#maven), which takes care of the dependencies for you. 
-
-An IDE provides a hassle-free development environment that allows you to focus more on your code. IDEs typically come with Maven support, but we prefer you to install [Maven](#maven) so you can run commands directly. While we prefer IntelliJ, [Eclipse](http://books.sonatype.com/m2eclipse-book/reference/creating-sect-importing-projects.html) and [Netbeans](http://wiki.netbeans.org/MavenBestPractices) are two other popular IDEs.
-
-### Installing an IDE
-
-The free community edition of [IntelliJ](https://www.jetbrains.com/idea/download/) has installation instructions.
 
 ## <a id="github">GitHub (Optional)</a>
 
