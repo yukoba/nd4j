@@ -27,7 +27,7 @@ Distributed systems using Spark requirements:
 
 GPUs requirements:
 
-* [Cuda 7](http://docs.nvidia.com/cuda/cuda-getting-started-guide-for-linux/#axzz3Zm828m4B)
+* [Cuda 7](http://docs.nvidia.com/cuda/index.html#axzz3dlfIdQjP)
 
 ## <a id="java">Java</a>
 
@@ -39,7 +39,7 @@ To test which version of Java you have (and whether you have it at all), type th
 
 		java -version
 
-ND4J requires Java 7, so if you have an older or newer version, you will need to reinstall.
+ND4J and DL4J require **Java 7**, so if you have an older or newer version, you will need to reinstall.
 
 If you don't have Java 7 installed on your machine, download the [Java Development Kit (JDK) here](http://www.oracle.com/technetwork/java/javase/downloads/jdk7-downloads-1880260.html). The download will vary by operating system. For newer Macs, you'll want the file on the first line to mention Mac OS X (the number after *jdk-7u* increments with each update). It will look something like this:
 
@@ -135,7 +135,7 @@ More information on installing Deeplearning4j is available on its [Getting Start
 
 ## <a id="ide">Integrated Development Environments</a>
 
-An Integrated Development Environment ([IDE](http://encyclopedia.thefreedictionary.com/integrated+development+environment)) will allow you to work with our API and build your nets with a few clicks. The IDEs suggested here work with your installed version of Java and can communicate with [Maven](#maven), which takes care of the dependencies for you. 
+An Integrated Development Environment ([IDE](http://encyclopedia.thefreedictionary.com/integrated+development+environment)) will allow you to work with our API and build your nets with a few clicks. We suggest **IntelliJ**. It will work with your installed version of Java and can communicate with [Maven](#maven), which takes care of the dependencies for you. 
 
 An IDE provides a hassle-free development environment that allows you to focus more on your code. IDEs typically come with Maven support, but we prefer you to install [Maven](#maven) so you can run commands directly. While we prefer IntelliJ, [Eclipse](http://books.sonatype.com/m2eclipse-book/reference/creating-sect-importing-projects.html) and [Netbeans](http://wiki.netbeans.org/MavenBestPractices) are two other popular IDEs.
 
