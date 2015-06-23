@@ -5,11 +5,13 @@ description: "Follow our video and install a Java development environment ready 
 ---
 {% include JB/setup %}
 
+This is a multistep install. We highly recommend you join our [Gitter Live Chat](gitter.im/deeplearning4j/deeplearning4j) if you have questions or feedback, so we can walk you through it. If you're feeling anti-social or brashly independent, feel free to lurk and learn. 
+
 To get started with ND4J and DL4J, please read the following:
 
 1. [Prerequisites](#prereq) 
 3. [Integrated Development Environment](#ide) 
-4. [Github](#github)(Optional)
+4. [Github](#github) (Optional)
 5. [Next Steps](#next-steps)
 
 ## <a id="prereq"> Prerequisites </a>
@@ -117,17 +119,19 @@ You can now create a new Java file within IntelliJ, and start using ND4J's API f
 
 ## <a id="canova">Canova</a>
 
-[Canova](https://github.com/deeplearning4j/Canova) is a general vectorization lib we built for machine-learning tools. It vectorizes raw data into usable vector formats like svmLight, libsvm and ARFF, which our neural nets can work with.
+[Canova](https://github.com/deeplearning4j/Canova) is a general vectorization lib we built for machine-learning tools. It vectorizes raw data into usable vector formats like *svmLight*, *libsvm* and *ARFF*, which our neural nets can work with.
 
 ### Installing Canova
 
-Take the same steps to install [Canova](http://search.maven.org/#search%7Cga%7C1%7Ccanova-parent) using Maven that you followed for ND4J. 
+Take the same steps using Maven to install [Canova](http://search.maven.org/#search%7Cga%7C1%7Ccanova-parent) that you followed for ND4J. 
 
 ### Installing Deeplearning4j
 
-Deeplearning4j versions should be specified in the same way you did for ND4J, which the version in properties and the variable in the dependencies. 
+Deeplearning4j versions should be specified in the same way you did for ND4J, with the version hard-coded in the properties section of the POM, and the version variable cited in each dependency. 
 
-The DL4J dependencies you add to the POM will vary with the nature of your project. In addition to the core dependency, given below, you may also want to install deeplearning4j-cli for the command-line interface, deeplearning4j-scaleout for running parallel on Hadoop or Spark, and others as needed... A full list will come up by searching for *deeplearning4j* on Maven Central.
+The DL4J dependencies you add to the POM will vary with the nature of your project. 
+
+In addition to the core dependency, given below, you may also want to install deeplearning4j-cli for the command-line interface, deeplearning4j-scaleout for running parallel on Hadoop or Spark, and others as needed. A full list can be seen by searching for *deeplearning4j* on Maven Central.
 
 		   <dependency>
 		     <groupId>org.deeplearning4j</groupId>
@@ -176,8 +180,6 @@ Now you're ready to run the [examples](introduction.html). We recommend that you
 If everything was installed correctly, you should see numbers appear as the program output at the bottom of the IntelliJ window. Please use these as a sandbox to start experimenting.  
 
 Once you're comfortable with the examples, you might want to change the dependencies defined in the POM files. Learn how to change the [dependencies here](gpu_native_backends.html).
-
-For questions or feedback, join us on our [Google Groups Forum](https://groups.google.com/forum/#!forum/nd4j).
 
 ## Useful links
 
