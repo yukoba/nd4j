@@ -29,17 +29,15 @@ GPU(s) requirements:
 
 * [Cuda 7](http://docs.nvidia.com/cuda/index.html#axzz3dlfIdQjP)
 
-## <a id="java">Java</a>
+## <a id="java">Java 7</a>
 
-Java is the main programming language of ND4J. There are about 9 million Java developers worldwide. It runs on 3 billion mobile phones and 97 percent of all enterprise desktops, both Windows and OSX. Java is used for everything from distributed cloud-based systems with thousands of nodes, to low-memory IoT devices. It's a "write once, run anywhere" language.
-
-### Installing Java
+Java is the main interface and networking language of ND4J, because it's used for everything from distributed cloud-based systems with thousands of nodes, to low-memory IoT devices. It's a "write once, run anywhere" language.
 
 To test which version of Java you have (and whether you have it at all), type the following into your command line:
 
 		java -version
 
-ND4J and DL4J require **Java 7**, so if you have an older or newer version, you will need to reinstall.
+ND4J and DL4J require **Java 7**, so if you have an older or newer version, you need to reinstall.
 
 If you don't have Java 7 installed on your machine, download the [Java Development Kit (JDK) here](http://www.oracle.com/technetwork/java/javase/downloads/jdk7-downloads-1880260.html). The download will vary by operating system. For newer Macs, you'll want the file on the first line to mention Mac OS X (the number after *jdk-7u* increments with each update). It will look something like this:
 
@@ -47,25 +45,21 @@ If you don't have Java 7 installed on your machine, download the [Java Developme
 
 ## <a id="scala">Scala</a>
 
-Scala is an object-oriented langauge like Java with a strong static type system and it runs on teh JVM. The difference is that it has functional programming features similar to Scheme and Haskell and its structure keeps programs consice. You can use Java libraries with Scala. We provide a [Scala API](http://nd4j.org/scala.html). There are neural net examples you can run written in Scala, and it is requried for Spark implementation.
+You can work with ND4J via a [Scala API](http://nd4j.org/scala.html). Scala is a multiparadigm language with a strong static type system that runs on the JVM. As such, Scala has functional programming features similar to Scheme and Haskell and its structure keeps programs concise. You can use Java libraries with Scala. There are neural net examples you can run written in Scala, and it is required for the Spark implementation.
 
-### Installing Scala
-
-To test which version of Java you have (and whether you have it at all), type the following into your command line:
+To test which version of Scala you have (and whether you have it at all), type the following into your command line:
 
 		scala -version
 
-In order to install Scala, checkout this [link](http://www.scala-lang.org/download/2.10.4.html).
+To install Scala, checkout this [link](http://www.scala-lang.org/download/2.10.4.html).
 
 ## <a id="maven">Maven</a>
 
-Maven is an automated build tool for Java projects (among other [things](http://maven.apache.org/what-is-maven.html)), which locates the latest version of the project libraries (ND4J .jar files) and downloads them automatically to your computer. We've written a slightly more thorough [introduction to Maven for non-Java programmers](http://deeplearning4j.org/maven.html) here. Maven will allow you to install both ND4J and Deeplearning4j projects easily. It works well with Integrated Development Environments ([IDE](#ide)) such as IntelliJ.
-
-*(Experienced Java developers who prefer not to work with Maven can find the .jar files on our [downloads](downloads.html) page. For an expert user, the downloads may be faster, but for beginners, they are also more complicated to use, due to dependencies.)*
+Maven is an automated build tool for Java projects (among its other [uses](http://maven.apache.org/what-is-maven.html)). Maven locates the latest version of ND4J and DL4J project libraries (.jar files) and downloads them automatically. We've written a slightly more in-depth [introduction to Maven for non-Java programmers](http://deeplearning4j.org/maven.html) here. Maven lets you to install both ND4J and Deeplearning4j projects easily. It works well with Integrated Development Environments (IDEs) such as IntelliJ.
 
 ### Installing Maven
 
-To see if Maven is installed in your machine, enter the following into the command line:
+To check if Maven is installed in your machine, enter the following into the command line:
 
 		mvn --version
 
@@ -73,21 +67,19 @@ Instructions to install Maven are [here](https://maven.apache.org/download.cgi).
 
 ![Alt text](../img/maven_downloads.png) 
 
-Lower on the same Web page, follow the instructions that pertain to your operating system; e.g. *"Unix-based Operating Systems (Linux, Solaris and Mac OS X)."* They look like this:
+Lower on the same page, follow the instructions specific to your operating system; e.g. *"Unix-based Operating Systems (Linux, Solaris and Mac OS X)."* They look like this:
 
 ![Alt text](../img/maven_OS_instructions.png) 
 
-## <a id="ide">Integrated Development Environments</a>
+## <a id="ide">Integrated Development Environment: IntelliJ</a>
 
-An Integrated Development Environment ([IDE](http://encyclopedia.thefreedictionary.com/integrated+development+environment)) will allow you to work with our API and build your nets with a few clicks. We suggest **IntelliJ**. It will work with your installed version of Java and can communicate with [Maven](#maven), which takes care of the dependencies for you. 
+An Integrated Development Environment ([IDE](http://encyclopedia.thefreedictionary.com/integrated+development+environment)) will allow you to work with our API and build your nets with a few clicks. We suggest using **IntelliJ**, which works with your installed version of Java and communicates with [Maven](#maven) to handle the dependencies. 
 
-An IDE provides a hassle-free development environment that allows you to focus more on your code. IDEs typically come with Maven support, but we prefer you to install [Maven](#maven) so you can run commands directly. While we prefer IntelliJ, [Eclipse](http://books.sonatype.com/m2eclipse-book/reference/creating-sect-importing-projects.html) and [Netbeans](http://wiki.netbeans.org/MavenBestPractices) are two other popular IDEs.
-
-The free community edition of [IntelliJ](https://www.jetbrains.com/idea/download/) has installation instructions.
+The free community edition of [IntelliJ](https://www.jetbrains.com/idea/download/) has installation instructions. While we prefer that, [Eclipse](http://books.sonatype.com/m2eclipse-book/reference/creating-sect-importing-projects.html) and [Netbeans](http://wiki.netbeans.org/MavenBestPractices) are two other popular IDEs. 
 
 ## Starting a New ND4J Project
 
-Now create a new project within IntelliJ. With the right dependencies in your project's POM.xml file, Maven will be able to build ND4J for you. Getting the dependencies right amounts to installing ND4J. 
+To create a new ND4J project within IntelliJ, just put the right dependencies in your project's POM.xml file. With those in place, Maven will be able to build ND4J for you. Pasting the right dependencies into your POM amounts to installing ND4J -- no other install is necessary!
 
 Select `maven-archetype-quickstart`. 
 
