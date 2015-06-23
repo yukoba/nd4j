@@ -5,11 +5,11 @@ description: "Follow our video and install a Java development environment ready 
 ---
 {% include JB/setup %}
 
-To get started with ND4J and DL4J, review and setup the following:
+To get started with ND4J and DL4J, please read the following:
 
 1. [Prerequisites](#prereq) 
 3. [Integrated Development Environment](#ide) 
-4. [Github](#github)
+4. [Github](#github)(Optional)
 5. [Next Steps](#next-steps)
 
 ## <a id="prereq"> Prerequisites </a>
@@ -37,7 +37,7 @@ To test which version of Java you have (and whether you have it at all), type th
 
 		java -version
 
-ND4J and DL4J require **Java 7**, so if you have an older or newer version, you need to reinstall.
+ND4J and DL4J require **Java 7**, so if you have an older or newer version, please reinstall.
 
 If you don't have Java 7 installed on your machine, download the [Java Development Kit (JDK) here](http://www.oracle.com/technetwork/java/javase/downloads/jdk7-downloads-1880260.html). The download will vary by operating system. For newer Macs, you'll want the file on the first line to mention Mac OS X (the number after *jdk-7u* increments with each update). It will look something like this:
 
@@ -45,19 +45,19 @@ If you don't have Java 7 installed on your machine, download the [Java Developme
 
 ## <a id="scala">Scala</a>
 
-You can work with ND4J via a [Scala API](http://nd4j.org/scala.html). Scala is a multiparadigm language with a strong static type system that runs on the JVM. As such, Scala has functional programming features similar to Scheme and Haskell and its structure keeps programs concise. You can use Java libraries with Scala. There are neural net examples you can run written in Scala, and it is required for the Spark implementation.
+You can work with ND4J via a [Scala API](http://nd4j.org/scala.html). Scala is a multiparadigm language with a strong static type system that runs on the JVM. As such, Scala has functional programming features similar to Scheme and Haskell as well as OOP features like Java, and its structure keeps programs concise. You can use Java libraries with Scala. There are neural net examples you can run written in Scala, and it's required for the Spark implementation.
 
 To test which version of Scala you have (and whether you have it at all), type the following into your command line:
 
 		scala -version
 
-To install Scala, checkout this [link](http://www.scala-lang.org/download/2.10.4.html).
+To install Scala, please visit the [Scala download page](http://www.scala-lang.org/download/2.10.4.html).
 
 ## <a id="maven">Maven</a>
 
-Maven is an automated build tool for Java projects (among its other [uses](http://maven.apache.org/what-is-maven.html)). Maven locates the latest version of ND4J and DL4J project libraries (.jar files) and downloads them automatically. We've written a slightly more in-depth [introduction to Maven for non-Java programmers](http://deeplearning4j.org/maven.html) here. Maven lets you to install both ND4J and Deeplearning4j projects easily. It works well with Integrated Development Environments (IDEs) such as IntelliJ.
+Maven is an automated build tool for Java projects (among its other [uses](http://maven.apache.org/what-is-maven.html)). It locates the latest version of ND4J and DL4J project libraries (.jar files) and downloads them automatically. 
 
-### Installing Maven
+We've written a slightly more in-depth [introduction to Maven for non-Java programmers](http://deeplearning4j.org/maven.html) here. Maven lets you to install both ND4J and Deeplearning4j projects easily. It works well with Integrated Development Environments (IDEs) such as IntelliJ.
 
 To check if Maven is installed in your machine, enter the following into the command line:
 
