@@ -145,7 +145,7 @@ More information on installing Deeplearning4j is available on its [Getting Start
 
 [Github](http://en.wikipedia.org/wiki/GitHub) is a web-based [Revision Control System](http://en.wikipedia.org/wiki/Revision_control), _the [de facto host](http://opensource.com/life/12/11/code-hosting-comparison) for open source projects_.
 
-**You are not required to install GitHub**. If you're planning to contribute to the ND4J or [DeepLearning4J](https://github.com/SkymindIO/deeplearning4j) projects by fixing bugs and committing code, you will need git and GitHub. (Thanks in advance btw :)
+**You are not required to install GitHub**. If you're planning to contribute to the ND4J or [DeepLearning4J](https://github.com/deeplearning4j/deeplearning4j) projects by fixing bugs and committing code, you will need git and GitHub. (Thanks in advance btw :)
 
 ### Installing Git &/or GitHub (Optional)
 
@@ -155,17 +155,16 @@ Type the following into your command line to verify you have git.
 
 Just check the list of applications installed on your computer for GitHub.
 
-To use GitHub, first install [git](https://git-scm.herokuapp.com/book/en/v2/Getting-Started-Installing-Git) if you do not have it already. Then setup a [Github account](https://github.com/join). Download GitHub for [Mac](https://mac.github.com/), [Windows](https://windows.github.com/), etc. Once installed, clone ND4J or DL4J, enter this command into your terminal (Mac) or Git Shell (Windows):
+To use GitHub, first install [git](https://git-scm.herokuapp.com/book/en/v2/Getting-Started-Installing-Git) if you do not have it already. Then setup a [Github account](https://github.com/join). Download GitHub for [Mac](https://mac.github.com/), [Windows](https://windows.github.com/), etc. Once installed, clone ND4J or DL4J, enter this command into your console:
 
-      git clone https://github.com/SkymindIO/nd4j
-      git clone https://github.com/SkymindIO/deeplearning4j
+      git clone https://github.com/deeplearning4j/nd4j
+      git clone https://github.com/deeplearning4j/deeplearning4j
       
 You might also want to clone our examples so you can mess around with ND4J or DL4J's pre-built samples:
       
-      git clone https://github.com/SkymindIO/nd4j-examples
-      git clone https://github.com/SkymindIO/dl4j-examples
+      git clone https://github.com/deeplearning4j/dl4j-0.0.3.3-examples
       
-Another way to get the source code is by clicking on the "[download ZIP](https://github.com/SkymindIO/nd4j/archive/master.zip)" button from the [ND4J GitHub page](https://github.com/SkymindIO/nd4j). Then unzip the file (you can use [7-zip](http://www.7-zip.org/download.html) to do that).
+Another way to get the source code is by clicking on the "[download ZIP](https://github.com/deeplearning4j/nd4j/archive/master.zip)" button from the [ND4J GitHub page](https://github.com/deeplearning4j/nd4j). Then unzip the file (you can use [7-zip](http://www.7-zip.org/download.html) to do that).
 
 Maven can be used in conjunction with Git to ensure that ND4J, Canova and Deeplearning4j build correctly. To make sure you have the most recent, working version of these libraries, you can *cd* into their root directories and enter the following command into your prompt:
 
