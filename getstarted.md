@@ -5,7 +5,7 @@ description: "Follow our video and install a Java development environment ready 
 ---
 {% include JB/setup %}
 
-This is a multistep install. We highly recommend you join our [Gitter Live Chat](gitter.im/deeplearning4j/deeplearning4j) if you have questions or feedback, so we can walk you through it. If you're feeling anti-social or brashly independent, feel free to lurk and learn. 
+This is a multistep install. We highly recommend you join our [Gitter Live Chat](https://gitter.im/deeplearning4j/deeplearning4j) if you have questions or feedback, so we can walk you through it. If you're feeling anti-social or brashly independent, you're still welcome to lurk and learn. 
 
 To get started with ND4J and DL4J, please read the following:
 
