@@ -102,14 +102,14 @@ The default backend for CPUs is ([Jblas](http://en.wikipedia.org/wiki/Jblas:_Lin
 	   <artifactId>nd4j-jblas</artifactId>
 	   <version>${nd4j.version}</version>
 	 </dependency>
-	 
-If you do this, Maven will automatically install the required libraries and you should be able to run ND4J.
 
 ND4J's version is a variable here. It will refer to another line higher in the POM, in the <properties> ... </properties> section, specifying the nd4j version and appearing similar to this:
 
 		<nd4j.version>0.0.3.5.5.3</nd4j.version>
 
-The number of the version will vary as we progress with new releases. Make sure you check the latest version available on Maven Central. The backend does not have to be Jblas; it can be switched to Netlib Blas, or to Jcublas for GPUs. That's explained on our [dependencies](../dependencies.html) page, alongside more advanced configuration changes. The same page also explains how to check on the [latest version](http://search.maven.org/#search%7Cga%7C1%7Cnd4j) of the libraries.
+The number of the version will vary as we progress with new releases. Make sure you check the latest version available on Maven Central. If you paste in the right dependency and nd4j version, Maven will automatically install the required libraries and you should be able to run ND4J.
+
+The backend does not have to be Jblas; it can be switched to Netlib Blas, or to Jcublas for GPUs. That's explained on our [dependencies](../dependencies.html) page, alongside more advanced configuration changes. The same page also explains how to check on the [latest version](http://search.maven.org/#search%7Cga%7C1%7Cnd4j) of the libraries.
 
 Open App.java file that is created with every new Intellij project, and start writing code between the curly brackets you see after **public static void main( String[] args )**. 
 
