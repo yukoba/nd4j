@@ -11,7 +11,8 @@ To get started with ND4J and DL4J, please read the following:
 
 1. [Prerequisites](#prereq) 
 3. [Integrated Development Environment](#ide) 
-4. [Github](#github) (Optional)
+4. [Github](#github) 
+5. [Dev Tools](#devtools)
 5. [Next Steps](#next-steps)
 
 ## <a id="prereq"> Prerequisites </a>
@@ -141,13 +142,11 @@ In addition to the core dependency, given below, you may also want to install de
 
 More information on installing Deeplearning4j is available on its [Getting Started page](http://deeplearning4j.org/gettingstarted.html).
 
-## <a id="github">GitHub (Optional)</a>
+## <a id="github">GitHub</a>
 
 [Github](http://en.wikipedia.org/wiki/GitHub) is a web-based [Revision Control System](http://en.wikipedia.org/wiki/Revision_control), _the [de facto host](http://opensource.com/life/12/11/code-hosting-comparison) for open source projects_.
 
-**You are not required to install GitHub**. If you're planning to contribute to the ND4J or [DeepLearning4J](https://github.com/deeplearning4j/deeplearning4j) projects by fixing bugs and committing code, you will need git and GitHub. (Thanks in advance btw :)
-
-### Installing Git &/or GitHub (Optional)
+If you're planning to contribute to the ND4J or [DeepLearning4J](https://github.com/deeplearning4j/deeplearning4j) projects by fixing bugs and committing code, you will need git and GitHub. (Thanks in advance btw :)
 
 Type the following into your command line to verify you have git.
 
@@ -155,12 +154,13 @@ Type the following into your command line to verify you have git.
 
 Just check the list of applications installed on your computer for GitHub.
 
-To use GitHub, first install [git](https://git-scm.herokuapp.com/book/en/v2/Getting-Started-Installing-Git) if you do not have it already. Then setup a [Github account](https://github.com/join). Download GitHub for [Mac](https://mac.github.com/), [Windows](https://windows.github.com/), etc. Once installed, clone ND4J or DL4J, enter this command into your console:
+Install [git](https://git-scm.herokuapp.com/book/en/v2/Getting-Started-Installing-Git) if you do not have it already. Then setup a [Github account](https://github.com/join). Download GitHub for [Mac](https://mac.github.com/), [Windows](https://windows.github.com/), etc. Once installed, clone ND4J or DL4J, enter this command into your console:
 
       git clone https://github.com/deeplearning4j/nd4j
+      git clone https://github.com/deeplearning4j/Canova
       git clone https://github.com/deeplearning4j/deeplearning4j
       
-You might also want to clone our examples so you can mess around with ND4J or DL4J's pre-built samples:
+You might also want to clone our examples so you can mess around with ND4J or DL4J's pre-built samples (the version will vary):
       
       git clone https://github.com/deeplearning4j/dl4j-0.0.3.3-examples
       
@@ -171,6 +171,38 @@ Maven can be used in conjunction with Git to ensure that ND4J, Canova and Deeple
 		mvn clean install -DskipTests -Dmaven.javadoc.skip=true
 
 Running a clean install on ND4J, Canova and Deeplearning4j, in that order, is a good way to get the most recent bug fixes and features. 
+
+## <a id="devtools">Linux Dev Tools for C</a>
+
+To compile certain ND4J dependencies on a Linux OS, you will need to install certain dev tools for C. Ubuntu and Centos users will need to follow two separate sets of instructions:
+
+###Ubuntu
+
+For Ubuntu, first type:
+
+			sudo apt-get update
+
+Then you'll need to run a version of this command:
+
+			sudo apt-get install linux-headers-$(uname -r) build-essential
+
+*$(uname -r)* will vary according to your Linux version. To get your Linux version, open a new window of your terminal and enter this command:
+
+			uname -r
+
+You will see something like this -- *3.2.0-23-generic*. Whatever you see, copy and paste it into the first line of script in place of *$(uname -r)*. Then insert one space and type *build-essential*. Watch out for typos. You can press tab to complete any command. 
+
+###Centos
+
+Enter the following in your terminal (or ssh session) as a root user:
+
+			yum groupinstall 'Development Tools'
+
+After that, you should see a lot of activity and installs on the terminal. To verify that you have, for example, *gcc*, enter this line:
+
+			gcc --version
+
+For more complete instructions, [go here](http://www.cyberciti.biz/faq/centos-linux-install-gcc-c-c-compiler/). 
 
 ## <a id="next-steps">Next Steps</a>
 
