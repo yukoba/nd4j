@@ -156,14 +156,14 @@ Just check the list of applications installed on your computer for GitHub.
 
 Install [git](https://git-scm.herokuapp.com/book/en/v2/Getting-Started-Installing-Git) if you do not have it already. Then setup a [Github account](https://github.com/join). Download GitHub for [Mac](https://mac.github.com/), [Windows](https://windows.github.com/), etc. Once installed, clone ND4J or DL4J, enter this command into your console:
 
-      git clone https://github.com/deeplearning4j/nd4j
-      git clone https://github.com/deeplearning4j/Canova
-      git clone https://github.com/deeplearning4j/deeplearning4j
-      
+    git clone https://github.com/deeplearning4j/nd4j
+    git clone https://github.com/deeplearning4j/Canova
+    git clone https://github.com/deeplearning4j/deeplearning4j
+
 You might also want to clone our examples so you can mess around with ND4J or DL4J's pre-built samples (the version will vary):
-      
-      git clone https://github.com/deeplearning4j/dl4j-0.0.3.3-examples
-      
+
+    git clone https://github.com/deeplearning4j/dl4j-0.0.3.3-examples
+
 Another way to get the source code is by clicking on the "[download ZIP](https://github.com/deeplearning4j/nd4j/archive/master.zip)" button from the [ND4J GitHub page](https://github.com/deeplearning4j/nd4j). Then unzip the file (you can use [7-zip](http://www.7-zip.org/download.html) to do that).
 
 Maven can be used in conjunction with Git to ensure that ND4J, Canova and Deeplearning4j build correctly. To make sure you have the most recent, working version of these libraries, you can *cd* into their root directories and enter the following command into your prompt:
@@ -180,15 +180,15 @@ To compile certain ND4J dependencies on a Linux OS, you will need to install cer
 
 For Ubuntu, first type:
 
-			sudo apt-get update
+		sudo apt-get update
 
 Then you'll need to run a version of this command:
 
-			sudo apt-get install linux-headers-$(uname -r) build-essential
+		sudo apt-get install linux-headers-$(uname -r) build-essential
 
 *$(uname -r)* will vary according to your Linux version. To get your Linux version, open a new window of your terminal and enter this command:
 
-			uname -r
+		uname -r
 
 You will see something like this -- *3.2.0-23-generic*. Whatever you see, copy and paste it into the first line of script in place of *$(uname -r)*. Then insert one space and type *build-essential*. Watch out for typos. You can press tab to complete any command. 
 
@@ -196,11 +196,11 @@ You will see something like this -- *3.2.0-23-generic*. Whatever you see, copy a
 
 Enter the following in your terminal (or ssh session) as a root user:
 
-			yum groupinstall 'Development Tools'
+		yum groupinstall 'Development Tools'
 
 After that, you should see a lot of activity and installs on the terminal. To verify that you have, for example, *gcc*, enter this line:
 
-			gcc --version
+		gcc --version
 
 For more complete instructions, [go here](http://www.cyberciti.biz/faq/centos-linux-install-gcc-c-c-compiler/). 
 
