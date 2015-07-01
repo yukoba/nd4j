@@ -172,9 +172,19 @@ Maven can be used in conjunction with Git to ensure that ND4J, Canova and Deeple
 
 Running a clean install on ND4J, Canova and Deeplearning4j, in that order, is a good way to get the most recent bug fixes and features. 
 
-## <a id="devtools">Linux Dev Tools for C</a>
+## <a id="devtools">Dev Tools for C on Windows & Linux</a>
 
-To compile certain ND4J dependencies on a Linux OS, you will need to install certain dev tools for C. Ubuntu and Centos users will need to follow two separate sets of instructions:
+To compile certain ND4J dependencies on Windows or a Linux OS, you will need to install certain dev tools for C. 
+
+###Windows
+
+Windows users may need to install [Visual Studio Community 2013](https://www.visualstudio.com/en-us/products/visual-studio-community-vs.aspx), which is free. You will need to add its path to your PATH environment variable manually. The path will look something like this: *C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin*
+
+Type "cl" into your CMD. You may get a message informing you that certain .dll files are missing. Make sure that typed "cl" your VS/IDE folder is in the path (see above).
+
+###Linux
+
+With Linux, Ubuntu and Centos users will need to follow two separate sets of instructions:
 
 ###Ubuntu
 
