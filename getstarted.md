@@ -172,9 +172,13 @@ Maven can be used in conjunction with Git to ensure that ND4J, Canova and Deeple
 
 Running a clean install on ND4J, Canova and Deeplearning4j, in that order, is a good way to get the most recent bug fixes and features. 
 
-## <a id="devtools">Dev Tools for C on Windows & Linux</a>
+## <a id="devtools">Dev Tools for C on OSX, Windows & Linux</a>
 
-To compile certain ND4J dependencies on Windows or a Linux OS, you will need to install certain dev tools for C. 
+To compile certain ND4J dependencies on Windows or a Linux OS, you will need to install some dev tools for C, including gcc. To check if you have *gcc*, enter *gcc -v* on your terminal or command prompt.
+
+###OSX
+
+Some versions of the [Apple developer tool Xcode](https://developer.apple.com/xcode/downloads/) will install *gcc* for you. If you don't already have gcc, enter *brew install gcc* into your command prompt.
 
 ###Windows
 
