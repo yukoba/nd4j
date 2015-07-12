@@ -104,7 +104,7 @@ The default backend for CPUs is ([Jblas](http://en.wikipedia.org/wiki/Jblas:_Lin
 	   <version>${nd4j.version}</version>
 	 </dependency>
 
-ND4J's version is a variable here. It will refer to another line higher in the POM, in the <properties> ... </properties> section, specifying the nd4j version and appearing similar to this:
+ND4J's version is a variable here. It will refer to another line higher in the POM, in the `<properties> ... </properties>` section, specifying the nd4j version and appearing similar to this:
 
 		<nd4j.version>0.0.3.5.5.3</nd4j.version>
 
