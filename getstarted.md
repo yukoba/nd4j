@@ -88,7 +88,7 @@ Select `maven-archetype-quickstart`.
 
 ![Alt text](../img/new_maven_project.png) 
 
-The images below will walk you through the windows of the IntelliJ New Project Wizard using Maven. First, name your group and artifact. If you're building a deeplearning4j project, you'll want org.deeplearning4j in the GroupID slot; if the project is simply for ND4J, you'll want org.nd4j, and so on. The artifact can be any name you choose.
+The images below will walk you through the windows of the IntelliJ New Project Wizard using Maven. First, name your group and artifact as you please.
 
 ![Alt text](../img/maven2.png) 
 
@@ -112,11 +112,13 @@ The number of the version will vary as we progress with new releases. Make sure 
 
 The backend does not have to be Jblas; it can be switched to Netlib Blas, or to Jcublas for GPUs. That's explained on our [dependencies](../dependencies.html) page, alongside more advanced configuration changes. The same page also explains how to check on the [latest version](http://search.maven.org/#search%7Cga%7C1%7Cnd4j) of the libraries.
 
+You can now create a new Java file within IntelliJ, and start using ND4J's API for distributed linear algebra. 
+
 Open App.java file that is created with every new Intellij project, and start writing code between the curly brackets you see after **public static void main( String[] args )**. 
 
 Many of the classes will appear in red, since you haven't imported the right packages, but IntelliJ will add those packages automatically to the top of your file. Lookup the appropriate hot keys based on your OS to help automatically load the packages. 
 
-You can now create a new Java file within IntelliJ, and start using ND4J's API for distributed linear algebra. (See our [intro](http://nd4j.org/introduction.html) for a couple beginning operations. ND4J in IntelliJ has **autocomplete**, so starting a new line with any letter will show you a list of all ND4J commands including that letter.) 
+(See our [intro](http://nd4j.org/introduction.html) for a couple beginning operations. ND4J in IntelliJ has **autocomplete**, so starting a new line with any letter will show you a list of all ND4J commands including that letter.) 
 
 ## <a id="canova">Canova</a>
 
