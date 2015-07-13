@@ -188,6 +188,8 @@ Windows users may need to install [Visual Studio Community 2013](https://www.vis
 
 Type "cl" into your CMD. You may get a message informing you that certain .dll files are missing. Make sure that your VS/IDE folder is in the path (see above). If your CMD returns usage info for "cl", then it's in the right place. 
 
+(*In addition, the include path for [Java CPP](https://github.com/bytedeco/javacpp) doesn't always work on Windows. One workaround is to take the the header files from the include directory of Visual Studio, and put them in the include directory of the Java Run-Time Environment (JRE), where Java is installed. This will affect files such as standardio.h.*)
+
 ###Linux
 
 With Linux, Ubuntu and Centos users will need to follow two separate sets of instructions:
