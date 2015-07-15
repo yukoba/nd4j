@@ -110,7 +110,7 @@ ND4J의 버전이 여기에서 변수입니다. 이는 `<properties> ... </prope
 
 저희가 새로운 릴리스를 사용하면 버전의 숫자는 달라질 수 있습니다. Maven Central에서 최신 버전을 확인하십시오. 여러분이 적절한 디펜던시와 nd4j 버전에 붙여 넣는다면, Maven은 자동으로 필요한 라이브러리를 설치하고, 여러분은 ND4J을 실행하실 수 있어야 합니다.
 
-백엔드는 Jblas이어야 할 필요가 없습니다; Netlib Blas, 또는 GPU를 위한 Jcublas로 전환될 수 있습니다. 이는 저희의 [dependencies](http://nd4j.org/dependencies.html) 페이지에 더 심화된 구성 변경과 함께 설명되어 있습니다. 같은 페이지에 라이브러리의 [최신 버전](http://search.maven.org/#search%7Cga%7C1%7Cnd4j)을 확인하는 방법에 대해서도 설명되어 있습니다.
+백엔드는 Jblas이어야 할 필요가 없습니다; Netlib Blas, 또는 GPU를 위한 Jcublas로 전환될 수 있습니다. 이는 저희의 [dependencies](http://nd4j.org/kr-dependencies.html) 페이지에 더 심화된 구성 변경과 함께 설명되어 있습니다. 같은 페이지에 라이브러리의 [최신 버전](http://search.maven.org/#search%7Cga%7C1%7Cnd4j)을 확인하는 방법에 대해서도 설명되어 있습니다.
 
 여러분은 이제 IntelliJ 내에서 새로운 프로젝트를 생성하고, 분산 선형 대수학을 위한 ND4J의 API를 사용해 시작하실 수 있습니다.
 
@@ -142,7 +142,7 @@ Deeplearning4j 버전은 POM의 속성(properties) 섹션에 하드 코딩된 �
 				 <version>${deeplearning4j.version}</version>
 				</dependency>
 
-Deeplearning4j 설치에 대한 더 많은 정보는 [Getting Started page](http://deeplearning4j.org/gettingstarted.html)에서 가능합니다.
+Deeplearning4j 설치에 대한 더 많은 정보는 [Getting Started page](http://deeplearning4j.org/kr-gettingstarted.html)에서 가능합니다.
 
 ## <a id="github">GitHub</a>
 
@@ -234,6 +234,6 @@ $(uname -r)은 여러분의 Linux 버전에 따라 달라질 수 있습니다. L
 
 * [ND4J Github 저장소](https://github.com/deeplearning4j/nd4j)
 * [ND4J Maven 저장소](http://mvnrepository.com/artifact/org.nd4j)
-* [DeepLearning4j.org](http://deeplearning4j.org)
+* [DeepLearning4j.org](http://deeplearning4j.org/kr-index.html)
 * [DeepLearning4j Github 저장소](https://github.com/deeplearning4j/deeplearning4j)
 * [DeepLearning4j Maven 저장소](http://mvnrepository.com/artifact/org.deeplearning4j)
