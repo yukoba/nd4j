@@ -76,7 +76,7 @@ Maven 설치 방법은 [여기](https://maven.apache.org/download.cgi)에 있습
 
 ## <a id="ide">통합 개발 환경: IntelliJ</a>
 
-통합 개발 환경 ([IDE](http://encyclopedia.thefreedictionary.com/integrated+development+environment))는 여러분이 저희의 API와 작동하게 하고, 몇 번의 클릭만으로 여러분의 망(nets)을 구축하게 합니다. 설치된 Java의 버전과 작동하고, 디펜던시(dependencies)를 처리할 [Maven](#maven)과 의사소통 할 IntelliJ를 사용하시기를 권장합니다.
+통합 개발 환경 ([IDE](http://encyclopedia.thefreedictionary.com/integrated+development+environment))는 여러분이 저희의 API와 작동하게 하고, 몇 번의 클릭만으로 여러분의 망(nets)을 구축하게 합니다. 설치된 Java의 버전과 작동하고, 디펜던시([dependencies](../kr-dependencies.html))를 처리할 [Maven](#maven)과 의사소통 할 IntelliJ를 사용하시기를 권장합니다.
 
 [IntelliJ](https://www.jetbrains.com/idea/download/)의 무료 커뮤니티 간행물에 설치 설명이 있습니다. 저희는 이를 선호하지만, [Eclipse](http://books.sonatype.com/m2eclipse-book/reference/creating-sect-importing-projects.html)와 [Netbeans](http://wiki.netbeans.org/MavenBestPractices)도 범용화된 통합 개발 환경 입니다.
 
@@ -236,6 +236,6 @@ $(uname -r)은 여러분의 Linux 버전에 따라 달라질 수 있습니다. L
 
 * [ND4J Github 저장소](https://github.com/deeplearning4j/nd4j)
 * [ND4J Maven 저장소](http://mvnrepository.com/artifact/org.nd4j)
-* [DeepLearning4j.org](http://deeplearning4j.org/kr-index.html)
+* [DeepLearning4j.org (한글)](http://deeplearning4j.org/kr-index.html)
 * [DeepLearning4j Github 저장소](https://github.com/deeplearning4j/deeplearning4j)
 * [DeepLearning4j Maven 저장소](http://mvnrepository.com/artifact/org.deeplearning4j)
