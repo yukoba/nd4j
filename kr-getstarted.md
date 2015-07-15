@@ -7,7 +7,7 @@ description:
 
 이것은 다단계 설치 입니다. 질문이나 피드백이 있으시다면 저희가 상세한 설명을 드릴 수 있드록 저희의 [Gitter Live Chat](https://gitter.im/deeplearning4j/deeplearning4j)에 가입하시기를 강력 추천드립니다. 비사교적 또는 완전 독립적인 성격이시라면 자율 학습 하실 수 있습니다.
 
-ND4J 및 DL4J를 시작하려면 다음을 읽어주시기 바랍니다:
+[ND4J](../kr-index.html) 및 [DL4J](http://deeplearning4j.org/kr-index.html)를 시작하려면 다음을 읽어주시기 바랍니다:
 
 1. [Prerequisites](#prereq)
 2. [통합 개발 환경(Integrated Development Environment)](#ide)
@@ -130,7 +130,7 @@ ND4J의 버전이 여기에서 변수입니다. 이는 `<properties> ... </prope
 
 ## Deeplearning4j 설치하기
 
-Deeplearning4j 버전은 POM의 속성(properties) 섹션에 하드 코딩된 버전 및 각 디펜던시에 언급된 버전 변수로, ND4J를 위해 했던 것과 동일한 방법으로 지정되어야 합니다.
+[Deeplearning4j](http://deeplearning4j.org/kr-index.html) 버전은 POM의 속성(properties) 섹션에 하드 코딩된 버전 및 각 디펜던시에 언급된 버전 변수로, ND4J를 위해 했던 것과 동일한 방법으로 지정되어야 합니다.
 
 여러분이 POM에 추가한 DL4J 디펜던시들은 프로젝트의 성격에 따라 달라집니다.
 
