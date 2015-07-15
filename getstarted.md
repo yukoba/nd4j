@@ -222,7 +222,7 @@ After that, you should see a lot of activity and installs on the terminal. To ve
 
 For more complete instructions, [go here](http://www.cyberciti.biz/faq/centos-linux-install-gcc-c-c-compiler/). 
 
-## <a id="next-steps">Next Steps</a>
+## <a id="next">Next Steps</a>
 
 Now you're ready to run the [examples](introduction.html). We recommend that you launch your IDE, load the ND4J project and open the examples subdirectory. Locate an example in the file tree on the lefthand side of the IntelliJ window, right click on it, and select the green arrow for "Run" on the drop-down menu. 
 
