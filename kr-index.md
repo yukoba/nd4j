@@ -7,7 +7,7 @@ description:
 
 ND4J는 JVM를 위한 과학 컴퓨팅 라이브러리 입니다. 리서치 도구로서보다는 생산 환경에서 사용되고자 만들어졌고 이는 최소 RAM 요건으로도 빨리 실행되도록 설계 되었슴을 의미합니다.
 
-**주요 특징**:
+### 주요 특징:
 
 * 다목적 N 차원 배열 객체
 * GPU를 포함한 멀티플랫폼 기능
@@ -19,20 +19,20 @@ ND4J는 JVM를 위한 과학 컴퓨팅 라이브러리 입니다. 리서치 도�
 
 [시작하시려면 여기를 클릭하시거나](http://nd4j.org/kr-getstarted.html) 계속 읽어주십시오.
 
-**ND4J 특성(Specifics)**
+### ND4J 특성(Specifics)
 
 * Jblas 및 Netblas Blas를 통한 CUDA 및 네이티브(Native)를 통해 GPU를 지원합니다.
 * 이 모두가 통합 인터페이스에 포함되어 있습니다.
 * 그 API는 Numpy, Matlab 및 scikit-learn의 의미론(semantics)를 모방합니다.
 
-**코드 예제**
+### 코드 예제
 
 2 × 2 NDarray를 생성하십시오:
 
 		INDArray arr1 = Nd4j.create(new float[]{1,2,3,4},new int[]{2,2});
 		System.out.println(arr1);
 
-**산출(Output)**
+### 산출(Output)
 
 		[[1.0 ,3.0]
 		[2.0 ,4.0]
@@ -55,7 +55,7 @@ ND4J는 JVM를 위한 과학 컴퓨팅 라이브러리 입니다. 리서치 도�
     arr1.addi(arr2);
     System.out.println(arr1);
 
-**산출:**
+### 산출:
 
     [[7.0 ,11.0]
     [9.0 ,13.0]
