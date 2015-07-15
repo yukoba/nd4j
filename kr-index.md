@@ -17,7 +17,7 @@ ND4J는 JVM를 위한 과학 컴퓨팅 라이브러리 입니다. 리서치 도�
 
 [SLF4J](http://www.slf4j.org)를 생각해 보십시오. 이제 [Theano](http://deeplearning.net/software/theano/)가 내장된 NumPy를 상상하십시오. 그것이 ND4J입니다. 이것은 생산 환경에 있는 엔지니어들에게 Java와 Scala 에코시스템에서 그들의 알고리즘을 이동하고 다른 라이브러리들과 인터페이스 하는 쉬운 방법을 제공합니다.
 
-[시작하시려면 여기를 클릭하시거나](http://nd4j.org/getstarted.html) 계속 읽어주십시오.
+[시작하시려면 여기를 클릭하시거나](http://nd4j.org/kr-getstarted.html) 계속 읽어주십시오.
 
 **ND4J 특성(Specifics)**
 
@@ -61,4 +61,4 @@ ND4J는 JVM를 위한 과학 컴퓨팅 라이브러리 입니다. 리서치 도�
     [9.0 ,13.0]
     ]
 
-모두 이해 하셨습니다. [이제 시작하도록 하겠습니다](http://nd4j.org/getstarted.html).
+모두 이해 하셨습니다. [이제 시작하도록 하겠습니다](http://nd4j.org/kr-getstarted.html).
