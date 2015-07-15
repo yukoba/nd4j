@@ -9,20 +9,20 @@ description:
 
 ND4J 및 DL4J를 시작하려면 다음을 읽어주시기 바랍니다:
 
-1. [Prerequisites](http://nd4j.org/getstarted.html#prereq)
-2. [통합 개발 환경(Integrated Development Environment)](http://nd4j.org/getstarted.html#ide)
-3. [Github](http://nd4j.org/getstarted.html#github)
-4. [개발 도구](http://nd4j.org/getstarted.html#devtools)
-5. [다음 단계](http://nd4j.org/getstarted.html#next-steps)
+1. [Prerequisites](#prereq)
+2. [통합 개발 환경(Integrated Development Environment)](#ide)
+3. [Github](#github)
+4. [개발 도구](#devtools)
+5. [다음 단계](#next)
 
-## Prerequisites
+## <a id="prereq">Prerequisites</a>
 
 시스템 구성(configuration) 요구 사항:
 
-[Java 7](http://nd4j.org/getstarted.html#java)
-[Scala 2.10.4](http://nd4j.org/getstarted.html#scala)
-[Maven 3.2.5](http://nd4j.org/getstarted.html#maven)
-[Canova 0.0.0.2](http://nd4j.org/getstarted.html#canova)
+[Java 7](#java)
+[Scala 2.10.4](#scala)
+[Maven 3.2.5](#maven)
+[Canova 0.0.0.2](#canova)
 
 Spark 요구 사항을 사용하여 배포된(distributed) 시스템:
 
@@ -32,7 +32,7 @@ GPU 요구 사항:
 
 * [Cuda 7](http://docs.nvidia.com/cuda/index.html#axzz3dlfIdQjP)
 
-## Java 7
+## <a id="java">Java 7</a>
 
 Java는 ND4J의 주요 인터페이스 및 네트워킹 언어입니다. 이는 수천 개의 노드로 배포된 클라우드 기반의 시스템에서부터 저용량 메모리 IoT 기기들까지 모두 사용되기 때문입니다. Java는 "한번 작성하면, 어디서든 실행할 수 있는" 언어입니다.
 
@@ -46,7 +46,7 @@ Java 7이 컴퓨터에 설치되어 있지 않은 경우, [여기에서 Java Dev
 
 		Mac OS X x64 185.94 MB -  jdk-7u79-macosx-x75.dmg
 
-## Scala
+## <a id="scala">Scala</a>
 
 여러분은 [Scala API](http://nd4j.org/scala.html)를 통해 ND4J를 작업하실 수 있습니다. Scala는 JVM 상에서 실행되는 강력한 static type 시스템을 가진 멀티패러다임 언어입니다.다. Scala는 Java와 같이 OOP 기능 뿐만 아니라 Scheme 및 Haskell과 유사한 기능적인 프로그래밍 기능을 가지고 있으며, 그 구조는 프로그램을 간결하게 유지하게 합니다. 여러분은 Scala와 함께 Java 라이브러리를 이용하실 수 있습니다. 여러분이 실행해 볼 수 있는 Scala로 작성된 신경망 예제들이 있는데, 이는 Spark 구현에 필요합니다.
 
@@ -56,7 +56,7 @@ Java 7이 컴퓨터에 설치되어 있지 않은 경우, [여기에서 Java Dev
 
 Scala를 설치하시려면 [Scala download page](http://www.scala-lang.org/download/2.10.4.html)를 방문하십시오.
 
-## Maven
+## <a id="maven">Maven</a>
 
 Maven은 Java 프로젝트를 위한 자동화된 빌드 도구입니다 (이는 다른 [여러 용도들](http://maven.apache.org/what-is-maven.html) 중 하나 입니다). 이는 ND4J 및 DL4J 프로젝트 라이브러리의 최신 버전을 찾아주고 (.jar 파일들), 필요시 자동으로 다운로드 합니다.
 
@@ -74,7 +74,7 @@ Maven 설치 방법은 [여기](https://maven.apache.org/download.cgi)에 있습
 
 ![Alt text](../img/maven_OS_instructions.png) 
 
-통합 개발 환경: IntelliJ
+## <a id="ide">통합 개발 환경: IntelliJ</a>
 
 통합 개발 환경 ([IDE](http://encyclopedia.thefreedictionary.com/integrated+development+environment))는 여러분이 저희의 API와 작동하게 하고, 몇 번의 클릭만으로 여러분의 망(nets)을 구축하게 합니다. 설치된 Java의 버전과 작동하고, 디펜던시(dependencies)를 처리할 [Maven](http://nd4j.org/getstarted.html#maven)과 의사소통 할 IntelliJ를 사용하시기를 권장합니다.
 
@@ -120,7 +120,7 @@ ND4J의 버전이 여기에서 변수입니다. 이는 `<properties> ... </prope
 
 (몇 개의 시작 작업을 위해 저희의 [intro](http://nd4j.org/introduction.html)를 참조하십시오. IntelliJ에서 ND4J는 autocomplete 하므로, 어떤 문자로 새로운 라인을 시작하면 그 문자를 포함한 모든 ND4J 커맨드 목록이 보여질 것 입니다.)
 
-## Canova
+## <a id="canova">Canova</a>
 
 [Canova](https://github.com/deeplearning4j/Canova)는 저희가 기계 학습 도구를 위해 개발한 일반 벡터화 lib 입니다. 이는 저희의 신경망과 함께 작동 할 수 있는 svmLight, libsvm 및 ARFF와 같이 raw data를 사용 가능한 벡터 형식으로 벡터화 합니다.
 
@@ -144,7 +144,7 @@ Deeplearning4j 버전은 POM의 속성(properties) 섹션에 하드 코딩된 �
 
 Deeplearning4j 설치에 대한 더 많은 정보는 [Getting Started page](http://deeplearning4j.org/gettingstarted.html)에서 가능합니다.
 
-## GitHub
+## <a id="github">GitHub</a>
 
 [Github](https://en.wikipedia.org/wiki/GitHub)은 웹 기반의 [개정 제어 시스템(Revision Control System)](https://en.wikipedia.org/wiki/Revision_control)으로, 오픈 소스 프로젝트를 위한 [사실상의 호스트](http://opensource.com/life/12/11/code-hosting-comparison) 입니다.
 
@@ -174,7 +174,7 @@ Maven은 ND4J, Canova 및 Deeplearning4j가 올바르게 구축되었는지 확�
 
 순서대로 ND4J, Canova 및 Deeplearning4j에 새로운 설치를 실행하는 것이 가장 최근의 버그 수정 및 기능들을 얻을 수 있는 좋은 방법 입니다.
 
-## OSX, Windows 및 Linux의 C를 위한 개발 도구
+## <a id="devtools">OSX, Windows 및 Linux의 C를 위한 개발 도구</a>
 
 Windows나 Linux OS에서 특정 ND4J 디펜던시들을 컴파일 하려면, 여러분은 gcc를 포함한 C를 위한 몇 개의 개발 도구를 설치해야 합니다. 여러분이 gcc를 가지고 있는지 확인하려면, 여러분의 터미널 혹은 커맨드 프롬프트에 gcc -v를 입력하시기 바랍니다.
 
@@ -222,7 +222,7 @@ $(uname -r)은 여러분의 Linux 버전에 따라 달라질 수 있습니다. L
 
 더 자세한 설명은 [여기](http://www.cyberciti.biz/faq/centos-linux-install-gcc-c-c-compiler/)를 보시기 바랍니다.
 
-## 다음 단계
+## <a id="next">다음 단계</a>
 
 이제 여러분은 [예제들](http://nd4j.org/introduction.html)을 실행할 준비가 된 것 입니다. 저희는 여러분께서 여러분의 IDE를 착수, ND4J 프로젝트를 로드하고 예제들의 하위 디렉토리를 열기를 권장 합니다. IntelliJ 창의 왼쪽에 있는 파일 트리에서 한 예를 찾은 후 오른쪽 클릭하시고, 드롭 다운 메뉴에서 "Run"을 위한 녹색 화살표를 선택하십시오.
 
