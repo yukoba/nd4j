@@ -19,10 +19,10 @@ ND4J 및 DL4J를 시작하려면 다음을 읽어주시기 바랍니다:
 
 시스템 구성(configuration) 요구 사항:
 
-[Java 7](#java)
-[Scala 2.10.4](#scala)
-[Maven 3.2.5](#maven)
-[Canova 0.0.0.2](#canova)
+* [Java 7](#java)
+* [Scala 2.10.4](#scala)
+* [Maven 3.2.5](#maven)
+* [Canova 0.0.0.2](#canova)
 
 Spark 요구 사항을 사용하여 배포된(distributed) 시스템:
 
@@ -76,7 +76,7 @@ Maven 설치 방법은 [여기](https://maven.apache.org/download.cgi)에 있습
 
 ## <a id="ide">통합 개발 환경: IntelliJ</a>
 
-통합 개발 환경 ([IDE](http://encyclopedia.thefreedictionary.com/integrated+development+environment))는 여러분이 저희의 API와 작동하게 하고, 몇 번의 클릭만으로 여러분의 망(nets)을 구축하게 합니다. 설치된 Java의 버전과 작동하고, 디펜던시(dependencies)를 처리할 [Maven](http://nd4j.org/getstarted.html#maven)과 의사소통 할 IntelliJ를 사용하시기를 권장합니다.
+통합 개발 환경 ([IDE](http://encyclopedia.thefreedictionary.com/integrated+development+environment))는 여러분이 저희의 API와 작동하게 하고, 몇 번의 클릭만으로 여러분의 망(nets)을 구축하게 합니다. 설치된 Java의 버전과 작동하고, 디펜던시(dependencies)를 처리할 [Maven](#maven)과 의사소통 할 IntelliJ를 사용하시기를 권장합니다.
 
 [IntelliJ](https://www.jetbrains.com/idea/download/)의 무료 커뮤니티 간행물에 설치 설명이 있습니다. 저희는 이를 선호하지만, [Eclipse](http://books.sonatype.com/m2eclipse-book/reference/creating-sect-importing-projects.html)와 [Netbeans](http://wiki.netbeans.org/MavenBestPractices)도 범용화된 통합 개발 환경 입니다.
 
@@ -98,11 +98,11 @@ IntelliJ 내에서 새로운 ND4J 프로젝트를 생성하려면, 여러분의 
 
 CPU를 위한 기본 백엔드는 ([Jblas](https://en.wikipedia.org/wiki/Jblas:_Linear_Algebra_for_Java)) 입니다. 이를 여러분의 POM의 `<dependencies> ... </dependencies>` 섹션에 다음과 같이 붙여 넣으실 수 있습니다.
 
-			<dependency>
-			   <groupId>org.nd4j</groupId>
-			   <artifactId>nd4j-jblas</artifactId>
-			   <version>${nd4j.version}</version>
-			 </dependency>
+		<dependency>
+		  <groupId>org.nd4j</groupId>
+		  <artifactId>nd4j-jblas</artifactId>
+		  <version>${nd4j.version}</version>
+		</dependency>
  
 ND4J의 버전이 여기에서 변수입니다. 이는 `<properties> ... </properties>` 섹션에 있는, nd4j를 지정할 POM의 다른 상위 라인을 참조할 것이며, 다음과 같이 보여질 것 입니다:
 
@@ -136,11 +136,11 @@ Deeplearning4j 버전은 POM의 속성(properties) 섹션에 하드 코딩된 �
 
 핵심 디펜던시 뿐만 아니라, 아래에 보여진 것과 같이, 여러분은 또한 커맨드 라인 인터페이스를 위한 deeplearning-cli를, Hadoop 또는 Spark 및 다른 것들 상의 병렬 실행을 위한 deeplearning4j-scaleout도 필요에 따라 설치할 수 있습니다. 전체 목록은 Maven Central에서 deeplearning4j을 검색하면 보실 수 있습니다.
 
-				<dependency>
-				 <groupId>org.deeplearning4j</groupId>
-				 <artifactId>deeplearning4j-core</artifactId>
-				 <version>${deeplearning4j.version}</version>
-				</dependency>
+		<dependency>
+		  <groupId>org.deeplearning4j</groupId>
+		  <artifactId>deeplearning4j-core</artifactId>
+		  <version>${deeplearning4j.version}</version>
+		</dependency>
 
 Deeplearning4j 설치에 대한 더 많은 정보는 [Getting Started page](http://deeplearning4j.org/kr-gettingstarted.html)에서 가능합니다.
 
@@ -184,7 +184,9 @@ Windows나 Linux OS에서 특정 ND4J 디펜던시들을 컴파일 하려면, �
 
 ## Windows
 
-Windows 사용자는 무료 [Visual Studio community 2013](https://www.visualstudio.com/en-us/products/visual-studio-community-vs.aspx)을 설치해야 합니다. 수동으로 그 경로를 여러분의 PATH 환경 변수에 추가해야 합니다. 그 경로는 이와 같을 것입니다: C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin
+Windows 사용자는 무료 [Visual Studio community 2013](https://www.visualstudio.com/en-us/products/visual-studio-community-vs.aspx)을 설치해야 합니다. 수동으로 그 경로를 여러분의 PATH 환경 변수에 추가해야 합니다. 그 경로는 이와 같을 것입니다: 
+
+		C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin
 
 여러분의 CMD에 "cl"을 입력 하십시오. 특정 .dll 파일들이 누락되어 있슴을 알리는 메시지가 나타날 수 있습니다. 여러분의 VS/IDE 폴더가 그 경로 내에 있는지 확인하십시오 (위 참조). 만약 여러분의 CMD이 "cl"을 위한 사용 정보를 보여준다면 이는 제대로 되어 있슴을 의미합니다.
 
