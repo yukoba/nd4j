@@ -17,7 +17,7 @@ To get started with ND4J and DL4J, please read the following:
 
 ## <a id="prereq"> Prerequisites </a>
 
-System configuation requirements:
+System configuration requirements:
 
 * [Java 7](#java) 
 * [Scala 2.10.4](#scala)
