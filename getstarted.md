@@ -22,7 +22,6 @@ System configuration requirements:
 * [Java 7 or above](#java) 
 * [Maven 3.2.5](#maven)
 
-
 GPU(s) requirements:
 
 * [Cuda 7](http://docs.nvidia.com/cuda/index.html#axzz3dlfIdQjP)
@@ -34,18 +33,6 @@ Java is the main interface and networking language of ND4J, because it's used fo
 To test which version of Java you have (and whether you have it at all), type the following into your command line:
 
 		java -version
-
-
-
-## <a id="scala">Scala</a>
-
-You can work with ND4J via a [Scala API](http://nd4j.org/scala.html). Scala is a multiparadigm language with a strong static type system that runs on the JVM. As such, Scala has functional programming features similar to Scheme and Haskell as well as OOP features like Java, and its structure keeps programs concise. You can use Java libraries with Scala. There are neural net examples you can run written in Scala, and it's required for the Spark implementation.
-
-To test which version of Scala you have (and whether you have it at all), type the following into your command line:
-
-		scala -version
-
-To install Scala, please visit the [Scala download page](http://www.scala-lang.org/download/2.10.4.html).
 
 ## <a id="maven">Maven</a>
 
@@ -111,9 +98,19 @@ Many of the classes will appear in red, since you haven't imported the right pac
 
 (See our [intro](http://nd4j.org/introduction.html) for a couple beginning operations. ND4J in IntelliJ has **autocomplete**, so starting a new line with any letter will show you a list of all ND4J commands including that letter.) 
 
+## <a id="scala">Scala</a>
+
+While Scala doesn't need to be installed with work with ND4J, we do have a [Scala API](http://nd4j.org/scala.html). Scala is a multiparadigm language with a strong static type system that runs on the JVM. As such, Scala has functional programming features similar to Scheme and Haskell as well as OOP features like Java, and its structure keeps programs concise. You can use Java libraries with Scala. There are neural net examples you can run written in Scala, and it's required for the Spark implementation.
+
+To test which version of Scala you have (and whether you have it at all), type the following into your command line:
+
+		scala -version
+
+To install Scala, please visit the [Scala download page](http://www.scala-lang.org/download/2.10.4.html).
+
 ## <a id="canova">Canova</a>
 
-[Canova](https://github.com/deeplearning4j/Canova) is a general vectorization lib we built for machine-learning tools. It vectorizes raw data into usable vector formats like *svmLight*, *libsvm* and *ARFF*, which our neural nets can work with.
+[Canova](https://github.com/deeplearning4j/Canova) is a general vectorization lib we built for machine-learning tools. It vectorizes raw data into usable vector formats like *svmLight*, *libsvm* and *ARFF*, which our neural nets can work with. ND4J does not require Canova, but it is useful for loading data into Deeplearning4j neural nets. 
 
 ### Installing Canova
 
