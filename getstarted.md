@@ -19,7 +19,7 @@ To get started with ND4J and DL4J, please read the following:
 
 System configuration requirements:
 
-* [Java 7](#java) 
+* [Java 7 or above](#java) 
 * [Scala 2.10.4](#scala)
 * [Maven 3.2.5](#maven)
 * [Canova 0.0.0.2](#canova)
@@ -40,11 +40,7 @@ To test which version of Java you have (and whether you have it at all), type th
 
 		java -version
 
-ND4J and DL4J require **Java 7**, so if you have an older or newer version, please reinstall.
 
-If you don't have Java 7 installed on your machine, download the [Java Development Kit (JDK) here](http://www.oracle.com/technetwork/java/javase/downloads/jdk7-downloads-1880260.html). The download will vary by operating system. For newer Macs, you'll want the file on the first line to mention Mac OS X (the number after *jdk-7u* increments with each update). It will look something like this:
-
-		Mac OS X x64 185.94 MB -  jdk-7u79-macosx-x75.dmg
 
 ## <a id="scala">Scala</a>
 
