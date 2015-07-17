@@ -26,7 +26,7 @@ GPU(s) requirements:
 
 * [Cuda 7](http://docs.nvidia.com/cuda/index.html#axzz3dlfIdQjP)
 
-## <a id="java">Java 7</a>
+## <a id="java">Java 7 or above</a>
 
 Java is the main interface and networking language of ND4J, because it's used for everything from distributed cloud-based systems with thousands of nodes, to low-memory IoT devices. It's a "write once, run anywhere" language.
 
@@ -106,7 +106,7 @@ To test which version of Scala you have (and whether you have it at all), type t
 
 		scala -version
 
-To install Scala, please visit the [Scala download page](http://www.scala-lang.org/download/2.10.4.html).
+To install Scala, please visit the [Scala download page](http://www.scala-lang.org/download/2.10.4.html). ND4J is compatible with Scala 2.10.4, and Scala is not backwards compatible. 
 
 ## <a id="canova">Canova</a>
 
