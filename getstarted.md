@@ -20,13 +20,8 @@ To get started with ND4J and DL4J, please read the following:
 System configuration requirements:
 
 * [Java 7 or above](#java) 
-* [Scala 2.10.4](#scala)
 * [Maven 3.2.5](#maven)
-* [Canova 0.0.0.2](#canova)
 
-Distributed systems using Spark requirements: 
-
-* [Spark 1.3.0](https://spark.apache.org/downloads.html) _(package type = Pre-built for Hadoop 1.X)_
 
 GPU(s) requirements:
 
