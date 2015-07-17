@@ -34,6 +34,8 @@ To test which version of Java you have (and whether you have it at all), type th
 
 		java -version
 
+If you don’t have Java 7 installed on your machine, download the [Java Development Kit (JDK) here](http://www.oracle.com/technetwork/java/javase/downloads/jdk7-downloads-1880260.html).
+
 ## <a id="maven">Maven</a>
 
 Maven is an automated build tool for Java projects (among its other [uses](http://maven.apache.org/what-is-maven.html)). It locates the latest version of ND4J and DL4J project libraries (.jar files) and downloads them automatically. 
