@@ -7,6 +7,8 @@ tagline: "ND4J is a library for N-Dimensional Array Algebra designed for product
 
 ND4J is a scientific computing library for the JVM. It is meant to be used in production environments rather than as a research tool, which means routines are designed to run fast with minimum RAM requirements.
 
+![Alt text](../img/nasa_jpl_quote.png)
+
 **Main features**
 
 * Versatile **n-dimensional array** object
@@ -24,8 +26,6 @@ Think [SLF4J](http://www.slf4j.org/). Now imagine Numpy with [Theano](http://dee
 * Supports GPUs via CUDA and Native via Jblas and Netlib Blas.
 * All of this is wrapped in a unifying interface.
 * The API mimics the semantics of Numpy, Matlab and scikit-learn.
-
-![Alt text](../img/nasa_jpl_quote.png)
 
 ### Code Example
 
