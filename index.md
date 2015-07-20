@@ -25,6 +25,8 @@ Think [SLF4J](http://www.slf4j.org/). Now imagine Numpy with [Theano](http://dee
 * All of this is wrapped in a unifying interface.
 * The API mimics the semantics of Numpy, Matlab and scikit-learn.
 
+![Alt text](../img/nasa_jpl_quote.png)
+
 ### Code Example
 
 Create a 2 x 2 NDarray:
