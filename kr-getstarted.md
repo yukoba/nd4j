@@ -70,13 +70,13 @@ Maven 설치 방법은 [여기](https://maven.apache.org/download.cgi)에 있습
 
 ![Alt text](../img/maven_downloads.png) 
 
-같은 페이지의 아래 부분에 있는 여러분의 운영 체제에 맞춰진 설명을 따르십시오; 예를 들어, "Unix 기반의 운영 시스템 (Linux, Solaris 및 Mac OS X)." 그들은 다음과 같습니다:
+같은 페이지의 아래 부분에 있는 여러분의 운영 체제에 맞춰진 설명을 따르십시오; 예를 들어, "Unix 기반의 운영 시스템들 (Linux, Solaris 및 Mac OS X)." 이들은 다음과 같습니다:
 
 ![Alt text](../img/maven_OS_instructions.png) 
 
 ## <a id="ide">통합 개발 환경: IntelliJ</a>
 
-통합 개발 환경 ([IDE](http://encyclopedia.thefreedictionary.com/integrated+development+environment))는 여러분이 저희의 API와 작동하게 하고, 몇 번의 클릭만으로 여러분의 망(nets)을 구축하게 합니다. 설치된 Java의 버전과 작동하고, 디펜던시([dependencies](../kr-dependencies.html))를 처리할 [Maven](#maven)과 의사소통 할 IntelliJ를 사용하시기를 권장합니다.
+통합 개발 환경 ([IDE](http://encyclopedia.thefreedictionary.com/integrated+development+environment))는 여러분이 저희의 API와 작동하게 하고, 몇 번의 클릭만으로 여러분의 망(nets)을 구축하게 합니다. 설치된 Java의 버전과 작동하고 디펜던시([dependencies](../kr-dependencies.html))를 처리할 [Maven](#maven)과 의사소통 할 IntelliJ를 사용하시기를 권장합니다.
 
 [IntelliJ](https://www.jetbrains.com/idea/download/)의 무료 커뮤니티 간행물에 설치 설명이 있습니다. 저희는 이를 선호하지만, [Eclipse](http://books.sonatype.com/m2eclipse-book/reference/creating-sect-importing-projects.html)와 [Netbeans](http://wiki.netbeans.org/MavenBestPractices)도 범용화된 통합 개발 환경 입니다.
 
@@ -108,7 +108,7 @@ ND4J의 버전이 여기에서 변수입니다. 이는 `<properties> ... </prope
 
 		<nd4j.version>0.0.3.5.5.3</nd4j.version>
 
-저희가 새로운 릴리스를 사용하면 버전의 숫자는 달라질 수 있습니다. Maven Central에서 최신 버전을 확인하십시오. 여러분이 적절한 디펜던시와 nd4j 버전에 붙여 넣는다면, Maven은 자동으로 필요한 라이브러리를 설치하고, 여러분은 ND4J을 실행하실 수 있어야 합니다.
+저희가 새로운 릴리스를 사용하면 버전의 숫자는 달라질 수 있습니다. Maven Central에서 최신 버전을 확인하십시오. 여러분이 적절한 디펜던시와 nd4j 버전에 붙여 넣었다면, Maven은 자동으로 필요한 라이브러리를 설치하고, 여러분은 ND4J을 실행하실 수 있어야 합니다.
 
 백엔드는 Jblas이어야 할 필요가 없습니다; Netlib Blas, 또는 GPU를 위한 Jcublas로 전환될 수 있습니다. 이는 저희의 [ND4J dependencies](../kr-dependencies.html) 페이지에 더 심화된 구성 변경과 함께 설명되어 있습니다. 같은 페이지에 라이브러리의 [최신 버전](http://search.maven.org/#search%7Cga%7C1%7Cnd4j)을 확인하는 방법에 대해서도 설명되어 있습니다.
 
@@ -146,7 +146,7 @@ Deeplearning4j 설치에 대한 더 많은 정보는 [Getting Started page](http
 
 ## <a id="github">GitHub</a>
 
-[Github](https://en.wikipedia.org/wiki/GitHub)은 웹 기반의 [개정 제어 시스템(Revision Control System)](https://en.wikipedia.org/wiki/Revision_control)으로, 오픈 소스 프로젝트를 위한 [사실상의 호스트](http://opensource.com/life/12/11/code-hosting-comparison) 입니다.
+[Github](https://en.wikipedia.org/wiki/GitHub)는 웹 기반의 [개정 제어 시스템(Revision Control System)](https://en.wikipedia.org/wiki/Revision_control)으로, 오픈 소스 프로젝트를 위한 [사실상의 호스트](http://opensource.com/life/12/11/code-hosting-comparison) 입니다.
 
 만약 여러분께서 버그를 수정하고 코드를 작성하여 ND4J 및 [DeepLearning4J](https://github.com/deeplearning4j/deeplearning4j) 프로젝트에 기여하고자 하신다면, git 및 GitHub가 필요하실 것 입니다. (미리 감사드립니다 :))
 
@@ -184,7 +184,7 @@ Windows나 Linux OS에서 특정 ND4J 디펜던시들을 컴파일 하려면, �
 
 ## Windows
 
-Windows 사용자는 무료 [Visual Studio community 2013](https://www.visualstudio.com/en-us/products/visual-studio-community-vs.aspx)을 설치해야 합니다. 수동으로 그 경로를 여러분의 PATH 환경 변수에 추가해야 합니다. 그 경로는 이와 같을 것입니다: 
+Windows 사용자는 무료 [Visual Studio Community 2013](https://www.visualstudio.com/en-us/products/visual-studio-community-vs.aspx)을 설치해야 합니다. 수동으로 그 경로를 여러분의 PATH 환경 변수에 추가해야 합니다. 그 경로는 이와 같을 것입니다: 
 
 		C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin
 
@@ -218,11 +218,11 @@ $(uname -r)은 여러분의 Linux 버전에 따라 달라질 수 있습니다. L
 
 		yum groupinstall 'Development Tools'
 
-그 후, 여러분은 터미널 상에 많은 활동과 설치를 보시게 됩니다. 가지고 있는지 확인하려면, 예를 들어, gcc 이라면, 다음의 라인을 입력하십시오:
+그 후, 여러분은 터미널 상에 많은 활동과 설치를 보시게 됩니다. 예를 들어 gcc를 가지고 있는지 확인하려면, 다음의 라인을 입력하십시오:
 
 		gcc --version
 
-더 자세한 설명은 [여기](http://www.cyberciti.biz/faq/centos-linux-install-gcc-c-c-compiler/)를 보시기 바랍니다.
+더 자세한 설명은 [여기](http://www.cyberciti.biz/faq/centos-linux-install-gcc-c-c-compiler/)로 가시기 바랍니다.
 
 ## <a id="next">다음 단계</a>
 
