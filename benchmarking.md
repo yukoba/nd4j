@@ -7,6 +7,14 @@ description: ""
 
 ND4J can measure and display how long various operations take on any given machine. The [nd4j-benchmark project](https://github.com/deeplearning4j/nd4j-benchmark) on Github is dedicated to running those benchmarks.
 
+Early tests lead us to believe that ND4J is the fastest open-source linear algebra library for many matrix operations. On an 11K by 11K matrix multiply, it runs twice as fast as Numpy.
+
+![Alt text](../img/nd4j_vs_numpy.png)
+
+Extending the comparison to Breeze, ND4J's advantage is that it handles n-dimensional arrays.
+
+![Alt text](../img/sci_compsheet.png)
+
 ## Benchmarks on IntelliJ
 
 Here's how you get the numbers:
