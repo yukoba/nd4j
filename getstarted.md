@@ -13,7 +13,8 @@ To get started with ND4J and DL4J, please read the following:
 3. [Integrated Development Environment](#ide) 
 4. [Github](#github) 
 5. [Dev Tools](#devtools)
-5. [Next Steps](#next-steps)
+6. [GPUs](#gpu)
+7. [Next Steps](#next-steps)
 
 ## <a id="prereq"> Prerequisites </a>
 
@@ -212,6 +213,16 @@ After that, you should see a lot of activity and installs on the terminal. To ve
 		gcc --version
 
 For more complete instructions, [go here](http://www.cyberciti.biz/faq/centos-linux-install-gcc-c-c-compiler/). 
+
+## <a id="gpu"> GPUs </a>
+
+Instructions on adding a [Jcublas backend are here](../gpu_native_backends.html).
+
+Once you begin training neural networks on GPUs, you will want to monitor whether and how well the GPUs are working. There are several measures you can take:
+
+* Make sure you have nvcc, the Nvidia compiler, in your class path. We compile the kernels on the fly. 
+* Install the [Nvidia System Management Interface (SMI)](https://developer.nvidia.com/nvidia-system-management-interface). Look for "Java" in the output.
+* Turning on logging  by putting [Log4j](https://github.com/deeplearning4j/deeplearning4j/blob/master/dl4j-test-resources/src/main/resources/log4j.properties) in the class path. If your GPUs are working, it will tell you that your kernels are loading.
 
 ## <a id="next">Next Steps</a>
 
