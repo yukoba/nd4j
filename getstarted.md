@@ -220,7 +220,7 @@ Instructions on adding a [Jcublas backend are here](../gpu_native_backends.html)
 
 Once you begin training neural networks on GPUs, you will want to monitor whether and how well the GPUs are working. There are several measures you can take:
 
-* Make sure you have nvcc, the Nvidia compiler, in your class path. We compile the kernels on the fly. 
+* Make sure you have [nvcc, the Nvidia compiler](http://docs.nvidia.com/cuda/cuda-compiler-driver-nvcc/), in your classpath (src/main/resources). We compile the kernels on the fly. 
 * Install the [Nvidia System Management Interface (SMI)](https://developer.nvidia.com/nvidia-system-management-interface). Look for "Java" in the output.
 * Turning on logging  by putting [Log4j](https://github.com/deeplearning4j/deeplearning4j/blob/master/dl4j-test-resources/src/main/resources/log4j.properties) in the class path. If your GPUs are working, it will tell you that your kernels are loading.
 
