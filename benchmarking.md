@@ -11,7 +11,7 @@ Early tests lead us to believe that ND4J is the fastest open-source linear algeb
 
 ![Alt text](../img/nd4j_vs_numpy.png)
 
-Extending the comparison to Breeze, ND4J's advantage is that it handles n-dimensional arrays.
+You can view the [raw results on a spreadsheet  here](https://docs.google.com/spreadsheets/d/1BNniSTJv7VMBheitQ7Wgq8UnrFXmHdERnxwSay8PezA/edit?usp=sharing). Extending the comparison to Breeze, ND4J's advantage is that it handles n-dimensional arrays.
 
 ![Alt text](../img/sci_compsheet.png)
 
