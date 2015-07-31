@@ -140,15 +140,15 @@ More information on installing Deeplearning4j is available on its [Getting Start
 
 [Github](http://en.wikipedia.org/wiki/GitHub) is a web-based [Revision Control System](http://en.wikipedia.org/wiki/Revision_control), _the [de facto host](http://opensource.com/life/12/11/code-hosting-comparison) for open source projects_.
 
-If you're planning to contribute to the ND4J or [DeepLearning4J](https://github.com/deeplearning4j/deeplearning4j) projects by fixing bugs and committing code, you will need git and GitHub. (Thanks in advance btw :)
+Our [Github repositories for ND4J and Deeplearning4j are here](https://github.com/deeplearning4j/).
 
 Type the following into your command line to verify you have git.
 
 		git --version 
 
-Just check the list of applications installed on your computer for GitHub.
+Install [git](https://git-scm.herokuapp.com/book/en/v2/Getting-Started-Installing-Git) if you do not have it already. 
 
-Install [git](https://git-scm.herokuapp.com/book/en/v2/Getting-Started-Installing-Git) if you do not have it already. Then setup a [Github account](https://github.com/join). Download GitHub for [Mac](https://mac.github.com/), [Windows](https://windows.github.com/), etc. Once installed, clone ND4J or DL4J, enter this command into your console:
+Then check the list of applications installed on your computer for GitHub. If you don't, set up a [Github account](https://github.com/join). Download GitHub for [Mac](https://mac.github.com/), [Windows](https://windows.github.com/), etc. Once installed, `git clone` ND4J or DL4J, enter these commands into your console:
 
     git clone https://github.com/deeplearning4j/nd4j
     git clone https://github.com/deeplearning4j/Canova
@@ -164,7 +164,7 @@ Maven can be used in conjunction with Git to ensure that ND4J, Canova and Deeple
 
 		mvn clean install -DskipTests -Dmaven.javadoc.skip=true
 
-Running a clean install on ND4J, Canova and Deeplearning4j, in that order, is a good way to get the most recent bug fixes and features. 
+Running a `mvn clean install` on ND4J, Canova and Deeplearning4j, in that order, is a good way to get the most recent bug fixes and features. 
 
 ## <a id="devtools">Dev Tools for C on OSX, Windows & Linux</a>
 
