@@ -62,7 +62,6 @@ An Integrated Development Environment ([IDE](http://encyclopedia.thefreedictiona
 
 The free community edition of [IntelliJ](https://www.jetbrains.com/idea/download/) has installation instructions. While we prefer that, [Eclipse](http://books.sonatype.com/m2eclipse-book/reference/creating-sect-importing-projects.html) and [Netbeans](http://wiki.netbeans.org/MavenBestPractices) are two other popular IDEs. 
 
-
 ## <a id="github">GitHub</a>
 
 [Github](http://en.wikipedia.org/wiki/GitHub) is a web-based [Revision Control System](http://en.wikipedia.org/wiki/Revision_control), _the [de facto host](http://opensource.com/life/12/11/code-hosting-comparison) for open source projects_.
@@ -93,6 +92,7 @@ Maven can be used in conjunction with Git to ensure that ND4J, Canova and Deeple
 
 Running a `mvn clean install` on ND4J, Canova and Deeplearning4j, in that order, is a good way to get the most recent bug fixes and features. 
 
+<!--
 ## Starting a New ND4J Project
 
 To create a new ND4J project within IntelliJ, just put the right dependencies in your project's POM.xml file. With those in place, Maven will be able to build ND4J for you. Pasting the right dependencies into your POM amounts to installing ND4J -- no other install is necessary.
@@ -121,7 +121,7 @@ ND4J's version is a variable here. It will refer to another line higher in the P
 
 		<nd4j.version>0.0.3.5.5.3</nd4j.version>
 
-The number of the version will vary as we progress with new releases. <!-- Make sure you check the latest version available on Maven Central. If you paste in the right dependency and nd4j version, Maven will automatically install the required libraries and you should be able to run ND4J. -->
+The number of the version will vary as we progress with new releases. <!-- Make sure you check the latest version available on Maven Central. If you paste in the right dependency and nd4j version, Maven will automatically install the required libraries and you should be able to run ND4J. 
 
 The backend does not have to be Jblas; it can be switched to Netlib Blas, or to Jcublas for GPUs. That's explained on our [dependencies](../dependencies.html) page, alongside more advanced configuration changes. The same page also explains how to check on the [latest version](http://search.maven.org/#search%7Cga%7C1%7Cnd4j) of the libraries.
 
@@ -132,6 +132,7 @@ Open App.java file that is created with every new Intellij project, and start wr
 Many of the classes will appear in red, since you haven't imported the right packages, but IntelliJ will add those packages automatically to the top of your file. Lookup the appropriate hot keys based on your OS to help automatically load the packages. 
 
 (See our [intro](http://nd4j.org/introduction.html) for a couple beginning operations. ND4J in IntelliJ has **autocomplete**, so starting a new line with any letter will show you a list of all ND4J commands including that letter.) 
+-->
 
 ## <a id="scala">Scala</a>
 
