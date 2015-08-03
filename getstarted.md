@@ -121,7 +121,7 @@ ND4J's version is a variable here. It will refer to another line higher in the P
 
 		<nd4j.version>0.0.3.5.5.3</nd4j.version>
 
-The number of the version will vary as we progress with new releases. Make sure you check the latest version available on Maven Central. If you paste in the right dependency and nd4j version, Maven will automatically install the required libraries and you should be able to run ND4J.
+The number of the version will vary as we progress with new releases. <!-- Make sure you check the latest version available on Maven Central. If you paste in the right dependency and nd4j version, Maven will automatically install the required libraries and you should be able to run ND4J. -->
 
 The backend does not have to be Jblas; it can be switched to Netlib Blas, or to Jcublas for GPUs. That's explained on our [dependencies](../dependencies.html) page, alongside more advanced configuration changes. The same page also explains how to check on the [latest version](http://search.maven.org/#search%7Cga%7C1%7Cnd4j) of the libraries.
 
@@ -157,7 +157,7 @@ Deeplearning4j versions should be specified in the same way you did for ND4J, wi
 
 The DL4J dependencies you add to the POM will vary with the nature of your project. 
 
-In addition to the core dependency, given below, you may also want to install deeplearning4j-cli for the command-line interface, deeplearning4j-scaleout for running parallel on Hadoop or Spark, and others as needed. A full list can be seen by searching for *deeplearning4j* on Maven Central.
+In addition to the core dependency, given below, you may also want to install deeplearning4j-cli for the command-line interface, deeplearning4j-scaleout for running parallel on Hadoop or Spark, and others as needed. <!--A full list can be seen by searching for *deeplearning4j* on Maven Central.-->
 
 		   <dependency>
 		     <groupId>org.deeplearning4j</groupId>
