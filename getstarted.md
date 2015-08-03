@@ -92,9 +92,12 @@ Maven can be used in conjunction with Git to ensure that ND4J, Canova and Deeple
 
 Running a `mvn clean install` on ND4J, Canova and Deeplearning4j, in that order, is a good way to get the most recent bug fixes and features. 
 
-<!--
+
 ## Starting a New ND4J Project
 
+To create a new ND4J project within IntelliJ, either click on "Open Project" on IntelliJ's opening screen, or click on the  File/Open tab, and choose "nd4j." 
+
+<!--
 To create a new ND4J project within IntelliJ, just put the right dependencies in your project's POM.xml file. With those in place, Maven will be able to build ND4J for you. Pasting the right dependencies into your POM amounts to installing ND4J -- no other install is necessary.
 
 Select `maven-archetype-quickstart`. 
