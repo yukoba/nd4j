@@ -13,6 +13,7 @@ To get started with ND4J and DL4J, please read the following:
 3. [Integrated Development Environment](#ide) 
 4. [Github](#github) 
 5. [Dev Tools](#devtools)
+
 		* [Windows](#windows)
 6. [GPUs](#gpu)
 7. [Next Steps](#next-steps)
