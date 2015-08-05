@@ -13,6 +13,7 @@ To get started with ND4J and DL4J, please read the following:
 3. [Integrated Development Environment](#ide) 
 4. [Github](#github) 
 5. [Dev Tools](#devtools)
+		* [Windows](#windows)
 6. [GPUs](#gpu)
 7. [Next Steps](#next-steps)
 
@@ -183,7 +184,7 @@ To compile certain ND4J dependencies on Windows or a Linux OS, you will need to 
 
 Some versions of the [Apple developer tool Xcode](https://developer.apple.com/xcode/downloads/) will install *gcc* for you. If you don't already have gcc, enter *brew install gcc* into your command prompt.
 
-###Windows
+### <a id="windows"> Windows </a>
 
 Windows users may need to install [Visual Studio Community 2013](https://www.visualstudio.com/en-us/products/visual-studio-community-vs.aspx), which is free. You will need to add its path to your PATH environment variable manually. The path will look something like this: *C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin*
 
@@ -191,11 +192,11 @@ Type "cl" into your CMD. You may get a message informing you that certain .dll f
 
 If you use Visual Studio: 
 
-* Set up PATH environment variable to point to `\bin\` (for cl.exe etc)
+* Set up `PATH` environment variable to point to `\bin\` (for cl.exe etc)
 * Also try running `vcvars32.bat` (also in bin) to set up environment before doing `mvn clean install` on ND4J (it may save you from copying headers around)
 * `vcvars32` may be temporary, so you might need to run it every time you want to do ND4J `mvn install`
 
-(*In addition, the include path for [Java CPP](https://github.com/bytedeco/javacpp) doesn't always work on Windows. One workaround is to take the the header files from the include directory of Visual Studio, and put them in the include directory of the Java Run-Time Environment (JRE), where Java is installed. This will affect files such as standardio.h.*)
+(*In addition, the include path for [Java CPP](https://github.com/bytedeco/javacpp) doesn't always work on Windows. One workaround is to take the the header files from the include directory of Visual Studio, and put them in the include directory of the Java Run-Time Environment (JRE), where Java is installed. This will affect files such as `standardio.h`.*)
 
 ###Linux
 
