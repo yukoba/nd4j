@@ -24,9 +24,10 @@ System configuration requirements:
 * [Java 7 or above](#java) 
 * [Maven 3.2.5](#maven)
 
-GPU(s) requirements:
+Optional:
 
-* [Cuda 7](http://docs.nvidia.com/cuda/index.html#axzz3dlfIdQjP)
+* [Cuda 7 for GPUs](http://docs.nvidia.com/cuda/index.html#axzz3dlfIdQjP)
+* [Scala](#scala)
 
 ## <a id="java">Java 7 or above</a>
 
@@ -248,10 +249,11 @@ If everything was installed correctly, you should see numbers appear as the prog
 
 Once you're comfortable with the examples, you might want to change the dependencies defined in the POM files. Learn how to change the [dependencies here](gpu_native_backends.html).
 
-## Useful links
+## Useful Links
 
 * [ND4J Github repository](https://github.com/deeplearning4j/nd4j)
+* [ND4S Github repository](https://github.com/deeplearning4j/nd4s)
 * [ND4J Maven Repository](http://mvnrepository.com/artifact/org.nd4j)
 * [DeepLearning4j.org](http://deeplearning4j.org/)
 * [DeepLearning4j Github repository](https://github.com/deeplearning4j/deeplearning4j)
-* [DeepLearning4j Maven Repository](http://mvnrepository.com/artifact/org.deeplearning4j)
+<!-- [DeepLearning4j Maven Repository](http://mvnrepository.com/artifact/org.deeplearning4j) -->
