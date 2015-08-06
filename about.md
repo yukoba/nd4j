@@ -11,7 +11,6 @@ Scientific computing helps analysts mine big data for value. We think industry h
 
 ND4J is distributed under an Apache 2.0 License. 
 
-* [ND4J Google Group](https://groups.google.com/forum/#!forum/nd4j)
 * [Github repository](https://github.com/SkymindIO/nd4j/)
 
 <!-- Begin MailChimp Signup Form -->
