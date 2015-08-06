@@ -11,7 +11,7 @@ Before using ND4S, please make sure you have:
 
 * [Scala](../getstarted.html#scala)
 * [IntelliJ's Scala plugin](../getstarted.html#scala)
-* The [Maven Scala plugin](http://www.scala-lang.org/old/node/345) and plugin repository to your pom.xml file
+* The [Maven Scala plugin](http://www.scala-lang.org/old/node/345) and Scala repository in your POM.xml file.
 
 Below is an example of how ND4S looks. Notice how similar the syntax is to Numpy. 
 
