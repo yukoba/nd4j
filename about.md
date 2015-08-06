@@ -11,7 +11,13 @@ Scientific computing helps analysts mine big data for value. We think industry h
 
 ND4J is distributed under an Apache 2.0 License. 
 
-* [Github repository](https://github.com/SkymindIO/nd4j/)
+* [Github repository](https://github.com/deeplearning4j/nd4j/)
+* [Scala Github repo](https://github.com/deeplearning4j/nd4s/)
+* [Gitter Live Chat](https://gitter.im/deeplearning4j/deeplearning4j)
+
+# Jobs @Skymind
+
+We hire from our open-source contributors. The best way to apply for a job building the future of deep learning with us is to join our community on [Gitter](https://gitter.im/deeplearning4j/deeplearning4j), fork us on [Github](https://github.com/deeplearning4j), find a problem to work on with us, and we'll can see if there's a fit! Working together is more informative than interviews, and with a little luck it's be more fun.
 
 <!-- Begin MailChimp Signup Form -->
 <link href="//cdn-images.mailchimp.com/embedcode/slim-081711.css" rel="stylesheet" type="text/css">
