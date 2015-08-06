@@ -186,7 +186,7 @@ Some versions of the [Apple developer tool Xcode](https://developer.apple.com/xc
 
 ### <a id="windows"> Windows </a>
 
-Windows users may need to install [Visual Studio Community 2013](https://www.visualstudio.com/en-us/products/visual-studio-community-vs.aspx), which is free. You will need to add its path to your PATH environment variable manually. The path will look something like this: *C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin*
+Windows users may need to install [Visual Studio Community 2013 or later](https://www.visualstudio.com/en-us/products/visual-studio-community-vs.aspx), which is free. You will need to add its path to your PATH environment variable manually. The path will look something like this: *C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin*
 
 Type "cl" into your CMD. You may get a message informing you that certain .dll files are missing. Make sure that your VS/IDE folder is in the path (see above). If your CMD returns usage info for "cl", then it's in the right place. 
 
