@@ -13,8 +13,6 @@ To get started with ND4J and DL4J, please read the following:
 3. [Integrated Development Environment](#ide) 
 4. [Github](#github) 
 5. [Dev Tools](#devtools)
-
-		* [Dev Tools for Windows](#windows)
 6. [GPUs](#gpu)
 7. [Next Steps](#next-steps)
 
@@ -29,6 +27,7 @@ Optional:
 
 * [Cuda 7 for GPUs](http://docs.nvidia.com/cuda/index.html#axzz3dlfIdQjP)
 * [Scala](#scala)
+* [Windows](#windows)
 
 ## <a id="java">Java 7 or above</a>
 
