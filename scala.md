@@ -9,7 +9,7 @@ ND4J's Scala API is called ND4S, which lives [here on Github](https://github.com
 
 Before using ND4S, please make sure you have: 
 
-* [Scala](../getstarted.html#scala)
+* [Scala](../getstarted.html#scala) (2.10.4)
 * [IntelliJ's Scala plugin](../getstarted.html#scala)
 * The [Maven Scala plugin](http://www.scala-lang.org/old/node/345) and Scala repository in your POM.xml file.
 
