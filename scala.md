@@ -5,13 +5,15 @@ description:
 ---
 {% include JB/setup %}
 
-Below you'll find illustrations of how ND4J's Scala API works. Notice how similar the syntax is to Python. (You can run the Scala examples using [this file](https://gist.github.com/agibsonccc/241034a329bd1e12fa70).)
+ND4J's Scala API is called ND4S, which lives [here on Github](https://github.com/deeplearning4j/nd4s). 
 
-Before using Scala ND4J, please make sure you have: 
+Before using ND4S, please make sure you have: 
 
-* The nd4j-scala-api Maven dependency
-* The the Scala plugin (IntelliJ: Preferences -> Plugins)
-* The Maven Scala plugin and plugin repository to your pom.xml file
+* [Scala](../getstarted.html#scala)
+* [IntelliJ's Scala plugin](../getstarted.html#scala)
+* The [Maven Scala plugin](http://www.scala-lang.org/old/node/345) and plugin repository to your pom.xml file
+
+Below is an example of how ND4S looks. Notice how similar the syntax is to Numpy. 
 
         object ScalaMain {
              def main (args: Array[String]) {
