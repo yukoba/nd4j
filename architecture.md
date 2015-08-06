@@ -16,3 +16,5 @@ BLAS implements low-level routines for operations such as vector addition, scala
 In addition to BLAS versions and BLAS wrappers, ND4J relies on a [data buffer](https://en.wikipedia.org/wiki/Data_buffer), which stores arrays and raw bytes, and sends them to be processed by BLAS. This storage abstraction layer is implemented slightly differently by each backend to adapt to the requirements of, say, distributed GPUs and other hardware.
 
 ![Alt text](../img/nd4j_architecture.png) 
+
+For a Power Point overview of ND4J's architecture, please see this [presentation on Slide Share](http://www.slideshare.net/agibsonccc/nd4-j-slidespptx). 
