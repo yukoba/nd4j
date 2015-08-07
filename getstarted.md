@@ -46,11 +46,11 @@ Maven is an automated build tool for Java projects (among its other [uses](http:
 
 We've written a slightly more in-depth [introduction to Maven for non-Java programmers](http://deeplearning4j.org/maven.html) here. Maven lets you to install both ND4J and Deeplearning4j projects easily. It works well with Integrated Development Environments (IDEs) such as IntelliJ.
 
-To check if Maven is installed in your machine, enter the following into the command line:
+To check if Maven is installed in your machine, and which version you have, enter the following into the command line:
 
 		mvn --version
 
-Instructions to install Maven are [here](https://maven.apache.org/download.cgi). Download the compressed file containing Maven's latest stable version. 
+If you do not have the most recent version of Maven, please update it. (As of this writing, it was `3.3.x`.) Instructions to install Maven are [here](https://maven.apache.org/download.cgi). Download the compressed file containing Maven's latest stable version. 
 
 ![Alt text](../img/maven_downloads.png) 
 
@@ -233,7 +233,7 @@ For more complete instructions, [go here](http://www.cyberciti.biz/faq/centos-li
 
 ## <a id="gpu"> GPUs </a>
 
-Instructions on adding a [Jcublas backend are here](../gpu_native_backends.html).
+Instructions on adding a [Jcublas backend are here](../gpu_native_backends.html). We support CUDA versions 5.5, 6.0, 6.5 and 7.
 
 Once you begin training neural networks on GPUs, you will want to monitor whether and how well the GPUs are working. There are several measures you can take:
 
