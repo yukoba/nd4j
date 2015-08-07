@@ -149,7 +149,7 @@ To test which version of Scala you have (and whether you have it at all), type t
 
 		scala -version
 
-To install Scala, visit the [Scala download page](http://www.scala-lang.org/download/2.10.4.html). ND4J is compatible with Scala 2.10.4, and Scala is not backwards compatible. [Homebrew](http://brew.sh/) will help Mac users install Scala. `brew install scala` will get you the latest version, which is 2.11.x. To install Scala 2.10.x with Homebrew, please see [this page](https://github.com/ofishel/hb-scala-2.10.4). 
+To install Scala, visit the [Scala download page](http://www.scala-lang.org/download/2.10.4.html). ND4J is compatible with Scala 2.10.4, and Scala is not backwards compatible. [Homebrew](http://brew.sh/) will help Mac users install Scala. `brew install scala` will get you the latest version, which is `2.11.x`. To install Scala 2.10.x with Homebrew, please see [this page](https://github.com/ofishel/hb-scala-2.10.4). 
 
 You can also work with Scala via an IntelliJ plugin. (To add a plugin to IntelliJ, go to the tab `IntelliJ IDEA`/`Preferences`/`IDE Setting`/`Plugins`/ and search for Scala.)
 
@@ -159,7 +159,7 @@ You can also work with Scala via an IntelliJ plugin. (To add a plugin to Intelli
 
 ### Installing Canova
 
-Take the same steps using Maven to install [Canova](http://search.maven.org/#search%7Cga%7C1%7Ccanova-parent) that you followed for ND4J. 
+Take the same steps using Maven to install [Canova](http://search.maven.org/#search%7Cga%7C1%7Ccanova-parent) that you followed for ND4J. Make sure you have the most recent version of [Maven](#maven).
 
 ### Installing Deeplearning4j
 
@@ -167,7 +167,7 @@ Deeplearning4j versions should be specified in the same way you did for ND4J, wi
 
 The DL4J dependencies you add to the POM will vary with the nature of your project. 
 
-In addition to the core dependency, given below, you may also want to install deeplearning4j-cli for the command-line interface, deeplearning4j-scaleout for running parallel on Hadoop or Spark, and others as needed. <!--A full list can be seen by searching for *deeplearning4j* on Maven Central.-->
+In addition to the core dependency, given below, you may also want to install `deeplearning4j-cli` for the command-line interface, `deeplearning4j-scaleout` for running parallel on Hadoop or Spark, and others as needed. <!--A full list can be seen by searching for *deeplearning4j* on Maven Central.-->
 
 		   <dependency>
 		     <groupId>org.deeplearning4j</groupId>
@@ -179,17 +179,17 @@ More information on installing Deeplearning4j is available on its [Getting Start
 
 ## <a id="devtools">Dev Tools for C on OSX, Windows & Linux</a>
 
-To compile certain ND4J dependencies on Windows or a Linux OS, you will need to install some dev tools for C, including gcc. To check if you have *gcc*, enter *gcc -v* on your terminal or command prompt.
+To compile certain ND4J dependencies on Windows or a Linux OS, you will need to install some dev tools for C, including gcc. To check if you have *gcc*, enter `gcc -v` on your terminal or command prompt.
 
 ###OSX
 
-Some versions of the [Apple developer tool Xcode](https://developer.apple.com/xcode/downloads/) will install *gcc* for you. If you don't already have gcc, enter *brew install gcc* into your command prompt.
+Some versions of the [Apple developer tool Xcode](https://developer.apple.com/xcode/downloads/) will install *gcc* for you. If you don't already have gcc, enter `brew install gcc` into your command prompt.
 
 ### <a id="windows"> Windows </a>
 
-Windows users may need to install [Visual Studio Community 2013 or later](https://www.visualstudio.com/en-us/products/visual-studio-community-vs.aspx), which is free. You will need to add its path to your PATH environment variable manually. The path will look something like this: *C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin*
+Windows users may need to install [Visual Studio Community 2013 or later](https://www.visualstudio.com/en-us/products/visual-studio-community-vs.aspx), which is free. You will need to add its path to your PATH environment variable manually. The path will look something like this: `C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin`
 
-Type "cl" into your CMD. You may get a message informing you that certain .dll files are missing. Make sure that your VS/IDE folder is in the path (see above). If your CMD returns usage info for "cl", then it's in the right place. 
+Type `cl` into your CMD. You may get a message informing you that certain .dll files are missing. Make sure that your VS/IDE folder is in the path (see above). If your CMD returns usage info for `cl`, then it's in the right place. 
 
 If you use Visual Studio: 
 
@@ -213,11 +213,11 @@ Then you'll need to run a version of this command:
 
 		sudo apt-get install linux-headers-$(uname -r) build-essential
 
-*$(uname -r)* will vary according to your Linux version. To get your Linux version, open a new window of your terminal and enter this command:
+`$(uname -r)` will vary according to your Linux version. To get your Linux version, open a new window of your terminal and enter this command:
 
 		uname -r
 
-You will see something like this -- *3.2.0-23-generic*. Whatever you see, copy and paste it into the first line of script in place of *$(uname -r)*. Then insert one space and type *build-essential*. Watch out for typos. You can press tab to complete any command. 
+You will see something like this -- `3.2.0-23-generic`. Whatever you see, copy and paste it into the first line of script in place of `$(uname -r)`. Then insert one space and type `build-essential`. Watch out for typos. You can press tab to complete any command. 
 
 ###Centos
 
@@ -237,8 +237,8 @@ Instructions on adding a [Jcublas backend are here](../gpu_native_backends.html)
 
 Once you begin training neural networks on GPUs, you will want to monitor whether and how well the GPUs are working. There are several measures you can take:
 
-* Make sure you have [nvcc, the Nvidia compiler](http://docs.nvidia.com/cuda/cuda-compiler-driver-nvcc/), in your classpath (src/main/resources). We compile the kernels on the fly. 
-* Install the [Nvidia System Management Interface (SMI)](https://developer.nvidia.com/nvidia-system-management-interface). Look for "Java" in the output.
+* Make sure you have [nvcc, the Nvidia compiler](http://docs.nvidia.com/cuda/cuda-compiler-driver-nvcc/), in your classpath (`src/main/resources`). We compile the kernels on the fly. 
+* Install the [Nvidia System Management Interface (SMI)](https://developer.nvidia.com/nvidia-system-management-interface). Look for `Java` in the output.
 * Turning on logging  by putting [Log4j](https://github.com/deeplearning4j/deeplearning4j/blob/master/dl4j-test-resources/src/main/resources/log4j.properties) in the class path. If your GPUs are working, it will tell you that your kernels are loading.
 
 ## <a id="next">Next Steps</a>
