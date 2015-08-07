@@ -21,12 +21,12 @@ To get started with ND4J and DL4J, please read the following:
 System configuration requirements:
 
 * [Java 7 or above](#java) 
-* [Maven 3.2.5](#maven)
+* [Maven 3.2.5 or above](#maven)
 
 Optional:
 
 * [Cuda 7 for GPUs](http://docs.nvidia.com/cuda/index.html#axzz3dlfIdQjP)
-* [Scala](#scala)
+* [Scala 2.10.x](#scala)
 * [Windows](#windows)
 
 ## <a id="java">Java 7 or above</a>
