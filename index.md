@@ -5,7 +5,7 @@ tagline: "ND4J is a library for N-Dimensional Array Algebra designed for product
 ---
 {% include JB/setup %}
 
-ND4J is a scientific computing library for the JVM. It is meant to be used in production environments rather than as a research tool, which means routines are designed to run fast with minimum RAM requirements.
+ND4J is a scientific computing library for the JVM. It is meant to be used in production environments, which means routines are designed to run fast with minimum RAM requirements.
 
 **Main features**
 
@@ -13,17 +13,20 @@ ND4J is a scientific computing library for the JVM. It is meant to be used in pr
 * Multiplatform functionality including GPUs
 * Linear algebra and signal processing functions
 
-A usability gap has separated Java, [Scala](http://nd4j.org/scala.html) and Clojure programmers from the most powerful tools in data analysis, like [NumPy](http://www.numpy.org/) or [Matlab](http://www.mathworks.com/). With ND4J, intuitive scientific computing tools once limited to the Python community are now open source, distributed and integrated with GPUs on the JVM.
+A usability gap has separated Java, [Scala](http://nd4j.org/scala.html) and Clojure programmers from the most powerful tools in data analysis, like NumPy or Matlab. Libraries like Breeze don't support n-dimensional arrays, or tensors, which are necessary for deep learning and other tasks.  
 
-Think [SLF4J](http://www.slf4j.org/). Now imagine Numpy with [Theano](http://deeplearning.net/software/theano/) built in. That's ND4J. It gives engineers in production environments an easy way to port their algorithms and interface with other libraries in the Java and Scala ecosystems. 
+With ND4J, intuitive scientific computing tools once limited to the Python community are now open source, distributed and integrated with GPUs on the JVM.
+
+Think [SLF4J](http://www.slf4j.org/). Or Numpy with Theano built in. ND4J gives engineers in production environments an easy way to port their algorithms and interface with other libraries in the Java and Scala ecosystems. 
 
 [Click here to get started](getstarted.html), or read on. 
 
-### ND4J Specifics
+### ND4J/ND4S Specifics
 
 * Supports GPUs via CUDA and Native via Jblas and Netlib Blas.
-* All of this is wrapped in a unifying interface.
-* The API mimics the semantics of Numpy, Matlab and scikit-learn.
+* Deploys on Android.
+* Integrates with Hadoop and Spark.
+* [ND4S's API](https://github.com/deeplearning4j/nd4s) mimics the semantics of Numpy.
 
 ### Code Example
 
