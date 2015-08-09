@@ -5,7 +5,7 @@ tagline: "ND4J is a library for N-Dimensional Array Algebra designed for product
 ---
 {% include JB/setup %}
 
-ND4J is a scientific computing library for the JVM. It is meant to be used in production environments, which means routines are designed to run fast with minimum RAM requirements.
+ND4J and ND4S are scientific computing libraries for the JVM. They are meant to be used in production environments, which means routines are designed to run fast with minimum RAM requirements. 
 
 **Main features**
 
@@ -13,11 +13,9 @@ ND4J is a scientific computing library for the JVM. It is meant to be used in pr
 * Multiplatform functionality including GPUs
 * Linear algebra and signal processing functions
 
-A usability gap has separated Java, [Scala](http://nd4j.org/scala.html) and Clojure programmers from the most powerful tools in data analysis, like NumPy or Matlab. Libraries like Breeze don't support n-dimensional arrays, or tensors, which are necessary for deep learning and other tasks.  
+A usability gap has separated Java, [Scala](http://nd4j.org/scala.html) and Clojure programmers from the most powerful tools in data analysis, like NumPy or Matlab. Libraries like Breeze don't support n-dimensional arrays, or tensors, which are necessary for deep learning and other tasks. ND4J and ND4S are used by national laboratories for tasks such as climatic modeling, which require computationally intensive simulations.  
 
-With ND4J, intuitive scientific computing tools once limited to the Python community are now open source, distributed and integrated with GPUs on the JVM.
-
-Think [SLF4J](http://www.slf4j.org/). Or Numpy with Theano built in. ND4J gives engineers in production environments an easy way to port their algorithms and interface with other libraries in the Java and Scala ecosystems. 
+ND4J brings the intuitive scientific computing tools of the Python community to the JVM in an open source, distributed and GPU-enabled library. In structure, it is similar to [SLF4J](http://www.slf4j.org/). ND4J gives engineers in production environments an easy way to port their algorithms and interface with other libraries in the Java and Scala ecosystems. 
 
 [Click here to get started](getstarted.html), or read on. 
 
