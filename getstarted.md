@@ -159,7 +159,7 @@ You can also work with Scala via an IntelliJ plugin. (To add a plugin to Intelli
 
 ### Installing Canova
 
-Take the same steps using Maven to install [Canova](http://search.maven.org/#search%7Cga%7C1%7Ccanova-parent) that you followed for ND4J. Make sure you have the most recent version of [Maven](#maven).
+Take the same steps using Maven to install [Canova](https://github.com/deeplearning4j/Canova) that you followed for ND4J. Make sure you have the most recent version of [Maven](#maven). We are currently using version 0.0.0.5-SNAPSHOT.
 
 ### Installing Deeplearning4j
 
