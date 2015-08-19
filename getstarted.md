@@ -195,9 +195,10 @@ If you use Visual Studio:
 
 * Set up `PATH` environment variable to point to `\bin\` (for cl.exe etc)
 * Also try running `vcvars32.bat` (also in bin) to set up environment before doing `mvn clean install` on ND4J (it may save you from copying headers around)
-* `vcvars32` may be temporary, so you might need to run it every time you want to do ND4J `mvn install`
-* Finally, set this environment variable: `INCLUDE = C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\include` and 
-this so you can link to .lib files: `LIB = "C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\lib"`
+* `vcvars32` may be temporary, so you might need to run it every time you want to do ND4J `mvn install`.
+* After installing Visual Studio 2015 and setting the PATH variable, you need to run the `vcvars32.bat` to set up the environment variables (INCLUDE, LIB, LIBPATH) properly so that you don't have to copy header files. But if you run the bat file from Explorer, since the settings are temporary, they're not properly set. So run `vcvars32.bat` from the same CMD window as your `mvn install`, and all the environment variables will be set correctly.
+* Here is how they should be set: `INCLUDE = C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\include` and 
+: `LIB = "C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\lib"` (so you can link to .lib files).
 
 (*In addition, the include path for [Java CPP](https://github.com/bytedeco/javacpp) doesn't always work on Windows. One workaround is to take the the header files from the include directory of Visual Studio, and put them in the include directory of the Java Run-Time Environment (JRE), where Java is installed. This will affect files such as `standardio.h`.*)
 
