@@ -202,7 +202,7 @@ If you use Visual Studio:
 		INCLUDE = C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\include
 		LIB = "C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\lib"
 		//so you can link to .lib files^^
-
+* In Visual Studio, you also have to click on C++. It is no longer set by default. 
 (*In addition, the include path for [Java CPP](https://github.com/bytedeco/javacpp) doesn't always work on Windows. One workaround is to take the the header files from the include directory of Visual Studio, and put them in the include directory of the Java Run-Time Environment (JRE), where Java is installed. This will affect files such as `standardio.h`.*)
 
 ###Linux
