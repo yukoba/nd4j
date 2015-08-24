@@ -124,7 +124,9 @@ The default backend for CPUs is ([Jblas](http://en.wikipedia.org/wiki/Jblas:_Lin
 
 ND4J's version is a variable here. It will refer to another line higher in the POM, in the `<properties> ... </properties>` section, specifying the nd4j version and appearing similar to this:
 
-		<nd4j.version>0.4</nd4j.version>
+		<nd4j.version>0.4-rc0</nd4j.version>
+
+*The dl4j version is also 0.4-rc0, and Canova is 0.5.*
 
 The number of the version will vary as we progress with new releases. Make sure you check the latest version available on Maven Central. If you paste in the right dependency and nd4j version, Maven will automatically install the required libraries and you should be able to run ND4J. 
 
