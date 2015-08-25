@@ -43,7 +43,7 @@ If you don’t have Java 7 installed on your machine, download the [Java Develop
 
 ## <a id="maven">Maven</a>
 
-Maven is an automated build tool for Java projects (among its other [uses](http://maven.apache.org/what-is-maven.html)). It locates the latest version of ND4J and DL4J project libraries (.jar files) and downloads them automatically. 
+Maven is an automated build tool for Java projects (among its other [uses](http://maven.apache.org/what-is-maven.html)). It locates the latest version of ND4J and DL4J project libraries (.jar files) and downloads them automatically. You can find those repositories on [Maven Central](https://search.maven.org/#search%7Cga%7C1%7Cnd4j).
 
 We've written a slightly more in-depth [introduction to Maven for non-Java programmers](http://deeplearning4j.org/maven.html) here. Maven lets you to install both ND4J and Deeplearning4j projects easily. It works well with Integrated Development Environments (IDEs) such as IntelliJ.
 
@@ -67,7 +67,7 @@ The free community edition of [IntelliJ](https://www.jetbrains.com/idea/download
 
 ## <a id="github">GitHub</a>
 
-[Github](http://en.wikipedia.org/wiki/GitHub) is a web-based [Revision Control System](http://en.wikipedia.org/wiki/Revision_control), _the [de facto host](http://opensource.com/life/12/11/code-hosting-comparison) for open source projects_.
+[Github](http://en.wikipedia.org/wiki/GitHub) is a web-based [Revision Control System](http://en.wikipedia.org/wiki/Revision_control), the [de facto host](http://opensource.com/life/12/11/code-hosting-comparison) for open-source projects. You will primarily use Github if you are building these projects from source. The JAR files can be downloaded directly from [Maven Central](https://search.maven.org/#search%7Cga%7C1%7Cnd4j).
 
 Our [Github repositories for ND4J and Deeplearning4j are here](https://github.com/deeplearning4j/).
 
@@ -77,7 +77,7 @@ Type the following into your command line to verify you have git.
 
 Install [git](https://git-scm.herokuapp.com/book/en/v2/Getting-Started-Installing-Git) if you do not have it already. 
 
-Then check the list of applications installed on your computer for GitHub. If you don't, set up a [Github account](https://github.com/join). Download GitHub for [Mac](https://mac.github.com/), [Windows](https://windows.github.com/), etc. Once installed, `git clone` ND4J or DL4J, enter these commands into your console:
+Then check the list of applications installed on your computer for GitHub. If you don't, set up a [Github account](https://github.com/join). Download GitHub for [Mac](https://mac.github.com/), [Windows](https://windows.github.com/), etc. Once installed, `git clone` ND4J or DL4J by entering these commands into your console:
 
     git clone https://github.com/deeplearning4j/nd4j
     git clone https://github.com/deeplearning4j/Canova
@@ -94,7 +94,6 @@ Maven can be used in conjunction with Git to ensure that ND4J, Canova and Deeple
 		mvn clean install -DskipTests -Dmaven.javadoc.skip=true
 
 Running a `mvn clean install` on ND4J, Canova and Deeplearning4j, in that order, is a good way to get the most recent bug fixes and features. 
-
 
 ## <a id="nd4j">Starting a New ND4J Project</a>
 
@@ -139,7 +138,6 @@ Open App.java file that is created with every new Intellij project, and start wr
 Many of the classes will appear in red, since you haven't imported the right packages, but IntelliJ will add those packages automatically to the top of your file. Lookup the appropriate hot keys based on your OS to help automatically load the packages. 
 
 (See our [intro](http://nd4j.org/introduction.html) for a couple beginning operations. ND4J in IntelliJ has **autocomplete**, so starting a new line with any letter will show you a list of all ND4J commands including that letter.) 
-
 
 ## <a id="scala">Scala</a>
 
