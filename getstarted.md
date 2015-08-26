@@ -85,7 +85,7 @@ Then check the list of applications installed on your computer for GitHub. If yo
 
 You might also want to clone our examples so you can mess around with ND4J or DL4J's pre-built samples (the version will vary):
 
-    git clone https://github.com/deeplearning4j/dl4j-0.0.3.3-examples
+    git clone https://github.com/deeplearning4j/dl4j-0.4-examples
 
 Another way to get the source code is by clicking on the "[download ZIP](https://github.com/deeplearning4j/nd4j/archive/master.zip)" button from the [ND4J GitHub page](https://github.com/deeplearning4j/nd4j). Then unzip the file (you can use [7-zip](http://www.7-zip.org/download.html) to do that).
 
