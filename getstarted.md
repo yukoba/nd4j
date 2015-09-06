@@ -93,11 +93,11 @@ The default backend for CPUs is ([Jblas](http://en.wikipedia.org/wiki/Jblas:_Lin
 
 ND4J's version is a variable here. It will refer to another line higher in the POM, in the `<properties> ... </properties>` section, specifying the nd4j version and appearing similar to this:
 
-		<nd4j.version>0.4-rc0</nd4j.version>
+		<nd4j.version>0.4-rc2</nd4j.version>
 
-*The dl4j version is also 0.4-rc0, and Canova is 0.5.*
+*The dl4j version is also 0.4-rc2, and Canova is 0.5.*
 
-The number of the version will vary as we progress with new releases. Make sure you check the latest version available on Maven Central. If you paste in the right dependency and nd4j version, Maven will automatically install the required libraries and you should be able to run ND4J. 
+The number of the version will vary as we progress with new releases. Make sure you check [the latest version available on Maven Central](https://search.maven.org/#search%7Cga%7C1%7Cnd4j). If you paste in the right dependency and nd4j version, Maven will automatically install the required libraries and you should be able to run ND4J. 
 
 The backend does not have to be Jblas; it can be switched to Netlib Blas, or to Jcublas for GPUs. That's explained on our [dependencies](../dependencies.html) page, alongside more advanced configuration changes. The same page also explains how to check on the [latest version](http://search.maven.org/#search%7Cga%7C1%7Cnd4j) of the libraries.
 
@@ -111,15 +111,13 @@ Many of the classes will appear in red, since you haven't imported the right pac
 
 ## <a id="github">GitHub</a>
 
-[Github](http://en.wikipedia.org/wiki/GitHub) is a web-based [Revision Control System](http://en.wikipedia.org/wiki/Revision_control), the [de facto host](http://opensource.com/life/12/11/code-hosting-comparison) for open-source projects. 
+Github is a web-based [Revision Control System](http://en.wikipedia.org/wiki/Revision_control), the [de facto host](http://opensource.com/life/12/11/code-hosting-comparison) for open-source projects. 
 
-If you are not planning to contribute to ND4J as a committer, or don't need the latest alpha version, we recommend downloading the most recent stable release of ND4J from [Maven Central](https://search.maven.org/#search%7Cga%7C1%7Cdeeplearning4j), 0.4-rc1.x.
+If you are not planning to contribute to ND4J as a committer, or don't need the latest alpha version, we recommend downloading the most recent stable release of ND4J from [Maven Central](https://search.maven.org/#search%7Cga%7C1%7Cdeeplearning4j), 0.4-rc1.x. The JAR files can be downloaded directly from [Maven Central](https://search.maven.org/#search%7Cga%7C1%7Cnd4j).
 
-You will primarily use Github if you are building these projects from source. The JAR files can be downloaded directly from [Maven Central](https://search.maven.org/#search%7Cga%7C1%7Cnd4j).
+On the other hand, you will primarily use Github if you are building these projects from source, or working with our examples. Our [Github repositories for ND4J and Deeplearning4j are here](https://github.com/deeplearning4j/).
 
-Our [Github repositories for ND4J and Deeplearning4j are here](https://github.com/deeplearning4j/).
-
-Type the following into your command line to verify you have git.
+Type the following into your command line to verify you have Git.
 
 		git --version 
 
@@ -141,7 +139,7 @@ Maven can be used in conjunction with Git to ensure that ND4J, Canova and Deeple
 
 		mvn clean install -DskipTests -Dmaven.javadoc.skip=true
 
-Running a `mvn clean install` on ND4J, Canova and Deeplearning4j, in that order, is a good way to get the most recent bug fixes and features. 
+Running a `mvn clean install` etc. on ND4J, Canova and Deeplearning4j, in that order, is a good way to get the most recent bug fixes and features. 
 
 ## <a id="scala">Scala</a>
 
@@ -208,6 +206,7 @@ If you use Visual Studio:
 		//so you can link to .lib files^^
 * In Visual Studio, you also have to click on C++. It is no longer set by default. 
 (*In addition, the include path for [Java CPP](https://github.com/bytedeco/javacpp) doesn't always work on Windows. One workaround is to take the the header files from the include directory of Visual Studio, and put them in the include directory of the Java Run-Time Environment (JRE), where Java is installed. This will affect files such as `standardio.h`.*)
+* For a walkthrough of installing our examples with Git, IntelliJ and Maven, please see our [Quickstart page](http://deeplearning4j.org/quickstart.html#walk). 
 
 ###Linux
 
