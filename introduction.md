@@ -15,8 +15,6 @@ The basic operations of linear algebra are matrix creation, addition and multipl
 * [Functions](../functions.html)
 * [Swapping CPUs for GPUs](../gpu_native_backends.html)
 
-(The example code for elementwise operations [lives here](https://github.com/SkymindIO/nd4j/blob/master/nd4j-examples/src/main/java/org/nd4j/examples/ElementWiseOperationExample.java).)
-
 The Java code below will create a simple 2 x 2 matrix, populate it with integers, and place it in the nd-array variable nd:
 
     INDArray nd = Nd4j.create(new float[]{1,2,3,4},new int[]{2,2});
