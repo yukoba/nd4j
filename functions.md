@@ -9,7 +9,7 @@ A static import at the top of your Java file makes advanced functions fairly sim
 
     import static org.nd4j.linalg.ops.transforms.*;
 
-Here are the [transform classes]https://github.com/deeplearning4j/nd4j/blob/master/nd4j-api/src/main/java/org/nd4j/linalg/ops/transforms/Transforms.java). That done, create your arrays and call a function on them.
+Here are the [transform classes](https://github.com/deeplearning4j/nd4j/blob/master/nd4j-api/src/main/java/org/nd4j/linalg/ops/transforms/Transforms.java). That done, create your arrays and call a function on them.
 
         INDArray nd = Nd4j.create(new float[]{1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12}, new int[]{2, 7});
         INDArray ndv;
