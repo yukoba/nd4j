@@ -35,7 +35,7 @@ Here's how you get the numbers:
 		    <version>1.0-SNAPSHOT</version>
 		
 		    <properties>
-		        <nd4j.version>0.0.3.5.5.6-SNAPSHOT</nd4j.version>
+		        <nd4j.version>0.4-rc2.2</nd4j.version>
 		    </properties>
 		
 		    <dependencies>
