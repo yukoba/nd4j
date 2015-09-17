@@ -31,7 +31,7 @@ public class ConcatTests extends BaseNd4jTest {
 
 
 
-    
+
     @Test
     public void testConcatHorizontally() {
         INDArray rowVector = Nd4j.ones(5);

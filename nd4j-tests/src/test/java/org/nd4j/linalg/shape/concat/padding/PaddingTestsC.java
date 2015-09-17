@@ -45,7 +45,7 @@ public class PaddingTestsC extends BaseNd4jTest {
 
 
     @Test
-    public void testPaddingOneThrougFour() {
+    public void testPaddingOneThroughFour() {
         int ph = 0;
         int pw = 0;
         int sy = 2;

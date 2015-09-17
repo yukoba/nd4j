@@ -986,34 +986,49 @@ public abstract class BaseNDArrayFactory implements NDArrayFactory {
      */
     @Override
     public INDArray concat(int dimension, INDArray... toConcat) {
+        if(dimension < 0)
+            dimension += toConcat[0].rank();
+        int[] shape = ArrayUtil.copy(toConcat[0].shape());
         if (toConcat.length == 1)
             return toConcat[0];
-        int sumAlongDim = 0;
-        int lastSize = toConcat[0].size(dimension);
-        for (int i = 0; i < toConcat.length; i++) {
-            if(toConcat[i].size(dimension) != lastSize)
-                throw new IllegalStateException("Unable to concatneate along dimension " + dimension + " for array " + i);
-            sumAlongDim += toConcat[i].size(dimension);
-            lastSize = toConcat[i].size(dimension);
+        INDArray first = toConcat[0];
+        for (int iarrays = 1; iarrays < toConcat.length; iarrays++) {
+            int[] arrShape = toConcat[iarrays].shape();
+            if (toConcat[iarrays].rank() != first.rank()) {
+                throw new IllegalArgumentException("All concat arrays must have same rank");
+            }
+
+            for (int idim = 0; idim < first.rank(); ++idim) {
+            /* Build up the size of the concatenation axis */
+                if (idim == dimension) {
+                    shape[idim] += shape[idim];
+                }
+            /* Validate that the rest of the dimensions match */
+                else if (shape[idim] != arrShape[idim]) {
+                    throw new IllegalArgumentException(
+                            "all the input array dimensions " +
+                                    "except for the concatenation axis " +
+                                    "must match exactly");
+                }
+            }
         }
 
-        int[] outputShape = ArrayUtil.copy(toConcat[0].shape());
-        int[] strides = new int[outputShape.length];
 
-        outputShape[dimension] = sumAlongDim;
-        int[] strideperm = StridePermutation.create(outputShape.length,toConcat);
+
+        int[] strides = new int[shape.length];
+        int[] strideperm = StridePermutation.create(shape.length,toConcat);
 
 
         int s  = 1;
-        int ndim = outputShape.length;
-        for (int idim = ndim - 1; idim >= 0; --idim) {
+        int ndim = shape.length;
+        for (int idim = ndim - 1; idim >= 0; idim--) {
             int iperm = strideperm[idim];
             strides[iperm] = s;
-            s *= outputShape[iperm];
+            s *= shape[iperm];
         }
 
 
-        INDArray ret = Nd4j.create(ArrayUtil.copy(outputShape),strides);
+        INDArray ret = Nd4j.create(ArrayUtil.copy(shape),strides);
 
 
         int arrOffset = 0;
@@ -1044,7 +1059,7 @@ public abstract class BaseNDArrayFactory implements NDArrayFactory {
 
         }
 
-        ret.setShape(outputShape);
+        ret.setShape(shape);
         ret.updateShapeInfo();
         return ret;
 

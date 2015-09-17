@@ -99,6 +99,7 @@ public class ConcatTestsC extends BaseNd4jTest {
     
 
 
+
     @Override
     public char ordering() {
         return 'c';
