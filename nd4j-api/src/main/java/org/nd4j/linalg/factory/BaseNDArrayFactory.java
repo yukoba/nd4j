@@ -20,10 +20,7 @@
 package org.nd4j.linalg.factory;
 
 
-import java.util.Arrays;
-import java.util.Collection;
-import java.util.Iterator;
-import java.util.List;
+import java.util.*;
 
 import org.nd4j.linalg.api.blas.Level1;
 import org.nd4j.linalg.api.blas.Level2;
@@ -35,6 +32,7 @@ import org.nd4j.linalg.api.complex.IComplexNDArray;
 import org.nd4j.linalg.api.complex.IComplexNumber;
 import org.nd4j.linalg.api.iter.NdIndexIterator;
 import org.nd4j.linalg.api.ndarray.INDArray;
+import org.nd4j.linalg.api.parallel.TaskCreator;
 import org.nd4j.linalg.api.rng.distribution.Distribution;
 import org.nd4j.linalg.indexing.INDArrayIndex;
 import org.nd4j.linalg.indexing.NDArrayIndex;
@@ -1032,25 +1030,34 @@ public abstract class BaseNDArrayFactory implements NDArrayFactory {
 
 
         int arrOffset = 0;
+        int tensorsAlongDimension = ret.tensorssAlongDimension(dimension);
+
+        List<INDArray> retTensorAlongDimensionCache = new ArrayList<>();
+        for(int i = 0; i < ret.tensorssAlongDimension(dimension); i++) {
+            retTensorAlongDimensionCache.add(ret.tensorAlongDimension(i,dimension));
+        }
+
         for(INDArray arr : toConcat) {
             int arrTensorLength = -1;
 
-            if(arr.tensorssAlongDimension(dimension) != ret.tensorssAlongDimension(dimension))
+            if(arr.tensorssAlongDimension(dimension) != tensorsAlongDimension)
                 throw new IllegalStateException("Illegal concatenate. Tensors along dimension must be same length.");
+            final int currOffset = arrOffset;
 
+            arrTensorLength = arr.tensorAlongDimension(0,dimension).length();
 
-            for(int i = 0; i < arr.tensorssAlongDimension(dimension); i++) {
-                INDArray retLinear = ret.tensorAlongDimension(i, dimension);
-                INDArray arrTensor = arr.tensorAlongDimension(i, dimension);
-
-                arrTensorLength = arrTensor.length();
-                for(int j = 0; j < arrTensor.length(); j++) {
-                    int idx = j + arrOffset;
-                    retLinear.putScalar(idx,arrTensor.getDouble(j));
+            Nd4j.getExecutioner().parallelExecutioner().execBasedOnArraysAlongDimension(new INDArray[]{ret,arr}, new TaskCreator.INDArrayTask() {
+                @Override
+                public void perform(INDArray... arr) {
+                    for(int j = 0; j < arr[1].length(); j++) {
+                        int idx = j + currOffset;
+                        arr[0].putScalar(idx,arr[1].getDouble(j));
+                    }
                 }
+            },dimension);
 
 
-            }
+
             //bump the sliding window
             arrOffset += arrTensorLength;
 
