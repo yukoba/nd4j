@@ -13,7 +13,7 @@ ND4J and ND4S are scientific computing libraries for the JVM. They are meant to 
 * Multiplatform functionality including GPUs
 * Linear algebra and signal processing functions
 
-A usability gap has separated Java, [Scala](http://nd4j.org/scala.html) and Clojure programmers from the most powerful tools in data analysis, like NumPy or Matlab. Libraries like Breeze don't support n-dimensional arrays, or tensors, which are necessary for deep learning and other tasks. ND4J and ND4S are used by national laboratories for tasks such as climatic modeling, which require computationally intensive simulations.  
+A usability gap has separated Java, [Scala](http://nd4j.org/scala.html) and [Clojure](https://github.com/whilo/clj-nd4j) programmers from the most powerful tools in data analysis, like NumPy or Matlab. Libraries like Breeze don't support n-dimensional arrays, or tensors, which are necessary for deep learning and other tasks. ND4J and ND4S are used by national laboratories for tasks such as climatic modeling, which require computationally intensive simulations.  
 
 ND4J brings the intuitive scientific computing tools of the Python community to the JVM in an open source, distributed and GPU-enabled library. In structure, it is similar to [SLF4J](http://www.slf4j.org/). ND4J gives engineers in production environments an easy way to port their algorithms and interface with other libraries in the Java and Scala ecosystems. 
 
