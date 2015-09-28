@@ -187,6 +187,13 @@ To compile certain ND4J dependencies on Windows or a Linux OS, you will need to 
 
 Some versions of the [Apple developer tool Xcode](https://developer.apple.com/xcode/downloads/) will install *gcc* for you. If you don't already have gcc, enter `brew install gcc` into your command prompt.
 
+### <a id="open"> OpenBlas </a>
+
+To make sure the native libs on the x86 backend work, you need `/opt/OpenBLAS/lib` on the system path. After that, enter these commands in the prompt
+
+			sudo cp libopenblas.so liblapack.so.3
+			sudo cp libopenblas.so libblas.so.3
+
 ### <a id="windows"> Windows </a>
 
 Windows users may need to install [Visual Studio Community 2013 or later](https://www.visualstudio.com/en-us/products/visual-studio-community-vs.aspx), which is free. You will need to add its path to your PATH environment variable manually. The path will look something like this: `C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin`
