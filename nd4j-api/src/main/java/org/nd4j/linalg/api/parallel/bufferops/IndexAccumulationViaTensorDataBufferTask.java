@@ -20,7 +20,7 @@ import java.util.concurrent.RecursiveTask;
  * @see IndexAccumulationDataBufferTask
  */
 @AllArgsConstructor
-public class IndexAccumulationViaTensorDataBufferTask extends RecursiveTask<Pair<Double,Integer>> {
+public class IndexAccumulationViaTensorDataBufferTask extends RecursiveTask<Pair<Double,Integer>> implements org.nd4j.linalg.api.parallel.bufferops.api.IndexAccumulationViaTensorDataBufferTask {
     protected final IndexAccumulation op;
     protected final int threshold;
     protected final INDArray x;

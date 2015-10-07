@@ -16,7 +16,7 @@ import java.util.concurrent.RecursiveTask;
  * @author Alex Black
  */
 @AllArgsConstructor
-public class TransformAlongDimensionDataBufferTask extends RecursiveTask<INDArray> {
+public class TransformAlongDimensionDataBufferTask extends RecursiveTask<INDArray> implements org.nd4j.linalg.api.parallel.bufferops.api.TransformAlongDimensionDataBufferTask {
     protected final TransformOp op;
     protected final int parallelThreshold;
     protected final int[] dimensions;
@@ -27,7 +27,7 @@ public class TransformAlongDimensionDataBufferTask extends RecursiveTask<INDArra
         int nTensors = op.x().tensorssAlongDimension(dimensions);
         List<RecursiveAction> taskList = new ArrayList<>(nTensors);
 
-        for( int i=0; i<nTensors; i++ ){
+        for(int i = 0; i < nTensors; i++) {
             RecursiveAction task = new TensorCalculator(i);
             task.fork();
             taskList.add(task);
@@ -36,8 +36,7 @@ public class TransformAlongDimensionDataBufferTask extends RecursiveTask<INDArra
         //Allocate return array + assign elements
         int[] retShape = ArrayUtil.removeIndex(op.x().shape(), dimensions);
         INDArray out = Nd4j.create(retShape);
-        int i=0;
-        for(RecursiveAction task : taskList ){
+        for(RecursiveAction task : taskList) {
             task.join();
         }
 
@@ -64,10 +63,11 @@ public class TransformAlongDimensionDataBufferTask extends RecursiveTask<INDArra
 
             RecursiveAction task;
             if(canDoDirectly){
-                if(y2!=null){
+                if(y2 != null) {
                     task = opOnDimension.getTransformOpDataBufferAction(parallelThreshold, opOnDimension.n(), x2.data(), y2.data(), z2.data(),
                             x2.offset(), y2.offset(), z2.offset(), x2.elementWiseStride(), y2.elementWiseStride(), z2.elementWiseStride());
-                } else {
+                }
+                else {
                     task = opOnDimension.getTransformOpDataBufferAction(parallelThreshold, opOnDimension.n(), x2.data(), null, z2.data(),
                             x2.offset(), 0, z2.offset(), x2.elementWiseStride(), 0, z2.elementWiseStride());
                 }

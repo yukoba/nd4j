@@ -10,7 +10,9 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.concurrent.RecursiveAction;
 
-/**A DataBufferAction for executing ScalarOps on a buffer in parallel.
+/**
+ *
+ * A DataBufferAction for executing ScalarOps on a buffer in parallel.
  * The 'via tensor' designation in the name reflects the fact that this is done
  * by breaking the INDArray down into 1d tensors (which is necessary for example
  * when the elements of the x and z NDArrays are not contiguous in their DataBuffers)
@@ -18,14 +20,14 @@ import java.util.concurrent.RecursiveAction;
  * @see ScalarDataBufferAction
  */
 @AllArgsConstructor
-public class ScalarViaTensorDataBufferAction extends RecursiveAction {
+public class ScalarViaTensorDataBufferAction extends RecursiveAction implements org.nd4j.linalg.api.parallel.bufferops.api.ScalarViaTensorDataBufferAction {
     protected final ScalarOp op;
     protected final int threshold;
     protected final INDArray x;
     protected final INDArray z;
 
     @Override
-    public void compute(){
+    public void compute() {
         //Break the scalar op into tensors
         //Run the scalar op on each tensor
 
@@ -57,9 +59,9 @@ public class ScalarViaTensorDataBufferAction extends RecursiveAction {
                 int n = tsx.getTensorLength();
                 int incrX = tsx.getElementWiseStride();
                 DataBuffer dx = x.data();
-                if(x==z){
+                if(x == z){
                     //x=Op(x)
-                    for( int i=0; i<nTensors; i++){
+                    for( int i = 0; i < nTensors; i++) {
                         int offsetX = tsx.getFirstTensorOffset() + i*tsx.getTensorStartSeparation();
                         ScalarDataBufferAction task = op.getScalarOpDataBufferAction(threshold, n, dx, dx, offsetX,
                                 offsetX, incrX, incrX);
@@ -71,9 +73,9 @@ public class ScalarViaTensorDataBufferAction extends RecursiveAction {
                     DataBuffer dz = z.data();
                     OpExecutionerUtil.Tensor1DStats tsz = OpExecutionerUtil.get1DTensorStats(z, tensorDim);
                     int incrZ = tsz.getElementWiseStride();
-                    for( int i=0; i<nTensors; i++){
-                        int offsetX = tsx.getFirstTensorOffset() + i*tsx.getTensorStartSeparation();
-                        int offsetZ = tsz.getFirstTensorOffset() + i*tsz.getTensorStartSeparation();
+                    for( int i = 0; i<nTensors; i++){
+                        int offsetX = tsx.getFirstTensorOffset() + i * tsx.getTensorStartSeparation();
+                        int offsetZ = tsz.getFirstTensorOffset() + i * tsz.getTensorStartSeparation();
                         ScalarDataBufferAction task = op.getScalarOpDataBufferAction(threshold,n,dx,dz,offsetX,
                                 offsetZ,incrX,incrZ);
                         task.fork();

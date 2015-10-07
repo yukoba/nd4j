@@ -18,7 +18,7 @@ import java.util.concurrent.RecursiveTask;
  * @see AccumulationDataBufferTask
  */
 @AllArgsConstructor
-public class AccumulationViaTensorDataBufferTask extends RecursiveTask<Double> {
+public class AccumulationViaTensorDataBufferTask extends RecursiveTask<Double> implements org.nd4j.linalg.api.parallel.bufferops.api.AccumulationViaTensorDataBufferTask {
 
     protected final Accumulation op;
     protected final int threshold;

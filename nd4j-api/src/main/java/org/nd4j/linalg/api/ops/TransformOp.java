@@ -39,7 +39,8 @@ public interface TransformOp extends Op {
      */
     TransformOp derivative();
 
-    /** Get a TransformDataBufferAction. Used (internally) for parallelizing Transform operations.
+    /** Get a TransformDataBufferAction.
+     * Used (internally) for parallelizing Transform operations.
      * Note that most TransformOp implementations can simply inherit BaseTransformOp.getTransformOpDataBufferTask,
      * however this can be overridden in certain cases for performance reasons
      * @param parallelThreshold The parallelism threshold for breaking an TransformDataBufferAction into smaller
@@ -56,11 +57,11 @@ public interface TransformOp extends Op {
      * @param incrZ Increment between elements in the Z databuffer
      * @return The TransformDataBufferAction
      */
-    TransformDataBufferAction getTransformOpDataBufferAction( int parallelThreshold, int n, DataBuffer x, DataBuffer y,
+    TransformDataBufferAction getTransformOpDataBufferAction(int parallelThreshold, int n, DataBuffer x, DataBuffer y,
                                                                    DataBuffer z, int offsetX, int offsetY, int offsetZ,
                                                                    int incrX, int incrY, int incrZ);
 
-    /**Get a TransformDataBufferAction. Used (internall) for parallelizing Transform operations.
+    /**Get a TransformDataBufferAction. Used (internally) for parallelizing Transform operations.
      * Unlike the other getTransformOpDataBufferAction, the resulting TransformDataBufferAction should
      * calculate a 1d tensor first.
      * Note that most TransformOp implementations can simply inherit BaseTransformOp.getTransformOpDataBufferTask,

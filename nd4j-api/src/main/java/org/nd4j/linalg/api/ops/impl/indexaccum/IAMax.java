@@ -52,7 +52,7 @@ public class IAMax extends BaseIndexAccumulation {
 
 
     public int update(double accum, int accumIdx, double x, int xIdx){
-        return (FastMath.abs(accum)>=FastMath.abs(x) ? accumIdx : xIdx);
+        return (FastMath.abs(accum) >= FastMath.abs(x) ? accumIdx : xIdx);
     }
 
     public int update(float accum, int accumIdx, float x, int xIdx){
@@ -60,11 +60,11 @@ public class IAMax extends BaseIndexAccumulation {
     }
 
     public int update(double accum, int accumIdx, double x, double y, int idx){
-        return (FastMath.abs(accum)>=FastMath.abs(x) ? accumIdx : idx);
+        return (FastMath.abs(accum) >= FastMath.abs(x) ? accumIdx : idx);
     }
 
     public int update(float accum, int accumIdx, float x, float y, int idx){
-        return (FastMath.abs(accum)>=FastMath.abs(x) ? accumIdx : idx);
+        return (FastMath.abs(accum) >= FastMath.abs(x) ? accumIdx : idx);
     }
 
     public int update(IComplexNumber accum, int accumIdx, IComplexNumber x, int xIdx){

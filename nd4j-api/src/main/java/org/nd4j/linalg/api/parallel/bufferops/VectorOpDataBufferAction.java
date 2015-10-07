@@ -13,8 +13,12 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.concurrent.RecursiveAction;
 
-/**VectorOpDataBufferAction: for executing row/column vector operations on a DataBuffer in parallel.
- * Implements parallel addiRowVector, muliColumnVector, etc operations
+/**
+ *
+ * VectorOpDataBufferAction: for executing row/column
+ * vector operations on a DataBuffer in parallel.
+ * Implements parallel addiRowVector,
+ * muliColumnVector, etc operations
  * @author Alex Black
  */
 @AllArgsConstructor
@@ -29,7 +33,7 @@ public class VectorOpDataBufferAction extends RecursiveAction {
     @Override
     protected void compute() {
 
-        if(array.isVector()){
+        if(array.isVector()) {
             //Two cases: either 'vector' is a scalar, or doing a single vector <op> vector
             if(vector.isScalar()){
                 //Edge case: 'vector' is a scalar
@@ -123,7 +127,7 @@ public class VectorOpDataBufferAction extends RecursiveAction {
             int offsetV = vector.offset();
             int incrV = vector.elementWiseStride();
 
-            for( int i=0; i<nOps; i++ ){
+            for( int i = 0; i<nOps; i++) {
                 int arrayVectorOffset = t1d.firstTensorOffset+i*t1d.getTensorStartSeparation();
                 switch(op){
                     case 'a':
@@ -174,7 +178,8 @@ public class VectorOpDataBufferAction extends RecursiveAction {
             }
 
             //Block until all complete
-            for(RecursiveAction a : blockList ) a.join();
+            for(RecursiveAction a : blockList )
+                a.join();
         }
 
     }

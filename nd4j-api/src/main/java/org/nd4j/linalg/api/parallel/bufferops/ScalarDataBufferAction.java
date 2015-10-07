@@ -10,7 +10,7 @@ import java.util.concurrent.RecursiveAction;
 /** A DataBufferAction for executing Scalar ops on a DataBuffer in parallel
  * @author Alex Black
  */
-public abstract class ScalarDataBufferAction extends RecursiveAction {
+public abstract class ScalarDataBufferAction extends RecursiveAction implements org.nd4j.linalg.api.parallel.bufferops.api.ScalarDataBufferAction {
     protected final ScalarOp op;
     protected final int threshold;
     protected int n;

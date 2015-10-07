@@ -10,7 +10,7 @@ import java.util.concurrent.RecursiveTask;
 /**A DataBufferTask for executing index accumulation ops on a buffer in parallel
  * @author Alex Black
  */
-public abstract class IndexAccumulationDataBufferTask extends RecursiveTask<Pair<Double,Integer>> {
+public abstract class IndexAccumulationDataBufferTask extends RecursiveTask<Pair<Double,Integer>> implements org.nd4j.linalg.api.parallel.bufferops.api.IndexAccumulationDataBufferTask {
     protected final IndexAccumulation op;
     protected final int threshold;
     protected int n;
@@ -98,8 +98,4 @@ public abstract class IndexAccumulationDataBufferTask extends RecursiveTask<Pair
         }
     }
 
-    public abstract Pair<Double,Integer> doTask();
-
-    public abstract IndexAccumulationDataBufferTask getSubTask(IndexAccumulation op, int threshold, int n, DataBuffer x, DataBuffer y,
-                                                                   int offsetX, int offsetY, int incrX, int incrY, int elementOffset, boolean outerTask);
 }

@@ -19,7 +19,7 @@ import java.util.concurrent.RecursiveAction;
  * @see TransformDataBufferAction
  */
 @AllArgsConstructor
-public class TransformViaTensorDataBufferAction extends RecursiveAction {
+public class TransformViaTensorDataBufferAction extends RecursiveAction implements org.nd4j.linalg.api.parallel.bufferops.api.TransformViaTensorDataBufferAction {
     protected final TransformOp op;
     protected final int threshold;
     protected final INDArray x;

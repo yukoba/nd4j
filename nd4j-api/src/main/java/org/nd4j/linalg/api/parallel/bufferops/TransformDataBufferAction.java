@@ -6,10 +6,14 @@ import org.nd4j.linalg.api.ops.TransformOp;
 
 import java.util.concurrent.RecursiveAction;
 
-/**A DataBufferAction for executing TransformOps on a DataBuffer in parallel
+/**
+ *
+ * A DataBufferAction
+ * for executing TransformOps
+ * on a DataBuffer in parallel
  * @author Alex Black
   */
-public abstract class TransformDataBufferAction extends RecursiveAction {
+public abstract class TransformDataBufferAction extends RecursiveAction implements org.nd4j.linalg.api.parallel.bufferops.api.TransformDataBufferAction {
     protected final TransformOp op;
     protected final int threshold;
     protected int n;
@@ -98,10 +102,5 @@ public abstract class TransformDataBufferAction extends RecursiveAction {
             doTask();
         }
     }
-
-    public abstract void doTask();
-
-    public abstract TransformDataBufferAction getSubTask(int threshold, int n, DataBuffer x, DataBuffer y, DataBuffer z,
-                                                         int offsetX, int offsetY, int offsetZ, int incrX, int incrY, int incrZ);
 
 }

@@ -47,7 +47,7 @@ public class DefaultOpExecutioner implements OpExecutioner {
 
         //Check if user has specified a parallel threshold via VM argument:
         String thresholdString = System.getProperty(PARALLEL_THRESHOLD,null);
-        if(thresholdString != null){
+        if(thresholdString != null) {
             int threshold = -1;
             try{
                 threshold = Integer.parseInt(thresholdString);
@@ -55,8 +55,8 @@ public class DefaultOpExecutioner implements OpExecutioner {
                 log.warn("Error parsing OpExecutioner parallel threshold: \"" + thresholdString + "\"");
                 log.warn("OpExecutioner parallel threshold set to default: " + parallelThreshold);
             }
-            if(threshold != -1){
-                if(threshold <= 0){
+            if(threshold != -1) {
+                if(threshold <= 0) {
                     log.warn("Invalid OpExecutioner parallel threshold; using default: " + parallelThreshold);
                 } else {
                     setParallelThreshold(threshold);

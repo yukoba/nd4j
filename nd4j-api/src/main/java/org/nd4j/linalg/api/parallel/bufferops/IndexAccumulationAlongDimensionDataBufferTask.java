@@ -12,7 +12,10 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.concurrent.RecursiveTask;
 
-/** DataBufferTask for executing index accumulations along one or more dimensions in parallel
+/**
+ * DataBufferTask for executing
+ *  index accumulations along
+ *  one or more dimensions in parallel
  * @author Alex Black
  */
 @AllArgsConstructor

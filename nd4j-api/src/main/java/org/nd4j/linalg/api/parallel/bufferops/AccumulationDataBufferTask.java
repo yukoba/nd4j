@@ -9,7 +9,7 @@ import java.util.concurrent.RecursiveTask;
 /**A DataBufferTask for executing accumulation ops on a buffer in parallel
  * @author Alex Black
  */
-public abstract class AccumulationDataBufferTask extends RecursiveTask<Double> {
+public abstract class AccumulationDataBufferTask extends RecursiveTask<Double> implements org.nd4j.linalg.api.parallel.bufferops.api.AccumulationDataBufferTask {
     protected final Accumulation op;
     protected final int threshold;
     protected int n;
@@ -89,8 +89,4 @@ public abstract class AccumulationDataBufferTask extends RecursiveTask<Double> {
         }
     }
 
-    public abstract double doTask();
-
-    public abstract AccumulationDataBufferTask getSubTask(int threshold, int n, DataBuffer x, DataBuffer y,
-                                                              int offsetX, int offsetY, int incrX, int incrY, boolean outerTask);
 }

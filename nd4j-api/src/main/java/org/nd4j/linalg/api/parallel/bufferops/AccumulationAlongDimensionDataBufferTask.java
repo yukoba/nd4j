@@ -26,7 +26,7 @@ public class AccumulationAlongDimensionDataBufferTask extends RecursiveTask<INDA
         int nTensors = op.x().tensorssAlongDimension(dimensions);
         List<RecursiveTask<Double>> taskList = new ArrayList<>(nTensors);
 
-        for( int i=0; i<nTensors; i++ ){
+        for( int i = 0; i < nTensors; i++) {
             RecursiveTask<Double> task = new TensorCalculator(i);
             task.fork();
             taskList.add(task);
@@ -35,24 +35,29 @@ public class AccumulationAlongDimensionDataBufferTask extends RecursiveTask<INDA
         //Allocate return array + assign elements
         int[] retShape = ArrayUtil.removeIndex(op.x().shape(), dimensions);
         INDArray out = Nd4j.create(retShape);
-        int i=0;
-        for(RecursiveTask<Double> task : taskList ){
+        int i = 0;
+        for(RecursiveTask<Double> task : taskList) {
             out.putScalar(i++,task.join());
         }
 
         return out;
     }
 
-    /** This TensorCalculator class is used to shift the tensor calculation from the original thread
+    /**
+     * This TensorCalculator class
+     * is used to shift
+     * the tensor calculation from the original thread
      * to the forked thread, so all tensor calculations can be done in parallel
-     *  */
+     *
+     *
+     */
     @AllArgsConstructor
     private class TensorCalculator extends RecursiveTask<Double>{
         private final int tensorNum;
 
         @Override
         protected Double compute() {
-            Accumulation opOnDimension = (Accumulation)op.opForDimension(tensorNum,dimensions);
+            Accumulation opOnDimension = (Accumulation) op.opForDimension(tensorNum,dimensions);
             INDArray x2 = opOnDimension.x();
             INDArray y2 = opOnDimension.y();
 
