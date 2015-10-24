@@ -196,6 +196,18 @@ To make sure the native libs on the x86 backend work, you need `/opt/OpenBLAS/li
 
 We added this so that [Spark](http://deeplearning4j.org/spark) would work with OpenBlas.
 
+If OpenBlas is not working correctly, follow these steps:
+* Remove Openblas if you installed it.
+* Run `sudo apt-get remove libopenblas-base`
+* Download the development version of OpenBLAS
+* `git clone git://github.com/xianyi/OpenBLAS`
+* `cd OpenBLAS`
+* `make FC=gfortran`
+* `sudo make PREFIX=/usr/local/ install`
+* Double check if the symlinks for `libblas.so.3` and `liblapack.so.3` are present anywhere in your `LD_LIBRARY_PATH`.
+
+For OpenBlas on **Windows**, download this [file](https://www.dropbox.com/s/6p8yn3fcf230rxy/ND4J_Win64_OpenBLAS-v0.2.14.zip?dl=1). Extract to somewhere such as `C:/BLAS`. Add that directory to your system's `PATH` environment variable.
+
 ### <a id="windows"> Windows </a>
 
 Windows users may need to install [Visual Studio Community 2013 or later](https://www.visualstudio.com/en-us/products/visual-studio-community-vs.aspx), which is free. You will need to add its path to your PATH environment variable manually. The path will look something like this: `C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin`
