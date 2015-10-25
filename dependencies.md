@@ -36,7 +36,7 @@ Go to your root directory -- e.g. nd4j or deeplearning4j -- and inspect the [pom
 	   <version>${nd4j.version}</version>
 	 </dependency>
   
-### Or [Netlib Blas](http://netlib.org/)
+### [Netlib Blas](http://netlib.org/)
  
 	 <dependency>
 	   <groupId>org.nd4j</groupId>
@@ -44,9 +44,13 @@ Go to your root directory -- e.g. nd4j or deeplearning4j -- and inspect the [pom
 	   <version>${nd4j.version}</version>
 	 </dependency>
 
-### Or Jcublas (Cuda/GPUs)
+### Jcublas (Cuda/GPUs)
 
 See our [GPU page](gpu_native_backends.html) for the versions you can choose.
+
+### JOCL
+
+JOCL is a WIP. Please see the [source code here](https://github.com/deeplearning4j/nd4j/tree/master/nd4j-jocl-parent).
 
 ## Finding and specifying the latest version of the libraries (Advanced)
 
