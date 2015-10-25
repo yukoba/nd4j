@@ -13,13 +13,20 @@ First, you will need to choose the right dependency for your chips:
 
 Maven can automatically install the required dependencies once we select one of these backends:
 
-* JBLAS (default)
-* [Netlib Blas](http://netlib.org/)
+* [Netlib Blas](http://netlib.org/) (and x86)
 * [JCUBLAS](gpu_native_backends.html) (for GPUs)
 * ND4J-Java 
 * JOCL 
  
 Go to your root directory -- e.g. nd4j or deeplearning4j -- and inspect the [pom.xml file](https://maven.apache.org/pom.html). You should see one backend defined in the `<dependencies> ... </dependencies>` section. You can switch among:
+
+### x86
+
+        <dependency>
+            <groupId>org.nd4j</groupId>
+            <artifactId>nd4j-x86</artifactId>
+            <version>${nd4j.version}</version>
+        </dependency>
 
 ### Jblas
 
