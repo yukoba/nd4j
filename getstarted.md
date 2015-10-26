@@ -197,6 +197,7 @@ To make sure the native libs on the x86 backend work, you need `/opt/OpenBLAS/li
 We added this so that [Spark](http://deeplearning4j.org/spark) would work with OpenBlas.
 
 If OpenBlas is not working correctly, follow these steps:
+
 * Remove Openblas if you installed it.
 * Run `sudo apt-get remove libopenblas-base`
 * Download the development version of OpenBLAS
