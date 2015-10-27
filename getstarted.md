@@ -205,7 +205,7 @@ If OpenBlas is not working correctly, follow these steps:
 * `cd OpenBLAS`
 * `make FC=gfortran`
 * `sudo make PREFIX=/usr/local/ install`
-* With **Linux**, double check if the symlinks for `libblas.so.3` and `liblapack.so.3` are present anywhere in your `LD_LIBRARY_PATH`. Then restart your IDE. 
+* With **Linux**, double check if the symlinks for `libblas.so.3` and `liblapack.so.3` are present anywhere in your `LD_LIBRARY_PATH`. If they aren't, add the links to `/usr/lib`. Then restart your IDE. 
 
 For OpenBlas on **Windows**, download this [file](https://www.dropbox.com/s/6p8yn3fcf230rxy/ND4J_Win64_OpenBLAS-v0.2.14.zip?dl=1). Extract to somewhere such as `C:/BLAS`. Add that directory to your system's `PATH` environment variable.
 
