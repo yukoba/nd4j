@@ -10,7 +10,7 @@ For the complete nd4j-api index, consult the [Javadoc](../apidocs).
 There are three types of operations used in ND4J: scalars, transforms and accumulations. We’ll use the word op synonymously with operation. You can see the list of [ND4J ops here]( https://github.com/deeplearning4j/nd4j/tree/master/nd4j-api/src/main/java/org/nd4j/linalg/api/ops/impl
 ). Each Java file in the list is an op. 
 
-Most of the ops just take [enums] (https://docs.oracle.com/javase/tutorial/java/javaOO/enum.html), or a list of discrete values that you can autocomplete. Activation functions are the exception, because they take strings. 
+Most of the ops just take [enums] (https://docs.oracle.com/javase/tutorial/java/javaOO/enum.html), or a list of discrete values that you can autocomplete. Activation functions are the exception, because they take strings such as `"relu"` or `"tanh"`. 
 
 
 |Method| Meaning| Type |
