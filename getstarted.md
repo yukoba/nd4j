@@ -236,6 +236,18 @@ If you use Visual Studio:
 (*In addition, the include path for [Java CPP](https://github.com/bytedeco/javacpp) doesn't always work on Windows. One workaround is to take the the header files from the include directory of Visual Studio, and put them in the include directory of the Java Run-Time Environment (JRE), where Java is installed. This will affect files such as `standardio.h`.*)
 * For a walkthrough of installing our examples with Git, IntelliJ and Maven, please see our [Quickstart page](http://deeplearning4j.org/quickstart.html#walk). 
 
+* [This page](http://avulanov.blogspot.cz/2014/09/howto-to-run-netlib-javabreeze-in.html) describes how to obtain dll for the Windows 64 platform. 
+* Download dll libraries and put it to my Java bin folder (e.g. C:\prg\Java\jdk1.7.0_45\bin).
+* Library `netlib-native_system-win-x86_64.dll` depends on: 
+`libgcc_s_seh-1.dll
+libgfortran-3.dll
+libquadmath-0.dll
+libwinpthread-1.dll
+libblas3.dll
+liblapack3.dll`
+* (`liblapack3.dll` and `libblas3.dll` are just renamed copies of `libopeblas.dll`)
+* You can download compiled libs from [this page](http://sourceforge.net/projects/mingw-w64/files/Toolchains%20targetting%20Win64/Automated%20Builds/), [here](http://www.openblas.net/), or [here](http://search.maven.org/#search%7Cga%7C1%7Ca%3A%22netlib-native_system-win-x86_64%22)
+
 ###Linux
 
 With Linux, Ubuntu and Centos users will need to follow two separate sets of instructions:
