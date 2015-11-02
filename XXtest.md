@@ -5,7 +5,7 @@ description: ""
 ---
 {% include JB/setup %}
 
-|Method| Meaning|
+|Method| What it does |
 |:----------|:-------------:|
 |abs(IComplexNDArray ndarray)| Absolute value, abs(x)|
 |**Scalar**||
