@@ -5,14 +5,34 @@ description: ""
 ---
 {% include JB/setup %}
 
-For the complete nd4j-api index, consult the [Javadoc](../apidocs).
+For the complete nd4j-api index, please consult the [Javadoc](../doc).
 
 There are three types of operations used in ND4J: scalars, transforms and accumulations. We’ll use the word op synonymously with operation. You can see the lists of those three kinds of [ND4J ops under the directories here]( https://github.com/deeplearning4j/nd4j/tree/master/nd4j-api/src/main/java/org/nd4j/linalg/api/ops/impl
 ). Each Java file in each list is an op. 
 
 Most of the ops just take [enums] (https://docs.oracle.com/javase/tutorial/java/javaOO/enum.html), or a list of discrete values that you can autocomplete. Activation functions are the exception, because they take strings such as `"relu"` or `"tanh"`. 
 
-Many ND4J ops are overloaded, meaning methods sharing a common name have different argument lists. 
+Scalars, transforms and accumulations each have their own patterns. Transforms are the simplest, since the take a single argument and perform an operation on it. Absolute value is a transform that takes the argument `x`, and produces the result which is the absolute value of x. Similarly, you would apply to the sigmoid transform `sigmoid()` to produce the "sigmoid of x".
+
+Scalars are also simple, but they take two arguments: the input and the scalar to be applied to the input. For example, `ScalarAdd()` takes two arguments: the input `INDArray x` and the scalar `Number num`; i.e. `ScalarAdd(INDArray x, Number num)`. The same format applies to every Scalar op.
+
+Finally, we have accumulations, which are also known as reductions in GPU-land. Accumulations add arrays and vectors to one another and can *reduce* the dimensions of those arrays in the op's result. For example, we might run an accumulation on the array 
+
+     [1 2
+      3 4]
+
+Which would give us the vector
+
+     [3
+      7]
+
+Reducing the columns (i.e. dimensions) from two to one.
+
+Accumulations can be either pairwise or scalar. In a pairwise reduction, we might be dealing with two arrays, x and y, which have the same shape. In that case, we could calculate the cosine similarity of x and y by taking their elements two by two. 
+
+        cosineSim(x[i], y[i])
+
+Many ND4J ops are overloaded, meaning methods sharing a common name have different argument lists. Below we will explain only the simplest configurations.
 
 |Method| Meaning| Type |
 |:----------|:-------------:| ----:|
