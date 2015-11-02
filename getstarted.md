@@ -305,3 +305,4 @@ Once you're comfortable with the examples, you might want to change the dependen
 * [DeepLearning4j.org](http://deeplearning4j.org/)
 * [DeepLearning4j Github repository](https://github.com/deeplearning4j/deeplearning4j)
 <!-- [DeepLearning4j Maven Repository](http://mvnrepository.com/artifact/org.deeplearning4j) -->
+
