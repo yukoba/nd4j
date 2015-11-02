@@ -38,6 +38,18 @@ Many ND4J ops are overloaded, meaning methods sharing a common name have differe
 
 As you can see, there are three possible argument types with ND4J ops: inputs, optional arguments and outputs. The outputs are specified in the ops' constructor. The inputs are specified in the parentheses following the method name, always in the first position, and the optional arguments are used to transform the inputs; e.g. the scalar to add; the coefficient to multiply by, always in the second position. 
 
+|Method| What it does |
+|:----------------|:-------------:|
+|**Scalar**||
+|ScalarAdd(INDArray x, Number num)|Returns the result of adding `num` to each entry of `INDArray x`.|
+|ScalarDivision(INDArray x, Number num)|Returns the result of dividing each entry of `INDArray x` by `num`.|
+|ScalarMax(INDArray x, Number num)|Compares each entry of `INDArray x` to `num` and returns the higher quantity.|
+|ScalarMultiplication(INDArray x, Number num)|Returns the result of multiplying each entry of `INDArray x` by `num`.|
+|ScalarReverseDivision(INDArray x, Number num)|Returns the result of dividing `num` by each element of `INDArray x`.|
+|ScalarReverseSubtraction(INDArray x, Number num)|Returns the result of subtracting each entry of `INDArray x` from `num`.|
+|ScalarSet(INDArray x, Number num)|This sets the value of each entry of `INDArray x` to `num`.|
+|ScalarSubtraction(INDArray x, Number num)|Returns the result of subtracting `num` from each entry of `INDArray x`.|
+
 |Method| Meaning| Type |
 |:----------|:-------------:| ----:|
 |abs(IComplexNDArray ndarray)| Absolute value, abs(x)|Transform|
