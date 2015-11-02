@@ -12,11 +12,11 @@ There are three types of operations used in ND4J: scalars, transforms and accumu
 
 Most of the ops just take [enums] (https://docs.oracle.com/javase/tutorial/java/javaOO/enum.html), or a list of discrete values that you can autocomplete. Activation functions are the exception, because they take strings such as `"relu"` or `"tanh"`. 
 
-Scalars, transforms and accumulations each have their own patterns. Transforms are the simplest, since the take a single argument and perform an operation on it. Absolute value is a transform that takes the argument `x`, and produces the result which is the absolute value of x. Similarly, you would apply to the sigmoid transform `sigmoid()` to produce the "sigmoid of x".
+Scalars, transforms and accumulations each have their own patterns. Transforms are the simplest, since the take a single argument and perform an operation on it. Absolute value is a transform that takes the argument `x` like so `abs(IComplexNDArray ndarray)` and produces the result which is the absolute value of x. Similarly, you would apply to the sigmoid transform `sigmoid()` to produce the "sigmoid of x".
 
-Scalars are also simple, but they take two arguments: the input and the scalar to be applied to the input. For example, `ScalarAdd()` takes two arguments: the input `INDArray x` and the scalar `Number num`; i.e. `ScalarAdd(INDArray x, Number num)`. The same format applies to every Scalar op.
+Scalars just take two arguments: the input and the scalar to be applied to that input. For example, `ScalarAdd()` takes two arguments: the input `INDArray x` and the scalar `Number num`; i.e. `ScalarAdd(INDArray x, Number num)`. The same format applies to every Scalar op. 
 
-Finally, we have accumulations, which are also known as reductions in GPU-land. Accumulations add arrays and vectors to one another and can *reduce* the dimensions of those arrays in the op's result. For example, we might run an accumulation on the array 
+Finally, we have accumulations, which are also known as reductions in GPU-land. Accumulations add arrays and vectors to one another and can *reduce* the dimensions of those arrays in the result by adding their elements in a rowwise op. For example, we might run an accumulation on the array 
 
      [1 2
       3 4]
@@ -31,6 +31,8 @@ Reducing the columns (i.e. dimensions) from two to one.
 Accumulations can be either pairwise or scalar. In a pairwise reduction, we might be dealing with two arrays, x and y, which have the same shape. In that case, we could calculate the cosine similarity of x and y by taking their elements two by two. 
 
         cosineSim(x[i], y[i])
+
+Or take `EuclideanDistance(arr, arr2)`, a reduction between one array `arr` and another `arr2`.
 
 Many ND4J ops are overloaded, meaning methods sharing a common name have different argument lists. Below we will explain only the simplest configurations.
 
