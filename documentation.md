@@ -40,6 +40,10 @@ As you can see, there are three possible argument types with ND4J ops: inputs, o
 
 |Method| What it does |
 |:----------------|:-------------:|
+|**Transforms**||
+|ACos(INDArray x)|Trigonometric inverse cosine, elementwise. The inverse of cos such that, if `y = cos(x)`, then `x = ACos(y)`.|
+|ASin(INDArray x)|Also known as arcsin. Inverse sine, element-wise.|
+|ATan(INDArray x)|Trigonometric inverse tangent, elementwise. The inverse of tan, such that, if `y = tan(x)` then `x = arctan(y)`.|
 |**Scalar**||
 |ScalarAdd(INDArray x, Number num)|Returns the result of adding `num` to each entry of `INDArray x`.|
 |ScalarDivision(INDArray x, Number num)|Returns the result of dividing each entry of `INDArray x` by `num`.|
