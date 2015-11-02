@@ -36,6 +36,8 @@ Or take `EuclideanDistance(arr, arr2)`, a reduction between one array `arr` and 
 
 Many ND4J ops are overloaded, meaning methods sharing a common name have different argument lists. Below we will explain only the simplest configurations.
 
+As you can see, there are three possible argument types with ND4J ops: inputs, optional arguments and outputs. The outputs are specified in the ops' constructor. The inputs are specified in the parentheses following the method name, always in the first position, and the optional arguments are used to transform the inputs; e.g. the scalar to add; the coefficient to multiply by, always in the second position. 
+
 |Method| Meaning| Type |
 |:----------|:-------------:| ----:|
 |abs(IComplexNDArray ndarray)| Absolute value, abs(x)|Transform|
