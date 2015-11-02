@@ -12,6 +12,7 @@ There are three types of operations used in ND4J: scalars, transforms and accumu
 
 Most of the ops just take [enums] (https://docs.oracle.com/javase/tutorial/java/javaOO/enum.html), or a list of discrete values that you can autocomplete. Activation functions are the exception, because they take strings such as `"relu"` or `"tanh"`. 
 
+Many ND4J ops are overloaded, meaning methods sharing a common name have different argument lists. 
 
 |Method| Meaning| Type |
 |:----------|:-------------:| ----:|
