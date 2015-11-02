@@ -116,4 +116,4 @@ As you can see, there are three possible argument types with ND4J ops: inputs, o
 |unitVec|Scale by 1 / norm2 of the matrix||
 |upSample(INDArray d, INDArray scale)|Upsampling a signal (specifically the first 2 dimensions)|Signal processing|
 
-If you do not understand the explanation of ND4J's syntax, cannot find a definition for a method, or would like to request that a function be added, please let us know on the [ND4J Google Group](https://groups.google.com/forum/#!forum/nd4j).
+If you do not understand the explanation of ND4J's syntax, cannot find a definition for a method, or would like to request that a function be added, please let us know on [Gitter live chat](https://gitter.im/deeplearning4j/deeplearning4j).
