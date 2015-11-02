@@ -8,5 +8,5 @@ description: ""
 |Method| Meaning|
 |:----------|:-------------:|
 |abs(IComplexNDArray ndarray)| Absolute value, abs(x)|
-|Scalar||
+|**Scalar**||
 |ScalarAdd(INDArray x, Number num)|Returns the result of adding num to each entry of INDArray x.|
