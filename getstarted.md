@@ -212,6 +212,7 @@ If OpenBlas is not working correctly, follow these steps:
 
 * The "from-here" is the symbolic link that does not exist yet, and which you are creating. Here's StackOverflow on [how to create a symlink](https://stackoverflow.com/questions/1951742/how-to-symlink-a-file-in-linux). And here's the [Linux man page](http://linux.die.net/man/1/ln).
 * As a last step, restart your IDE. 
+* For complete instructions on how to get native Blas running with Centos 6, [see this page](https://gist.github.com/jarutis/912e2a4693accee42a94).
 
 For OpenBlas on **Windows**, download this [file](https://www.dropbox.com/s/6p8yn3fcf230rxy/ND4J_Win64_OpenBLAS-v0.2.14.zip?dl=1). Extract to somewhere such as `C:/BLAS`. Add that directory to your system's `PATH` environment variable.
 
