@@ -28,22 +28,6 @@ Go to your root directory -- e.g. nd4j or deeplearning4j -- and inspect the [pom
             <version>${nd4j.version}</version>
         </dependency>
 
-### Jblas
-
-	 <dependency>
-	   <groupId>org.nd4j</groupId>
-	   <artifactId>nd4j-jblas</artifactId>
-	   <version>${nd4j.version}</version>
-	 </dependency>
-  
-### [Netlib Blas](http://netlib.org/)
- 
-	 <dependency>
-	   <groupId>org.nd4j</groupId>
-	   <artifactId>nd4j-netlib-blas</artifactId>
-	   <version>${nd4j.version}</version>
-	 </dependency>
-
 ### Jcublas (Cuda/GPUs)
 
 See our [GPU page](gpu_native_backends.html) for the versions you can choose.
