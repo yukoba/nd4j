@@ -214,6 +214,8 @@ If OpenBlas is not working correctly, follow these steps:
 * As a last step, restart your IDE. 
 * For complete instructions on how to get native Blas running with Centos 6, [see this page](https://gist.github.com/jarutis/912e2a4693accee42a94).
 
+For OpenBlas on **Ubuntu** (15.10), please see [these instructions](http://pastebin.com/F0Rv2uEk).
+
 For OpenBlas on **Windows**, download this [file](https://www.dropbox.com/s/6p8yn3fcf230rxy/ND4J_Win64_OpenBLAS-v0.2.14.zip?dl=1). Extract to somewhere such as `C:/BLAS`. Add that directory to your system's `PATH` environment variable.
 
 ### <a id="windows"> Windows </a>
