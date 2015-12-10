@@ -39,6 +39,7 @@ Many ND4J ops are overloaded, meaning methods sharing a common name have differe
 As you can see, there are three possible argument types with ND4J ops: inputs, optional arguments and outputs. The outputs are specified in the ops' constructor. The inputs are specified in the parentheses following the method name, always in the first position, and the optional arguments are used to transform the inputs; e.g. the scalar to add; the coefficient to multiply by, always in the second position. 
 
 |Method| What it does |
+|:----|:-------------:|
 |**Transforms**||
 |ACos(INDArray x)|Trigonometric inverse cosine, elementwise. The inverse of cos such that, if `y = cos(x)`, then `x = ACos(y)`.|
 |ASin(INDArray x)|Also known as arcsin. Inverse sine, elementwise.|
