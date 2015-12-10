@@ -45,6 +45,8 @@ As you can see, there are three possible argument types with ND4J ops: inputs, o
 |ASin(INDArray x)|Also known as arcsin. Inverse sine, elementwise.|
 |ATan(INDArray x)|Trigonometric inverse tangent, elementwise. The inverse of tan, such that, if `y = tan(x)` then `x = ATan(y)`.|
 |**Scalar**||
+|INDArray.add(number)|Returns the result of adding `number` to each entry of `INDArray x`; e.g. myArray.add(2.0)|
+|INDArray.addi(number)|Returns the result of adding `number` to each entry of `INDArray x`.|
 |ScalarAdd(INDArray x, Number num)|Returns the result of adding `num` to each entry of `INDArray x`.|
 |ScalarDivision(INDArray x, Number num)|Returns the result of dividing each entry of `INDArray x` by `num`.|
 |ScalarMax(INDArray x, Number num)|Compares each entry of `INDArray x` to `num` and returns the higher quantity.|
