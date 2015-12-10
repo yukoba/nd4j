@@ -10,7 +10,7 @@ For the complete nd4j-api index, please consult the [Javadoc](../doc).
 There are three types of operations used in ND4J: scalars, transforms and accumulations. We’ll use the word op synonymously with operation. You can see the lists of those three kinds of [ND4J ops under the directories here]( https://github.com/deeplearning4j/nd4j/tree/master/nd4j-api/src/main/java/org/nd4j/linalg/api/ops/impl
 ). Each Java file in each list is an op. 
 
-Most of the ops just take [enums] (https://docs.oracle.com/javase/tutorial/java/javaOO/enum.html), or a list of discrete values that you can autocomplete. Activation functions are the exception, because they take strings such as `"relu"` or `"tanh"`. 
+Most of the ops just take [enums](https://docs.oracle.com/javase/tutorial/java/javaOO/enum.html), or a list of discrete values that you can autocomplete. Activation functions are the exception, because they take strings such as `"relu"` or `"tanh"`. 
 
 Scalars, transforms and accumulations each have their own patterns. Transforms are the simplest, since the take a single argument and perform an operation on it. Absolute value is a transform that takes the argument `x` like so `abs(IComplexNDArray ndarray)` and produces the result which is the absolute value of x. Similarly, you would apply to the sigmoid transform `sigmoid()` to produce the "sigmoid of x".
 
@@ -44,8 +44,10 @@ As you can see, there are three possible argument types with ND4J ops: inputs, o
 |ACos(INDArray x)|Trigonometric inverse cosine, elementwise. The inverse of cos such that, if `y = cos(x)`, then `x = ACos(y)`.|
 |ASin(INDArray x)|Also known as arcsin. Inverse sine, elementwise.|
 |ATan(INDArray x)|Trigonometric inverse tangent, elementwise. The inverse of tan, such that, if `y = tan(x)` then `x = ATan(y)`.|
-|Transforms.tanh(myArray)|Hyperbolic tangent: a sigmoidal function|Activation|
+|Transforms.tanh(myArray)|Hyperbolic tangent: a sigmoidal function. This applies elementwise tanh inplace.|
 |Nd4j.getExecutioner().exec(Nd4j.getOpFactory().createTransform("tanh", myArray));|equivalent to the above|
+|Nd4j.getExecutioner().exec(Nd4j.getOpFactory().createTransform("tanh", myArray));|equivalent to the above|
+
 |**Scalar**||
 |INDArray.add(number)|Returns the result of adding `number` to each entry of `INDArray x`; e.g. myArray.add(2.0)|
 |INDArray.addi(number)|Returns the result of adding `number` to each entry of `INDArray x`.|
