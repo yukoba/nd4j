@@ -113,7 +113,8 @@ As you can see, there are three possible argument types with ND4J ops: inputs, o
 |subi(IComplexNumber c, IComplexNumber result)|Subtract two complex numbers in place||
 |symmetricGeneralizedEigenvalues (INDArray A)|Computes generalized eigenvalues of the problem A x = L B x.|
 |symmetricGeneralizedEigenvalues (INDArray A, INDArray B)|Compute generalized eigenvalues of the problem A x = L B x.|
-|tanh()|Hyperbolic tangent: a sigmoidal function|Activation|
+|Transforms.tanh(myArray)|Hyperbolic tangent: a sigmoidal function|Activation|
+|Nd4j.getExecutioner().exec(Nd4j.getOpFactory().createTransform("tanh", myArray));|equivalent to the above|Activation|
 |toDecimal(String binary)|Converts the given binary string to a decimal based integer.||
 |unitVec|Scale by 1 / norm2 of the matrix||
 |upSample(INDArray d, INDArray scale)|Upsampling a signal (specifically the first 2 dimensions)|Signal processing|
