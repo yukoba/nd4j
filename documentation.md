@@ -45,7 +45,73 @@ As you can see, there are three possible argument types with ND4J ops: inputs, o
 |ASin(INDArray x)|Also known as arcsin. Inverse sine, elementwise.|
 |ATan(INDArray x)|Trigonometric inverse tangent, elementwise. The inverse of tan, such that, if `y = tan(x)` then `x = ATan(y)`.|
 |Transforms.tanh(myArray)|Hyperbolic tangent: a sigmoidal function. This applies elementwise tanh inplace.|
-|Nd4j.getExecutioner().exec(Nd4j .getOpFactory() .createTransform("tanh", myArray))|equivalent to the above|
+|Nd4j.getExecutioner().exec(Nd4j.getOpFactory() .createTransform("tanh", myArray))|equivalent to the above|
+
+Here are two examples of performing `z = tanh(x)`, in which the original array `x` is unmodified.
+
+     INDArray x = Nd4j.rand(3,2);	//input
+     INDArray z = Nd4j.create(3,2); //output
+     Nd4j.getExecutioner().exec(new Tanh(x,z));
+     Nd4j.getExecutioner().exec(Nd4j.getOpFactory().createTransform("tanh",x,z));
+ 
+The latter two examples above use ND4J's basic convention for all ops, in which we have 3 NDArrays, x, y and z.
+
+     x is input, always required
+     y is (optional) input, only used in some ops (like CosineSimilarity, AddOp etc)
+     z is output
+
+Frequently, `z = x` (this is the default if you use a constructor with only one argument). But there are exceptions for situations like `x = x + y`. Another possibility is `z = x + y`, etc.
+
+## Accumulations  
+
+Most accumulations are accessable directly via the INDArray interface.
+
+For example, to add up all elements of an NDArray: 
+
+          double sum = myArray.sumNumber().doubleValue();
+
+Accum along dimension example - i.e., sum values in each row:
+
+          INDArray tenBy3 = Nd4j.ones(10,3);	//10 rows, 3 columns
+          INDArray sumRows = tenBy3.sum(0);
+          System.out.println(sumRows);	//Output: [ 10.00, 10.00, 10.00]
+
+Accumulations along dimensions generalize, so you can sum along two dimensions of any array with two or more dimensions.
+ 
+## Subset Operations on Arrays
+
+A simple example:
+ 
+          INDArray random = Nd4j.rand(3, 3);
+          System.out.println(random);
+          [[0.93,0.32,0.18]
+          [0.20,0.57,0.60]
+          [0.96,0.65,0.75]]
+ 
+          INDArray lastTwoRows = random.get(NDArrayIndex.interval(1,3),NDArrayIndex.all());
+
+Interval is fromInclusive, toExclusive; note that can equivalently use inclusive version: NDArrayIndex.interval(1,2,true);
+
+          System.out.println(lastTwoRows);
+          [[0.20,0.57,0.60]
+          [0.96,0.65,0.75]]
+ 
+          INDArray twoValues = random.get(NDArrayIndex.point(1),NDArrayIndex.interval(0, 2));
+          System.out.println(twoValues);
+          [ 0.20, 0.57]
+ 
+These are views of the underlying array, **not** copy operations (which provides greater flexibility and doesn't have cost of copying).
+
+          twoValues.addi(5.0);
+          System.out.println(twoValues);
+          [ 5.20, 5.57]
+           
+          System.out.println(random);
+          [[0.93,0.32,0.18]
+          [5.20,5.57,0.60]
+          [0.96,0.65,0.75]]
+ 
+To avoid in-place behaviour, random.get(...).dup() to make a copy.
 
 |**Scalar**||
 |INDArray.add(number)|Returns the result of adding `number` to each entry of `INDArray x`; e.g. myArray.add(2.0)|
