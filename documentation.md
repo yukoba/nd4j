@@ -45,7 +45,7 @@ As you can see, there are three possible argument types with ND4J ops: inputs, o
 |ASin(INDArray x)|Also known as arcsin. Inverse sine, elementwise.|
 |ATan(INDArray x)|Trigonometric inverse tangent, elementwise. The inverse of tan, such that, if `y = tan(x)` then `x = ATan(y)`.|
 |Transforms.tanh(myArray)|Hyperbolic tangent: a sigmoidal function. This applies elementwise tanh inplace.|
-|Nd4j.getExecutioner().exec(Nd4j.getOpFactory().createTransform("tanh", myArray));|equivalent to the above|
+|Nd4j.getExecutioner().exec(Nd4j.getOpFactory() .createTransform("tanh", myArray));|equivalent to the above|
 
 |**Scalar**||
 |INDArray.add(number)|Returns the result of adding `number` to each entry of `INDArray x`; e.g. myArray.add(2.0)|
