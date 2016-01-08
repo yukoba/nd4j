@@ -137,7 +137,7 @@ Another way to get the source code is by clicking on the "[download ZIP](https:/
 
 Maven can be used in conjunction with Git to ensure that ND4J, Canova and Deeplearning4j build correctly. To make sure you have the most recent, working version of these libraries, you can *cd* into their root directories and enter the following command into your prompt:
 
-		mvn clean install -DskipTests -Dmaven.javadoc.skip=true
+		mvn clean install -DskipTests=true -Dmaven.javadoc.skip=true
 
 Running a `mvn clean install` etc. on ND4J, Canova and Deeplearning4j, in that order, is a good way to get the most recent bug fixes and features. 
 
