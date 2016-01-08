@@ -93,9 +93,9 @@ The default backend for CPUs is x86, which relies heavily on Netlib-blas. You ca
 
 ND4J's version is a variable here. It will refer to another line higher in the POM, in the `<properties> ... </properties>` section, specifying the nd4j version and appearing similar to this:
 
-		<nd4j.version>0.4-rc3.7</nd4j.version>
+		<nd4j.version>0.4-rc3.8</nd4j.version>
 
-*The dl4j version is also 0.4-rc3.7, and Canova is 0.0.0.13.*
+*The dl4j version is also 0.4-rc3.8, and Canova is 0.0.0.13.*
 
 The number of the version will vary as we progress with new releases. Make sure you check [the latest version available on Maven Central](https://search.maven.org/#search%7Cga%7C1%7Cnd4j). If you paste in the right dependency and nd4j version, Maven will automatically install the required libraries and you should be able to run ND4J. 
 
@@ -113,33 +113,7 @@ Many of the classes will appear in red, since you haven't imported the right pac
 
 Github is a web-based [Revision Control System](http://en.wikipedia.org/wiki/Revision_control), the [de facto host](http://opensource.com/life/12/11/code-hosting-comparison) for open-source projects. 
 
-If you are not planning to contribute to ND4J as a committer, or don't need the latest alpha version, we recommend downloading the most recent stable release of ND4J from [Maven Central](https://search.maven.org/#search%7Cga%7C1%7Cdeeplearning4j), 0.4-rc1.x. The JAR files can be downloaded directly from [Maven Central](https://search.maven.org/#search%7Cga%7C1%7Cnd4j).
-
-On the other hand, you will primarily use Github if you are building these projects from source, or working with our examples. Our [Github repositories for ND4J and Deeplearning4j are here](https://github.com/deeplearning4j/).
-
-Type the following into your command line to verify you have Git.
-
-		git --version 
-
-Install [git](https://git-scm.herokuapp.com/book/en/v2/Getting-Started-Installing-Git) if you do not have it already. 
-
-Then check the list of applications installed on your computer for GitHub. If you don't, set up a [Github account](https://github.com/join). Download GitHub for [Mac](https://mac.github.com/), [Windows](https://windows.github.com/), etc. Once installed, `git clone` ND4J or DL4J by entering these commands into your console:
-
-    git clone https://github.com/deeplearning4j/nd4j
-    git clone https://github.com/deeplearning4j/Canova
-    git clone https://github.com/deeplearning4j/deeplearning4j
-
-You might also want to clone our examples so you can mess around with ND4J or DL4J's pre-built samples (the version will vary):
-
-    git clone https://github.com/deeplearning4j/dl4j-0.4-examples
-
-Another way to get the source code is by clicking on the "[download ZIP](https://github.com/deeplearning4j/nd4j/archive/master.zip)" button from the [ND4J GitHub page](https://github.com/deeplearning4j/nd4j). Then unzip the file (you can use [7-zip](http://www.7-zip.org/download.html) to do that).
-
-Maven can be used in conjunction with Git to ensure that ND4J, Canova and Deeplearning4j build correctly. To make sure you have the most recent, working version of these libraries, you can *cd* into their root directories and enter the following command into your prompt:
-
-		mvn clean install -DskipTests=true -Dmaven.javadoc.skip=true
-
-Running a `mvn clean install` etc. on ND4J, Canova and Deeplearning4j, in that order, is a good way to get the most recent bug fixes and features. 
+If you are not planning to contribute to ND4J as a committer, or don't need the latest alpha version, we recommend downloading the most recent stable release of ND4J from [Maven Central](https://search.maven.org/#search%7Cga%7C1%7Cdeeplearning4j), 0.4-rc1.x. The JAR files can be downloaded directly from [Maven Central](https://search.maven.org/#search%7Cga%7C1%7Cnd4j). Otherwise, please see [source](http://nd4j.org/source). 
 
 ## <a id="scala">Scala</a>
 
