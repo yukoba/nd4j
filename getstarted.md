@@ -16,6 +16,8 @@ To get started with ND4J and DL4J, please read the following:
 6. [GPUs](#gpu)
 7. [Next Steps](#next-steps)
 
+ND4J is an open-source project targetting professional Java developers familiar with production deployments, an IDE like IntelliJ and an automated build tool such as Maven. Our tool will serve you best if you have those tools under your belt already.
+
 ## <a id="prereq"> Prerequisites </a>
 
 System configuration requirements:
