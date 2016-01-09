@@ -1,6 +1,6 @@
 ---
 layout: page
-title: "Get started with ND4J in Minutes"
+title: "Full ND4J Installation"
 description: "Install a Java development environment ready for N-Dimensional Array Algebra with ND4J"
 ---
 {% include JB/setup %}
