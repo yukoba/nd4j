@@ -111,7 +111,7 @@ Many of the classes will appear in red, since you haven't imported the right pac
 
 (See our [intro](http://nd4j.org/introduction.html) for a couple beginning operations. ND4J in IntelliJ has **autocomplete**, so starting a new line with any letter will show you a list of all ND4J commands including that letter.) 
 
-## <a id="github">GitHub</a>
+## <a id="github">GitHub & Source</a>
 
 Github is a web-based [Revision Control System](http://en.wikipedia.org/wiki/Revision_control), the [de facto host](http://opensource.com/life/12/11/code-hosting-comparison) for open-source projects. 
 
@@ -199,17 +199,17 @@ For OpenBlas on **Ubuntu** (15.10), please see [these instructions](http://paste
 		sudo ln -s libopenblas.so libblas.so.3 
 		sudo ln -s libopenblas.so liblapack.so.3
 
-For OpenBlas on **Windows**, download this [file](https://www.dropbox.com/s/6p8yn3fcf230rxy/ND4J_Win64_OpenBLAS-v0.2.14.zip?dl=1). Extract to somewhere such as `C:/BLAS`. Add that directory to your system's `PATH` environment variable.
+For OpenBlas on **Windows**, download [this file](https://www.dropbox.com/s/6p8yn3fcf230rxy/ND4J_Win64_OpenBLAS-v0.2.14.zip?dl=1). Extract it to a location such as `C:/BLAS`. Finally, add that directory to your system's `PATH` environment variable.
 
 ### <a id="windows"> Windows </a>
 
 Windows users may need to install [Visual Studio Community 2013 or later](https://www.visualstudio.com/en-us/products/visual-studio-community-vs.aspx), which is free. You will need to add its path to your PATH environment variable manually. The path will look something like this: `C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin`
 
-Type `cl` into your CMD. You may get a message informing you that certain .dll files are missing. Make sure that your VS/IDE folder is in the path (see above). If your CMD returns usage info for `cl`, then it's in the right place. 
+Type `cl` into your CMD. You may get a message informing you that certain `.dll` files are missing. Make sure that your VS/IDE folder is in the path (see above). If your CMD returns usage info for `cl`, then it's in the right place. 
 
 If you use Visual Studio: 
 
-* Set up `PATH` environment variable to point to `\bin\` (for cl.exe etc)
+* Set up `PATH` environment variable to point to `\bin\` (for `cl.exe` etc)
 * Also try running `vcvars32.bat` (also in bin) to set up environment before doing `mvn clean install` on ND4J (it may save you from copying headers around)
 * `vcvars32` may be temporary, so you might need to run it every time you want to do ND4J `mvn install`.
 * After installing Visual Studio 2015 and setting the PATH variable, you need to run the `vcvars32.bat` to set up the environment variables (INCLUDE, LIB, LIBPATH) properly so that you don't have to copy header files. But if you run the bat file from Explorer, since the settings are temporary, they're not properly set. So run `vcvars32.bat` from the same CMD window as your `mvn install`, and all the environment variables will be set correctly.
@@ -284,10 +284,6 @@ Once you're comfortable with the examples, you might want to change the dependen
 
 ## Useful Links
 
-* [ND4J Github repository](https://github.com/deeplearning4j/nd4j)
-* [ND4S Github repository](https://github.com/deeplearning4j/nd4s)
 * [ND4J Maven Repository](http://mvnrepository.com/artifact/org.nd4j)
 * [DeepLearning4j.org](http://deeplearning4j.org/)
-* [DeepLearning4j Github repository](https://github.com/deeplearning4j/deeplearning4j)
-<!-- [DeepLearning4j Maven Repository](http://mvnrepository.com/artifact/org.deeplearning4j) -->
-
+* [DeepLearning4j Maven Repository](http://mvnrepository.com/artifact/org.deeplearning4j)
