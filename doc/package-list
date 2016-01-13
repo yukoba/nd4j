@@ -146,6 +146,8 @@ org.nd4j.linalg.indexing
 org.nd4j.linalg.indexing.conditions
 org.nd4j.linalg.indexing.conditions.test
 org.nd4j.linalg.indexing.functions
+org.nd4j.linalg.inverse
+org.nd4j.linalg.io
 org.nd4j.linalg.jcublas
 org.nd4j.linalg.jcublas.blas
 org.nd4j.linalg.jcublas.buffer
