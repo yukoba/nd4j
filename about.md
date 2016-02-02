@@ -19,6 +19,12 @@ ND4J is distributed under an Apache 2.0 License.
 
 We hire from our open-source contributors. The best way to apply for a job building the future of deep learning with us is to join our community on [Gitter](https://gitter.im/deeplearning4j/deeplearning4j), fork us on [Github](https://github.com/deeplearning4j), find a problem to work on with us, and we'll can see if there's a fit! Working together is more informative than interviews, and with a little luck it's be more fun.
 
+## Citing ND4J
+
+If you plan to publish an academic paper and wish to cite ND4J, please use this format:
+
+*ND4J Development Team (<CURRENT YEAR>). ND4J: N-dimensional arrays and scientific computing for the JVM, Apache Software Foundation License 2.0.* [http://nd4j.org](http://nd4j.org)
+
 <!-- Begin MailChimp Signup Form -->
 <link href="//cdn-images.mailchimp.com/embedcode/slim-081711.css" rel="stylesheet" type="text/css">
 <style type="text/css">
