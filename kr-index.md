@@ -13,7 +13,7 @@ ND4J는 JVM를 위한 과학 컴퓨팅 라이브러리 입니다. 리서치 도�
 * GPU를 포함한 멀티플랫폼 기능
 * 선형 대수학 및 신호 처리 기능
 
-유저빌리티 (usability) 차이가 [NumPy](http://www.numpy.org) 또는 [Matlab](http://www.mathworks.com)과 같은 데이터 분석에서 가장 강력한 도구들로부터 Java, [Scala](http://nd4j.org/scala.html) 및 Clojure 프로그래머들을 분류해 왔습니다. 한 때 Python 커뮤니티에 제한되었던 직관적인 과학 컴퓨팅 도구들은  이제 ND4J로 인해 오픈소스로, 배포되고(distributed), JVM 상에서 GPU와 통합 되었습니다.
+유저빌리티 (usability) 차이가 [NumPy](http://www.numpy.org) 또는 [Matlab](http://www.mathworks.com)과 같은 데이터 분석에서 가장 강력한 도구들로부터 Java, [Scala](http://nd4j.org/scala.html) 및 [Clojure](https://github.com/whilo/nd4clj) 프로그래머들을 분류해 왔습니다. 한 때 Python 커뮤니티에 제한되었던 직관적인 과학 컴퓨팅 도구들은  이제 ND4J로 인해 오픈소스로, 배포되고(distributed), JVM 상에서 GPU와 통합 되었습니다.
 
 [SLF4J](http://www.slf4j.org)를 생각해 보십시오. 이제 [Theano](http://deeplearning.net/software/theano/)가 내장된 NumPy를 상상하십시오. 그것이 ND4J입니다. 이것은 생산 환경에 있는 엔지니어들에게 Java와 Scala 에코시스템에서 그들의 알고리즘을 이동하고 다른 라이브러리들과 인터페이스 하는 쉬운 방법을 제공합니다.
 
