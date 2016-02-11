@@ -5,7 +5,7 @@ description: ""
 ---
 {% include JB/setup %}
 
-There are several other basic matrix manipulations to highlight as you learn ND4J's workings. ([Example code](https://github.com/SkymindIO/nd4j/blob/master/nd4j-examples/src/main/java/org/nd4j/examples/ReshapeOperationExample.java).)
+There are several other basic matrix manipulations to highlight as you learn ND4J's workings. ([Example code](https://github.com/SkymindIO/nd4j-examples/blob/master/src/main/java/org/nd4j/examples/ReshapeOperationExample.java).)
 
 ### Transpose
 
