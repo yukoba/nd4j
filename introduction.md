@@ -4,7 +4,7 @@ title: "Elementwise Operations"
 description: ""
 ---
 
-To see the complete nd4j-api reference, consult the [Javadocs](../apidocs).
+To see the complete nd4j-api reference, consult the [Javadocs](../doc).
 
 {% include JB/setup %}
 
