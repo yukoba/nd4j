@@ -1,91 +1,91 @@
 ---
-layout: page
-title: "Full ND4J Installation"
-description: "Install a Java development environment ready for N-Dimensional Array Algebra with ND4J"
+レイアウト: ページ
+タイトル:"ND4Jのフルインストール"
+詳細:"ND4Jでn次元の配列代数ができるJava開発環境をインストールしましょう。"
 ---
 {% include JB/setup %}
 
-This is a multistep install. We highly recommend you join our [Gitter Live Chat](https://gitter.im/deeplearning4j/deeplearning4j) if you have questions or feedback, so we can walk you through it. If you're feeling anti-social or brashly independent, you're still welcome to lurk and learn. 
+このインストールは複数の段階の手順に従って行います。質問やコメント等は、是非、[Gitter Live Chat](https://gitter.im/deeplearning4j/deeplearning4j)でお聞かせください。弊社のスタッフがお手伝いいたします。恥ずかしがる必要は全くありません。いつでも気軽にご連絡ください。 
 
-To get started with ND4J and DL4J, please read the following:
+ND4J、DL4Jを開始するには、以下をお読みください。
 
-1. [Prerequisites](#prereq) 
-3. [Integrated Development Environment](#ide) 
-4. [New ND4J Project](#nd4j)
-5. [Dev Tools](#devtools)
+1. [必要なもの](#prereq) 
+3. [統合開発環境](#ide) 
+4. [新しいND4Jのプロジェクト](#nd4j)
+5. [開発ツール](#devtools)
 6. [GPUs](#gpu)
-7. [Next Steps](#next-steps)
+7. [次のステップ](#next-steps)
 
-ND4J is an open-source project targetting professional Java developers familiar with production deployments, an IDE like IntelliJ and an automated build tool such as Maven. Our tool will serve you best if you have those tools under your belt already.
+Deeplearning4jは、プロのJava開発者向けのオープンソースプロジェクトで、製品展開、IntellijなどのIDE、Mavenのような自動ビルドツールなどに精通した方々を対象としています。既にこれらのツールをお持ちの方には、弊社のツールは、非常に役に立ちます。
 
-## <a id="prereq"> Prerequisites </a>
+## <a id="prereq"> 必要なもの </a>
 
-System configuration requirements:
+システム設定の必要条件:
 
-* [Java 7 or above](#java) 
-* [Maven 3.2.5 or above](#maven)
+* [Java 7、またはそれ以降のバージョン](#java) 
+* [Maven 3.2.5、またはそれ以降のバージョン](#maven)
 
-Optional:
+オプショナル:
 
-* [Cuda 7 for GPUs](http://docs.nvidia.com/cuda/index.html#axzz3dlfIdQjP)
+* [GPU用のCuda 7](http://docs.nvidia.com/cuda/index.html#axzz3dlfIdQjP)
 * [Scala 2.10.x](#scala)
 * [Windows](#windows)
 * [Github](#github) 
 
-## <a id="java">Java 7 or above</a>
+## <a id="java">Java 7、またはそれ以降のバージョン</a>
 
-Java is the main interface and networking language of ND4J, because it's used for everything from distributed cloud-based systems with thousands of nodes, to low-memory IoT devices. It's a "write once, run anywhere" language.
+Javaは、主要なインターフェース、そしてND4Jのネットワーキング言語です。何千ものノードを使ったクラウドベースの配信システムからローメモリーのモノのインターネット（Iot：Internet of Things）に至るまで様々なものに使用されているからです。「いったん作成すれば、あちこちで実行できる」言語なのです。
 
-To test which version of Java you have (and whether you have it at all), type the following into your command line:
+使用しているJavaのバージョン名を調べるには（またはJavaがインストールされているかを調べるには）、以下のコマンドを入力してください。
 
 		java -version
 
-If you don’t have Java 7 installed on your machine, download the [Java Development Kit (JDK) here](http://www.oracle.com/technetwork/java/javase/downloads/jdk7-downloads-1880260.html). For newer Macs, you’ll want the file on the first line to mention Mac OS X (the number after jdk-7u increments with each update). It will look something like this:
-		Mac OS X x64 185.94 MB -  jdk-7u79-macosx-x75.dmg
+Java 7がインストールされていない場合は、Java開発キットを[こちら](http://www.oracle.com/technetwork/java/javase/downloads/jdk7-downloads-1880260.html)からダウンロードしてください。最近のMacの場合、最初のラインのファイルに、Mac OS X （jdk-7uの後の数字はアップデートを行うごとに増えます）の情報を入れます。
+		「Mac OS X x64 185.94 MB -  jdk-7u79-macosx-x75.dmg」のようになります。
 
 ## <a id="maven">Maven</a>
 
-Maven is an automated build tool for Java projects (among its other [uses](http://maven.apache.org/what-is-maven.html)). It locates the latest version of ND4J and DL4J project libraries (.jar files) and downloads them automatically. You can find those repositories on [Maven Central](https://search.maven.org/#search%7Cga%7C1%7Cnd4j).
+MavenはJavaのプロジェクトの自動ビルドツール（Mavenのその他の用途は[こちら](http://maven.apache.org/what-is-maven.html)）です。最新バージョンのND4J、そしてDL4Jのプロジェクトライブラリ（.jar files）を見つけ、自動でダウンロードします。これらのリポジトリは、[Maven Central](https://search.maven.org/#search%7Cga%7C1%7Cnd4j)にあります。
 
-We've written a slightly more in-depth [introduction to Maven for non-Java programmers](http://deeplearning4j.org/maven.html) here. Maven lets you to install both ND4J and Deeplearning4j projects easily. It works well with Integrated Development Environments (IDEs) such as IntelliJ.
+Javaプログラマーでない方々のためのさらに詳細にわたるMavenガイドも準備しましたので、[こちら](http://deeplearning4j.org/maven.html)をお読みください。 Mavenだと、ND4JとDeeplearning4jのプロジェクトの両方が簡単にインストールできます。IntelliJなどのような統合開発環境（IDE）を使うのには最適です。
 
-To check if Maven is installed in your machine, and which version you have, enter the following into the command line:
+お手持ちの機器にMavenがインストールされているか、またはどのバージョンのMavenがインストールされているかを調べるには以下のコマンドラインを入力してください。
 
 		mvn --version
 
-If you do not have the most recent version of Maven, please update it. (As of this writing, it was `3.3.x`.) Instructions to install Maven are [here](https://maven.apache.org/download.cgi). Download the compressed file containing Maven's latest stable version. 
+最新のMavenがインストールされていない場合は、最新のものにアップデートしてください。（これが書かれた現時点では`3.3.x`が最新です。）Mavenのインストールの方法については、[こちら](https://maven.apache.org/download.cgi)をお読みください。Mavenの最新で安定したバージョンの入った圧縮ファイルをダウンロードしてください。 
 
 ![Alt text](../img/maven_downloads.png) 
 
-Lower on the same page, follow the instructions specific to your operating system; e.g. *"Unix-based Operating Systems (Linux, Solaris and Mac OS X)."* They look like this:
+同じページの下部で、お使いのオペレーティングシステムのガイドに従ってください。例）*「Unixベースオペレーティングシステム（Linux、 Solaris、Mac OS X）」*　以下のようになります。
 
 ![Alt text](../img/maven_OS_instructions.png) 
 
-## <a id="ide">Integrated Development Environment: IntelliJ</a>
+## <a id="ide">統合開発環境:IntelliJ</a>
 
-An Integrated Development Environment ([IDE](http://encyclopedia.thefreedictionary.com/integrated+development+environment)) will allow you to work with our API and build your nets with a few clicks. We suggest using **IntelliJ**, which works with your installed version of Java and communicates with [Maven](#maven) to handle the dependencies. 
+統合開発環境([IDE](http://encyclopedia.thefreedictionary.com/integrated+development+environment))を使用すると、APIを使用し、クリックするだけで自分のネットワークが作成できます。統合開発環境には、**IntelliJ**を使うことをお勧めします。IntelliJだと、インストールしたJavaのバージョンで使うことができ、[Maven](#maven)を使って依存関係を扱うことができるからです。 
 
-The free community edition of [IntelliJ](https://www.jetbrains.com/idea/download/) has installation instructions. While we prefer that, [Eclipse](http://books.sonatype.com/m2eclipse-book/reference/creating-sect-importing-projects.html) and [Netbeans](http://wiki.netbeans.org/MavenBestPractices) are two other popular IDEs. Here is a guide to installing the [ND4J/DL4J package on Eclipse](https://depiesml.wordpress.com/2015/08/26/dl4j-gettingstarted/).
+IntelliJのフリーコミュニティーサイトでは、[こちら](https://www.jetbrains.com/idea/download/)でインストレーションのガイドを提供しています。弊社では、IntelliiJの方をお勧めしていますが、他にも[Eclipse](http://books.sonatype.com/m2eclipse-book/reference/creating-sect-importing-projects.html)や[Netbeans](http://wiki.netbeans.org/MavenBestPractices)が人気のある統合開発環境です。EclipseでND4J/DL4Jパッケージをインストールするには、[こちら](https://depiesml.wordpress.com/2015/08/26/dl4j-gettingstarted/)のガイドをお読みください。
 
-## <a id="nd4j">Starting a New ND4J Project</a>
+## <a id="nd4j">新しいND4Jプロジェクトをはじめましょう</a>
 
-To create a new ND4J project within IntelliJ, either click on "Open Project" on IntelliJ's opening screen, or click on the  File/Open tab, and choose "nd4j." If you have cloned the source files from Github, the directory should be available from IntelliJ.
+IntelliJに新規のND4Jプロジェクトを作成するには、IntelliJの開始画面で「Open Project（プロジェクトを開く）」をクリックするか、File（ファイル）/Open（開く）タブをクリックし、「nd4j」を選びます。Githubからソースファイルをクローンした場合、ディレクトリは、IntelliJからアクセス可能です。
 
-To create a new ND4J project within IntelliJ, just put the right dependencies in your project's POM.xml file. With those in place, Maven will be able to build ND4J for you. Pasting the right dependencies into your POM amounts to installing ND4J -- no other install is necessary.
+IntelliJに新規のND4Jプロジェクトを作成するには、正しいdependencyを、該当するプロジェクトのPOM.xmlファイルにペーストしてください。これらすべてが正しく実行されれば、Mavenが自動でND4Jを構築します。正しい依存関係をPOMファイルにペーストすることにより、ND4Jがインストールできます。他にインストールしなければならないものはありません。
 
-Select `maven-archetype-quickstart`. 
+`maven-archetype-quickstart`を選びます。 
 
 ![Alt text](../img/new_maven_project.png) 
 
-The images below will walk you through the windows of the IntelliJ New Project Wizard using Maven. First, name your group and artifact as you please.
+こちらは、Mavenを使ったIntelliJの新規プロジェクト作成ウイザード画面です。まずは自分のグループ名とアーティファクト名を付けてください。
 
 ![Alt text](../img/maven2.png) 
 
-Click through the following screen with "Next", and on the screen after that, name your project ("ND4J-test", for example) and hit finish. Now go into your POM.xml file within the root of the new ND4J project in IntelliJ. 
+次の画面の「Next（次へ）」をクリックし、その次の画面で、自分のプロジェクト名（例えば「ND4J-test」）を入れ、「Finish（終了）」をクリックします。次に、IntelliJの新規NND4JプロジェクトのルートにあるPOM.xmlにアクセスします。 
 
-Update the POM file with the dependences you'll need. These will vary depending on whether you're running on CPUs or GPUs. 
+必要な依存関係を挿入してPOMファイルを更新させます。必要な依存関係は、CPUやGPUによって異なります。 
 
-The default backend for CPUs is x86, which relies heavily on Netlib-blas. You can paste that into  the `<dependencies> ... </dependencies>` section of your POM like this:
+CPUのデフォルト設定のバックエンドは、x86ですが、これはNetlib-blasに強く依存しています。YPOMの`<dependencies> ... </dependencies>` とあるところに、以下のようにペーストします。
 
 	 <dependency>
 	   <groupId>org.nd4j</groupId>
@@ -93,59 +93,59 @@ The default backend for CPUs is x86, which relies heavily on Netlib-blas. You ca
 	   <version>${nd4j.version}</version>
 	 </dependency>
 
-ND4J's version is a variable here. It will refer to another line higher in the POM, in the `<properties> ... </properties>` section, specifying the nd4j version and appearing similar to this:
+ND4Jのバージョンは、ここでは、変数となります。IPOMの少し上にある別のライン`<properties> ... </properties>`を指します。nd4jのバージョンを指定したもので、以下のようになります。
 
 		<nd4j.version>0.4-rc3.8</nd4j.version>
 
-*The dl4j version is also 0.4-rc3.8, and Canova is 0.0.0.13.*
+*dl4jのバージョンも0.4-rc3.8で、Canovaのバージョンは0.0.0.13です。*
 
-The number of the version will vary as we progress with new releases. Make sure you check [the latest version available on Maven Central](https://search.maven.org/#search%7Cga%7C1%7Cnd4j). If you paste in the right dependency and nd4j version, Maven will automatically install the required libraries and you should be able to run ND4J. 
+バージョン番号は、新しいリリースが出るにつれて変わります。Maven Centralにある最新のバージョンを忘れずに[こちら](https://search.maven.org/#search%7Cga%7C1%7Cnd4j)でチェックするようにしてください。正しいdependencyとnd4jバージョンをペーストすれば、Mavenが自動的に必要なライブラリをインストールし、ND4Jを実行させることができます。 
 
-The backend does not have to be x86; it can be switched to Jcublas for GPUs. That's explained on our [dependencies](../dependencies.html) page, alongside more advanced configuration changes. The same page also explains how to check on the [latest version](http://search.maven.org/#search%7Cga%7C1%7Cnd4j) of the libraries.
+バックエンドがx86である必要はありません。GPUとの関係で、Jcublasに切り替えても大丈夫です。このことは、弊社の[依存関係](../dependencies.html)のページで、より上級レベルの設定変更についてとともにご説明しています。また、このページでは、ライブラリの[最新バージョン](http://search.maven.org/#search%7Cga%7C1%7Cnd4j)について説明しています。
 
-You can now create a new Java file within IntelliJ, and start using ND4J's API for distributed linear algebra. 
+もうこれで、IntelliJで新規のJavaファイルを作成し、ND4JのAPIを線形代数の計算に使い始めることができます。 
 
-Open App.java file that is created with every new Intellij project, and start writing code between the curly brackets you see after **public static void main( String[] args )**. 
+新規のIntellijプロジェクトごとに、App.javaファイルを開き、**public static void main( String[] args )**の後に表示される波括弧内にコードを入れてください。 
 
-Many of the classes will appear in red, since you haven't imported the right packages, but IntelliJ will add those packages automatically to the top of your file. Lookup the appropriate hot keys based on your OS to help automatically load the packages. 
+正しいパッケージがインポートされなかったため、クラスの多くは赤色で表示されます。しかし、IntelliJは、これらのパッケージを自動的にファイルのトップに追加します。パッケージを自動ロードさせるには、お使いのOSに基づいて、適切なホットキーを調べてください。 
 
-(See our [intro](http://nd4j.org/introduction.html) for a couple beginning operations. ND4J in IntelliJ has **autocomplete**, so starting a new line with any letter will show you a list of all ND4J commands including that letter.) 
+（最初の手順については、弊社の[イントロダクション](http://nd4j.org/introduction.html)をお読みください。IntelliJ のND4Jには、**オートコンプリート**機能があるため、どの文字のコマンドを入れても、その文字が含まれるすべてのND4Jコマンドのリストを表示させてくれます。） 
 
 ## <a id="github">GitHub & Source</a>
 
-Github is a web-based [Revision Control System](http://en.wikipedia.org/wiki/Revision_control), the [de facto host](http://opensource.com/life/12/11/code-hosting-comparison) for open-source projects. 
+Githubは、ウェブベースの[Revision Control System](http://en.wikipedia.org/wiki/Revision_control)で、オープンソースプロジェクトの[事実上のホスト](http://opensource.com/life/12/11/code-hosting-comparison)です。 
 
-If you are not planning to contribute to ND4J as a committer, or don't need the latest alpha version, we recommend downloading the most recent stable release of ND4J from [Maven Central](https://search.maven.org/#search%7Cga%7C1%7Cdeeplearning4j), 0.4-rc1.x. The JAR files can be downloaded directly from [Maven Central](https://search.maven.org/#search%7Cga%7C1%7Cnd4j). Otherwise, please see [source](http://nd4j.org/source). 
+ND4Jのコミッターになるつもりはない方、または最新のアルファバージョンが必要ない方は、[Maven Central](https://search.maven.org/#search%7Cga%7C1%7Cdeeplearning4j)から最も安定したバージョンである0.4-rc1.xをダウンロードすることをお勧めいたします。JARファイルは、[Maven Central](https://search.maven.org/#search%7Cga%7C1%7Cnd4j)から直接ダウンロードすることができます。あるいは、弊社の[ソース](http://nd4j.org/source)をご参照ください。 
 
 ## <a id="scala">Scala</a>
 
-While Scala doesn't need to be installed with work with ND4J, we do have a [Scala API](http://nd4j.org/scala.html) under a repository known as [ND4S](https://github.com/deeplearning4j/nd4s). 
+ND4Jと連動させるためにScalaをインストールする必要はありません。[ND4S](https://github.com/deeplearning4j/nd4s)という名のリポジトリに[Scala API](http://nd4j.org/scala.html)があるからです。 
 
-Scala is a multiparadigm language with a strong static type system that runs on the JVM. As such, Scala has functional programming features similar to Scheme and Haskell as well as OOP features like Java, and its structure keeps programs concise. You can use Java libraries with Scala. There are neural net examples you can run written in Scala, and it's required for the Spark implementation.
+Scalaは、マルチパラダイムの言語です。Java仮想マシンで実行できる強い静的型システムです。このようにして、Scalaには、SchemeやHaskellに似た機能的プログラム機能やJavaのようなオブジェクト指向プログラミング機能があり、プログラムが簡易になる構造になっています。ScalaをJavaライブラリと連動させて使用することができます。Scalaに書かれたニューラルネットワークのexampleが複数あり、Sparkの実装に必要になっています。
 
-To test which version of Scala you have (and whether you have it at all), type the following into your command line:
+お手持ちの機器にScalaがインストールされているか、またはどのバージョンのScalaがインストールされているかを調べるには以下のコマンドラインを入力してください。
 
 		scala -version
 
-To install Scala, visit the [Scala download page](http://www.scala-lang.org/download/2.10.4.html). ND4J is compatible with Scala 2.10.4, and Scala is not backwards compatible. [Homebrew](http://brew.sh/) will help Mac users install Scala. `brew install scala` will get you the latest version, which is `2.11.x`. To install Scala 2.10.x with Homebrew, please see [this page](https://github.com/ofishel/hb-scala-2.10.4). 
+Scalaをインストールするには、[Scalaダウンロードページ](http://www.scala-lang.org/download/2.10.4.html)にアクセスしてください。ND4Jは、Scala 2.10.4との互換性があり、Scalaには後方互換性がありません。[Homebrew](http://brew.sh/)では、Macのユーザーのために、Scalaをインストールするためのガイドを提供しています。コマンドの`brew install scala`を使用すると、最新のバージョン`2.11.x`が入手できます。Homebrewを使ってScala 2.10.xをインストールするには、[こちら](https://github.com/ofishel/hb-scala-2.10.4)をお読みください。 
 
-You can also work with Scala via an IntelliJ plugin. (To add a plugin to IntelliJ, go to the tab `IntelliJ IDEA`/`Preferences`/`IDE Setting`/`Plugins`/ and search for Scala.)
+IntelliJのプラグインによってScalaを使用することができます。（IntelliJにプラグインを追加するには、タブの`IntelliJ IDEA`/`Preferences`/`IDE Setting`/`Plugins`/へ行き、Scalaを探します。）
 
 ## <a id="canova">Canova</a>
 
-[Canova](https://github.com/deeplearning4j/Canova) is a general vectorization lib we built for machine-learning tools. It vectorizes raw data into usable vector formats like *svmLight*, *libsvm* and *ARFF*, which our neural nets can work with. ND4J does not require Canova, but it is useful for loading data into Deeplearning4j neural nets. 
+[Canova](https://github.com/deeplearning4j/Canova)は、機械学習ツールとして弊社が構築した一般的なベクトル化ライブラリです。生のデータを使用可能なベクターフォーマットである*svmLight*、 *libsvm*、*ARFF*などにベクトル化するため、弊社のニューラルネットワークに使用できます。Canovaは、ND4Jに必要ではありませんが、Deeplearning4jニューラルネットワークにデータをロードするのに役立ちます。 
 
-### Installing Canova
+### Canovaをインストールしましょう
 
-Take the same steps using Maven to install [Canova](https://github.com/deeplearning4j/Canova) that you followed for ND4J. Make sure you have the most recent version of [Maven](#maven). We are currently using version 0.0.0.5-SNAPSHOT.
+Mavenで、ND4Jに使用したものと同じ手順にしたがって[Canova](https://github.com/deeplearning4j/Canova)をインストールしてください。[Maven](#maven)は、必ず最新バージョンを入手するようにしてください。弊社が現在使用しているバージョンは、0.0.0.5-SNAPSHOTです。
 
-### Installing Deeplearning4j
+### Deeplearning4jをインストールしましょう
 
-Deeplearning4j versions should be specified in the same way you did for ND4J, with the version hard-coded in the properties section of the POM, and the version variable cited in each dependency. 
+ND4Jに使ったものと同じ方法で、POMのプロパティセクションにハード・コード化されたバージョンを使い、バージョン変数を各依存性に入れて、Deeplearning4jのバージョンを指定する必要があります。 
 
-The DL4J dependencies you add to the POM will vary with the nature of your project. 
+POMに追加するDL4Jの依存性は、プロジェクトの性質によって異なります。 
 
-In addition to the core dependency, given below, you may also want to install `deeplearning4j-cli` for the command-line interface, `deeplearning4j-scaleout` for running parallel on Hadoop or Spark, and others as needed. <!--A full list can be seen by searching for *deeplearning4j* on Maven Central.-->
+以下のコア依存性に加えて、コマンドラインインターフェイスに`deeplearning4j-cli`をインストールしたり、Hadoopや Sparkと並行させて使用するために、`deeplearning4j-scaleout`をインストールしたい方もおられるかもしれません。<!--A full list can be seen by searching for *deeplearning4j* on Maven Central.-->
 
 		   <dependency>
 		     <groupId>org.deeplearning4j</groupId>
@@ -153,44 +153,44 @@ In addition to the core dependency, given below, you may also want to install `d
 		     <version>${deeplearning4j.version}</version>
 		   </dependency>
 
-More information on installing Deeplearning4j is available on its [Getting Started page](http://deeplearning4j.org/gettingstarted.html).
+Deeplearning4jをインストールするための詳細情報は、[DL4Jをはじめましょう](http://deeplearning4j.org/gettingstarted.html)をお読みください。
 
-## <a id="devtools">Dev Tools for C on OSX, Windows & Linux</a>
+## <a id="devtools">OSX, Windows & Linux用のC言語開発ツール</a>
 
-To compile certain ND4J dependencies on Windows or a Linux OS, you will need to install some dev tools for C, including gcc. To check if you have *gcc*, enter `gcc -v` on your terminal or command prompt.
+あるND4J依存関係をWindows、Linux OSにコンパイルするには、gccなどC言語の開発ツールが必要です。お手持ちの機器に*gcc*がインストールされているかを調べるには、ターミナルやコマンドプロンプトにコマンドの`gcc -v`を実行してください。
 
 ###OSX
 
-Some versions of the [Apple developer tool Xcode](https://developer.apple.com/xcode/downloads/) will install *gcc* for you. If you don't already have gcc, enter `brew install gcc` into your command prompt.
+[アップル開発ツールXcode](https://developer.apple.com/xcode/downloads/)の一部のバージョンは、*gcc*をインストールしてくれます。gccがまだインストールされていない場合は、コマンドプロンプトに`brew install gcc`と入力してください。
 
 ### <a id="open"> OpenBlas </a>
 
-To make sure the native libs on the x86 backend work, you need `/opt/OpenBLAS/lib` on the system path. After that, enter these commands in the prompt
+x86のバックエンドにあるネイティブライブラリが使用できるかを調べるには、システムパスに`/opt/OpenBLAS/lib`が必要になります。その後、以下のコマンドをプロンプトに入れてください。
 
 			sudo cp libopenblas.so liblapack.so.3
 			sudo cp libopenblas.so libblas.so.3
 
-We added this so that [Spark](http://deeplearning4j.org/spark) would work with OpenBlas.
+これを追加し、[Spark](http://deeplearning4j.org/spark)がOpenBlasで使用できるようにしました。
 
-If OpenBlas is not working correctly, follow these steps:
+OpenBlasが正常に動作しない場合は、以下の手順に従ってください。
 
-* Remove Openblas if you installed it.
-* Run `sudo apt-get remove libopenblas-base`
-* Download the development version of OpenBLAS
+* Openblasがインストールされていれば、これを削除します。
+* コマンドの`sudo apt-get remove libopenblas-base`を実行します。
+* OpenBLASの開発版をダウンロードします。
 * `git clone git://github.com/xianyi/OpenBLAS`
 * `cd OpenBLAS`
 * `make FC=gfortran`
 * `sudo make PREFIX=/usr/local/ install`
-* With **Linux**, double check if the symlinks for `libblas.so.3` and `liblapack.so.3` are present anywhere in your `LD_LIBRARY_PATH`. If they aren't, add the links to `/usr/lib`. A symlink is a "symbolic link." You can set it up like this (the -s makes the link symbolic):
+* **Linux**の場合、シンボリックリンクの`libblas.so.3`や `liblapack.so.3`が`LD_LIBRARY_PATH`に存在しないか再度確認します。もし、存在しなければ、`/usr/lib`にリンクを追加してください。以下のようにして設定できます。（-sにより、リンクがシンボリックになります。）
 
 		ln -s TARGET LINK_NAME
-		// interpretation: ln -s "to-here" <- "from-here"
+		// 解釈: ln -s "to-here" <- "from-here"
 
-* The "from-here" is the symbolic link that does not exist yet, and which you are creating. Here's StackOverflow on [how to create a symlink](https://stackoverflow.com/questions/1951742/how-to-symlink-a-file-in-linux). And here's the [Linux man page](http://linux.die.net/man/1/ln).
-* As a last step, restart your IDE. 
-* For complete instructions on how to get native Blas running with Centos 6, [see this page](https://gist.github.com/jarutis/912e2a4693accee42a94).
+* "from-here"は、まだ存在しないシンボリックリンクを作成したものです。StackOverflowのシンボリックリンク作成方法ガイドがありますので、[こちら](https://stackoverflow.com/questions/1951742/how-to-symlink-a-file-in-linux)をお読みください。「Linux man page」は、[こちら](http://linux.die.net/man/1/ln)をお読みください。
+* 最後に統合開発環境を再起動します。 
+* ネイティブのBlasをCentos 6で作動させるための詳細は、[こちらのCentos 6](https://gist.github.com/jarutis/912e2a4693accee42a94)をお読みください。
 
-For OpenBlas on **Ubuntu** (15.10), please see [these instructions](http://pastebin.com/F0Rv2uEk). Some additional gymnastics may be necessary to get OpenBlas running:
+ **Ubuntu**（15.10）のOpenBlasについてのガイドは、[こちら](http://pastebin.com/F0Rv2uEk)をお読みください。OpenBlasを動作させるには、その他、以下を実行する必要があるかもしれません。 
 
 		cd OpenBLAS
 		make FC=gfortran
@@ -199,90 +199,90 @@ For OpenBlas on **Ubuntu** (15.10), please see [these instructions](http://paste
 		sudo ln -s libopenblas.so libblas.so.3 
 		sudo ln -s libopenblas.so liblapack.so.3
 
-For OpenBlas on **Windows**, download [this file](https://www.dropbox.com/s/6p8yn3fcf230rxy/ND4J_Win64_OpenBLAS-v0.2.14.zip?dl=1). Extract it to a location such as `C:/BLAS`. Finally, add that directory to your system's `PATH` environment variable.
+**Windows**にOpenBlasをインストールするには、[こちらのファイル](https://www.dropbox.com/s/6p8yn3fcf230rxy/ND4J_Win64_OpenBLAS-v0.2.14.zip?dl=1)をダウンロードしてください。ダウンロードしたファイルを`C:/BLAS`などの場所で解凍してください。最後に、そのディレクトリを、お使いのシステムの環境変数`PATH`に追加してください。
 
 ### <a id="windows"> Windows </a>
 
-Windows users may need to install [Visual Studio Community 2013 or later](https://www.visualstudio.com/en-us/products/visual-studio-community-vs.aspx), which is free. You will need to add its path to your PATH environment variable manually. The path will look something like this: `C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin`
+Windowsをご使用の場合、[Visual Studio Community 2013、またはそれ以降](https://www.visualstudio.com/en-us/products/visual-studio-community-vs.aspx)（無料）をインストールする必要があります。そのパスをPATH環境変数に手動で追加する必要があります。パスは以下のようになります。`C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin`
 
-Type `cl` into your CMD. You may get a message informing you that certain `.dll` files are missing. Make sure that your VS/IDE folder is in the path (see above). If your CMD returns usage info for `cl`, then it's in the right place. 
+コマンドプロンプトに`cl`と入力してください。`.dll`ファイルが足りないというメッセージが表示されることがあります。VS/IDEフォルダーがパスに入っていることを確認してください（上記をご参照ください）。If your CMD returns usage info for `cl`, then it's in the right place. 
 
-If you use Visual Studio: 
+Visual Studioを使用する場合は、 
 
-* Set up `PATH` environment variable to point to `\bin\` (for `cl.exe` etc)
-* Also try running `vcvars32.bat` (also in bin) to set up environment before doing `mvn clean install` on ND4J (it may save you from copying headers around)
-* `vcvars32` may be temporary, so you might need to run it every time you want to do ND4J `mvn install`.
-* After installing Visual Studio 2015 and setting the PATH variable, you need to run the `vcvars32.bat` to set up the environment variables (INCLUDE, LIB, LIBPATH) properly so that you don't have to copy header files. But if you run the bat file from Explorer, since the settings are temporary, they're not properly set. So run `vcvars32.bat` from the same CMD window as your `mvn install`, and all the environment variables will be set correctly.
-* Here is how they should be set: 
+* `\bin\`（`cl.exe`用などに）を指すように、環境変数`PATH`を設定する。
+* ND4Jに`mvn clean install`を実行する前に、環境を設定するために`vcvars32.bat`（binにあります）を実行してみてください（ヘッダーをあちこちにコピーする手間が省けます）。
+* `vcvars32`は一時的かもしれないので、ND4Jの`mvn install`を実行するたびに`vcvars32`を実行する必要があるかもしれません。
+* Visual Studio 2015をインストールし、 PATH変数を設定した後、 ヘッダーファイルをコピーしなくて済むよう、`vcvars32.bat`を実行し、環境変数（INCLUDE、LIB、LIBPATH）を正しく設定する必要があります。しかし、バッチファイルをエキスプローラから実行すると、一時的なものであるため適切に設定されていません。そこで、`mvn install`と同じコマンドプロンプト画面から、`vcvars32.bat`を実行すると、すべての環境変数が正しく設定されます。
+* 以下のように設定してください。 
 
 		INCLUDE = C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\include
 		LIB = "C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\lib"
-		//so you can link to .lib files^^
-* In Visual Studio, you also have to click on C++. It is no longer set by default. 
-(*In addition, the include path for [Java CPP](https://github.com/bytedeco/javacpp) doesn't always work on Windows. One workaround is to take the the header files from the include directory of Visual Studio, and put them in the include directory of the Java Run-Time Environment (JRE), where Java is installed. This will affect files such as `standardio.h`.*)
-* For a walkthrough of installing our examples with Git, IntelliJ and Maven, please see our [Quickstart page](http://deeplearning4j.org/quickstart.html#walk). 
-* [This page](http://avulanov.blogspot.cz/2014/09/howto-to-run-netlib-javabreeze-in.html) describes how to obtain dll for the Windows 64 platform. 
-* Download dll libraries and place them in the Java bin folder (e.g. `C:\prg\Java\jdk1.7.0_45\bin`).
-* Library `netlib-native_system-win-x86_64.dll` depends on: 
+		//これにより、.lib filesへリンクできます。^^
+* Visual Studioで、C++もクリックしてください。これでデフォルト設定でなくなります。 
+（*また、[Java CPP](https://github.com/bytedeco/javacpp)のinclude pathは、常にWindowsで動作するとは限りません。これを解決する1つの方法はVisual Studioのincludeディレクトリーからヘッダーファイルを取り、それらをJavaがインストールされたJava Run-Time Environment（JRE）のincludeディレクトリーに入れることです。これにより`standardio.h`などのファイルに影響が出ます。*）
+* Git、IntelliJ 、Mavenでexampleのインストールガイドは、弊社の[クイックスタート](http://deeplearning4j.org/quickstart.html#walk)をお読みください 
+* [こちら](http://avulanov.blogspot.cz/2014/09/howto-to-run-netlib-javabreeze-in.html)では、Windows 64プラットフォームでどのようにしてdllを入手するかを解説しています。 
+* dllライブラリをダウンロードし、Java binフォルダ（例えば、 `C:\prg\Java\jdk1.7.0_45\bin`）に入れてください。
+* ライブラリの`netlib-native_system-win-x86_64.dll`は、 
 `libgcc_s_seh-1.dll
 libgfortran-3.dll
 libquadmath-0.dll
 libwinpthread-1.dll
 libblas3.dll
-liblapack3.dll`
-* (`liblapack3.dll` and `libblas3.dll` are just renamed copies of `libopeblas.dll`)
-* You can download compiled libs from [here](http://sourceforge.net/projects/mingw-w64/files/Toolchains%20targetting%20Win64/Automated%20Builds/), [here](http://www.openblas.net/), or [here](http://search.maven.org/#search%7Cga%7C1%7Ca%3A%22netlib-native_system-win-x86_64%22)
+liblapack3.dll`に依存します。
+* （`liblapack3.dll`や`libblas3.dll`は、`libopeblas.dll`の名前を変えたコピーです。）
+* コンパイルしたライブラリは、[sourceforge](http://sourceforge.net/projects/mingw-w64/files/Toolchains%20targetting%20Win64/Automated%20Builds/)や[OpenBLAS](http://www.openblas.net/)、[Maven Central](http://search.maven.org/#search%7Cga%7C1%7Ca%3A%22netlib-native_system-win-x86_64%22)からダウンロードできます。
 
 ###Linux
 
-With Linux, Ubuntu and Centos users will need to follow two separate sets of instructions:
+Linuxの場合、UbuntuやCentosのユーザーは、2つの異なる手順にしたがう必要があります。
 
 ###Ubuntu
 
-For Ubuntu, first type:
+Ubuntuの場合、最初に以下を入力します。
 
 		sudo apt-get update
 
-Then you'll need to run a version of this command:
+次に、このコマンドのバージョンを実行する必要があります。
 
 		sudo apt-get install linux-headers-$(uname -r) build-essential
 
-`$(uname -r)` will vary according to your Linux version. To get your Linux version, open a new window of your terminal and enter this command:
+`$(uname -r)`は、お使いのLinuxのバージョンによって異なります。Linuxのバージョンを調べるには、ターミナルの新しいウインドウを開き、以下のコマンドを入れてください。
 
 		uname -r
 
-You will see something like this -- `3.2.0-23-generic`. Whatever you see, copy and paste it into the first line of script in place of `$(uname -r)`. Then insert one space and type `build-essential`. Watch out for typos. You can press tab to complete any command. 
+すると、結果が`3.2.0-23-generic`などのように表示されます。 どのような結果が表示されたとしても、それをスクリプトの最初の行に`$(uname -r)`が表示された場所にコピー＆ペーストします。それから、1スペースを入れ、`build-essential`と入力してください。タイプミスには注意してください。タブを押して任意のコマンドを完了させてください。 
 
-###Centos
+###CentOS
 
-Enter the following in your terminal (or ssh session) as a root user:
+ルートユーザーとして、ターミナル（または、sshセッション）に以下のコマンドを入れてください。
 
 		yum groupinstall 'Development Tools'
 
-After that, you should see a lot of activity and installs on the terminal. To verify that you have, for example, *gcc*, enter this line:
+その後、ターミナルで様々な処理、インストールが実行されます。例えば、*gcc*がインストールされているかを調べるには、以下のコマンドを実行してください。
 
 		gcc --version
 
-For more complete instructions, [go here](http://www.cyberciti.biz/faq/centos-linux-install-gcc-c-c-compiler/). 
+完全ガイドは、[こちら](http://www.cyberciti.biz/faq/centos-linux-install-gcc-c-c-compiler/)をお読みください。 
 
-## <a id="gpu"> GPUs </a>
+## <a id="gpu"> GPU </a>
 
-Instructions on adding a [Jcublas backend are here](../gpu_native_backends.html). We support CUDA versions 5.5, 6.0, 6.5 and 7.
+Jcublasバックエンドを追加することについてのガイドは、[こちら](../gpu_native_backends.html)をお読みください。CUDAのバージョン5.5、6.0、6.5、7に対応いたしております。
 
-Once you begin training neural networks on GPUs, you will want to monitor whether and how well the GPUs are working. There are several measures you can take:
+いったんGPUでニューラルネットワークのトレーニングを開始した後、GPUがどのくらいちゃんと動作しているかモニターしたい場合は、様々な方法があります。
 
-* Make sure you have [nvcc, the Nvidia compiler](http://docs.nvidia.com/cuda/cuda-compiler-driver-nvcc/), in your classpath (`src/main/resources`). We compile the kernels on the fly. 
-* Install the [Nvidia System Management Interface (SMI)](https://developer.nvidia.com/nvidia-system-management-interface). Look for `Java` in the output.
+* [Nvidia compiler（NVCC）](http://docs.nvidia.com/cuda/cuda-compiler-driver-nvcc/)がクラスパス(`src/main/resources`)にあることを確認してください。カーネルをオンザフライでコンパイルします。 
+* [Nvidia System Management Interface（SMI）](https://developer.nvidia.com/nvidia-system-management-interface)をインストールします。出力結果で`Java`を探してください。
 
-## <a id="next">Next Steps</a>
+## <a id="next">次のステップ</a>
 
-Now you're ready to run the [examples](introduction.html). We recommend that you launch your IDE, load the ND4J project and open the examples subdirectory. Locate an example in the file tree on the lefthand side of the IntelliJ window, right click on it, and select the green arrow for "Run" on the drop-down menu. 
+[example](introduction.html)を実行させる準備が整いました。お使いの統合開発環境を起動し、ND4Jのプロジェクトをロードし、exampleのサブディレクトリを開きます。IntelliJウインドウの左側のファイルツリーからexampleを見つけ、その上で右クリックをし、ドロップダウンメニューで「Run（実行）」を意味する緑色の矢印を選択します。 
 
-If everything was installed correctly, you should see numbers appear as the program output at the bottom of the IntelliJ window. Please use these as a sandbox to start experimenting.  
+すべてが正常にインストールされれば、プログラムの出力結果として、IntelliJウィンドウの下部に数字が表示されます。実験を始めるには、これらのexampleをサンドボックスとして使用してください。  
 
-Once you're comfortable with the examples, you might want to change the dependencies defined in the POM files. Learn how to change the [dependencies here](gpu_native_backends.html).
+examplesに慣れてくると、POMファイルで定義された依存関係を変更してみるといいでしょう。依存関係の変更方法は、[こちら](gpu_native_backends.html)をお読みください。
 
-## Useful Links
+## 役に立つリンク
 
 * [ND4J Maven Repository](http://mvnrepository.com/artifact/org.nd4j)
 * [DeepLearning4j.org](http://deeplearning4j.org/)
