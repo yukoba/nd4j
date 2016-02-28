@@ -21,10 +21,10 @@ In real code, this line
 
     INDArray arr = Nd4j.create(new float[]{1,2,3,4},new int[]{2,2},'c');
 
-creates an array with four elements, whose shape is 2 by 2, and whose order is "row major", or rows first, which is the default in C. (In contrast, Fortran uses "column major" ordering, and could be specified with an 'f' as the third parameter.)
+creates an array with four elements, whose shape is 2 by 2, and whose order is "row major", or rows first, which is the default in C. (In contrast, Fortran uses "column major" ordering, and could be specified with an 'f' as the third parameter.) The distinction between thetwo orderings, for the array created above, is best illustrated with a table:
 
-| Row-major | Column-major | 
-| ------------- |:-------------:| 
+| Row-major (C) | Column-major (Fortran) | 
+| :-------------: |:-------------:| 
 | [1,2] | [1,3] |
 | [3,4] | [2,4] |
 
