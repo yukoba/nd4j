@@ -1,11 +1,9 @@
 ---
 layout: ja-default
-title: "ND4J入門"
-description: ""
+title:"ND4Jのフルインストール"
+description:"ND4Jでn次元の配列代数ができるJava開発環境をインストールしましょう。"
 ---
 {% include JB/setup %}
-
-# ND4Jのフルインストール
 
 このインストールは複数の段階の手順に従って行います。質問やコメント等は、是非、[Gitter Live Chat](https://gitter.im/deeplearning4j/deeplearning4j)でお聞かせください。弊社のスタッフがお手伝いいたします。恥ずかしがる必要は全くありません。いつでも気軽にご連絡ください。 
 
@@ -47,25 +45,25 @@ Java 7がインストールされていない場合は、Java開発キットを[
 
 ## <a id="maven">Maven</a>
 
-MavenはJavaのプロジェクトの自動ビルドツール（Mavenのその他の用途は[こちら](http://maven.apache.org/what-is-maven.html)）です。最新バージョンのND4J、そしてDL4Jのプロジェクトライブラリ（.jar files）を見つけてくれて、自動でダウンロードします。これらのリポジトリは、[Maven Central](https://search.maven.org/#search%7Cga%7C1%7Cnd4j)にあります。
+MavenはJavaのプロジェクトの自動ビルドツール（Mavenのその他の用途は[こちら](http://maven.apache.org/what-is-maven.html)）です。最新バージョンのND4J、そしてDL4Jのプロジェクトライブラリ（.jar files）を見つけ、自動でダウンロードします。これらのリポジトリは、[Maven Central](https://search.maven.org/#search%7Cga%7C1%7Cnd4j)にあります。
 
-Javaプログラマーでない人のためのさらに詳細にわたるMavenガイドも準備しましたので、[こちら](http://deeplearning4j.org/maven.html)をお読みください。 Mavenだと、ND4JとDeeplearning4jのプロジェクトの両方が簡単にインストールできます。IntelliJなどのような統合開発環境（IDE）を使うのには最適です。
+Javaプログラマーでない方々のためのさらに詳細にわたるMavenガイドも準備しましたので、[こちら](http://deeplearning4j.org/maven.html)をお読みください。 Mavenだと、ND4JとDeeplearning4jのプロジェクトの両方が簡単にインストールできます。IntelliJなどのような統合開発環境（IDE）を使うのには最適です。
 
 お手持ちの機器にMavenがインストールされているか、またはどのバージョンのMavenがインストールされているかを調べるには以下のコマンドラインを入力してください。
 
 		mvn --version
 
-最新のMavenがインストールされていない場合は、最新のものにアップデートしてください。（これが書かれたゲ現時点では`3.3.x`が最新です。）Mavenのインストールの方法については、[こちら](https://maven.apache.org/download.cgi)をお読みください。Mavenの最新で安定したバージョンの入った圧縮ファイルをダウンロードしてください。 
+最新のMavenがインストールされていない場合は、最新のものにアップデートしてください。（これが書かれた現時点では`3.3.x`が最新です。）Mavenのインストールの方法については、[こちら](https://maven.apache.org/download.cgi)をお読みください。Mavenの最新で安定したバージョンの入った圧縮ファイルをダウンロードしてください。 
 
 ![Alt text](../img/maven_downloads.png) 
 
-同じページの下部で、お使いのオペレーティングシステムのガイドに従ってください。例）*「Unixベースオペレーティングシステム（Linux、 Solaris、Mac OS X）」*以下のようになります。
+同じページの下部で、お使いのオペレーティングシステムのガイドに従ってください。例）*「Unixベースオペレーティングシステム（Linux、 Solaris、Mac OS X）」*　以下のようになります。
 
 ![Alt text](../img/maven_OS_instructions.png) 
 
 ## <a id="ide">統合開発環境:IntelliJ</a>
 
-統合開発環境（[IDE]　(http://encyclopedia.thefreedictionary.com/integrated+development+environment)）を使用すると、APIを使用し、クリックするだけで自分のネットワークが作成できます。統合開発環境には、**IntelliJ**を使うことをお勧めします。IntelliJだと、インストールしたJavaのバージョンで使うことができ、[Maven](#maven)を使って依存関係を扱うことができるからです。 
+統合開発環境([IDE](http://encyclopedia.thefreedictionary.com/integrated+development+environment))を使用すると、APIを使用し、クリックするだけで自分のネットワークが作成できます。統合開発環境には、**IntelliJ**を使うことをお勧めします。IntelliJだと、インストールしたJavaのバージョンで使うことができ、[Maven](#maven)を使って依存関係を扱うことができるからです。 
 
 IntelliJのフリーコミュニティーサイトでは、[こちら](https://www.jetbrains.com/idea/download/)でインストレーションのガイドを提供しています。弊社では、IntelliiJの方をお勧めしていますが、他にも[Eclipse](http://books.sonatype.com/m2eclipse-book/reference/creating-sect-importing-projects.html)や[Netbeans](http://wiki.netbeans.org/MavenBestPractices)が人気のある統合開発環境です。EclipseでND4J/DL4Jパッケージをインストールするには、[こちら](https://depiesml.wordpress.com/2015/08/26/dl4j-gettingstarted/)のガイドをお読みください。
 
@@ -117,7 +115,7 @@ ND4Jのバージョンは、ここでは、変数となります。IPOMの少し
 
 Githubは、ウェブベースの[Revision Control System](http://en.wikipedia.org/wiki/Revision_control)で、オープンソースプロジェクトの[事実上のホスト](http://opensource.com/life/12/11/code-hosting-comparison)です。 
 
-ND4Jにコミッターとして貢献する予定でない方、または最新のアルファバージョンが必要ない方は、[Maven Central](https://search.maven.org/#search%7Cga%7C1%7Cdeeplearning4j)から最も安定したバージョンである0.4-rc1.xをダウンロードすることをお勧めいたします。The JARファイルは、[Maven Central](https://search.maven.org/#search%7Cga%7C1%7Cnd4j)から直接ダウンロードすることができます。あるいは、弊社の[ソース](http://nd4j.org/source)をご参照ください。 
+ND4Jのコミッターになるつもりはない方、または最新のアルファバージョンが必要ない方は、[Maven Central](https://search.maven.org/#search%7Cga%7C1%7Cdeeplearning4j)から最も安定したバージョンである0.4-rc1.xをダウンロードすることをお勧めいたします。JARファイルは、[Maven Central](https://search.maven.org/#search%7Cga%7C1%7Cnd4j)から直接ダウンロードすることができます。あるいは、弊社の[ソース](http://nd4j.org/source)をご参照ください。 
 
 ## <a id="scala">Scala</a>
 
@@ -161,7 +159,7 @@ Deeplearning4jをインストールするための詳細情報は、[DL4Jをは�
 
 あるND4J依存関係をWindows、Linux OSにコンパイルするには、gccなどC言語の開発ツールが必要です。お手持ちの機器に*gcc*がインストールされているかを調べるには、ターミナルやコマンドプロンプトにコマンドの`gcc -v`を実行してください。
 
-### OSX
+###OSX
 
 [アップル開発ツールXcode](https://developer.apple.com/xcode/downloads/)の一部のバージョンは、*gcc*をインストールしてくれます。gccがまだインストールされていない場合は、コマンドプロンプトに`brew install gcc`と入力してください。
 
@@ -186,7 +184,7 @@ OpenBlasが正常に動作しない場合は、以下の手順に従ってくだ
 * **Linux**の場合、シンボリックリンクの`libblas.so.3`や `liblapack.so.3`が`LD_LIBRARY_PATH`に存在しないか再度確認します。もし、存在しなければ、`/usr/lib`にリンクを追加してください。以下のようにして設定できます。（-sにより、リンクがシンボリックになります。）
 
 		ln -s TARGET LINK_NAME
-		// interpretation: ln -s "to-here" <- "from-here"
+		// 解釈: ln -s "to-here" <- "from-here"
 
 * "from-here"は、まだ存在しないシンボリックリンクを作成したものです。StackOverflowのシンボリックリンク作成方法ガイドがありますので、[こちら](https://stackoverflow.com/questions/1951742/how-to-symlink-a-file-in-linux)をお読みください。「Linux man page」は、[こちら](http://linux.die.net/man/1/ln)をお読みください。
 * 最後に統合開発環境を再起動します。 
@@ -205,13 +203,13 @@ OpenBlasが正常に動作しない場合は、以下の手順に従ってくだ
 
 ### <a id="windows"> Windows </a>
 
-ウィンドウをご使用の場合、[Visual Studio Community 2013、またはそれ以降](https://www.visualstudio.com/en-us/products/visual-studio-community-vs.aspx)（無料）をインストールする必要があります。そのパスをPATH環境変数に手動で追加する必要があります。パスは以下のようになります。`C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin`
+Windowsをご使用の場合、[Visual Studio Community 2013、またはそれ以降](https://www.visualstudio.com/en-us/products/visual-studio-community-vs.aspx)（無料）をインストールする必要があります。そのパスをPATH環境変数に手動で追加する必要があります。パスは以下のようになります。`C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin`
 
 コマンドプロンプトに`cl`と入力してください。`.dll`ファイルが足りないというメッセージが表示されることがあります。VS/IDEフォルダーがパスに入っていることを確認してください（上記をご参照ください）。If your CMD returns usage info for `cl`, then it's in the right place. 
 
 Visual Studioを使用する場合は、 
 
-* `\bin\`（`cl.exe`用などに）を指すように、`PATH`環境変数を設定する。
+* `\bin\`（`cl.exe`用などに）を指すように、環境変数`PATH`を設定する。
 * ND4Jに`mvn clean install`を実行する前に、環境を設定するために`vcvars32.bat`（binにあります）を実行してみてください（ヘッダーをあちこちにコピーする手間が省けます）。
 * `vcvars32`は一時的かもしれないので、ND4Jの`mvn install`を実行するたびに`vcvars32`を実行する必要があるかもしれません。
 * Visual Studio 2015をインストールし、 PATH変数を設定した後、 ヘッダーファイルをコピーしなくて済むよう、`vcvars32.bat`を実行し、環境変数（INCLUDE、LIB、LIBPATH）を正しく設定する必要があります。しかし、バッチファイルをエキスプローラから実行すると、一時的なものであるため適切に設定されていません。そこで、`mvn install`と同じコマンドプロンプト画面から、`vcvars32.bat`を実行すると、すべての環境変数が正しく設定されます。
@@ -219,20 +217,19 @@ Visual Studioを使用する場合は、
 
 		INCLUDE = C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\include
 		LIB = "C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\lib"
-		//so you can link to .lib files^^
+		//これにより、.lib filesへリンクできます。^^
 * Visual Studioで、C++もクリックしてください。これでデフォルト設定でなくなります。 
 （*また、[Java CPP](https://github.com/bytedeco/javacpp)のinclude pathは、常にWindowsで動作するとは限りません。これを解決する1つの方法はVisual Studioのincludeディレクトリーからヘッダーファイルを取り、それらをJavaがインストールされたJava Run-Time Environment（JRE）のincludeディレクトリーに入れることです。これにより`standardio.h`などのファイルに影響が出ます。*）
 * Git、IntelliJ 、Mavenでexampleのインストールガイドは、弊社の[クイックスタート](http://deeplearning4j.org/quickstart.html#walk)をお読みください 
 * [こちら](http://avulanov.blogspot.cz/2014/09/howto-to-run-netlib-javabreeze-in.html)では、Windows 64プラットフォームでどのようにしてdllを入手するかを解説しています。 
 * dllライブラリをダウンロードし、Java binフォルダ（例えば、 `C:\prg\Java\jdk1.7.0_45\bin`）に入れてください。
 * ライブラリの`netlib-native_system-win-x86_64.dll`は、 
-		libgcc_s_seh-1.dll
-		libgfortran-3.dll
-		libquadmath-0.dll
-		libwinpthread-1.dll
-		libblas3.dll
-		liblapack3.dll
-に依存します。
+`libgcc_s_seh-1.dll
+libgfortran-3.dll
+libquadmath-0.dll
+libwinpthread-1.dll
+libblas3.dll
+liblapack3.dll`に依存します。
 * （`liblapack3.dll`や`libblas3.dll`は、`libopeblas.dll`の名前を変えたコピーです。）
 * コンパイルしたライブラリは、[sourceforge](http://sourceforge.net/projects/mingw-w64/files/Toolchains%20targetting%20Win64/Automated%20Builds/)や[OpenBLAS](http://www.openblas.net/)、[Maven Central](http://search.maven.org/#search%7Cga%7C1%7Ca%3A%22netlib-native_system-win-x86_64%22)からダウンロードできます。
 
