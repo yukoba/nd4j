@@ -34,6 +34,12 @@ Once we create an n-dimensional array, we may want to work with slices of it. Ra
 
 which would give you the first 5 channels, rows 3 to 4 and columns 6 to 7, and so forth for *n* dimensions, which each individual dimension's slice starting before the colon and ending after it. 
 
+## Linear Buffer
+
 Now, while it is useful to imagine matrices as two-dimensional planes, and 3-D tensors are cubic volumes, we store all tensors as a linear buffer. That is, they are all flattened to a row of numbers. 
 
 For that linear buffer, we specify something called *stride*. Stride tells the computation layer how to interpret the flattened representation. It is the number of elements you skip in the buffer to get to the next channel or row or column. There's a stride for each dimension.
+
+Here's a brief video summarizing how tensors are converted into linear byte buffers for ND4J.
+
+<iframe width="420" height="315" src="https://www.youtube.com/embed/EHHtyRKQIJ0" frameborder="0" allowfullscreen></iframe>
