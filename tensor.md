@@ -43,3 +43,7 @@ For that linear buffer, we specify something called *stride*. Stride tells the c
 Here's a brief video summarizing how tensors are converted into linear byte buffers for ND4J.
 
 <iframe width="420" height="315" src="https://www.youtube.com/embed/EHHtyRKQIJ0" frameborder="0" allowfullscreen></iframe>
+
+## Additional Resources
+
+* [Multidimensional Arrays](https://www.mathworks.com/help/matlab/math/multidimensional-arrays.html?requestedDomain=www.mathworks.com)
