@@ -1350,6 +1350,8 @@ public abstract class BaseDataBuffer implements DataBuffer {
             return floatData;
         if(doubleData != null)
             return doubleData;
+        else if(intData != null)
+            return intData;
         throw new UnsupportedOperationException();
     }
 
