@@ -171,13 +171,14 @@ public class NativeOpExecutioner extends DefaultOpExecutioner {
         long dimensionAddress = Nd4j.createBuffer(dimension).address();
         if(op.x().data().dataType() == DataBuffer.Type.DOUBLE) {
             if(op instanceof Variance) {
+                Variance variance = (Variance) op;
                 if(ret.isScalar()) {
                     ret.putScalar(0,loop.execSummaryStatsScalarDouble(
                             dummy,
                             op.opNum()
                             , op.x().data().address(),
                             op.x().shapeInfoDataBuffer().address(),
-                            getAddressForExtraArgs(op), true));
+                            getAddressForExtraArgs(op), variance.isBiasCorrected()));
                 }
                 else {
                     loop.execSummaryStatsDouble(
@@ -188,7 +189,7 @@ public class NativeOpExecutioner extends DefaultOpExecutioner {
                             getAddressForExtraArgs(op),
                             op.z().data().address(),
                             op.z().shapeInfoDataBuffer().address(),
-                            dimensionAddress, dimension.length, );
+                            dimensionAddress, dimension.length, variance.isBiasCorrected());
                 }
 
             }
@@ -243,13 +244,15 @@ public class NativeOpExecutioner extends DefaultOpExecutioner {
         }
         else {
             if(op instanceof Variance) {
+                Variance variance = (Variance) op;
+
                 if(ret.isScalar()) {
                     ret.putScalar(0,loop.execSummaryStatsScalarFloat(
                             dummy,
                             op.opNum()
                             , op.x().data().address(),
                             op.x().shapeInfoDataBuffer().address(),
-                            getAddressForExtraArgs(op), true));
+                            getAddressForExtraArgs(op), variance.isBiasCorrected()));
                 }
                 else {
                     loop.execSummaryStatsFloat(
@@ -259,7 +262,7 @@ public class NativeOpExecutioner extends DefaultOpExecutioner {
                             op.x().shapeInfoDataBuffer().address(),getAddressForExtraArgs(op),
                             op.z().data().address(),
                             op.z().shapeInfoDataBuffer().address(),
-                            dimensionAddress, dimension.length, true);
+                            dimensionAddress, dimension.length, variance.isBiasCorrected());
                 }
 
             }
@@ -555,11 +558,13 @@ public class NativeOpExecutioner extends DefaultOpExecutioner {
             long[] dummy = new long[1];
             if(op.x().data().dataType() == DataBuffer.Type.DOUBLE) {
                 if(op instanceof Variance) {
+                    Variance variance = (Variance) op;
+
                     op.setFinalResult(loop.execSummaryStatsScalarDouble(
                             dummy,
                             op.opNum(),
                             op.x().data().address()
-                            ,op.x().shapeInfoDataBuffer().address(), getAddressForExtraArgs(op), true));
+                            ,op.x().shapeInfoDataBuffer().address(), getAddressForExtraArgs(op), variance.isBiasCorrected()));
                 }
                 else if(op.y() != null) {
                     op.setFinalResult(loop.execReduce3ScalarDouble(
@@ -579,11 +584,13 @@ public class NativeOpExecutioner extends DefaultOpExecutioner {
             }
             else {
                 if(op instanceof Variance) {
+                    Variance variance = (Variance) op;
+
                     op.setFinalResult(loop.execSummaryStatsScalarFloat(
                             dummy,
                             op.opNum(),
                             op.x().data().address()
-                            ,op.x().shapeInfoDataBuffer().address(),  getAddressForExtraArgs(op), true));
+                            ,op.x().shapeInfoDataBuffer().address(),  getAddressForExtraArgs(op), variance.isBiasCorrected()));
                 }
                 else if(op.y() != null) {
                     op.setFinalResult(loop.execReduce3ScalarFloat(
