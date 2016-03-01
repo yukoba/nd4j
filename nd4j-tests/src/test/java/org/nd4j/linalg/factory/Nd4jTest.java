@@ -99,7 +99,7 @@ public class Nd4jTest extends BaseNd4jTest {
                 ,4.,4.,8.,8.,8.,8.,4.,4.,4.,4.,8.,8.,8.,8,
                 2.,2.,2.,2.,4.,4.,4.,4.,2.,2.,2.,2.,4.,4.,4.,4.,
                 2.,2.,2.,2.,4.,4.,4.,4.,2.,2.,2.,2.,4.,4.,4.,4.
-        },new int[]{2, 2, 4, 4});
+        },new int[]{2, 2, 4, 4},'c');
 
         INDArray actualResult = data.var(false, 0);
         INDArray expectedResult = Nd4j.create(new double[] {
