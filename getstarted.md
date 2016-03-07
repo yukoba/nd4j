@@ -159,7 +159,7 @@ More information on installing Deeplearning4j is available on its [Getting Start
 
 To compile certain ND4J dependencies on Windows or a Linux OS, you will need to install some dev tools for C, including gcc. To check if you have *gcc*, enter `gcc -v` on your terminal or command prompt.
 
-###OSX
+### OSX
 
 Some versions of the [Apple developer tool Xcode](https://developer.apple.com/xcode/downloads/) will install *gcc* for you. If you don't already have gcc, enter `brew install gcc` into your command prompt.
 
@@ -233,11 +233,11 @@ liblapack3.dll`
 * (`liblapack3.dll` and `libblas3.dll` are just renamed copies of `libopeblas.dll`)
 * You can download compiled libs from [here](http://sourceforge.net/projects/mingw-w64/files/Toolchains%20targetting%20Win64/Automated%20Builds/), [here](http://www.openblas.net/), or [here](http://search.maven.org/#search%7Cga%7C1%7Ca%3A%22netlib-native_system-win-x86_64%22)
 
-###Linux
+### Linux
 
 With Linux, Ubuntu and Centos users will need to follow two separate sets of instructions:
 
-###Ubuntu
+### Ubuntu
 
 For Ubuntu, first type:
 
