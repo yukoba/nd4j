@@ -253,7 +253,7 @@ Then you'll need to run a version of this command:
 
 You will see something like this -- `3.2.0-23-generic`. Whatever you see, copy and paste it into the first line of script in place of `$(uname -r)`. Then insert one space and type `build-essential`. Watch out for typos. You can press tab to complete any command. 
 
-###Centos
+### Centos
 
 Enter the following in your terminal (or ssh session) as a root user:
 
