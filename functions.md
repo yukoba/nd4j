@@ -7,7 +7,7 @@ description: ""
 
 A static import at the top of your Java file makes advanced functions fairly simple to use with ND4J:
 
-    import static org.nd4j.linalg.ops.transforms.*;
+    import static org.nd4j.linalg.ops.transforms.Transforms.*;
 
 Here are the [transform classes](https://github.com/deeplearning4j/nd4j/blob/master/nd4j-backends/nd4j-api-parent/nd4j-api/src/main/java/org/nd4j/linalg/ops/transforms/Transforms.java). That done, create your arrays and call a function on them.
 
