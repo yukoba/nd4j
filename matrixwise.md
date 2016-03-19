@@ -33,7 +33,7 @@ Now let's take the same operation, while adding an additional column to a new ar
 
     INDArray nd4 = Nd4j.create(new float[]{3,4,5,6},new int[]{2, 2}); 
     nd.mmul(nd4);                                                                                                                                                                                                                                                   
-    [3.0 ,5.0]
+                 [3.0 ,5.0]
     [1.0 ,2.0] * [4.0 ,6.0] = [(1.0 * 3.0) + (2.0 * 4.0), (1.0 * 5.0) + (2.0 * 6.0)] = [11, 17]
 
 Now let's add an extra row to the first matrix, call it nd3, and multiply it by nd4

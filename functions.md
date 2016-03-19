@@ -7,11 +7,11 @@ description: ""
 
 A static import at the top of your Java file makes advanced functions fairly simple to use with ND4J:
 
-    import static org.nd4j.linalg.ops.transforms.*;
+    import static org.nd4j.linalg.ops.transforms.Transforms.*;
 
-Here are the [transform classes](https://github.com/deeplearning4j/nd4j/blob/master/nd4j-api/src/main/java/org/nd4j/linalg/ops/transforms/Transforms.java). That done, create your arrays and call a function on them.
+Here are the [transform classes](https://github.com/deeplearning4j/nd4j/blob/master/nd4j-backends/nd4j-api-parent/nd4j-api/src/main/java/org/nd4j/linalg/ops/transforms/Transforms.java). That done, create your arrays and call a function on them.
 
-        INDArray nd = Nd4j.create(new float[]{1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12}, new int[]{2, 7});
+        INDArray nd = Nd4j.create(new float[]{1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12}, new int[]{2, 6});
         INDArray ndv;
 
 ### Sigmoid
@@ -74,4 +74,4 @@ Should give you this
       [2.7182817 ,20.085537 ,148.41316 ,1096.6332 ,8103.084 ,59874.14]
       [7.389056 ,54.59815 ,403.4288 ,2980.958 ,22026.465 ,162754.8]
 
-These are just a few of the functions available in ND4J. You can learn more about our API from [ND4J's Github repo](https://github.com/SkymindIO/nd4j/tree/master/nd4j-api/src/main/java/org/nd4j/linalg).
+These are just a few of the functions available in ND4J. You can learn more about our API from [ND4J's Github repo](https://github.com/deeplearning4j/nd4j/tree/master/nd4j-backends/nd4j-api-parent/nd4j-api/src/main/java/org/nd4j/linalg).
