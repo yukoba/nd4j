@@ -7,8 +7,8 @@ description: ""
 This user guide is designed to explain (and provide examples for) the main functionality in ND4J. It is still a work in progress.
 
 * <a href="#intro">Introduction</a>
-  * <a href="inmemory">NDArrays: How Are They Stored in Memory?</a>
-  * <a href="views">Views: When an two or more INDArrays refer to the same data</a>
+  * <a href="#inmemory">NDArrays: How Are They Stored in Memory?</a>
+  * <a href="#views">Views: When an two or more INDArrays refer to the same data</a>
 * <a href="#creating">Creating NDArrays</a>
   * <a href="#createzero">Zero, One and Scalar-Value Initialized Arrays</a>
   * <a href="#createrandom">Random arrays</a>
