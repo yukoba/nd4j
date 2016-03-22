@@ -4,13 +4,13 @@ title: "ND4J User Guide"
 description: ""
 ---
 
-This user guide attempts to explain the core functionality in Nd4j. It is still a work in progress
+This user guide is designed to explain (and provide examples for) the main functionality in ND4J. It is still a work in progress.
 
 * <a href="#intro">Introduction</a>
-  * <a name="inmemory">NDArrays: How Are They Stored in Memory?</a>
-  * <a name="views">Views: When an two or more INDArrays refer to the same data</a>
+  * <a href="inmemory">NDArrays: How Are They Stored in Memory?</a>
+  * <a href="views">Views: When an two or more INDArrays refer to the same data</a>
 * <a href="#creating">Creating NDArrays</a>
-  * <a href="#createzero">Zero initialized arrays</a>
+  * <a href="#createzero">Zero, One and Scalar-Value Initialized Arrays</a>
   * <a href="#createrandom">Random arrays</a>
   * <a href="#createfromjava">Creating NDArrays from Java arrays</a>
   * <a href="#createfromndarray">Creating NDArrays from other NDArrays</a>
@@ -158,8 +158,8 @@ INDArray myArr = Nd4j.create(flat,shape,'c');
 There are three primary ways of creating arrays from other arrays:
 
 * Creating an exact copy of an existing NDArray using ```INDArray.dup()```
-* Create the array as a subset of an existing NDArrays
-* Combine a number of existing NDArrays
+* Create the array as a subset of an existing NDArray
+* Combine a number of existing NDArrays to create a new NDArray
 
 For the second case, you can use getRow(), get(), etc. See <a href="#getset">Getting and Setting Parts of NDArrays</a> for details on this.
 
@@ -167,7 +167,7 @@ Two methods for combining NDArrays are ```Nd4j.hstack(INDArray...)``` and ```Nd4
 
 ```hstack``` (horizontal stack) takes as argument a number of matrices that have the same number of rows, and stacks them horizontally to produce a new array. The input NDArrays can have a different number of columns, however.
 
-```vstack``` (vertical stack) is the vertical equivalent of hstack.
+```vstack``` (vertical stack) is the vertical equivalent of hstack. The input arrays must have the same number of columns.
 
 
 One other method that can occasionally be useful is ```Nd4j.diag(INDArray in)```. This method has two uses, depending on the argument ```in```:
@@ -335,7 +335,7 @@ And two methods of executing each:
 
 Before getting into the specifics of these operations, let's take a moment to consider the difference between *in-place* and *copy* operations.
 
-Many ops have both in-place and copy operations. Suppose we want to add two arrays. Nd4j defines two methods for this: ```INDArray.add(INDArray)``` and ```INDArray.addi(INDArray)```. The former (add) is a copy operation; the latter is an in-place operation - the *i* in *addi* means inplace. This convention (*...i* means inplace, no *i* means copy) holds for other ops that are accessible via the INDArray interface.
+Many ops have both in-place and copy operations. Suppose we want to add two arrays. Nd4j defines two methods for this: ```INDArray.add(INDArray)``` and ```INDArray.addi(INDArray)```. The former (add) is a copy operation; the latter is an in-place operation - the *i* in *addi* means in-place. This convention (*...i* means in-place, no *i* means copy) holds for other ops that are accessible via the INDArray interface.
 
 Suppose we have two INDArrays ```x``` and ```y``` and we do ```INDArray z = x.add(y)``` or ```INDArray z = x.addi(y)```. The results of these operations are shown below.
 
