@@ -339,7 +339,10 @@ Many ops have both in-place and copy operations. Suppose we want to add two arra
 
 Suppose we have two INDArrays ```x``` and ```y``` and we do ```INDArray z = x.add(y)``` or ```INDArray z = x.addi(y)```. The results of these operations are shown below.
 
-![Add vs. Addi](../img/add_v_addi.png)
+![Add](../img/add_v_addi_1.png)
+
+![Addi](../img/add_v_addi_2.png)
+
 
 Note that with the ```x.add(y)``` operation, the original array ```x``` is not modified. Comparatively, with the in-place version ```x.addi(y)```, the array ```x``` is modified. In both versions of the add operation, an INDArray is returned that contains the result. Note however that in the case of the ```addi``` operation, the result array us actually just the original array ```x```.
 
