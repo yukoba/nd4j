@@ -448,7 +448,6 @@ As with other ops, there are inplace and copy versions. There are also column co
 
 ## <a name="misc">Advanced and Miscellaneous Topics</a>
 
-[This section: Forthcoming.]
 
 ### <a name="miscdatatype">Setting the data type</a>
 
@@ -470,6 +469,10 @@ For 0.4-rc3.9 and later:
 
 
 ### Reshaping
+
+[This section: Forthcoming.]
+
+
 ### <a name="miscflattening">Flattening</a>
 
 Flattening is the process of taking a or more INDArrays and converting them into a single flat array (a row vector), given some traversal order of the arrays.
@@ -485,9 +488,23 @@ Nd4j also provides overloaded toFlattened methods with the default ordering. The
 
 
 ### Permute
+
+[This section: Forthcoming.]
+
+
 ### sortRows/sortColumns
+
+[This section: Forthcoming.]
+
+
 ### Directly accessing BLAS operations
+
+[This section: Forthcoming.]
+
+
 ### Serialization
+
+[This section: Forthcoming.]
 
 
 ## <a name="quickref">Quick Reference: A Summary Overview of ND4J Methods</a>
