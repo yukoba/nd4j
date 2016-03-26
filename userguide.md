@@ -29,9 +29,9 @@ This user guide is designed to explain (and provide examples for) the main funct
   * <a href="#opsbroadcast">Broadcast and Vector Operations</a>
 * <a href="#boolean">Boolean Indexing: Selectively Apply Operations Based on a Condition</a>
 * <a href="#misc">Advanced and Miscellaneous Topics</a>
-  * Setting the data type
+  * <a href="#miscdatatype">Setting the data type</a>
   * Reshaping
-  * Flattening
+  * <a href="#miscflattening">Flattening<a>
   * Permute
   * sortRows/sortColumns
   * Directly accessing BLAS operations
@@ -116,7 +116,7 @@ Two of the most commonly used methods of creating arrays are:
 * ```Nd4j.zeros(int...)```
 * ```Nd4j.ones(int...)```
 
-The shape of the arrays are specified s integers. For example, to create a zero-filled array with 3 rows and 5 columns, use ```Nd4j.zeros(3,5)```.
+The shape of the arrays are specified as integers. For example, to create a zero-filled array with 3 rows and 5 columns, use ```Nd4j.zeros(3,5)```.
 
 These can often be combined with other operations to create arrays with other values. For example, to create an array filled with 10s:
 
@@ -450,13 +450,44 @@ As with other ops, there are inplace and copy versions. There are also column co
 
 [This section: Forthcoming.]
 
-  * Setting the data type
-  * Reshaping
-  * Flattening
-  * Permute
-  * sortRows/sortColumns
-  * Directly accessing BLAS operations
-  * Serialization
+### <a name="miscdatatype">Setting the data type</a>
+
+ND4J currently allows INDArrays to be backed by either float or double-precision values. The default is single-precision (float). To set the order that ND4J uses for arrays globally to double precision, you can use:
+
+For 0.4-rc3.8 and earlier:
+
+```
+	Nd4j.dtype = DataBuffer.Type.DOUBLE;
+    NDArrayFactory factory = Nd4j.factory();
+    factory.setDType(DataBuffer.Type.DOUBLE);
+```
+
+For 0.4-rc3.9 and later:
+
+```
+	DataTypeUtil.setDTypeForContext(DataBuffer.Type.DOUBLE);
+```
+
+
+### Reshaping
+### <a name="miscflattening">Flattening</a>
+
+Flattening is the process of taking a or more INDArrays and converting them into a single flat array (a row vector), given some traversal order of the arrays.
+
+Nd4j provides the following methods for this:
+
+```
+Nd4j.toFlattened(char order, INDArray... arrays)
+Nd4j.toFlattened(char order, Collection<INDArray>)
+```
+Nd4j also provides overloaded toFlattened methods with the default ordering. The order argument must be 'c' or 'f', and defines the order in which values are taken from the arrays: c order results in the arrays being flattened using array indexes in an order like [0,0,0], [0,0,1], etc (for 3d arrays) whereas f order results in values being taken in order [0,0,0], [1,0,0], etc.
+
+
+
+### Permute
+### sortRows/sortColumns
+### Directly accessing BLAS operations
+### Serialization
 
 
 ## <a name="quickref">Quick Reference: A Summary Overview of ND4J Methods</a>
