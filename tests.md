@@ -1,12 +1,14 @@
 ---
 layout: page
-title: "Getting Data Into Canova"
+title: "Running Tests"
 description: ""
 ---
 {% include JB/setup %}
 
 
-###Running Tests
+
+
+##Running Tests
 
 
 In nd4j, running tests can be a bit difficult to understand due to the multi backend nature of nd4j.
