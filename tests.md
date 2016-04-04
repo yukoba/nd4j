@@ -25,11 +25,15 @@ When extending BaseNd4jTest, an ordering method returning 'c' or 'f' must also b
 
 
 -Maven
+
 cd in to the backend of your choice. Backends are located under [nd4j-backend-impls](https://github.com/deeplearning4j/nd4j/tree/master/nd4j-backends/nd4j-backend-impls)
-and run mvn clean test -Dtest=ClassName
+and run 
+ 
+            mvn clean test -Dtest=ClassName
 
 If you want to run a single method:
-mvn clean test -Dtest=ClassName#methodName
+
+            mvn clean test -Dtest=ClassName#methodName
 
 -Intellij
 
