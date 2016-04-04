@@ -1,3 +1,11 @@
+---
+layout: page
+title: "Getting Data Into Canova"
+description: ""
+---
+{% include JB/setup %}
+
+
 ###Running Tests
 
 
