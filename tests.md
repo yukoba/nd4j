@@ -8,9 +8,6 @@ description: ""
 
 
 
-##Running Tests
-
-
 In nd4j, running tests can be a bit difficult to understand due to the multi backend nature of nd4j.
 
 Nd4j has a singlar test directory for all backends:
