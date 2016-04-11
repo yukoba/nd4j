@@ -24,6 +24,7 @@ System configuration requirements:
 
 * [Java 7 or above](#java) 
 * [Maven 3.2.5 or above](#maven)
+* [BLAS (ATLAS, MKL, or OpenBLAS)](#blas) 
 
 Optional:
 
@@ -60,6 +61,11 @@ If you do not have the most recent version of Maven, please update it. (As of th
 Lower on the same page, follow the instructions specific to your operating system; e.g. *"Unix-based Operating Systems (Linux, Solaris and Mac OS X)."* They look like this:
 
 ![Alt text](../img/maven_OS_instructions.png) 
+
+## <a id="blas">BLAS</a>
+
+BLAS is used as a backend for libnd4j computations. You can choose between ATAL, MKL, or [OpenBLAS](https://github.com/xianyi/OpenBLAS/wiki/Installation-Guide). Note, if you use OpenBLAS check fortran requirements and make sure to configure for the number of cores on your machine.
+
 
 ## <a id="ide">Integrated Development Environment: IntelliJ</a>
 
