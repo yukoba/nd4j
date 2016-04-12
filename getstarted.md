@@ -24,6 +24,9 @@ System configuration requirements:
 
 * [Java 7 or above](#java) 
 * [Maven 3.2.5 or above](#maven)
+
+*above  0.4-rc3.8*
+* [JavaCPP](#javacpp)
 * [BLAS (ATLAS, MKL, or OpenBLAS)](#blas) 
 
 Optional:
@@ -62,10 +65,13 @@ Lower on the same page, follow the instructions specific to your operating syste
 
 ![Alt text](../img/maven_OS_instructions.png) 
 
+## <a id="javacpp">JavaCPP</a>
+
+[JavaCPP](https://github.com/bytedeco/javacpp) provides efficient access to native C++ inside Java. Git clone and install when using version above 0.4-rc3.8.
+
 ## <a id="blas">BLAS</a>
 
 BLAS is used as a backend for libnd4j computations. You can choose between ATAL, MKL, or [OpenBLAS](https://github.com/xianyi/OpenBLAS/wiki/Installation-Guide). Note, if you use OpenBLAS check fortran requirements and make sure to configure for the number of cores on your machine.
-
 
 ## <a id="ide">Integrated Development Environment: IntelliJ</a>
 
