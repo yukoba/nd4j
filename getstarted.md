@@ -24,7 +24,9 @@ System configuration requirements:
 
 * [Java 7 or later](#java) 
 * [Maven 3.2.5 or later](#maven)
-*above  0.4-rc3.8*
+
+Above  0.4-rc3.8:
+
 * [JavaCPP](#javacpp)
 * [BLAS (ATLAS, MKL, or OpenBLAS)](#blas) 
 
