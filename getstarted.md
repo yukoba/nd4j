@@ -22,9 +22,8 @@ ND4J is an open-source project targetting professional Java developers familiar 
 
 System configuration requirements:
 
-* [Java 7 or above](#java) 
-* [Maven 3.2.5 or above](#maven)
-
+* [Java 7 or later](#java) 
+* [Maven 3.2.5 or later](#maven)
 *above  0.4-rc3.8*
 * [JavaCPP](#javacpp)
 * [BLAS (ATLAS, MKL, or OpenBLAS)](#blas) 
@@ -36,7 +35,7 @@ Optional:
 * [Windows](#windows)
 * [Github](#github) 
 
-## <a id="java">Java 7 or above</a>
+## <a id="java">Java 7 or later</a>
 
 Java is the main interface and networking language of ND4J, because it's used for everything from distributed cloud-based systems with thousands of nodes, to low-memory IoT devices. It's a "write once, run anywhere" language.
 
@@ -44,7 +43,7 @@ To test which version of Java you have (and whether you have it at all), type th
 
 		java -version
 
-If you don’t have Java 7 or above installed on your machine, download the [Java Development Kit (JDK) here](http://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html). For newer Macs, you’ll want the file on the first line to mention Mac OS X (the number after jdk-7u increments with each update). It will look something like this:
+If you don’t have Java 7 or later installed on your machine, download the [Java Development Kit (JDK) here](http://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html). For newer Macs, you’ll want the file on the first line to mention Mac OS X (the number after jdk-7u increments with each update). It will look something like this:
 		Mac OS X x64 185.94 MB -  jdk-7u79-macosx-x75.dmg
 
 ## <a id="maven">Maven</a>
