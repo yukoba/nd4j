@@ -1,7 +1,7 @@
 ---
 layout: page
-title:“ND4J：为Java编写的N维数组”
-tagline:“ND4J是为生产环境设计的多维数组代数库”
+title: "ND4J：为Java编写的N维数组"
+tagline: "ND4J是为生产环境设计的多维数组代数库"
 ---
 
 {% include JB/setup %}
