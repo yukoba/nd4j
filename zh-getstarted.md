@@ -118,9 +118,9 @@ ND4J需要Java 7 才能执行，因此，如果您有较旧的Java版本，您�
 
 一旦您熟悉了这些例子，您可以更改POM文件中的依赖值。[请点击这里学习如何改变依赖值](http://nd4j.org/dependencies.html)。
 
-如果您有任何疑问或意见，[坛联系我们](mailto:chris@skymind.io)。
+如果您有任何疑问或意见，[坛联系我们](mailto:help@skymind.io)。
 
 相关链接:
 
-* [ND4J](http://nd4j.org/)项目和[Github](https://github.com/SkymindIO/nd4j)上库。
+* [ND4J](http://nd4j.org/zh-index)项目和[Github](https://github.com/SkymindIO/nd4j)上库。
 * [DeepLearning4J](http://deeplearning4j.org/zh-index.html)项目和[Github](https://github.com/SkymindIO/deeplearning4j)上库。
