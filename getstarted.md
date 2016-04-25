@@ -18,14 +18,14 @@ To get started with ND4J and DL4J, please read the following:
 
 ND4J is an open-source project targetting professional Java developers familiar with production deployments, an IDE like IntelliJ and an automated build tool such as Maven. Our tool will serve you best if you have those tools under your belt already.
 
-## <a id="prereq"> Prerequisites </a>
+## <a id="prereq">Prerequisites</a>
 
 System configuration requirements:
 
-* [Java 7 or above](#java) 
-* [Maven 3.2.5 or above](#maven)
+* [Java 7 or above](#javamvn) 
+* [Apache Maven 3.3.9 or above](#javamvn)
 
-*above  0.4-rc3.8*
+*Above 0.4-rc3.8*
 * [JavaCPP](#javacpp)
 * [BLAS (ATLAS, MKL, or OpenBLAS)](#blas) 
 
@@ -36,34 +36,9 @@ Optional:
 * [Windows](#windows)
 * [Github](#github) 
 
-## <a id="java">Java 7 or above</a>
+## <a id="javamvn">Java and Maven</a>
 
-Java is the main interface and networking language of ND4J, because it's used for everything from distributed cloud-based systems with thousands of nodes, to low-memory IoT devices. It's a "write once, run anywhere" language.
-
-To test which version of Java you have (and whether you have it at all), type the following into your command line:
-
-		java -version
-
-If you don’t have Java 7 or above installed on your machine, download the [Java Development Kit (JDK) here](http://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html). For newer Macs, you’ll want the file on the first line to mention Mac OS X (the number after jdk-7u increments with each update). It will look something like this:
-		Mac OS X x64 185.94 MB -  jdk-7u79-macosx-x75.dmg
-
-## <a id="maven">Maven</a>
-
-Maven is an automated build tool for Java projects (among its other [uses](http://maven.apache.org/what-is-maven.html)). It locates the latest version of ND4J and DL4J project libraries (.jar files) and downloads them automatically. You can find those repositories on [Maven Central](https://search.maven.org/#search%7Cga%7C1%7Cnd4j).
-
-We've written a slightly more in-depth [introduction to Maven for non-Java programmers](http://deeplearning4j.org/maven.html) here. Maven lets you to install both ND4J and Deeplearning4j projects easily. It works well with Integrated Development Environments (IDEs) such as IntelliJ.
-
-To check if Maven is installed in your machine, and which version you have, enter the following into the command line:
-
-		mvn --version
-
-If you do not have the most recent version of Maven, please update it. (As of this writing, it was `3.3.x`.) Instructions to install Maven are [here](https://maven.apache.org/download.cgi). Download the compressed file containing Maven's latest stable version. 
-
-![Alt text](../img/maven_downloads.png) 
-
-Lower on the same page, follow the instructions specific to your operating system; e.g. *"Unix-based Operating Systems (Linux, Solaris and Mac OS X)."* They look like this:
-
-![Alt text](../img/maven_OS_instructions.png) 
+[Java](http://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html) is the main interface and networking language of ND4J, because it's used for everything from distributed cloud-based systems with thousands of nodes, to low-memory IoT devices. It's a "write once, run anywhere" language. [Maven](https://maven.apache.org/download.cgi) is an automated build tool for Java projects. For more detail on installing Java or Maven, see the [DL4J Quick Start guide](http://deeplearning4j.org/quickstart#Java).
 
 ## <a id="javacpp">JavaCPP</a>
 
