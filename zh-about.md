@@ -25,4 +25,4 @@ ND4J根据Apache 2.0许可协议进行分发。
 
 如果您计划发表学术论文，希望引用ND4J，则请使用以下格式：
 
-*ND4J开发团队（〈当前年份〉）。ND4J：JVM环境下的N维数组合科学计算，Apache软件基金会许可协议2.0。*[http://nd4j.org](http://nd4j.org)
+*ND4J开发团队（〈当前年份〉）。ND4J：JVM环境下的N维数组合科学计算，Apache软件基金会许可协议2.0。*[http://nd4j.org](http://nd4j.org/zh-index)
