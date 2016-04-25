@@ -3,6 +3,7 @@ layout: page
 title:“ND4J：为Java编写的N维数组”
 tagline:“ND4J是为生产环境设计的多维数组代数库”
 ---
+
 {% include JB/setup %}
 
 ND4J和ND4S是JVM的科学计算库，并为生产环境设计，亦即例程运行速度快，RAM要求低。 
@@ -17,7 +18,7 @@ ND4J和ND4S是JVM的科学计算库，并为生产环境设计，亦即例程运
 
 ND4J在开源、分布式、支持GPU的库内，为JVM带来了符合直觉的、Python编程人员所用的科学计算工具。在结构上，ND4J与[SLF4J](http://www.slf4j.org/)相似。ND4J让生产环境下的工程师能够轻松将算法和界面移植到Java和Scala体系内的其他库内。 
 
-[点此立刻开始体验](getstarted.html)，或继续阅读下文。 
+[点此立刻开始体验](../zh-getstarted.html)，或继续阅读下文。 
 
 ### ND4J/ND4S具体细节
 
@@ -62,4 +63,4 @@ ND4J在开源、分布式、支持GPU的库内，为JVM带来了符合直觉的�
     [9.0 ,13.0]
     ]
 
-您已对ND4J有所了解。[现在请亲自体验](getstarted.html)。
+您已对ND4J有所了解。[现在请亲自体验](../zh-getstarted.html)。
