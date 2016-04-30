@@ -274,41 +274,54 @@ Also note that ```myArray.put(NDArrayIndex[],INDArray other)``` is functionally 
 
 ### <a name="getsettensor">Tensor Along Dimension</a>
 
-Tensor along dimension is a powerful technique, but can be a little hard to understand at first. The idea behind tensor along dimension (hereafter refered to as TAD) is to get a lower rank sub-array. TAD can be executed along 1 or more dimensions, and can perhaps best be explained by examples.
+(Note: ND4J versions 0.4-rc3.8 and earlier returned slightly different results for tensor along dimension, as compared to current versions).
 
-The simplest case is a tensor along a single example of a 2d array. Consider the following diagram:
+Tensor along dimension is a powerful technique, but can be a little hard to understand at first. The idea behind tensor along dimension (hereafter refered to as TAD) is to get a lower rank sub-array that is a <a href="#views">view</a> of the original array.
+
+The tensor along dimension method takes two arguments:
+
+- The *index* of the tensor to return (in the range of 0 to numTensors-1)
+- The *dimensions* (1 or more values) along which to execute the TAD operation
+
+The simplest case is a tensor along a single row or column of a 2d array. Consider the following diagram (where dimension 0 (rows) are indexed going down the page, and dimension 1 (columns) are indexed going across the page):
 
 ![Tensor Along Dimension](../img/tad_2d.png)
 
-First, note the signature of the TAD method: ```INDArray.tensorAlongDimension(int index, int... dimension)```. Second, note that the output of the tensorAlongDimension call with one dimension is a row vector in all cases.
+Note that the output of the tensorAlongDimension call with one dimension is a row vector in all cases.
 
-To understand why we get this output: consider the first case in the above diagram. There, we are taking the 0th (first) tensor *along* dimension 0 (dimension 0 being rows); the values (1,5,2) are in a line as we move along dimension 0, hence the output.
+To understand why we get this output: consider the first case in the above diagram. There, we are taking the 0th (first) tensor *along* dimension 0 (dimension 0 being rows); the values (1,5,2) are in a line as we move along dimension 0, hence the output. Similarly, the ```tensorAlongDimension(1,1)``` is the second (*index=1*) tensor along dimension 1; values (5,3,5) are in a line as we move along dimension 1.
 
-Now, consider what happens if we do a tensor along 2 dimensions in the above:
 
-![Tensor Along Dimension](../img/tad_2d_2.png)
+The TAD operation can also be executed along multiple dimensions. For example, by specifying two dimensions to execute the TAD operation along, we can use it to get a 2d sub-array from a 3d (or 4d, or 5d...) array. Similarly, by specifying 3 dimensions, we can use it to get a 3d from 4d or higher.
 
-There are two things to note here:
+There are two things we need to know about the output, for the TAD operation to be useful.
 
-* For a TAD executed along two dimensions we get a matrix (2d) output
-* For a TAD executed along dimensions i,j:
-  * The output array rows taken from values along dimension i of the original array
-  * The output array columns are taken from the values along dimension j of the original array
-
-This is why the ```tensorAlongDimension(0,0,1)``` call returns the transpose of the original matrix: the *rows* of the output array are taken from the *columns* (columns = "along dimension 0") of the input array, and the *columns* of the output array are taken along the *rows* (rows = "along dimension 1") of the input array. This is what the arrows attempt to show in the image above.
-
-Another method worth knowing about is the "number of tensors along dimensions" method, ```INDArray.tensorssAlongDimension(int... dimensions)```. This method simply returns the number of tensors along the specified dimensions. In the examples above, we have:
+First, we need to the number of tensors that we can get, for a given set of dimensions. To determine this, we can use the "number of tensors along dimensions" method, ```INDArray.tensorssAlongDimension(int... dimensions)```. This method simply returns the number of tensors along the specified dimensions. In the examples above, we have:
 
 * ```myArray.tensorssAlongDimension(0) = 3```
 * ```myArray.tensorssAlongDimension(1) = 3```
 * ```myArray.tensorssAlongDimension(0,1) = 1```
 * ```myArray.tensorssAlongDimension(1,0) = 1```
 
+(In the latter 2 cases, note that tensor along dimension would give us the same array out as the original array in - i.e., we get a 2d output from a 2d array).
+
+More generally, the *number* of tensors is given by the product of the remaining dimensions, and the *shape* of the tensors is given by the size of the specified dimensions in the original shape.
 
 
-Finally, consider some possible TADs along 2 dimensions we can perform on a 3d array. The diagram below attempts to demonstrate how the shape and values of the output tensors depend on the input array. Note that though the outputs are shown as 3d in the diagram below, keep in mind that they are in fact two dimensional (in general, a tensor along N dimensions gives an output array of rank N).
+Here's some examples:
 
-![Tensors along 2 dimensions on a 3d array](../img/tad_3d.png)
+- For input shape [a,b,c], tensorssAlongDimension(0) gives b*c tensors, and tensorAlongDimension(i,0) returns tensors of shape [1,a].
+- For input shape [a,b,c], tensorssAlongDimension(1) gives a*c tensors, and tensorAlongDimension(i,1) returns tensors of shape [1,b].
+- For input shape [a,b,c], tensorssAlongDimension(0,1) gives c tensors, and tensorAlongDimension(i,0,1) returns tensors of shape [a,b].
+- For input shape [a,b,c], tensorssAlongDimension(1,2) gives a tensors, and tensorAlongDimension(i,1,2) returns tensors of shape [b,c].
+- For input shape [a,b,c,d], tensorssAlongDimension(1,2) gives a*d tensors, and tensorAlongDimension(i,1,2) returns tensors of shape [b,c].
+- For input shape [a,b,c,d], tensorssAlongDimension(0,2,3) gives b tensors, and tensorAlongDimension(i,0,2,3) returns tensors of shape [a,c,d].
+
+
+
+
+
+
 
 
 ### <a name="getsetslice">Slice</a>
