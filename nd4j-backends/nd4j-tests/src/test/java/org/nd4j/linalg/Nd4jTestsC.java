@@ -719,13 +719,13 @@ public  class Nd4jTestsC extends BaseNd4jTest {
     public void testSumAlongDim1sEdgeCases() {
         int[][] shapes = new int[][]{
                 //Standard case:
-               // {2,2,3,4},
+                {2,2,3,4},
                 //Leading 1s:
-            //    {1,2,3,4},
-             //   {1,1,2,3},
+                {1,2,3,4},
+                {1,1,2,3},
                 //Trailing 1s:
-             //   {4,3,2,1},
-             //   {4,3,1,1},
+                {4,3,2,1},
+                {4,3,1,1},
                 //1s for non-leading/non-trailing dimensions
                 {4,1,3,2},
                 {4,3,1,2},
@@ -733,12 +733,12 @@ public  class Nd4jTestsC extends BaseNd4jTest {
         };
 
         int[][] sumDims = {
-                /*{0}, {1}, {2}, {3},
-                {0,1}, {0,2}, {0,3}, {1,2}, {1,3},*/
+                {0}, {1}, {2}, {3},
+                {0,1}, {0,2}, {0,3}, {1,2}, {1,3},
                 {0,1,2}, {0,1,3}, {0,2,3},
                 {0,1,2,3}
         };
-        for( int[] shape : shapes) {
+/*        for( int[] shape : shapes) {
             for (int[] dims : sumDims) {
                 System.out.println("Shape");
                 System.out.println(Arrays.toString(shape));
@@ -746,7 +746,11 @@ public  class Nd4jTestsC extends BaseNd4jTest {
                 System.out.println(Arrays.toString(dims));
                 int length = ArrayUtil.prod(shape);
                 INDArray inC = Nd4j.linspace(1, length, length).reshape('c', shape);
+                System.out.println("TAD shape");
+                System.out.println(Arrays.toString((inC.tensorAlongDimension(0,dims).shape())));
+
                 INDArray inF = inC.dup('f');
+                System.out.println("C stride " + Arrays.toString(inC.tensorAlongDimension(0,dims).stride()) + " and f stride " + Arrays.toString(inF.tensorAlongDimension(0,dims).stride()));
                 for(int i = 0; i < inC.tensorssAlongDimension(dims); i++) {
                     System.out.println(inC.tensorAlongDimension(i,dims).ravel());
                 }
@@ -754,8 +758,8 @@ public  class Nd4jTestsC extends BaseNd4jTest {
                     System.out.println(inF.tensorAlongDimension(i,dims).ravel());
                 }
             }
-        }
- /*       for( int[] shape : shapes) {
+        }*/
+        for( int[] shape : shapes) {
             for(int[] dims : sumDims) {
                 System.out.println("Shape: " + Arrays.toString(shape) + ", sumDims=" + Arrays.toString(dims));
                 int length = ArrayUtil.prod(shape);
@@ -773,7 +777,7 @@ public  class Nd4jTestsC extends BaseNd4jTest {
                     assertEquals(sumF, inF.sum(dims));
                 }
             }
-        }*/
+        }
     }
 
     @Test
