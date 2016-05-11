@@ -11,7 +11,7 @@ import org.bytedeco.javacpp.annotation.Platform;
  * Original credit:
  * https://github.com/uncomplicate/neanderthal-atlas
  */
-@Platform(include = "NativeBlas.h", compiler = "cpp11", link = "nd4j", library = "jnind4j")
+@Platform(include = "NativeBlas.h", compiler = "cpp11", link = "nd4j", library = "nd4j")
 public class Nd4jBlas extends Pointer {
     static {
         // using our custom platform properties from resources, load
