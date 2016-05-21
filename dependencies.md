@@ -43,7 +43,7 @@ Add the following to your `build.gradle`:
 ```groovy
 switch(libnd4jOS) {
   case 'windows':
-    libnd4jOS = 'win-x86_64'
+    libnd4jOS = 'windows-x86_64'
     break
   case 'linux':
     libnd4jOS = 'linux-x86_64'
