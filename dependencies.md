@@ -21,8 +21,8 @@ Add the following to your dependencies in `build.gradle`:
 
 ```groovy
 dependencies {
-  compile 'org.nd4j:nd4j-native:0.4-rc3.9-SNAPSHOT'
-  compile 'org.nd4j:nd4j-native:0.4-rc3.9-SNAPSHOT:macosx-x86_64'
+  compile 'org.nd4j:nd4j-native:0.4-rc3.9'
+  compile 'org.nd4j:nd4j-native:0.4-rc3.9:macosx-x86_64'
 }
 ```
 
@@ -33,7 +33,7 @@ Add the following to your dependencies in `build.sbt`:
 ```scala
 classpathTypes += "maven-plugin"
 
-libraryDependencies += "org.nd4j" % "nd4j-native" % "0.4-rc3.9-SNAPSHOT" classifier "" classifier "linux-x86_64"
+libraryDependencies += "org.nd4j" % "nd4j-native" % "0.4-rc3.9" classifier "" classifier "linux-x86_64"
 ```
 
 ### Command Line Option (Gradle)
@@ -62,8 +62,8 @@ switch(libnd4jOS) {
 }
 
 dependencies {
-  compile 'org.nd4j:nd4j-native:0.4-rc3.9-SNAPSHOT'
-  compile 'org.nd4j:nd4j-native:0.4-rc3.9-SNAPSHOT:'+libnd4jOS
+  compile 'org.nd4j:nd4j-native:0.4-rc3.9'
+  compile 'org.nd4j:nd4j-native:0.4-rc3.9:'+libnd4jOS
 }
 ```
 
