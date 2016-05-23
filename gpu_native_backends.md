@@ -6,7 +6,6 @@ description: "GPU - Compatibility for NVIDIA CUDA BLAS, CUBLAS through JCUBLAS"
 
 # JCublas Backend for GPUs
 
-*ND4J's GPU backend is currently undergoing a rewrite. Please use nd4j-x86 for now.*
 
 You can choose GPUs or native CPUs for your backend linear algebra operations by changing the dependencies in ND4J's POM.xml file. Your selection will affect both ND4J and [Deeplearning4j](http://deeplearning4j.org/). Check our [dependencies page](dependencies.html) for instructions on configuring your POM.xml file.
 
@@ -14,13 +13,13 @@ The current version of __Jcuda__ supports the CUDA versions 5.5, 6.0, 6.5 and 7,
 
         <dependency>
          <groupId>org.nd4j</groupId>
-         <artifactId>nd4j-jcublas-6.0</artifactId>
+         <artifactId>nd4j-cuda-7.5</artifactId>
          <version>${nd4j.version}</version>
         </dependency>
 
 You can replace the `<artifactId> ... </artifactId>`, depending on your preference:
 
-                nd4j-jcublas-$CUDA_VERSION (where CUDA_VERSION is one of 5.5, 6.0, 6.5, or 7)
+                nd4j-cuda-$CUDA_VERSION (where CUDA_VERSION is one of 7.5)
 
 That's it. 
 
