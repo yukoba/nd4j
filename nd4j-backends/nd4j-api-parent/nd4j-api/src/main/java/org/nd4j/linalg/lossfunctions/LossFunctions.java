@@ -95,11 +95,9 @@ public class LossFunctions {
                 INDArray xEntOneMinusLogOneMinusZ = log(z).rsubi(1);
                 ret = labels.mul(xEntLogZ).add(xEntOneMinusLabelsOut).muli(xEntOneMinusLogOneMinusZ).sum(1).sumNumber().doubleValue();
                 break;
-            case RMSE_XENT:
-                INDArray rmseXentDiff = labels.sub(z);
-                INDArray squaredrmseXentDiff = pow(rmseXentDiff, 2.0);
-                INDArray sqrt = sqrt(squaredrmseXentDiff);
-                ret = sqrt.sum(1).sumNumber().doubleValue();
+            case RMSE:
+                INDArray mse = labels.sub(z);
+                ret = Math.sqrt(pow(mse, 2).sum(1).sumNumber().doubleValue());
                 break;
             case MSE:
                 INDArray mseDelta = labels.sub(z);
@@ -137,7 +135,7 @@ public class LossFunctions {
      * EXPLL: Exponential log likelihood: Poisson Regression
      * XENT: Cross Entropy: Binary Classification
      * MCXENT: Multiclass Cross Entropy
-     * RMSE_XENT: RMSE Cross Entropy
+     * RMSE: Root Mean Squared Error
      * SQUARED_LOSS: Squared Loss
      * RECONSTRUCTION_CROSSENTROPY: Reconstruction Cross Entropy
      * NEGATIVELOGLIKELIHOOD: Negative Log Likelihood
@@ -148,7 +146,7 @@ public class LossFunctions {
         EXPLL,
         XENT,
         MCXENT,
-        RMSE_XENT,
+        RMSE,
         SQUARED_LOSS,
         RECONSTRUCTION_CROSSENTROPY,
         NEGATIVELOGLIKELIHOOD,
