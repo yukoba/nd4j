@@ -56,9 +56,10 @@ public  class LossFunctionTests extends BaseNd4jTest {
     @Test
     public void testRMse() {
         INDArray in = Nd4j.create(new double[][]{{1, 2}, {3, 4}});
-        INDArray out = Nd4j.create(new double[][]{{5, 6}, {7, 8}});
+        INDArray out = Nd4j.create(new double[][]{{11, 12}, {13, 14}});
         double diff = LossFunctions.score(in, LossFunctions.LossFunction.RMSE, out, 0, false);
-        assertEquals(getFailureMessage(),4, diff, 1e-1);
+        //expected is sqrt((10^2 * 4)/2) = sqrt(200) = 10*1.414 = 14.14
+        assertEquals(getFailureMessage(),14.14, diff, 1e-1);
     }
 
     @Test

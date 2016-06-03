@@ -97,7 +97,8 @@ public class LossFunctions {
                 break;
             case RMSE:
                 INDArray mse = labels.sub(z);
-                ret = Math.sqrt(pow(mse, 2).sum(1).sumNumber().doubleValue());
+                //Compensating for the division by n, since it should be divided by sqrt(n)
+                ret = Math.sqrt(pow(mse, 2).sum(1).sumNumber().doubleValue()*labels.size(0));
                 break;
             case MSE:
                 INDArray mseDelta = labels.sub(z);
