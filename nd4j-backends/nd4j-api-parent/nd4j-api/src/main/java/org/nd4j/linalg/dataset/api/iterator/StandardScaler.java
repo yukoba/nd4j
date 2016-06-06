@@ -97,7 +97,7 @@ public class StandardScaler {
      */
     public void transform(DataSet dataSet) {
         dataSet.setFeatures(dataSet.getFeatures().subRowVector(mean));
-        dataSet.setFeatures(dataSet.getFeatures().divRowVector(std));
+        dataSet.setFeatures(dataSet.getFeatures().divRowVector(std).add(Nd4j.scalar(Nd4j.EPS_THRESHOLD)));
     }
 
 

@@ -78,7 +78,7 @@ public class NormalizerMinMaxScaler implements org.nd4j.linalg.dataset.api.DataS
         // subtract by dataset min
         toPreProcess.setFeatures(toPreProcess.getFeatures().subRowVector(min));
         // scale by dataset range
-        toPreProcess.setFeatures(toPreProcess.getFeatures().divRowVector(maxMinusMin));
+        toPreProcess.setFeatures(toPreProcess.getFeatures().divRowVector(maxMinusMin).add(Nd4j.scalar(Nd4j.EPS_THRESHOLD)));
         // scale by given or default feature range
         toPreProcess.setFeatures(toPreProcess.getFeatures().div(maxRange - minRange + Nd4j.EPS_THRESHOLD));
         // offset by given min feature value
@@ -105,7 +105,7 @@ public class NormalizerMinMaxScaler implements org.nd4j.linalg.dataset.api.DataS
 
         toPreProcess.setFeatures(toPreProcess.getFeatures().sub(minRange));
         toPreProcess.setFeatures(toPreProcess.getFeatures().mul(maxRange - minRange + Nd4j.EPS_THRESHOLD));
-        toPreProcess.setFeatures(toPreProcess.getFeatures().mulRowVector(maxMinusMin));
+        toPreProcess.setFeatures(toPreProcess.getFeatures().mulRowVector(maxMinusMin).add(Nd4j.scalar(Nd4j.EPS_THRESHOLD)));
         toPreProcess.setFeatures(toPreProcess.getFeatures().addRowVector(min));
     }
 
