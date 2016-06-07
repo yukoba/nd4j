@@ -3106,6 +3106,17 @@ public  class Nd4jTestsC extends BaseNd4jTest {
         assertEquals(Nd4j.create(new int[]{10,10}), arrF);
     }
 
+    @Test
+    public void testVarConst() {
+        INDArray constArr = Nd4j.ones(10,10).mul(10);
+        assertFalse(Double.isNaN(constArr.var(0).sumNumber().doubleValue()));
+        assertFalse(Double.isNaN(constArr.var(1).sumNumber().doubleValue()));
+        INDArray aconst = Nd4j.linspace(1,10,10);
+        INDArray constArrN = Nd4j.ones(10,10).mulRowVector(aconst);
+        assertFalse(Double.isNaN((Double) constArrN.var(0).sumNumber()));
+        assertFalse(Double.isNaN((Double) constArrN.var(1).sumNumber()));
+    }
+
 
     @Override
     public char ordering() {
