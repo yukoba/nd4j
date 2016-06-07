@@ -88,6 +88,7 @@ public class NormalizerMinMaxScalerTest  extends BaseNd4jTest {
         int nFeatures = 3;
 
         INDArray featureSet = Nd4j.randn(nSamples,nFeatures);
+        featureSet.addi(5);
         INDArray labelSet = Nd4j.zeros(nSamples, 1);
         DataSet sampleDataSet = new DataSet(featureSet, labelSet);
 
@@ -110,10 +111,11 @@ public class NormalizerMinMaxScalerTest  extends BaseNd4jTest {
         int nFeatures = 3;
 
         INDArray featureSet = Nd4j.randn(nSamples,nFeatures);
+        featureSet.addi(5);
         INDArray labelSet = Nd4j.zeros(nSamples, 1);
         DataSet sampleDataSet = new DataSet(featureSet, labelSet);
 
-        double givenMin = -1;
+        double givenMin = 0.99999;
         double givenMax = 1;
         NormalizerMinMaxScaler myNormalizer = new NormalizerMinMaxScaler(givenMin,givenMax);
         DataSet transformed = sampleDataSet.copy();

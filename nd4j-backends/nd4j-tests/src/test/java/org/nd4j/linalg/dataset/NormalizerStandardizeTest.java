@@ -146,10 +146,10 @@ public class NormalizerStandardizeTest extends BaseNd4jTest {
         // And the constant is large. Checking if algorithm can handle
         double tolerancePerc = 1; //Within 1 %
         double toleranceAbs = 0.0005;
-        int nSamples = 1000;
-        int bSize = 10;
-        int x = -1000000,y = 1000000;
-        double z = 1000000;
+        int nSamples = 3;
+        int bSize = 3;
+        int x = -1000000000,y = 1000000000;
+        double z = 1000000000;
 
         INDArray featureX = Nd4j.rand(nSamples,1).mul(1).add(x);
         INDArray featureY = Nd4j.rand(nSamples,1).mul(2).add(y);
@@ -180,6 +180,7 @@ public class NormalizerStandardizeTest extends BaseNd4jTest {
         int nFeatures = 3;
 
         INDArray featureSet = Nd4j.randn(nSamples,nFeatures);
+        featureSet.addi(5);
         INDArray labelSet = Nd4j.zeros(nSamples, 1);
         DataSet sampleDataSet = new DataSet(featureSet, labelSet);
 
@@ -194,6 +195,24 @@ public class NormalizerStandardizeTest extends BaseNd4jTest {
         double maxdeltaPerc = delta.max(0,1).mul(100).getDouble(0,0);
         assertTrue(maxdeltaPerc < tolerancePerc);
 
+    }
+    @Test
+    public void testConstant() {
+        double tolerancePerc = 0.01; // 0.01% of correct value
+        int nSamples = 500;
+        int nFeatures = 3;
+
+        INDArray featureSet = Nd4j.zeros(nSamples,nFeatures).add(100);
+        INDArray labelSet = Nd4j.zeros(nSamples, 1);
+        DataSet sampleDataSet = new DataSet(featureSet, labelSet);
+
+        NormalizerStandardize myNormalizer = new NormalizerStandardize();
+        myNormalizer.fit(sampleDataSet);
+        //assertFalse (Double.isNaN(myNormalizer.getStd().getDouble(0)));
+        myNormalizer.transform(sampleDataSet);
+        //assertFalse (Double.isNaN(sampleDataSet.getFeatures().min(0,1).getDouble(0)));
+        myNormalizer.revert(sampleDataSet);
+        //assertFalse (Double.isNaN(sampleDataSet.getFeatures().min(0,1).getDouble(0)));
     }
 
     public class genRandomDataSet {
