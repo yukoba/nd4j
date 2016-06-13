@@ -1,6 +1,6 @@
 ---
-layout: ja-default
-title:"ND4Jのフルインストール"
+layout: default
+title: ND4Jのフルインストール
 description:"ND4Jでn次元の配列代数ができるJava開発環境をインストールしましょう。"
 ---
 {% include JB/setup %}
