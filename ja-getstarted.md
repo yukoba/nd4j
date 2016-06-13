@@ -3,7 +3,6 @@ layout: default
 title: ND4Jのフルインストール
 description:"ND4Jでn次元の配列代数ができるJava開発環境をインストールしましょう。"
 ---
-{% include JB/setup %}
 
 このインストールは複数の段階の手順に従って行います。質問やコメント等は、是非、[Gitter Live Chat](https://gitter.im/deeplearning4j/deeplearning4j)でお聞かせください。弊社のスタッフがお手伝いいたします。恥ずかしがる必要は全くありません。いつでも気軽にご連絡ください。 
 
