@@ -5,10 +5,6 @@ description: "Dependencies - How to change backends"
 ---
 {% include JB/setup %}
 
-First, you will need to choose the right dependency for your chips:
-
-![Alt text](../img/backend_table.png) 
-
 ## Platform Specific Binaries
 
 Valid for version `0.4-rc3.9` and higher. (As of this writing, we're on `0.4-rc3.10`)
