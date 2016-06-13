@@ -11,7 +11,7 @@ First, you will need to choose the right dependency for your chips:
 
 ## Platform Specific Binaries
 
-Valid for version `0.4-rc3.9` and higher.
+Valid for version `0.4-rc3.9` and higher. (As of this writing, we're on `0.4-rc3.10`)
 
 Certain build tools such as [Gradle](http://www.gradle.org) and [SBT](http://www.scala-sbt.org/) cannot resolve transitive dependencies for specific platforms. When using a build tool such as Gradle, you will need to either explicitly state the platform binary you need at runtime or create a command line parameter that will specify your required platform. Creating command line parameters will allow you to switch between multiple platforms, such as testing on OS X and submitting to an Apache Spark cluster using a Linux operating system.
 
@@ -21,8 +21,8 @@ Add the following to your dependencies in `build.gradle`:
 
 ```groovy
 dependencies {
-  compile 'org.nd4j:nd4j-native:0.4-rc3.9'
-  compile 'org.nd4j:nd4j-native:0.4-rc3.9:macosx-x86_64'
+  compile 'org.nd4j:nd4j-native:0.4-rc3.10'
+  compile 'org.nd4j:nd4j-native:0.4-rc3.10:macosx-x86_64'
 }
 ```
 
@@ -33,7 +33,7 @@ Add the following to your dependencies in `build.sbt`:
 ```scala
 classpathTypes += "maven-plugin"
 
-libraryDependencies += "org.nd4j" % "nd4j-native" % "0.4-rc3.9" classifier "" classifier "linux-x86_64"
+libraryDependencies += "org.nd4j" % "nd4j-native" % "0.4-rc3.10" classifier "" classifier "linux-x86_64"
 ```
 
 ### Command Line Option (Gradle)
@@ -62,8 +62,8 @@ switch(libnd4jOS) {
 }
 
 dependencies {
-  compile 'org.nd4j:nd4j-native:0.4-rc3.9'
-  compile 'org.nd4j:nd4j-native:0.4-rc3.9:'+libnd4jOS
+  compile 'org.nd4j:nd4j-native:0.4-rc3.10'
+  compile 'org.nd4j:nd4j-native:0.4-rc3.10:'+libnd4jOS
 }
 ```
 
@@ -79,13 +79,13 @@ Maven can automatically install the required dependencies once we select one of 
 
 * [Netlib Blas](http://netlib.org/) (and x86)
 * [JCUBLAS](gpu_native_backends.html) (for GPUs)
-* ND4J-Java 
 * JOCL 
  
 Go to your root directory -- e.g. nd4j or deeplearning4j -- and inspect the [pom.xml file](https://maven.apache.org/pom.html). You should see one backend defined in the `<dependencies> ... </dependencies>` section. You can switch among:
 
 ### x86
 Before version `4.0-rc3.9` you needed to specify the backend for your device.
+
 ```xml
         <dependency>
             <groupId>org.nd4j</groupId>
@@ -103,7 +103,7 @@ After version `4.0-RC3.8` you can now pull include ND4J for all platforms.
 ```
 ### Jcublas (Cuda/GPUs)
 
-See our [GPU page](gpu_native_backends.html) for the versions you can choose.
+See our [GPU page](./gpu_native_backends) for the versions you can choose.
 
 ### JOCL
 
@@ -111,7 +111,7 @@ JOCL is a WIP. Please see the [source code here](https://github.com/deeplearning
 
 ## Finding and specifying the latest version of the libraries (Advanced)
 
-They can be found on: [search.maven.org](http://search.maven.org/#search%7Cga%7C1%7Cnd4j-jblas). Click on the "latest version" on this screen. From there, you want to copy the dependency information:
+They can be found on: [search.maven.org](http://search.maven.org/#search%7Cga%7C1%7Cnd4j). Click on the "latest version" on this screen. From there, you want to copy the dependency information:
 
 ![Alt text](../img/nd4j_maven.png)
 
