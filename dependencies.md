@@ -7,7 +7,7 @@ description: "Dependencies - How to change backends"
 
 ## Platform Specific Binaries
 
-Valid for version `0.4-rc3.9` and higher. (As of this writing, we're on `0.4-rc3.10`)
+Valid for version `0.4-rc3.9` and higher. (As of this writing, we're on `0.4-rc3.10`.)
 
 Certain build tools such as [Gradle](http://www.gradle.org) and [SBT](http://www.scala-sbt.org/) cannot resolve transitive dependencies for specific platforms. When using a build tool such as Gradle, you will need to either explicitly state the platform binary you need at runtime or create a command line parameter that will specify your required platform. Creating command line parameters will allow you to switch between multiple platforms, such as testing on OS X and submitting to an Apache Spark cluster using a Linux operating system.
 
@@ -74,7 +74,7 @@ gradle run `-Plibnd4jOS=macosx`
 Maven can automatically install the required dependencies once we select one of these backends:
 
 * [Netlib Blas](http://netlib.org/) (and x86)
-* [JCUBLAS](gpu_native_backends.html) (for GPUs)
+* [JCUBLAS](./gpu_native_backends) (for GPUs)
 * JOCL 
  
 Go to your root directory -- e.g. nd4j or deeplearning4j -- and inspect the [pom.xml file](https://maven.apache.org/pom.html). You should see one backend defined in the `<dependencies> ... </dependencies>` section. You can switch among:
