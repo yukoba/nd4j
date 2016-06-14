@@ -8,7 +8,7 @@ description: "GPU - Compatibility for NVIDIA CUDA BLAS, CUBLAS through JCUBLAS"
 
 You can choose GPUs or native CPUs for your backend linear algebra operations by changing the dependencies in ND4J's POM.xml file. Your selection will affect both ND4J and [Deeplearning4j](http://deeplearning4j.org). Check our [dependencies page](dependencies.html) for instructions on configuring your POM.xml file.
 
-We support Cuda 7.5 at the moment, and we will add 8.0 support as soon as it comes out. If you have CUDA v6.0 installed, then you need to define the _artifactId_ like this:
+We support Cuda 7.5 at the moment, and we will add 8.0 support as soon as it comes out. If you have CUDA v7.5 installed, then you need to define the _artifactId_ like this:
 
         <dependency>
          <groupId>org.nd4j</groupId>
