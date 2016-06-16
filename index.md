@@ -21,8 +21,7 @@ ND4J brings the intuitive scientific computing tools of the Python community to 
 
 ### ND4J/ND4S Specifics
 
-* Supports GPUs via CUDA and Native via Jblas and Netlib Blas.
-* Deploys on Android.
+* Supports GPUs via CUDA
 * Integrates with Hadoop and Spark.
 * [ND4S's API](https://github.com/deeplearning4j/nd4s) mimics the semantics of Numpy.
 
