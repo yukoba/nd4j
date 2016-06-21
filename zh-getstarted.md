@@ -88,7 +88,7 @@ ND4J需要Java 7 才能执行，因此，如果您有较旧的Java版本，您�
 
 如果您想要开发ND4J，只要git 复制（git clone）此软件（如上所述） ，并运行ND4J目录中的Maven命令：
 
-        mvn clean install -DskipTests -Dmaven.javadoc.skip=true
+        mvn clean install -DskipTests=true -Dmaven.javadoc.skip=true
 
 ## <a name="ide">Java IDE</a>
 
