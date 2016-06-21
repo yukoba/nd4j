@@ -18,7 +18,7 @@ description:
 
 여러분의 루트 디렉터리로 가십시오. 예를 들어, nd4j 또는 deeplearning4j로 가셔서 [pom.xml 파일](https://maven.apache.org/pom.html)을 확인하십시오. 여러분은 `<dependencies> ... </dependencies>` 섹션에 정의된 백엔드를 보시게 됩니다. 다음 중 하나로 여러분이 전환하실 수 있습니다.
 
-### Jblas
+### Native
 
     <dependency>
       <groupId>org.nd4j</groupId>
@@ -26,9 +26,15 @@ description:
       <version>${nd4j.version}</version>
     </dependency>
 
-### 또는 Jcublas (Cuda/GPUs)
+### 또는 CUDA (/GPUs)
 
 여러분이 선택하실 수 있는 버전들을 보시려면 저희의 [GPU 페이지](http://nd4j.org/gpu_native_backends.html)로 가시기 바랍니다.
+
+		<dependency>
+		  <groupId>org.nd4j</groupId>
+		  <artifactId>nd4j-cuda-7.5</artifactId>
+		  <version>${nd4j.version}</version>
+		</dependency>
 
 ## 라이브러리의 최신 버전들을 찾고, 지정하는(specifying) 방법 (고급)
 
