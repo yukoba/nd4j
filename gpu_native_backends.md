@@ -1,7 +1,7 @@
 ---
 layout: page
 title: 
-description: "GPU - Compatibility for NVIDIA CUDA BLAS, CUBLAS through JCUBLAS"
+description: "GPU Compatibility for NVIDIA CUDA"
 ---
 
 # ND4J Cuda Backends for GPUs
@@ -21,5 +21,7 @@ You can replace the `<artifactId> ... </artifactId>`, depending on your preferen
                 nd4j-cuda-$CUDA_VERSION (where CUDA_VERSION is one of 7.5)
 
 That's it. 
+
+If you have several GPUs, but your system is forcing you to use just one, there's a solution. Just add `CudaEnvironment.getInstance().getConfiguration().allowMultiGPU(true);` as first line of your `main()` method.
 
 Check the NVIDIA guides for instructions on setting up CUDA on  [Linux](http://docs.nvidia.com/cuda/cuda-getting-started-guide-for-linux/), [Windows](http://docs.nvidia.com/cuda/cuda-getting-started-guide-for-microsoft-windows/), and [OSX](http://docs.nvidia.com/cuda/cuda-getting-started-guide-for-mac-os-x/).
