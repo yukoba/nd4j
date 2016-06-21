@@ -85,23 +85,23 @@ IntelliJ 내에서 새로운 ND4J 프로젝트를 생성하려면, 여러분의 
 
 여러분이 필요로 할 디펜던스들로 POM 파일을 업데이트 하십시오. 이들은 여러분께서 CPU 또는 GPU를 사용하시는 지의 여부에 따라 다를 것 입니다. 
 
-CPU를 위한 기본 백엔드는 x86 이며, 이는 Netlib-blas에 강력하게 의존합니다. 이를 여러분의 POM의 `<dependencies> ... </dependencies>` 섹션에 다음과 같이 붙여 넣으실 수 있습니다.
+CPU를 위한 기본 백엔드는 `native` 이며, 이는 Netlib-blas에 강력하게 의존합니다. 이를 여러분의 POM의 `<dependencies> ... </dependencies>` 섹션에 다음과 같이 붙여 넣으실 수 있습니다.
 
 		<dependency>
 		  <groupId>org.nd4j</groupId>
-		  <artifactId>nd4j-jblas</artifactId>
+		  <artifactId>nd4j-native</artifactId>
 		  <version>${nd4j.version}</version>
 		</dependency>
  
 ND4J의 버전이 여기에서 변수입니다. 이는 POM에서 다른 상위 라인을 참조할 것이며, `<properties> ... </properties>` 섹션에 있는 nd4j의 버전을 보여주고 다음과 비슷하게 보여질 것 입니다:
 
-		<nd4j.version>0.4-rc3.8</nd4j.version>
+		<nd4j.version>0.4-rc3.10</nd4j.version>
 
-dl4j의 버전 역시 0.4-rc3.8이고, Canova의 버전은 0.0.0.13 입니다.
+dl4j의 버전 역시 0.4-rc3.10이고, Canova의 버전은 0.0.0.13 입니다.
 
 저희가 새로운 릴리스를 사용하면 버전의 숫자는 달라질 수 있습니다. [Maven Central에서 최신 버전을 반드시 확인하십시오]( https://search.maven.org/#search%7Cga%7C1%7Cnd4j). 여러분이 적절한 디펜던시와 nd4j 버전에 붙여 넣었다면, Maven은 자동으로 필요한 라이브러리들을 설치하고, 여러분은 ND4J을 실행하실 수 있어야 합니다.
 
-백엔드가 x86이어야 하지는 않습니다; Netlib Blas, 또는 GPUs를 위한 Jcublas로 전환될 수 있습니다. 이는 저희의 [디펜던시들](../kr-dependencies.html) 페이지에 더 심화된 구성 변경들과 함께 설명되어 있습니다. 또한 같은 페이지에 라이브러리들의 [최신 버전](http://search.maven.org/#search%7Cga%7C1%7Cnd4j)을 확인하는 방법에 대해서도 설명되어 있습니다.
+백엔드가 `native`이어야 하지는 않습니다; Netlib Blas, 또는 GPUs를 위한 Jcublas로 전환될 수 있습니다. 이는 저희의 [디펜던시들](../kr-dependencies) 페이지에 더 심화된 구성 변경들과 함께 설명되어 있습니다. 또한 같은 페이지에 라이브러리들의 [최신 버전](http://search.maven.org/#search%7Cga%7C1%7Cnd4j)을 확인하는 방법에 대해서도 설명되어 있습니다.
 
 여러분은 이제 IntelliJ 내에서 새로운 Java 파일을 생성하고, 분산 선형 대수학을 위한 ND4J의 API 사용을 시작하실 수 있습니다.
 
@@ -164,7 +164,7 @@ Windows나 Linux OS에서 특정 ND4J 디펜던시들을 컴파일 하려면, �
 [Apple developer tool Xcode](https://developer.apple.com/xcode/downloads/)의 일부 버전은 여러분을 위해 gcc를 설치해 줄 것 입니다. 만약 gcc를 가지고 있지 않으시다면 여러분의 커맨드 프롬프트에 brew install gcc를 입력해 주십시오.
 
 ## OpenBlas
-X86 백엔드 상에서 네이티브 libs들이 작동하는지 보시려면, 시스템 경로 상에 /opt/OpenBLAS/lib가 필요합니다. 그 다음, 프롬프트에 다음의 커맨드들을 입력하십시오.
+`native` 백엔드 상에서 네이티브 libs들이 작동하는지 보시려면, 시스템 경로 상에 /opt/OpenBLAS/lib가 필요합니다. 그 다음, 프롬프트에 다음의 커맨드들을 입력하십시오.
 
 sudo cp libopenblas.so liblapack.so.3
 		sudo cp libopenblas.so libblas.so.3
