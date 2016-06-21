@@ -73,22 +73,13 @@ gradle run `-Plibnd4jOS=macosx`
 
 Maven can automatically install the required dependencies once we select one of these backends:
 
-* [Netlib Blas](http://netlib.org/) (and x86)
+* [nd4j-native]
 * [JCUBLAS](./gpu_native_backends) (for GPUs)
-* JOCL 
  
 Go to your root directory -- e.g. nd4j or deeplearning4j -- and inspect the [pom.xml file](https://maven.apache.org/pom.html). You should see one backend defined in the `<dependencies> ... </dependencies>` section. You can switch among:
 
-### x86
-Before version `4.0-rc3.9` you needed to specify the backend for your device.
+### native
 
-```xml
-        <dependency>
-            <groupId>org.nd4j</groupId>
-            <artifactId>nd4j-x86</artifactId>
-            <version>${nd4j.version}</version>
-        </dependency>
-```
 After version `4.0-RC3.8` you can now pull include ND4J for all platforms.
 ```xml
         <dependency>
