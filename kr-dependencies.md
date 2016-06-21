@@ -13,11 +13,8 @@ description:
 
 다음의 백엔드 중 하나를 선택하면 Maven이 자동으로 필요한 디펜던시를 설치합니다.
 
-* JBLAS (default)
-* [Netlib Blas](http://netlib.org)
+* `native` (default)
 * [JCUBLAS](http://nd4j.org/gpu_native_backends.html) (for GPUs)
-* ND4J-Java
-* JOCL
 
 여러분의 루트 디렉터리로 가십시오. 예를 들어, nd4j 또는 deeplearning4j로 가셔서 [pom.xml 파일](https://maven.apache.org/pom.html)을 확인하십시오. 여러분은 `<dependencies> ... </dependencies>` 섹션에 정의된 백엔드를 보시게 됩니다. 다음 중 하나로 여러분이 전환하실 수 있습니다.
 
@@ -25,15 +22,7 @@ description:
 
     <dependency>
       <groupId>org.nd4j</groupId>
-      <artifactId>nd4j-jblas</artifactId>
-      <version>${nd4j.version}</version>
-    </dependency>
-
-### 또는 [Netlib Blas](http://netlib.org)
-
-    <dependency>
-      <groupId>org.nd4j</groupId>
-      <artifactId>nd4j-netlib-blas</artifactId>
+      <artifactId>nd4j-native</artifactId>
       <version>${nd4j.version}</version>
     </dependency>
 
