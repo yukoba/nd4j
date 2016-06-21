@@ -257,10 +257,16 @@ $(uname -r)은 여러분의 Linux 버전에 따라 달라질 수 있습니다. L
 더 자세한 설명은 [여기](http://www.cyberciti.biz/faq/centos-linux-install-gcc-c-c-compiler/)로 가시기 바랍니다.
 
 ## GPUs
-[Jcublas 백엔드를 추가하는 설명은 여기에 있습니다](http://nd4j.org/gpu_native_backends.html). 저희는 CUDA 버전 5.5, 6.0, 6.5 및 7을 지원 합니다.
+[CUDA 백엔드를 추가하는 설명은 여기에 있습니다](http://nd4j.org/gpu_native_backends.html). 저희는 CUDA 버전 7.5 및 8을 지원 합니다.
 여러분께서 GPUs 상에서 신경망을 학습하시기 시작하면, GPU가 작동하는지, 얼마나 잘 작동하는지 모니터 하고자 할 것 입니다. 여러분께서 취할 수 있는 몇가지 방법들이 있습니다:
 여러분께서 [nvcc, Nvidia 컴파일러](http://docs.nvidia.com/cuda/cuda-compiler-driver-nvcc/)를 클래스경로(src/main/resources)에 가지고 있는지 확인하십시오. 저희는 즉석에서 커널들을 컴파일 합니다.
 [Nvidia Management Interface (SMI)](https://developer.nvidia.com/nvidia-system-management-interface)를 설치하십시오. 출력에서 Java를 찾으십시오.
+
+		<dependency>
+		  <groupId>org.nd4j</groupId>
+		  <artifactId>nd4j-cuda-7.5</artifactId>
+		  <version>${nd4j.version}</version>
+		</dependency>
 
 ## <a id="next">다음 단계들</a>
 
