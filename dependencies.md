@@ -74,13 +74,14 @@ gradle run `-Plibnd4jOS=macosx`
 Maven can automatically install the required dependencies once we select one of these backends:
 
 * [nd4j-native]
-* [JCUBLAS](./gpu_native_backends) (for GPUs)
+* [nd4j-cuda-7.5](./gpu_native_backends) (for GPUs)
  
 Go to your root directory -- e.g. nd4j or deeplearning4j -- and inspect the [pom.xml file](https://maven.apache.org/pom.html). You should see one backend defined in the `<dependencies> ... </dependencies>` section. You can switch among:
 
 ### native
 
-After version `4.0-RC3.8` you can now pull include ND4J for all platforms.
+After version `4.0-RC3.8`, you can now include nd4j-native for all platforms.
+
 ```xml
         <dependency>
             <groupId>org.nd4j</groupId>
@@ -88,9 +89,17 @@ After version `4.0-RC3.8` you can now pull include ND4J for all platforms.
             <version>${nd4j.version}</version>
         </dependency>
 ```
-### Jcublas (Cuda/GPUs)
+### CUDA (GPUs)
 
 See our [GPU page](./gpu_native_backends) for the versions you can choose.
+
+```xml
+        <dependency>
+            <groupId>org.nd4j</groupId>
+            <artifactId>nd4j-cuda-7.5</artifactId>
+            <version>${nd4j.version}</version>
+        </dependency>
+```
 
 ### JOCL
 
