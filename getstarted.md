@@ -282,7 +282,7 @@ For more complete instructions, [go here](http://www.cyberciti.biz/faq/centos-li
 
 ## <a id="gpu"> GPUs </a>
 
-Instructions on adding a [Jcublas backend are here](../gpu_native_backends.html). We support CUDA versions 5.5, 6.0, 6.5 and 7.
+We support CUDA versions 7.5 and higher.
 
 Once you begin training neural networks on GPUs, you will want to monitor whether and how well the GPUs are working. There are several measures you can take:
 
