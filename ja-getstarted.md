@@ -91,15 +91,15 @@ CPUのデフォルト設定のバックエンドは、x86ですが、これはNe
 
 	 <dependency>
 	   <groupId>org.nd4j</groupId>
-	   <artifactId>nd4j-x86</artifactId>
+	   <artifactId>nd4j-native</artifactId>
 	   <version>${nd4j.version}</version>
 	 </dependency>
 
 ND4Jのバージョンは、ここでは、変数となります。IPOMの少し上にある別のライン`<properties> ... </properties>`を指します。nd4jのバージョンを指定したもので、以下のようになります。
 
-		<nd4j.version>0.4-rc3.8</nd4j.version>
+		<nd4j.version>0.4-rc3.10</nd4j.version>
 
-*dl4jのバージョンも0.4-rc3.8で、Canovaのバージョンは0.0.0.13です。*
+*dl4jのバージョンも0.4-rc3.10で、Canovaのバージョンは0.0.0.13です。*
 
 バージョン番号は、新しいリリースが出るにつれて変わります。Maven Centralにある最新のバージョンを忘れずに[こちら](https://search.maven.org/#search%7Cga%7C1%7Cnd4j)でチェックするようにしてください。正しいdependencyとnd4jバージョンをペーストすれば、Mavenが自動的に必要なライブラリをインストールし、ND4Jを実行させることができます。 
 
@@ -167,7 +167,7 @@ Deeplearning4jをインストールするための詳細情報は、[DL4Jをは�
 
 ### <a id="open"> OpenBlas </a>
 
-x86のバックエンドにあるネイティブライブラリが使用できるかを調べるには、システムパスに`/opt/OpenBLAS/lib`が必要になります。その後、以下のコマンドをプロンプトに入れてください。
+`native`のバックエンドにあるネイティブライブラリが使用できるかを調べるには、システムパスに`/opt/OpenBLAS/lib`が必要になります。その後、以下のコマンドをプロンプトに入れてください。
 
 			sudo cp libopenblas.so liblapack.so.3
 			sudo cp libopenblas.so libblas.so.3
