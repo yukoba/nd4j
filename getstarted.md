@@ -73,19 +73,19 @@ Click through the following screen with "Next", and on the screen after that, na
 
 Update the POM file with the dependences you'll need. These will vary depending on whether you're running on CPUs or GPUs. 
 
-The default backend for CPUs is x86, which relies heavily on Netlib-blas. You can paste that into  the `<dependencies> ... </dependencies>` section of your POM like this:
+The default backend for CPUs is `nd4j-native`. You can paste that into  the `<dependencies> ... </dependencies>` section of your POM like this:
 
 	 <dependency>
 	   <groupId>org.nd4j</groupId>
-	   <artifactId>nd4j-x86</artifactId>
+	   <artifactId>nd4j-native</artifactId>
 	   <version>${nd4j.version}</version>
 	 </dependency>
 
 ND4J's version is a variable here. It will refer to another line higher in the POM, in the `<properties> ... </properties>` section, specifying the nd4j version and appearing similar to this:
 
-		<nd4j.version>0.4-rc3.8</nd4j.version>
+		<nd4j.version>0.4-rc3.10</nd4j.version>
 
-*The dl4j version is also 0.4-rc3.8, and Canova is 0.0.0.13.*
+*The dl4j version is also 0.4-rc3.10, and Canova is 0.0.0.13.*
 
 ### Platform-specific binaries
 
@@ -114,7 +114,7 @@ The number of the version will vary as we progress with new releases. Make sure 
 
 ### Switching Backends
 
-The backend does not have to be x86; it can be switched to Jcublas for GPUs. That's explained on our [dependencies](../dependencies.html) page, alongside more advanced configuration changes. The same page also explains how to check on the [latest version](http://search.maven.org/#search%7Cga%7C1%7Cnd4j) of the libraries.
+The backend does not have to be `nd4j-native`; it can be switched to Jcublas for GPUs. That's explained on our [dependencies](../dependencies.html) page, alongside more advanced configuration changes. The same page also explains how to check on the [latest version](http://search.maven.org/#search%7Cga%7C1%7Cnd4j) of the libraries.
 
 ### Your Main Class
 
@@ -180,7 +180,7 @@ Some versions of the [Apple developer tool Xcode](https://developer.apple.com/xc
 
 ### <a id="open"> OpenBlas </a>
 
-To make sure the native libs on the x86 backend work, you need `/opt/OpenBLAS/lib` on the system path. After that, enter these commands in the prompt
+To make sure the native libs on the `native` backend work, you need `/opt/OpenBLAS/lib` on the system path. After that, enter these commands in the prompt
 
 			sudo cp libopenblas.so liblapack.so.3
 			sudo cp libopenblas.so libblas.so.3
