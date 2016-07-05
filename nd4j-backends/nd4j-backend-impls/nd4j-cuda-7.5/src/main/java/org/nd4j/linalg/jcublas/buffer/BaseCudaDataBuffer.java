@@ -677,6 +677,9 @@ public abstract class BaseCudaDataBuffer extends BaseDataBuffer implements JCuda
             length = s.readInt();
             Type t = Type.valueOf(s.readUTF());
             //        log.info("Restoring buffer ["+t+"] of length ["+ length+"]");
+            if (globalType == null && Nd4j.dataType() != null) {
+                globalType = Nd4j.dataType();
+            }
             if (t != globalType && t!= Type.INT) {
                 log.warn("Loading a data stream with type different from what is set globally. Expect precision loss");
 				if (globalType == Type.INT) log.warn("Int to float/double widening UNSUPPORTED!!!");
