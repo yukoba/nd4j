@@ -5,9 +5,11 @@ title: Tensors & ND4j
 
 # Tensors & ND4J
 
-A vector, that column of numbers we feed into neural nets, is simply a subclass of a more general mathematical structure called a *tensor*. 
+A vector, that column of numbers we feed into neural nets, is simply a subclass of a more general mathematical structure called a *tensor*. A tensor is a multidimensional array. 
 
-Tensors have a so-called [*rank*](http://mathworld.wolfram.com/TensorRank.html): a scalar, or single number, is of rank 0; a vector is rank 1; a matrix is rank 2; and entities of rank 3 and above are simply called tensors. 
+You are already familiar with a matrix composed of rows and columns: the rows extend along the y axis and the columns along the x axis. Each axis is a dimension. Tensors have additional dimensions.
+
+Tensors also have a so-called [*rank*](http://mathworld.wolfram.com/TensorRank.html): a scalar, or single number, is of rank 0; a vector is rank 1; a matrix is rank 2; and entities of rank 3 and above are all simply called tensors. 
 
 It may be helpful to think of a scalar as a point, a vector as a line, a matrix as a plane, and tensors as objects of three dimensions or more. A matrix has rows and columns, two dimensions, and therefore is of rank 2. A three-dimensional tensor, such as those we use to represent color images, has channels, rows and columns, and therefore counts as rank 3. 
 
