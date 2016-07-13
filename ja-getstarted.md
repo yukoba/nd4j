@@ -97,9 +97,9 @@ CPUのデフォルト設定のバックエンドは、x86ですが、これはNe
 
 ND4Jのバージョンは、ここでは、変数となります。IPOMの少し上にある別のライン`<properties> ... </properties>`を指します。nd4jのバージョンを指定したもので、以下のようになります。
 
-		<nd4j.version>0.4-rc3.10</nd4j.version>
+		<nd4j.version>0.4.1-SNAPSHOT</nd4j.version>
 
-*dl4jのバージョンも0.4-rc3.10で、Canovaのバージョンは0.0.0.13です。*
+*dl4jのバージョンも0.4.1-SNAPSHOTで、DataVecのバージョンは0.4.1-SNAPSHOTです。*
 
 バージョン番号は、新しいリリースが出るにつれて変わります。Maven Centralにある最新のバージョンを忘れずに[こちら](https://search.maven.org/#search%7Cga%7C1%7Cnd4j)でチェックするようにしてください。正しいdependencyとnd4jバージョンをペーストすれば、Mavenが自動的に必要なライブラリをインストールし、ND4Jを実行させることができます。 
 
@@ -133,13 +133,13 @@ Scalaをインストールするには、[Scalaダウンロードページ](http
 
 IntelliJのプラグインによってScalaを使用することができます。（IntelliJにプラグインを追加するには、タブの`IntelliJ IDEA`/`Preferences`/`IDE Setting`/`Plugins`/へ行き、Scalaを探します。）
 
-## <a id="canova">Canova</a>
+## <a id="datavec">DataVec</a>
 
-[Canova](https://github.com/deeplearning4j/Canova)は、機械学習ツールとして弊社が構築した一般的なベクトル化ライブラリです。生のデータを使用可能なベクターフォーマットである*svmLight*、 *libsvm*、*ARFF*などにベクトル化するため、弊社のニューラルネットワークに使用できます。Canovaは、ND4Jに必要ではありませんが、Deeplearning4jニューラルネットワークにデータをロードするのに役立ちます。 
+[Canova](https://github.com/deeplearning4j/DataVec)は、機械学習ツールとして弊社が構築した一般的なベクトル化ライブラリです。生のデータを使用可能なベクターフォーマットである*svmLight*、 *libsvm*、*ARFF*などにベクトル化するため、弊社のニューラルネットワークに使用できます。Canovaは、ND4Jに必要ではありませんが、Deeplearning4jニューラルネットワークにデータをロードするのに役立ちます。 
 
 ### Canovaをインストールしましょう
 
-Mavenで、ND4Jに使用したものと同じ手順にしたがって[Canova](https://github.com/deeplearning4j/Canova)をインストールしてください。[Maven](#maven)は、必ず最新バージョンを入手するようにしてください。弊社が現在使用しているバージョンは、0.0.0.5-SNAPSHOTです。
+Mavenで、ND4Jに使用したものと同じ手順にしたがって[DataVec](https://github.com/deeplearning4j/DataVec)をインストールしてください。[Maven](#maven)は、必ず最新バージョンを入手するようにしてください。弊社が現在使用しているバージョンは、0.4.1-SNAPSHOTです。
 
 ### Deeplearning4jをインストールしましょう
 
