@@ -7,6 +7,8 @@ title: Tensors & ND4j
 
 A vector, that column of numbers we feed into neural nets, is simply a subclass of a more general mathematical structure called a *tensor*. A tensor is a multidimensional array. 
 
+The word tensor derives from the Latin *tendere*, or "to stretch"; therefore, tensor relates to *that which stretches, the stretcher*.
+
 You are already familiar with a matrix composed of rows and columns: the rows extend along the y axis and the columns along the x axis. Each axis is a dimension. Tensors have additional dimensions.
 
 Tensors also have a so-called [*rank*](http://mathworld.wolfram.com/TensorRank.html): a scalar, or single number, is of rank 0; a vector is rank 1; a matrix is rank 2; and entities of rank 3 and above are all simply called tensors. 
@@ -46,6 +48,11 @@ Here's a brief video summarizing how tensors are converted into linear byte buff
 
 <iframe width="420" height="315" src="https://www.youtube.com/embed/EHHtyRKQIJ0" frameborder="0" allowfullscreen></iframe>
 
-## Additional Resources
+## Additional Resources and Definitions
 
+        Tensors are generalizations of scalars (that have no indices), vectors (that have exactly one index), and matrices (that have exactly two indices) to an arbitrary number of indices. - Mathworld
+
+        tensor, n. a mathematical object analogous to but more general than a vector, represented by an array of components that are functions of the coordinates of a space.
+        
 * [Multidimensional Arrays](https://www.mathworks.com/help/matlab/math/multidimensional-arrays.html?requestedDomain=www.mathworks.com)
+* [Tensor on Wikipedia](https://en.wikipedia.org/wiki/Tensor)
