@@ -83,9 +83,9 @@ The default backend for CPUs is `nd4j-native`. You can paste that into  the `<de
 
 ND4J's version is a variable here. It will refer to another line higher in the POM, in the `<properties> ... </properties>` section, specifying the nd4j version and appearing similar to this:
 
-		<nd4j.version>0.4.1-SNAPSHOT</nd4j.version>
+		<nd4j.version>0.4.0</nd4j.version>
 
-*The dl4j version and DataVec version are also 0.4.1-SNAPSHOT.*
+*The dl4j version and DataVec version are also 0.4.0.*
 
 ### Platform-specific binaries
 
