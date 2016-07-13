@@ -83,13 +83,13 @@ The default backend for CPUs is `nd4j-native`. You can paste that into  the `<de
 
 ND4J's version is a variable here. It will refer to another line higher in the POM, in the `<properties> ... </properties>` section, specifying the nd4j version and appearing similar to this:
 
-		<nd4j.version>0.4-rc3.10</nd4j.version>
+		<nd4j.version>0.4.1-SNAPSHOT</nd4j.version>
 
-*The dl4j version is also 0.4-rc3.10, and Canova is 0.0.0.13.*
+*The dl4j version and DataVec version are also 0.4.1-SNAPSHOT.*
 
 ### Platform-specific binaries
 
-Version `0.4-rc3.9` or higher now includes all backends by default. However, if you are using a build tool such as SBT or Gradle, you will need to explicitly pull binaries for the platform you are using. *Especially* if you are building on one platform but deploying to another (OS X vs. Linux). Information on how to do this can be found on the [dependencies](../dependencies.html) page.
+Version `0.4-rc3.9` or higher now includes all backends by default. However, if you are using a build tool such as SBT or Gradle, you will need to explicitly pull binaries for the platform you are using. *Especially* if you are building on one platform but deploying to another (OS X vs. Linux). Information on how to do this can be found on the [dependencies](./dependencies) page.
 
 For example, a `build.gradle` file will include an extra definition for the targeted platform:
 
@@ -105,7 +105,7 @@ Similarly, for sbt, we can include something like the following:
 ```scala
 classpathTypes += "maven-plugin"
 
-libraryDependencies += "org.nd4j" % "nd4j-native" % "0.4-rc3.9-SNAPSHOT" classifier "" classifier "linux-x86_64"
+libraryDependencies += "org.nd4j" % "nd4j-native" % "0.4.1-SNAPSHOT" classifier "" classifier "linux-x86_64"
 ```
 
 ### Stay Up-to-date
@@ -114,7 +114,7 @@ The number of the version will vary as we progress with new releases. Make sure 
 
 ### Switching Backends
 
-The backend does not have to be `nd4j-native`; it can be switched to Jcublas for GPUs. That's explained on our [dependencies](../dependencies.html) page, alongside more advanced configuration changes. The same page also explains how to check on the [latest version](http://search.maven.org/#search%7Cga%7C1%7Cnd4j) of the libraries.
+The backend does not have to be `nd4j-native`; it can be switched to Jcublas for GPUs. That's explained on our [dependencies](./dependencies) page, alongside more advanced configuration changes. The same page also explains how to check on the [latest version](http://search.maven.org/#search%7Cga%7C1%7Cnd4j) of the libraries.
 
 ### Your Main Class
 
@@ -124,17 +124,17 @@ Open App.java file that is created with every new Intellij project, and start wr
 
 Many of the classes will appear in red, since you haven't imported the right packages, but IntelliJ will add those packages automatically to the top of your file. Lookup the appropriate hot keys based on your OS to help automatically load the packages. 
 
-(See our [intro](http://nd4j.org/introduction.html) for a couple beginning operations. ND4J in IntelliJ has **autocomplete**, so starting a new line with any letter will show you a list of all ND4J commands including that letter.) 
+(See our [intro](./introduction) for a couple beginning operations. ND4J in IntelliJ has **autocomplete**, so starting a new line with any letter will show you a list of all ND4J commands including that letter.) 
 
 ## <a id="github">GitHub & Source</a>
 
 Github is a web-based [Revision Control System](http://en.wikipedia.org/wiki/Revision_control), the [de facto host](http://opensource.com/life/12/11/code-hosting-comparison) for open-source projects. 
 
-If you are not planning to contribute to ND4J as a committer, or don't need the latest alpha version, we recommend downloading the most recent stable release of ND4J from [Maven Central](https://search.maven.org/#search%7Cga%7C1%7Cdeeplearning4j), 0.4-rc1.x. The JAR files can be downloaded directly from [Maven Central](https://search.maven.org/#search%7Cga%7C1%7Cnd4j). Otherwise, please see [source](http://nd4j.org/source). 
+If you are not planning to contribute to ND4J as a committer, or don't need the latest alpha version, we recommend downloading the most recent stable release of ND4J from [Maven Central](https://search.maven.org/#search%7Cga%7C1%7Cdeeplearning4j), 0.4-rc1.x. The JAR files can be downloaded directly from [Maven Central](https://search.maven.org/#search%7Cga%7C1%7Cnd4j). Otherwise, please see [source](./source). 
 
 ## <a id="scala">Scala</a>
 
-While Scala doesn't need to be installed with work with ND4J, we do have a [Scala API](http://nd4j.org/scala.html) under a repository known as [ND4S](https://github.com/deeplearning4j/nd4s). 
+While Scala doesn't need to be installed with work with ND4J, we do have a [Scala API](./scala) under a repository known as [ND4S](https://github.com/deeplearning4j/nd4s). 
 
 Scala is a multiparadigm language with a strong static type system that runs on the JVM. As such, Scala has functional programming features similar to Scheme and Haskell as well as OOP features like Java, and its structure keeps programs concise. You can use Java libraries with Scala. There are neural net examples you can run written in Scala, and it's required for the Spark implementation.
 
@@ -146,13 +146,13 @@ To install Scala, visit the [Scala download page](http://www.scala-lang.org/down
 
 You can also work with Scala via an IntelliJ plugin. (To add a plugin to IntelliJ, go to the tab `IntelliJ IDEA`/`Preferences`/`IDE Setting`/`Plugins`/ and search for Scala.)
 
-## <a id="canova">Canova</a>
+## <a id="datavec">DataVec</a>
 
-[Canova](https://github.com/deeplearning4j/Canova) is a general vectorization lib we built for machine-learning tools. It vectorizes raw data into usable vector formats like *svmLight*, *libsvm* and *ARFF*, which our neural nets can work with. ND4J does not require Canova, but it is useful for loading data into Deeplearning4j neural nets. 
+[DataVec](https://github.com/deeplearning4j/DataVec) is a general vectorization lib we built for machine-learning tools. It vectorizes raw data into usable vector formats like *svmLight*, *libsvm* and *ARFF*, which our neural nets can work with. ND4J does not require DataVec, but it is useful for loading data into Deeplearning4j neural nets. 
 
-### Installing Canova
+### Installing DataVec
 
-Take the same steps using Maven to install [Canova](https://github.com/deeplearning4j/Canova) that you followed for ND4J. Make sure you have the most recent version of [Maven](#maven). We are currently using version 0.0.0.5-SNAPSHOT.
+Take the same steps using Maven to install [DataVec](https://github.com/deeplearning4j/DataVec) that you followed for ND4J. Make sure you have the most recent version of [Maven](#maven). We are currently using version 0.4.1-SNAPSHOT.
 
 ### Installing Deeplearning4j
 
