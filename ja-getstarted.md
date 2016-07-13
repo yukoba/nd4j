@@ -97,9 +97,9 @@ CPUのデフォルト設定のバックエンドは、x86ですが、これはNe
 
 ND4Jのバージョンは、ここでは、変数となります。IPOMの少し上にある別のライン`<properties> ... </properties>`を指します。nd4jのバージョンを指定したもので、以下のようになります。
 
-		<nd4j.version>0.4.1-SNAPSHOT</nd4j.version>
+		<nd4j.version>0.4.0</nd4j.version>
 
-*dl4jのバージョンも0.4.1-SNAPSHOTで、DataVecのバージョンは0.4.1-SNAPSHOTです。*
+*dl4jのバージョンも0.4.0、DataVecのバージョンは0.4.0。*
 
 バージョン番号は、新しいリリースが出るにつれて変わります。Maven Centralにある最新のバージョンを忘れずに[こちら](https://search.maven.org/#search%7Cga%7C1%7Cnd4j)でチェックするようにしてください。正しいdependencyとnd4jバージョンをペーストすれば、Mavenが自動的に必要なライブラリをインストールし、ND4Jを実行させることができます。 
 
