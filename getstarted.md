@@ -95,8 +95,8 @@ For example, a `build.gradle` file will include an extra definition for the targ
 
 ```groovy
 dependencies {
-  compile 'org.nd4j:nd4j-native:0.4-rc3.9-SNAPSHOT'
-  compile 'org.nd4j:nd4j-native:0.4-rc3.9-SNAPSHOT:macosx-x86_64'
+  compile 'org.nd4j:nd4j-native:0.4.0'
+  compile 'org.nd4j:nd4j-native:0.4.0:macosx-x86_64'
 }
 ```
 
@@ -105,12 +105,12 @@ Similarly, for sbt, we can include something like the following:
 ```scala
 classpathTypes += "maven-plugin"
 
-libraryDependencies += "org.nd4j" % "nd4j-native" % "0.4.1-SNAPSHOT" classifier "" classifier "linux-x86_64"
+libraryDependencies += "org.nd4j" % "nd4j-native" % "0.4.0" classifier "" classifier "linux-x86_64"
 ```
 
 ### Stay Up-to-date
 
-The number of the version will vary as we progress with new releases. Make sure you check [the latest version available on Maven Central](https://search.maven.org/#search%7Cga%7C1%7Cnd4j). If you paste in the right dependency and nd4j version, Maven will automatically install the required libraries and you should be able to run ND4J. 
+The number of the version will vary as we progress with new releases. Make sure you check [the latest version available on Maven Central](https://search.maven.org/#search%7Cga%7C1%7Cnd4j). If you paste in the right dependency and ND4J version, Maven will automatically install the required libraries and you should be able to run ND4J. 
 
 ### Switching Backends
 
