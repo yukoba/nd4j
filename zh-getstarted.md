@@ -62,7 +62,7 @@ ND4J需要Java 7 才能执行，因此，如果您有较旧的Java版本，您�
 
 您只需要到GitHub上下载的Mac ，Windows等复制ND4J文件，输入以下的指令到您的终端（ Mac）或Git Shell（ Windows）中：
 
-        git clone https://github.com/SkymindIO/nd4j
+        git clone https://github.com/deeplearning4j/nd4j
 
 ## <a name="maven">Maven</a>
 
