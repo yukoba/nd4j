@@ -7,7 +7,7 @@ title: Tensors & ND4j
 
 A vector, that column of numbers we feed into neural nets, is simply a subclass of a more general mathematical structure called a *tensor*. A tensor is a multidimensional array. 
 
-The word tensor derives from the Latin *tendere*, or "to stretch"; therefore, tensor relates to *that which stretches, the stretcher*.
+The word tensor derives from the Latin *tendere*, or "to stretch"; therefore, tensor relates to *that which stretches, the stretcher*. Tensor was introduced to English from the German in 1915, after being coined by Woldemar Voigt in 1898. The mathematical object is called a tensor because an early application of the idea was the study of materials stretching under tension.
 
 You are already familiar with a matrix composed of rows and columns: the rows extend along the y axis and the columns along the x axis. Each axis is a dimension. Tensors have additional dimensions.
 
