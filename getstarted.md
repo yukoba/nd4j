@@ -73,11 +73,11 @@ Click through the following screen with "Next", and on the screen after that, na
 
 Update the POM file with the dependences you'll need. These will vary depending on whether you're running on CPUs or GPUs. 
 
-The default backend for CPUs is `nd4j-native`. You can paste that into  the `<dependencies> ... </dependencies>` section of your POM like this:
+The default backend for CPUs is `nd4j-native-platform`, and for CUDA it is `nd4j-cuda-7.5-platform`. You can paste that into  the `<dependencies> ... </dependencies>` section of your POM like this:
 
 	 <dependency>
 	   <groupId>org.nd4j</groupId>
-	   <artifactId>nd4j-native</artifactId>
+	   <artifactId>nd4j-native-platform</artifactId>
 	   <version>${nd4j.version}</version>
 	 </dependency>
 
@@ -87,25 +87,27 @@ ND4J's version is a variable here. It will refer to another line higher in the P
 
 *The dl4j version and DataVec version are also 0.4.0.*
 
-### Platform-specific binaries
+Version `0.4.0` or higher now includes all backends by default and binaries for all platforms are automatically pulled. It is recommended to not alter this behavior *especially* if you are building on one platform but deploying to another (OS X vs. Linux). However, you can also explicitly pull binaries only for the platforms you are using. Information on how to do this can be found on the [dependencies](./dependencies) page.
 
-Version `0.4-rc3.9` or higher now includes all backends by default. However, if you are using a build tool such as SBT or Gradle, you will need to explicitly pull binaries for the platform you are using. *Especially* if you are building on one platform but deploying to another (OS X vs. Linux). Information on how to do this can be found on the [dependencies](./dependencies) page.
+### Other Build Systems
 
-For example, a `build.gradle` file will include an extra definition for the targeted platform:
+If you are using a build tool such as Gradle or sbt, the artifacts work in the similar ways. For example, inside a `build.gradle` file:
 
 ```groovy
+repositories {
+    mavenCentral()
+}
 dependencies {
-  compile 'org.nd4j:nd4j-native:0.4.0'
-  compile 'org.nd4j:nd4j-native:0.4.0:macosx-x86_64'
+    compile 'org.nd4j:nd4j-native-platform:0.4.0'
 }
 ```
 
-Similarly, for sbt, we can include something like the following:
+Similarly, for sbt, we need to include something like the following inside `build.sbt`:
 
 ```scala
 classpathTypes += "maven-plugin"
 
-libraryDependencies += "org.nd4j" % "nd4j-native" % "0.4.0" classifier "" classifier "linux-x86_64"
+libraryDependencies += "org.nd4j" % "nd4j-native-platform" % "0.4.0"
 ```
 
 ### Stay Up-to-date
