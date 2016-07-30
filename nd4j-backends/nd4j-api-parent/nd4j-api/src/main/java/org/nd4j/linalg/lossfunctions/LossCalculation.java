@@ -11,8 +11,6 @@ import org.nd4j.linalg.indexing.conditions.Or;
 import org.nd4j.linalg.indexing.functions.StableNumber;
 import org.nd4j.linalg.indexing.functions.Value;
 
-import java.util.Arrays;
-
 import static org.nd4j.linalg.ops.transforms.Transforms.log;
 import static org.nd4j.linalg.ops.transforms.Transforms.sqrt;
 
@@ -119,12 +117,11 @@ class LossCalculation {
                 if(mask != null) temp2.muliColumnVector(mask);
                 scoreArray = temp2;
                 break;
-            case RMSE_XENT:
-                INDArray rmseXentDiff = labels.sub(z);
-                INDArray squaredrmseXentDiff = rmseXentDiff.muli(rmseXentDiff);
-                INDArray sqrt = sqrt(squaredrmseXentDiff);
-                if(mask != null) sqrt.muliColumnVector(mask);
-                scoreArray = sqrt;
+            case RMSE:
+                INDArray mseDeltaSquaredR = labels.sub(z);
+                mseDeltaSquaredR.muli(mseDeltaSquaredR);
+                if(mask != null) mseDeltaSquaredR.muliColumnVector(mask);
+                scoreArray = sqrt(mseDeltaSquaredR);
                 break;
             case MSE:
                 INDArray mseDeltaSquared = labels.sub(z);
