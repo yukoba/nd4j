@@ -28,8 +28,6 @@ import org.nd4j.linalg.api.ndarray.INDArray;
 import org.nd4j.linalg.api.ops.LossFunction;
 import org.nd4j.linalg.factory.Nd4j;
 import org.nd4j.linalg.factory.Nd4jBackend;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
 
 import static org.junit.Assert.assertEquals;
 
@@ -54,11 +52,11 @@ public  class LossFunctionTests extends BaseNd4jTest {
     }
 
     @Test
-    public void testRMseXent() {
+    public void testRMse() {
         INDArray in = Nd4j.create(new double[][]{{1, 2}, {3, 4}});
         INDArray out = Nd4j.create(new double[][]{{5, 6}, {7, 8}});
-        double diff = LossFunctions.score(in, LossFunctions.LossFunction.RMSE_XENT, out, 0, false);
-        assertEquals(getFailureMessage(),8, diff, 1e-1);
+        double diff = LossFunctions.score(in, LossFunctions.LossFunction.RMSE, out, 0, false);
+        assertEquals(getFailureMessage(),2.828, diff, 1e-3);
     }
 
     @Test
