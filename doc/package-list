@@ -1,3 +1,4 @@
+org.nd4j
 org.nd4j.bytebuddy.aggregate
 org.nd4j.bytebuddy.arithmetic
 org.nd4j.bytebuddy.arithmetic.relative
@@ -40,6 +41,7 @@ org.nd4j.bytebuddy.storeint.stackmanipulation
 org.nd4j.bytebuddy.storeref
 org.nd4j.bytebuddy.storeref.stackmanipulation
 org.nd4j.bytebuddy.util
+org.nd4j.camel.kafka
 org.nd4j.context
 org.nd4j.instrumentation.server
 org.nd4j.jdbc.driverfinder
@@ -62,6 +64,7 @@ org.nd4j.jita.allocator.time.providers
 org.nd4j.jita.allocator.time.rings
 org.nd4j.jita.allocator.utils
 org.nd4j.jita.balance
+org.nd4j.jita.concurrency
 org.nd4j.jita.conf
 org.nd4j.jita.constant
 org.nd4j.jita.flow
@@ -70,6 +73,8 @@ org.nd4j.jita.handler
 org.nd4j.jita.handler.impl
 org.nd4j.jita.memory
 org.nd4j.jita.memory.impl
+org.nd4j.jita.perf
+org.nd4j.jita.perf.data
 org.nd4j.linalg
 org.nd4j.linalg.api
 org.nd4j.linalg.api.blas
@@ -82,6 +87,7 @@ org.nd4j.linalg.api.buffer.pointer
 org.nd4j.linalg.api.buffer.unsafe
 org.nd4j.linalg.api.buffer.util
 org.nd4j.linalg.api.complex
+org.nd4j.linalg.api.concurrency
 org.nd4j.linalg.api.indexing
 org.nd4j.linalg.api.indexing.resolve
 org.nd4j.linalg.api.indexing.shape
@@ -103,15 +109,6 @@ org.nd4j.linalg.api.ops.impl.transforms
 org.nd4j.linalg.api.ops.impl.transforms.arithmetic
 org.nd4j.linalg.api.ops.impl.transforms.comparison
 org.nd4j.linalg.api.ops.impl.transforms.convolution
-org.nd4j.linalg.api.parallel
-org.nd4j.linalg.api.parallel.tasks
-org.nd4j.linalg.api.parallel.tasks.cpu
-org.nd4j.linalg.api.parallel.tasks.cpu.accumulation
-org.nd4j.linalg.api.parallel.tasks.cpu.indexaccum
-org.nd4j.linalg.api.parallel.tasks.cpu.misc
-org.nd4j.linalg.api.parallel.tasks.cpu.scalar
-org.nd4j.linalg.api.parallel.tasks.cpu.transform
-org.nd4j.linalg.api.parallel.tasks.cpu.vector
 org.nd4j.linalg.api.rng
 org.nd4j.linalg.api.rng.distribution
 org.nd4j.linalg.api.rng.distribution.factory
@@ -122,7 +119,6 @@ org.nd4j.linalg.api.shape.loop.four
 org.nd4j.linalg.api.shape.loop.one
 org.nd4j.linalg.api.shape.loop.three
 org.nd4j.linalg.api.shape.loop.two
-org.nd4j.linalg.api.shape.tensor
 org.nd4j.linalg.api.string
 org.nd4j.linalg.api.tad
 org.nd4j.linalg.benchmark
@@ -152,7 +148,9 @@ org.nd4j.linalg.cpu.nativecpu.ops
 org.nd4j.linalg.dataset
 org.nd4j.linalg.dataset.api
 org.nd4j.linalg.dataset.api.iterator
+org.nd4j.linalg.dataset.api.iterator.cache
 org.nd4j.linalg.dataset.api.iterator.fetcher
+org.nd4j.linalg.dataset.api.preprocessor
 org.nd4j.linalg.dimensionalityreduction
 org.nd4j.linalg.eigen
 org.nd4j.linalg.executors
@@ -191,4 +189,6 @@ org.nd4j.linalg.slicing
 org.nd4j.linalg.string
 org.nd4j.linalg.util
 org.nd4j.nativeblas
+org.nd4j.serde.base64
 org.nd4j.serde.jackson
+org.nd4j.serde.jackson.ndarray
