@@ -14,7 +14,7 @@ This user guide is designed to explain (and provide examples for) the main funct
   * <a href="#createrandom">Random arrays</a>
   * <a href="#createfromjava">Creating NDArrays from Java arrays</a>
   * <a href="#createfromndarray">Creating NDArrays from other NDArrays</a>
-  * <a href="#createother">Miscellanous NDArray Creation Methods</a>
+  * <a href="#createother">Miscellaneous NDArray Creation Methods</a>
 * <a href="#individual">Getting and Setting Individual Values</a>
 * <a href="#getset">Getting and Setting Parts of NDArrays</a>
   * <a href="#getsetrows">getRow() and putRow()</a>
@@ -140,7 +140,7 @@ Nd4j provides convenience methods for the creation of arrays from Java float and
 
 To create a 1d NDArray from a 1d Java array, use:
 
-* Rov vector: ```Nd4j.create(float[])``` or ```Nd4j.create(double[])```
+* Row vector: ```Nd4j.create(float[])``` or ```Nd4j.create(double[])```
 * Column vector: ```Nd4j.create(float[],new int[]{length,1})``` or ```Nd4j.create(double[],new int[]{length,1})```
 
 For 2d arrays, use ```Nd4j.create(float[][])``` or ```Nd4j.create(double[][])```.
@@ -177,7 +177,7 @@ One other method that can occasionally be useful is ```Nd4j.diag(INDArray in)```
 
 
 
-### <a name="createother"> Miscellanous NDArray Creation Methods </a>
+### <a name="createother"> Miscellaneous NDArray Creation Methods </a>
 
 To create an [identity matrix](https://en.wikipedia.org/wiki/Identity_matrix) of size N, you can use ```Nd4j.eye(N)```.
 
