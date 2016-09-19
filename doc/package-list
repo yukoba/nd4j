@@ -42,6 +42,7 @@ org.nd4j.bytebuddy.storeref
 org.nd4j.bytebuddy.storeref.stackmanipulation
 org.nd4j.bytebuddy.util
 org.nd4j.camel.kafka
+org.nd4j.compression.impl
 org.nd4j.context
 org.nd4j.instrumentation.server
 org.nd4j.jdbc.driverfinder
@@ -99,10 +100,13 @@ org.nd4j.linalg.api.ops
 org.nd4j.linalg.api.ops.exception
 org.nd4j.linalg.api.ops.executioner
 org.nd4j.linalg.api.ops.factory
+org.nd4j.linalg.api.ops.grid
 org.nd4j.linalg.api.ops.impl.accum
 org.nd4j.linalg.api.ops.impl.accum.distances
 org.nd4j.linalg.api.ops.impl.broadcast
+org.nd4j.linalg.api.ops.impl.grid
 org.nd4j.linalg.api.ops.impl.indexaccum
+org.nd4j.linalg.api.ops.impl.meta
 org.nd4j.linalg.api.ops.impl.scalar
 org.nd4j.linalg.api.ops.impl.scalar.comparison
 org.nd4j.linalg.api.ops.impl.transforms
@@ -139,6 +143,7 @@ org.nd4j.linalg.benchmark.transform.nocopy
 org.nd4j.linalg.cache
 org.nd4j.linalg.checkutil
 org.nd4j.linalg.complex
+org.nd4j.linalg.compression
 org.nd4j.linalg.convolution
 org.nd4j.linalg.cpu.nativecpu
 org.nd4j.linalg.cpu.nativecpu.blas
@@ -174,10 +179,10 @@ org.nd4j.linalg.jcublas.ops.executioner
 org.nd4j.linalg.jcublas.util
 org.nd4j.linalg.learning
 org.nd4j.linalg.lossfunctions
+org.nd4j.linalg.lossfunctions.impl
 org.nd4j.linalg.ops
 org.nd4j.linalg.ops.broadcast.row
 org.nd4j.linalg.ops.copy
-org.nd4j.linalg.ops.impl.transform
 org.nd4j.linalg.ops.transforms
 org.nd4j.linalg.shape
 org.nd4j.linalg.shape.concat
