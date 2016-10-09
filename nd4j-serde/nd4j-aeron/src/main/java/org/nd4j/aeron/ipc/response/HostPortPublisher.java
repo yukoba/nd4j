@@ -85,11 +85,7 @@ public class HostPortPublisher implements AutoCloseable {
 
             else if(timesFailed % 1000 == 0)
                 log.info("Offer failed due to unknown reason on channel " + channel + " and stream " + streamId);
-            try {
-                Thread.sleep(1000);
-            } catch (InterruptedException e) {
-                Thread.currentThread().interrupt();
-            }
+            Thread.yield();
             timesFailed++;
 
         }

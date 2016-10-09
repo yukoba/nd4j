@@ -247,6 +247,7 @@
         <module>nd4j-context</module>
         <module>nd4j-backends</module>
         <module>nd4j-parameter-server</module>
+        <module>nd4j-parameter-server-parent</module>
     </modules>
 
     <properties>
