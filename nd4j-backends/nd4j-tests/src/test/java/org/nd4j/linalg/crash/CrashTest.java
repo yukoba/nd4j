@@ -2,6 +2,7 @@ package org.nd4j.linalg.crash;
 
 import lombok.extern.slf4j.Slf4j;
 import org.apache.commons.lang3.RandomUtils;
+import org.junit.Ignore;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.junit.runners.Parameterized;
@@ -63,6 +64,7 @@ public class CrashTest extends BaseNd4jTest {
      * tensorAlongDimension() produces shapeInfo without EWS defined
      */
     @Test
+    @Ignore
     public void testNonEWSViews1() {
         System.out.println("non-EWS 1");
         INDArray x = Nd4j.create(64, 1024, 64);
@@ -74,6 +76,7 @@ public class CrashTest extends BaseNd4jTest {
         }
     }
 
+    @Ignore
     @Test
     public void testNonEWSViews2() {
         System.out.println("non-EWS 2");
@@ -89,6 +92,7 @@ public class CrashTest extends BaseNd4jTest {
     /**
      * slice() produces shapeInfo with EWS being 1 in our case
      */
+    @Ignore
     @Test
     public void testEWSViews1() {
         System.out.println("EWS 1");
@@ -101,6 +105,7 @@ public class CrashTest extends BaseNd4jTest {
         }
     }
 
+    @Ignore
     @Test
     public void testEWSViews2() {
         System.out.println("EWS 2");
