@@ -118,14 +118,14 @@ public class CrashTest extends BaseNd4jTest {
         INDArray row = Nd4j.ones(64);
         INDArray column = Nd4j.ones(1024, 1);
 
-        x.addiRowVector(row);
-        x.addiColumnVector(column);
+  //      x.addiRowVector(row);
+ //       x.addiColumnVector(column);
 
         // casual scalar
-        x.addi(i * 2);
+ //       x.addi(i * 2);
 
         // reduction along all dimensions
-        float sum = x.sumNumber().floatValue();
+//        float sum = x.sumNumber().floatValue();
 
         // index reduction
 //        Nd4j.getExecutioner().exec(new IMax(x), Integer.MAX_VALUE);
