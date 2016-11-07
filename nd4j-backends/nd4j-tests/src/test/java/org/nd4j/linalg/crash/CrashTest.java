@@ -194,7 +194,7 @@ public class CrashTest extends BaseNd4jTest {
 
                 System.out.println("Params: " + tA + "/" + tB);
 
-                Nd4j.gemm(xT, yT, tA, tB);
+             //   Nd4j.gemm(xT, yT, tA, tB);
             }
         }
 
