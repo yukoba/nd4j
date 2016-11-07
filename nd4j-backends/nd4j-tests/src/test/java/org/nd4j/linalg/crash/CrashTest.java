@@ -34,7 +34,7 @@ public class CrashTest extends BaseNd4jTest {
         super(backend);
     }
 
-    private static final int ITERATIONS = 10000;
+    private static final int ITERATIONS = 300;
     private static final boolean[] paramsA = new boolean[] {true, false};
     private static final boolean[] paramsB = new boolean[] {true, false};
 
@@ -64,7 +64,6 @@ public class CrashTest extends BaseNd4jTest {
      * tensorAlongDimension() produces shapeInfo without EWS defined
      */
     @Test
-    @Ignore
     public void testNonEWSViews1() {
         System.out.println("non-EWS 1");
         INDArray x = Nd4j.create(64, 1024, 64);
@@ -76,7 +75,6 @@ public class CrashTest extends BaseNd4jTest {
         }
     }
 
-    @Ignore
     @Test
     public void testNonEWSViews2() {
         System.out.println("non-EWS 2");
@@ -92,7 +90,6 @@ public class CrashTest extends BaseNd4jTest {
     /**
      * slice() produces shapeInfo with EWS being 1 in our case
      */
-    @Ignore
     @Test
     public void testEWSViews1() {
         System.out.println("EWS 1");
@@ -105,7 +102,6 @@ public class CrashTest extends BaseNd4jTest {
         }
     }
 
-    @Ignore
     @Test
     public void testEWSViews2() {
         System.out.println("EWS 2");
@@ -193,20 +189,29 @@ public class CrashTest extends BaseNd4jTest {
         // mmul
         for (boolean tA : paramsA) {
             for (boolean tB : paramsB) {
-
-            //    INDArray xT = tA ? x.dup() : x.dup().transpose();
-           //     INDArray yT = tB ? y.dup() : y.dup().transpose();
+/*
+                INDArray xT = x.dup(); // tA ? x.dup()// : x.dup().transpose();
+                INDArray yT = y.dup(); //tB ? y.dup() : y.dup().transpose();
 
                 System.out.println("Params: " + tA + "/" + tB);
 
-             //   Nd4j.gemm(xT, yT, tA, tB);
+                INDArray ct = Nd4j.gemm(xT, yT, tA, tB);
+                System.out.println("X shape: " + Arrays.toString(xT.shape()));
+                System.out.println("Y shape: " + Arrays.toString(yT.shape()));
+                System.out.println("ct shape: " + Arrays.toString(ct.shape()));
+                */
             }
         }
+
+   //     if (1>0)
+   //         throw new RuntimeException();
 
     //    System.out.println("PF");
 
         // specially for views, checking here without dup and rollover
-        Nd4j.gemm(x, y, false, false);
+        //Nd4j.gemm(x, y, false, false);
+        INDArray c = Nd4j.create(1024, 1024);
+        x.mmuli(y, c);
 
         if (i % 100 == 0)
             System.out.println("Iteration passed: " + i);
