@@ -183,7 +183,7 @@ public class CrashTest extends BaseNd4jTest {
        // INDArray xStd_1 = x.std(1);
 
         // blas call
-        float dot = (float) Nd4j.getBlasWrapper().dot(x, x1);
+       // float dot = (float) Nd4j.getBlasWrapper().dot(x, x1);
 
         // mmul
         for (boolean tA : paramsA) {
