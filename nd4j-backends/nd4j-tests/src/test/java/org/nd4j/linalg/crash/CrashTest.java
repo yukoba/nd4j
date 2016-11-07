@@ -194,8 +194,8 @@ public class CrashTest extends BaseNd4jTest {
         for (boolean tA : paramsA) {
             for (boolean tB : paramsB) {
 
-                INDArray xT = tA ? x.dup() : x.dup().transpose();
-                INDArray yT = tB ? y.dup() : y.dup().transpose();
+            //    INDArray xT = tA ? x.dup() : x.dup().transpose();
+           //     INDArray yT = tB ? y.dup() : y.dup().transpose();
 
                 System.out.println("Params: " + tA + "/" + tB);
 
@@ -203,7 +203,7 @@ public class CrashTest extends BaseNd4jTest {
             }
         }
 
-        System.out.println("PF");
+    //    System.out.println("PF");
 
         // specially for views, checking here without dup and rollover
         Nd4j.gemm(x, y, false, false);
