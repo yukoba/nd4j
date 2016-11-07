@@ -215,7 +215,7 @@ public class CrashTest extends BaseNd4jTest {
         // specially for views, checking here without dup and rollover
         //Nd4j.gemm(x, y, false, false);
         INDArray c = Nd4j.create(1024, 1024);
-        x.mmuli(y, c);
+        x.mmul(y, c);
 
         if (i % 100 == 0)
             System.out.println("Iteration passed: " + i);
