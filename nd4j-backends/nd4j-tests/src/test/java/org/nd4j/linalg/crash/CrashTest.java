@@ -128,16 +128,16 @@ public class CrashTest extends BaseNd4jTest {
         float sum = x.sumNumber().floatValue();
 
         // index reduction
-        Nd4j.getExecutioner().exec(new IMax(x), Integer.MAX_VALUE);
+//        Nd4j.getExecutioner().exec(new IMax(x), Integer.MAX_VALUE);
 
         // casual transform
-        Nd4j.getExecutioner().exec(new Sqrt(x, x));
+//        Nd4j.getExecutioner().exec(new Sqrt(x, x));
 
         //  dup
-        INDArray x1 = x.dup(x.ordering());
-        INDArray x2 = x.dup(x.ordering());
-        INDArray x3 = x.dup('c');
-        INDArray x4 = x.dup('f');
+//        INDArray x1 = x.dup(x.ordering());
+//        INDArray x2 = x.dup(x.ordering());
+//        INDArray x3 = x.dup('c');
+//        INDArray x4 = x.dup('f');
 
 
         // vstack && hstack
