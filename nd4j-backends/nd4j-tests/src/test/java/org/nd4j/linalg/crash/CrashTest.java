@@ -199,7 +199,8 @@ public class CrashTest extends BaseNd4jTest {
         // specially for views, checking here without dup and rollover
         Nd4j.gemm(x, y, false, false);
 
-        //System.out.println("Iteration passed: " + i);
+        if (i % 100 == 0)
+            System.out.println("Iteration passed: " + i);
     }
 
     @Override
