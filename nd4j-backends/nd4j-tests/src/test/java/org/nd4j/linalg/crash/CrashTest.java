@@ -170,10 +170,10 @@ public class CrashTest extends BaseNd4jTest {
 
 
         // BooleanIndexing
-        BooleanIndexing.replaceWhere(x, 5f, Conditions.lessThan(8f));
+        //BooleanIndexing.replaceWhere(x, 5f, Conditions.lessThan(8f));
 
         // assing on view
-        BooleanIndexing.assignIf(x, x1, Conditions.greaterThan(-1000000000f));
+        //BooleanIndexing.assignIf(x, x1, Conditions.greaterThan(-1000000000f));
 
         // std var along all dimensions
         //float std = x.stdNumber().floatValue();
@@ -192,9 +192,13 @@ public class CrashTest extends BaseNd4jTest {
                 INDArray xT = tA ? x.dup() : x.dup().transpose();
                 INDArray yT = tB ? y.dup() : y.dup().transpose();
 
+                System.out.println("Params: " + tA + "/" + tB);
+
                 Nd4j.gemm(xT, yT, tA, tB);
             }
         }
+
+        System.out.println("PF");
 
         // specially for views, checking here without dup and rollover
         Nd4j.gemm(x, y, false, false);
