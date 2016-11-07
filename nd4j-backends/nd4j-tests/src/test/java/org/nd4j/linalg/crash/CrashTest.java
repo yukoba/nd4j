@@ -154,13 +154,13 @@ public class CrashTest extends BaseNd4jTest {
 
 
         // reduction along dimension: row & column
-        INDArray max_0 = x.max(0);
-        INDArray max_1 = x.max(1);
+        //INDArray max_0 = x.max(0);
+        //INDArray max_1 = x.max(1);
 
 
         // index reduction along dimension: row & column
-        INDArray imax_0 = Nd4j.argMax(x, 0);
-        INDArray imax_1 = Nd4j.argMax(x, 1);
+        //INDArray imax_0 = Nd4j.argMax(x, 0);
+        //INDArray imax_1 = Nd4j.argMax(x, 1);
 
 
         // logisoftmax, softmax & softmax derivative
