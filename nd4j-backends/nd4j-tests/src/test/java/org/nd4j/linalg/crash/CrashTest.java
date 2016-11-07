@@ -164,9 +164,9 @@ public class CrashTest extends BaseNd4jTest {
 
 
         // logisoftmax, softmax & softmax derivative
-        Nd4j.getExecutioner().exec(new SoftMax(x));
-        Nd4j.getExecutioner().exec(new SoftMaxDerivative(x));
-        Nd4j.getExecutioner().exec(new LogSoftMax(x));
+        //Nd4j.getExecutioner().exec(new SoftMax(x));
+        //Nd4j.getExecutioner().exec(new SoftMaxDerivative(x));
+        //Nd4j.getExecutioner().exec(new LogSoftMax(x));
 
 
         // BooleanIndexing
