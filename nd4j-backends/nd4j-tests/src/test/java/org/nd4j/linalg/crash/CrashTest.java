@@ -141,16 +141,16 @@ public class CrashTest extends BaseNd4jTest {
 
 
         // vstack && hstack
-        INDArray vstack = Nd4j.vstack(x, x1, x2, x3, x4);
+        //INDArray vstack = Nd4j.vstack(x, x1, x2, x3, x4);
 
-        INDArray hstack = Nd4j.hstack(x, x1, x2, x3, x4);
+        //INDArray hstack = Nd4j.hstack(x, x1, x2, x3, x4);
 
         // reduce3 call
-        Nd4j.getExecutioner().exec(new ManhattanDistance(x, x2));
+        //Nd4j.getExecutioner().exec(new ManhattanDistance(x, x2));
 
 
         // flatten call
-        INDArray flat = Nd4j.toFlattened(x, x1, x2, x3, x4);
+        //INDArray flat = Nd4j.toFlattened(x, x1, x2, x3, x4);
 
 
         // reduction along dimension: row & column
