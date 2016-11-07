@@ -64,6 +64,7 @@ public class CrashTest extends BaseNd4jTest {
      * tensorAlongDimension() produces shapeInfo without EWS defined
      */
     @Test
+    @Ignore
     public void testNonEWSViews1() {
         System.out.println("non-EWS 1");
         INDArray x = Nd4j.create(64, 1024, 64);
@@ -76,6 +77,7 @@ public class CrashTest extends BaseNd4jTest {
     }
 
     @Test
+    @Ignore
     public void testNonEWSViews2() {
         System.out.println("non-EWS 2");
         INDArray x = Nd4j.create(new int[] {64, 1024, 64}, 'f');
@@ -91,6 +93,7 @@ public class CrashTest extends BaseNd4jTest {
      * slice() produces shapeInfo with EWS being 1 in our case
      */
     @Test
+    @Ignore
     public void testEWSViews1() {
         System.out.println("EWS 1");
         INDArray x = Nd4j.create(64, 1024, 64);
@@ -103,6 +106,7 @@ public class CrashTest extends BaseNd4jTest {
     }
 
     @Test
+    @Ignore
     public void testEWSViews2() {
         System.out.println("EWS 2");
         INDArray x = Nd4j.create(new int[] {96, 1024, 64}, 'f');
