@@ -33,7 +33,7 @@ public class CrashTest extends BaseNd4jTest {
         super(backend);
     }
 
-    private static final int ITERATIONS = 100;
+    private static final int ITERATIONS = 10000;
     private static final boolean[] paramsA = new boolean[] {true, false};
     private static final boolean[] paramsB = new boolean[] {true, false};
 
@@ -199,7 +199,7 @@ public class CrashTest extends BaseNd4jTest {
         // specially for views, checking here without dup and rollover
         Nd4j.gemm(x, y, false, false);
 
-        System.out.println("Iteration passed: " + i);
+        //System.out.println("Iteration passed: " + i);
     }
 
     @Override
