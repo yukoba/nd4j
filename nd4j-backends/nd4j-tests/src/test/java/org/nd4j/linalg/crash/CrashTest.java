@@ -39,6 +39,7 @@ public class CrashTest extends BaseNd4jTest {
     private static final boolean[] paramsB = new boolean[] {true, false};
 
     @Test
+    @Ignore
     public void testArrays1() {
         System.out.println("arrays 1");
         INDArray x = Nd4j.create(1024, 64);
