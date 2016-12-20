@@ -1,4 +1,4 @@
-pom.xml.releaseBackup 
+pom.xml.releaseBackup
 *.md5
 *.pom
 *.sha1
@@ -34,3 +34,4 @@ deeplearning4j-scaleout/deeplearning4j-aws/src/main/java/org/deeplearning4j/aws/
 *.dylib
 .DS_Store*
 lib/
+tmp/
