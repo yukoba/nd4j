@@ -35,15 +35,15 @@
     </prerequisites>
 
     <distributionManagement>
-        <snapshotRepository>
+        <!-- <snapshotRepository>
             <id>sonatype-nexus-snapshots</id>
             <name>Sonatype Nexus snapshot repository</name>
             <url>https://oss.sonatype.org/content/repositories/snapshots</url>
-        </snapshotRepository>
+        </snapshotRepository> -->
         <repository>
-            <id>nexus-releases</id>
-            <name>Nexus Release Repository</name>
-            <url>http://oss.sonatype.org/service/local/staging/deploy/maven2/</url>
+          <id>bintray-deeplearning4j-maven</id>
+          <name>deeplearning4j-maven</name>
+          <url>https://api.bintray.com/maven/deeplearning4j/maven/nd4j/;publish=1</url>
         </repository>
     </distributionManagement>
 
@@ -356,7 +356,7 @@
                     <skip>true</skip>
                 </configuration>
             </plugin>
-            <plugin>
+            <!-- <plugin>
                 <groupId>org.sonatype.plugins</groupId>
                 <artifactId>nexus-staging-maven-plugin</artifactId>
                 <version>1.6.6</version>
@@ -375,7 +375,7 @@
                     <nexusUrl>https://oss.sonatype.org/</nexusUrl>
                     <skipStagingRepositoryClose>true</skipStagingRepositoryClose>
                 </configuration>
-            </plugin>
+            </plugin> -->
             <plugin>
               <groupId>com.lewisd</groupId>
               <artifactId>lint-maven-plugin</artifactId>
