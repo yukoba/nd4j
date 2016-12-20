@@ -21,6 +21,7 @@ import org.nd4j.shade.jackson.databind.annotation.JsonSerialize;
  * <a href="https://en.wikipedia.org/wiki/Cross_entropy#Cross-entropy_error_function_and_logistic_regression">
  * https://en.wikipedia.org/wiki/Cross_entropy#Cross-entropy_error_function_and_logistic_regression</a>
  * Labels are assumed to take one hot values of size two [0,1] or [1,0]
+ * For other cases use Negative Log Likelihood or Multi class cross entropy
  *
  * @author Susan Eraly
  */
