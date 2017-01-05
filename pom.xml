@@ -236,9 +236,9 @@
         </profile>
     </profiles>
     <scm>
-        <connection>scm:git@github.com:deeplearning4j/nd4j.git</connection>
-        <developerConnection>scm:git:git@github.com:deeplearning4j/nd4j.git</developerConnection>
-        <url>git@github.com:deeplearning4j/nd4j.git</url>
+        <connection>scm:git@github.com:smaryn/nd4j.git</connection>
+        <developerConnection>scm:git:git@github.com:smaryn/nd4j.git</developerConnection>
+        <url>git@github.com:smaryn/nd4j.git</url>
         <tag> HEAD</tag>
     </scm>
 
@@ -358,24 +358,6 @@
                 </configuration>
             </plugin>
             <plugin>
-                <groupId>com.devexperts.bintray</groupId>
-                <artifactId>bintray-maven-plugin</artifactId>
-                <version>1.3</version>
-                <configuration>
-                    <id>bintray-deeplearning4j-maven</id>
-                    <url>https://api.bintray.com/maven/deeplearning4j/maven/nd4j/;publish=1</url>
-                </configuration>
-                <executions>
-                    <execution>
-                        <id>bintray-deploy</id>
-                        <goals>
-                            <goal>deploy</goal>
-                            <goal>publish</goal>
-                        </goals>
-                    </execution>
-                </executions>
-            </plugin>
-            <plugin>
               <groupId>com.lewisd</groupId>
               <artifactId>lint-maven-plugin</artifactId>
               <version>0.0.11</version>
@@ -436,10 +418,14 @@
                     <artifactId>maven-release-plugin</artifactId>
                     <version>2.5.3</version>
                     <configuration>
+                        <useReleaseProfile>false</useReleaseProfile>
+                        <releaseProfiles>release</releaseProfiles>
+                        <autoVersionSubmodules>true</autoVersionSubmodules>
                         <mavenExecutorId>forked-path</mavenExecutorId>
                         <!-- To deploy to an open staging repository: -Darguments=-DstagingRepositoryId=orgnd4j-xxxx -->
-                        <arguments>-Psonatype-oss-release -DskipTests ${arguments}</arguments>
-                        <localCheckout>true</localCheckout>
+                        <!-- <arguments>-Psonatype-oss-release -DskipTests ${arguments}</arguments> -->
+                        <!-- <arguments>-DskipTests ${arguments}</arguments> -->
+                        <!-- <localCheckout>true</localCheckout> -->
                         <pushChanges>false</pushChanges>
                     </configuration>
                 </plugin>
@@ -495,12 +481,12 @@
                 <version>${junit.version}</version>
                 <scope>test</scope>
             </dependency>
-            <!-- <dependency>
+            <dependency>
                  <groupId>com.devexperts.bintray</groupId>
                  <artifactId>bintray-maven-plugin</artifactId>
                  <version>1.3</version>
                  <type>pom</type>
-            </dependency> -->
+            </dependency>
         </dependencies>
     </dependencyManagement>
 
