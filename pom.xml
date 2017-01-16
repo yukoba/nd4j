@@ -1,4 +1,4 @@
-<!--
+﻿<!--
   ~ /*
   ~  * Copyright 2015 Skymind,Inc.
   ~  *
@@ -22,30 +22,41 @@
     <modelVersion>4.0.0</modelVersion>
     <groupId>org.nd4j</groupId>
     <artifactId>nd4j</artifactId>
-    <version>0.7.2-SNAPSHOT</version>
-
+    <version>1.0.0-SNAPSHOT</version>
+<!--
     <parent>
         <groupId>org.sonatype.oss</groupId>
         <artifactId>oss-parent</artifactId>
         <version>7</version>
     </parent>
+-->
 
     <prerequisites>
         <maven>3.0</maven>
     </prerequisites>
-
+<!--
     <distributionManagement>
         <snapshotRepository>
-            <id>bintray-deeplearning4j-mvnsnapshots</id>
-            <name>deeplearning4j-mvnsnapshots</name>
-            <url>https://api.bintray.com/maven/deeplearning4j/mvnsnapshots/nd4j/;publish=1</url>
+            <id>sonatype-nexus-snapshots</id>
+            <name>Sonatype Nexus snapshot repository</name>
+            <url>https://oss.sonatype.org/content/repositories/snapshots</url>
         </snapshotRepository>
         <repository>
-            <id>bintray-deeplearning4j-maven</id>
-            <name>deeplearning4j-maven</name>
-            <url>https://api.bintray.com/maven/deeplearning4j/maven/nd4j/;publish=1</url>
+            <id>nexus-releases</id>
+            <name>Nexus Release Repository</name>
+            <url>http://oss.sonatype.org/service/local/staging/deploy/maven2/</url>
         </repository>
     </distributionManagement>
+-->
+
+        <distributionManagement>
+                <repository>
+                        <id>bintray-intropromchr-cd-rnd</id>
+                        <name>intropromchr-cd-rnd</name>
+                        <url>https://api.bintray.com/maven/intropromchr/cd-rnd/${project.artifactId}/;publish=1</url>
+                </repository>
+        </distributionManagement>
+
 
     <profiles>
 
@@ -277,7 +288,7 @@
         <junit.version>4.12</junit.version>
         <slf4j.version>1.7.10</slf4j.version>
         <logback.version>1.1.2</logback.version>
-        <javacpp.version>1.3</javacpp.version>
+        <javacpp.version>1.3.1</javacpp.version>
         <javacpp-presets.version>1.3</javacpp-presets.version>
         <process-classes.skip> false</process-classes.skip>  <!-- To skip native compilation phase: -Dprocess-classes.skip=true    -->
         <javacpp.platform>${os.name}-${os.arch}</javacpp.platform> <!-- For Android: -Dplatform=android-arm                                        -->
@@ -286,7 +297,6 @@
         <spark.version>1.6.2</spark.version>
         <maven-shade-plugin.version>2.4.3</maven-shade-plugin.version>
         <maven-deploy-plugin.version>2.8.2</maven-deploy-plugin.version>
-
     </properties>
 
     <developers>
@@ -339,6 +349,7 @@
                     </execution>
                 </executions>
             </plugin>
+<!--
             <plugin>
                 <artifactId>maven-javadoc-plugin</artifactId>
                 <executions>
@@ -350,13 +361,38 @@
                     </execution>
                 </executions>
             </plugin>
+-->
             <plugin>
                 <artifactId>maven-deploy-plugin</artifactId>
                 <version>${maven-deploy-plugin.version}</version>
+<!--
                 <configuration>
                     <skip>true</skip>
                 </configuration>
+-->
             </plugin>
+<!--
+            <plugin>
+                <groupId>org.sonatype.plugins</groupId>
+                <artifactId>nexus-staging-maven-plugin</artifactId>
+                <version>1.6.6</version>
+                <executions>
+                    <execution>
+                        <id>default-deploy</id>
+                        <phase>deploy</phase>
+                        <goals>
+                            <goal>deploy</goal>
+                        </goals>
+                    </execution>
+                </executions>
+                <extensions>true</extensions>
+                <configuration>
+                    <serverId>nexus-releases</serverId>
+                    <nexusUrl>https://oss.sonatype.org/</nexusUrl>
+                    <skipStagingRepositoryClose>true</skipStagingRepositoryClose>
+                </configuration>
+            </plugin>
+-->
             <plugin>
               <groupId>com.lewisd</groupId>
               <artifactId>lint-maven-plugin</artifactId>
@@ -418,14 +454,10 @@
                     <artifactId>maven-release-plugin</artifactId>
                     <version>2.5.3</version>
                     <configuration>
-                        <useReleaseProfile>false</useReleaseProfile>
-                        <releaseProfiles>release</releaseProfiles>
-                        <autoVersionSubmodules>true</autoVersionSubmodules>
                         <mavenExecutorId>forked-path</mavenExecutorId>
                         <!-- To deploy to an open staging repository: -Darguments=-DstagingRepositoryId=orgnd4j-xxxx -->
-                        <!-- <arguments>-Psonatype-oss-release -DskipTests ${arguments}</arguments> -->
-                        <!-- <arguments>-DskipTests ${arguments}</arguments> -->
-                        <!-- <localCheckout>true</localCheckout> -->
+                        <arguments>-Psonatype-oss-release -DskipTests ${arguments}</arguments>
+                        <localCheckout>true</localCheckout>
                         <pushChanges>false</pushChanges>
                     </configuration>
                 </plugin>
@@ -480,12 +512,6 @@
                 <artifactId>junit</artifactId>
                 <version>${junit.version}</version>
                 <scope>test</scope>
-            </dependency>
-            <dependency>
-                 <groupId>com.devexperts.bintray</groupId>
-                 <artifactId>bintray-maven-plugin</artifactId>
-                 <version>1.3</version>
-                 <type>pom</type>
             </dependency>
         </dependencies>
     </dependencyManagement>
