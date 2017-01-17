@@ -51,9 +51,9 @@
 
         <distributionManagement>
                 <repository>
-                        <id>bintray-intropromchr-cd-rnd</id>
-                        <name>intropromchr-cd-rnd</name>
-                        <url>https://api.bintray.com/maven/intropromchr/cd-rnd/${project.artifactId}/;publish=1</url>
+                        <id>bintray-deeplearning4j-maven</id>
+                        <name>Deeplearning4j-maven</name>
+                        <url>https://api.bintray.com/maven/deeplearning4j/${project.artifactId}/;publish=1</url>
                 </repository>
         </distributionManagement>
 
