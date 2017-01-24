@@ -56,6 +56,11 @@
                         <name>Deeplearning4j-maven</name>
                         <url>https://api.bintray.com/maven/deeplearning4j/${project.artifactId}/;publish=1</url>
                 </repository>
+				 <snapshotRepository>
+					<id>snapshots</id>
+					<name>ip-172-31-32-137-snapshots</name>
+					<url>http://ec2-54-149-201-179.us-west-2.compute.amazonaws.com:8081/artifactory/libs-snapshot-local</url>
+				</snapshotRepository>
         </distributionManagement>
 
 
