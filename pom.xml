@@ -54,7 +54,7 @@
                 <repository>
                         <id>bintray-deeplearning4j-maven</id>
                         <name>Deeplearning4j-maven</name>
-                        <url>https://api.bintray.com/maven/deeplearning4j/${project.artifactId}/;publish=1</url>
+			<url>https://api.bintray.com/maven/deeplearning4j/maven/${project.artifactId}/;publish=1</url>
                 </repository>
 				 <snapshotRepository>
 					<id>snapshots</id>
