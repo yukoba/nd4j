@@ -1,4 +1,4 @@
-<!--
+﻿<!--
   ~ /*
   ~  * Copyright 2015 Skymind,Inc.
   ~  *
@@ -16,24 +16,26 @@
   ~  */
   ~
   -->
+  
 
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
 
     <modelVersion>4.0.0</modelVersion>
     <groupId>org.nd4j</groupId>
     <artifactId>nd4j</artifactId>
-    <version>0.7.2</version>
-
+    <version>0.7.2-SNAPSHOT</version>
+<!--
     <parent>
         <groupId>org.sonatype.oss</groupId>
         <artifactId>oss-parent</artifactId>
         <version>7</version>
     </parent>
+-->
 
     <prerequisites>
         <maven>3.0</maven>
     </prerequisites>
-
+<!--
     <distributionManagement>
         <snapshotRepository>
             <id>sonatype-nexus-snapshots</id>
@@ -46,6 +48,21 @@
             <url>http://oss.sonatype.org/service/local/staging/deploy/maven2/</url>
         </repository>
     </distributionManagement>
+-->
+
+        <distributionManagement>
+                <repository>
+                        <id>bintray-deeplearning4j-maven</id>
+                        <name>Deeplearning4j-maven</name>
+			<url>https://api.bintray.com/maven/deeplearning4j/maven/${project.artifactId}/;publish=1</url>
+                </repository>
+				 <snapshotRepository>
+					<id>snapshots</id>
+					<name>local-snapshots</name>
+					<url>http://localhost:8081/artifactory/libs-snapshot-local</url>
+				</snapshotRepository>
+        </distributionManagement>
+
 
     <profiles>
 
@@ -338,6 +355,7 @@
                     </execution>
                 </executions>
             </plugin>
+<!--
             <plugin>
                 <artifactId>maven-javadoc-plugin</artifactId>
                 <executions>
@@ -349,13 +367,17 @@
                     </execution>
                 </executions>
             </plugin>
+-->
             <plugin>
                 <artifactId>maven-deploy-plugin</artifactId>
                 <version>${maven-deploy-plugin.version}</version>
+<!--
                 <configuration>
                     <skip>true</skip>
                 </configuration>
+-->
             </plugin>
+<!--
             <plugin>
                 <groupId>org.sonatype.plugins</groupId>
                 <artifactId>nexus-staging-maven-plugin</artifactId>
@@ -376,6 +398,7 @@
                     <skipStagingRepositoryClose>true</skipStagingRepositoryClose>
                 </configuration>
             </plugin>
+-->
             <plugin>
               <groupId>com.lewisd</groupId>
               <artifactId>lint-maven-plugin</artifactId>
