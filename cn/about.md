@@ -1,6 +1,6 @@
 ---
 title: 简介
-layout: zh-default
+layout: cn-default
 redirect_from: /zh-about
 ---
 

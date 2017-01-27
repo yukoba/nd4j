@@ -1,5 +1,5 @@
 ---
-layout: page
+layout: cn-default
 title: "ND4J：为Java编写的N维数组"
 tagline: "ND4J是为生产环境设计的多维数组代数库"
 redirect_from: /zh-index
