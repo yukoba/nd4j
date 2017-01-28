@@ -52,10 +52,10 @@ public class Eigen {
 
 
     /**
-     * Compute generalized eigenvalues of the problem A x = L B x.
+     * Computes the eigenvalues of a real symmetric matrix.
      *
-     * @param A symmetric Matrix A. Only the upper triangle will be considered.
-     * @return a vector of eigenvalues L.
+     * @param A real symmetric matrix A. Only the upper triangle will be considered.
+     * @return a vector of eigenvalues.
      */
     public static INDArray symmetricGeneralizedEigenvalues(INDArray A) {
         INDArray eigenvalues = Nd4j.create(A.rows());
